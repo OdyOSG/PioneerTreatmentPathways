@@ -1,39 +1,78 @@
 name,atlasName,atlasId,cohortId
-EAU High Risk,[PIONEER S1] EAU High Risk,52,301
-EAU Low Risk,[PIONEER S2] EAU Low Risk,53,302
-EAU Intermediate Risk,[PIONEER S3] EAU Intermediate Risk,54,303
-Metastatic PCa,[PIONEER S4] Metastatic PCa,55,304
-Locally Advanced PCa,[PIONEER S5] Locally Advanced PCa,56,305
-Localized PCa,[PIONEER S6] Localized PCa,57,306
-PSA >20 at Diagnosis,[PIONEER S7] PSA >20 at Diagnosis,58,307
-PSA <10 at Diagnosis,[PIONEER S8] PSA <10 at Diagnosis,59,308
-PSA 10-20 at Diagnosis,[PIONEER S9] PSA 10-20 at Diagnosis,60,309
-Stage cT1 at Dx,[PIONEER S10] Stage cT1 at Dx,63,310
-Stage cT2 at Dx,[PIONEER S11] Stage cT2 at Dx,64,311
-Stage cT3/cT4 at Dx,[PIONEER S12] Stage cT3/cT4 at Dx,65,312
-Physical Therapy/Exercise,[PIONEER S13] Physical Therapy/Exercise,112,313
-Grade 1 (GS 2-6),[PIONEER S14] Grade 1 (GS 2-6),67,314
-Grade 2 (GS 3+4),[PIONEER S15] Grade 2 (GS 3+4),68,315
-Grade 3 (GS 4+3),[PIONEER S16] Grade 3 (GS 4+3),69,316
-Grade 4 (GS 8),[PIONEER S17] Grade 4 (GS 8),70,317
-Grade 5 (GS 9-10),[PIONEER S18] Grade 5 (GS 9-10),71,318
-Family history of Prostate cancer or germline mutations,[PIONEER S19] Family history of Prostate cancer or history of family history of germline mutations,72,319
-Mutation in oncogenes,[PIONEER S20] Mutation (germline or somatic) in oncogenes,83,320
-Age at diagnosis <55,[PIONEER S21] Age at diagnosis <55,111,321
-Age at diagnosis 55-80,[PIONEER S22] Age at diagnosis 55-80,110,322
-Age at diagnosis >80,[PIONEER S23] Age at diagnosis >80,109,323
-Charlson CCI=0,[PIONEER S24] Charlson CCI=0,120,324
-Charlson CCI=1,[PIONEER S25] Charlson CCI=1,121,325
-Charlson CCI>=2,[PIONEER S26] Charlson CCI>=2,122,326
-Any malignancy except malignant neoplasm of skin,[PIONEER S27] Any malignancy except malignant neoplasm of skin,81,327
-Performance status ECOG=0,[PIONEER S28] Performance status ECOG=0,164,334
-Performance status ECOG=1,[PIONEER S29] Performance status ECOG=1,165,335
-Performance status ECOG=2+,[PIONEER S30] Performance status ECOG=2+,166,336
-Total Cardiovascular Disease Event,[PIONEER S31] Total Cardiovascular Disease Event,152,328
-Stroke,[PIONEER S32] Stroke,153,329
-Type 2 Diabetes,[PIONEER S33] Type 2 Diabetes,154,330
-Hypertension,[PIONEER S34] Hypertension,155,331
-Obesity,[PIONEER S35] Obesity,156,332
-VTE,[PIONEER S36] VTE,157,333
-Anxiety,[PIONEER S37] Anxiety,158,337
-Prevalent Asthma or COPD,[PIONEER S38] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),159,338
+Performance status ECOG=0,[PIONEER 2.0] Performance Status ECOG=0,283,301
+Performance status ECOG=1,[PIONEER 2.0] Performance Status ECOG=1,294,302
+Performance status ECOG=2+,[PIONEER 2.0] Performance Status ECOG=2+,298,303
+Obesity,[Pioneer 2.0] Prevalent obesity S11,282,304
+Hypertension,[Pioneer 2.0] Prevalent hypertension S12,284,305
+Total Cardiovascular Disease Event,[Pioneer 2.0] Total Cardiovascular Disease Event S13,286,306
+Type 2 diabetes,[Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,287,307
+VTE,[Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,288,308
+Anxiety,[Pioneer 2.0] Anxiety S17,289,309
+Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),[Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,290,310
+Family history of Prostate cancer or history of family history of germline mutations,[Pioneer 2.0] Family History of PCa S22,292,311
+Physical Therapy Exercise,[Pioneer 2.0] Physical Therapy S23,293,312
+"Metastasis stage M1a, any T, any N",[PIONEER 2.0] Strata Cohort S24 Metastasis stage M1a,302,313
+"Metastasis stage M1b, any N, Any T",[PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,303,314
+"Metastatis stage M1c, any T, any M",[PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,304,315
+Metastasis recurrent RT,[PIONEER 2.0] Metastasis recurrent RT-FINAL,305,316
+Metastasis recurrent RP,[PIONEER 2.0] Metastasis recurrent RP-FINAL,301,317
+"Prostate MRI -90, +90 days of dx",[PIONEER 2.0] MRI of prostate FINAL,295,318
+"Bone scan -90 -, +90 days dx",[Pioneer 2.0] Bone scan S30,291,319
+"Full body CT scan -90, +90 days dx",[PIONEER 2.0] Abdominal CT scan,297,320
+"Full body CT scan -90, +90 days metastatic disease",[PIONEER 2.0] CT scan of whole body S32,317,321
+"PET CT imaging -90, +90 days dx",[PIONEER 2.0] PET-CT imaging FINAL,299,322
+PSA gt 20 at Diagnosis,[PIONEER S7] PSA>20,58,323
+PSA lt 10 at Diagnosis,[PIONEER S8] PSA<10,59,324
+PSA 10-20 at Diagnosis,[PIONEER S9] PSA 10-20,60,325
+Grade 1 at dx=earliest (GS 3+3),[PIONEER V2.0] Earliest Gleason Grade 1,326,326
+"Grade 2,3 at dx=earliest (GS 3+4, G 4+3)",[PIONEER V2.0] Earliest Gleason Grade 2 - 3,329,327
+Grade 4 at dx (GS 4+4 or 3+5 or 5+3),[PIONEER V2.0] Earliest Gleason Grade 4,330,328
+Grade 5 at dx (5+5 or 4+5 or 5+4),[PIONEER V2.0] Earliest Gleason Grade 5,331,329
+EAU High Risk,[PIONEER S1] High-Risk,52,330
+EAU Low Risk,[PIONEER S2] Low-Risk,53,331
+EAU Intermediate Risk,[PIONEER S3] Intermediate-Risk,54,332
+Prostate MRI,[Pioneer 2.0] MRI of prostate S59,315,333
+Bone scan,[PIONEER 2.0] Bone scan FINAL,309,334
+CT thorax abdomen OR full body MRI,[PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,316,335
+PSA gt 20 at index,REVIEW [Pioneer v2.0] PSA higher than 20,398,336
+PSA lt 10 at index,REVIEW [Pioneer v2.0] PSA lower than 10,396,337
+PSA 10-20 at index,REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,397,338
+Fatigue,[Pioneer 2.0] Fatigue,311,339
+Diarrhea,[Pioneer 2.0] Diarrhea,318,340
+Thrombocytopenia,FDA AESI Immune thrombocytopenia (ITP) events,312,341
+Neutropenia,{PIONEER 2.0] Neutropenia,340,342
+Convulsion,[PIONEER 2.0] Convulsion,345,343
+Myocardial infaction,[Pioneer 2.0] Acute myocardial infarction,313,344
+Constipation,[PIONEER 2.0] Constipation,402,345
+Hypokalemia,[PIONEER 2.0] Hypokalemia,374,346
+Index year 2016,[PIONEER 2.0] Index date 2016,352,347
+Index year 2017,[PIONEER 2.0] Index date 2017,353,348
+Index year 2018,[PIONEER 2.0] Index date 2018,355,349
+Index year 2019,[PIONEER 2.0] Index date 2019,356,350
+Index year 2020,[PIONEER 2.0] Index date 2020,357,351
+Index year 2021,[PIONEER 2.0] Index year 2021,358,352
+Index year 2022,[PIONEER 2.0] Index year 2022,359,353
+ADT (anti-androgen AND OR LHRH),REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),367,354
+anti androgen,REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),369,355
+LHRH,REVIEW [PIONEER 2.0] ADT (LHRH exclusive),370,356
+anti-androgen AND LHRH,REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),371,357
+ADT+ ARTA,REVIEW [PIONEER 2.0] ADT + ARTA,372,358
+ADT+enzalutamide,REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),373,359
+ADT+abiraterone,REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),381,360
+ADT+apalutamide,REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),375,361
+ADT+darolutamide,REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),376,362
+ADT+CHEMO,REVIEW [PIONEER 2.0] ADT + CHEMO,377,363
+ADT+docetaxel,REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),378,364
+ADT+paclitaxel,REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),382,365
+ADT+cabazitaxel,REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),379,366
+ADT+ARTA + CHEMO,REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,395,367
+ADT+darolutamide + docetaxel,REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),383,368
+ADT+abiraterone + docetaxel,REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),386,369
+ADT+lutetium PSMA,REVIEW [PIONEER 2.0] ADT + lutetium PSMA,387,370
+ADT+radium-223,REVIEW [PIONEER 2.0] ADT +Radium 223,388,371
+ADT+PARP-inhibitor,REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,389,372
+ADT+olaparib,REVIEW [PIONEER 2.0] ADT + olaparib,390,373
+ADT+rucaparib,REVIEW [PIONEER 2.0] ADT + rucaparib,391,374
+ADT+immunotherapy,REVIEW [PIONEER 2.0] ADT + immunotherapy,392,375
+ADT+sipuleucel-T,REVIEW [PIONEER 2.0] ADT + sipuleucel-T,393,376
+ADT+pembrolizumab,REVIEW [PIONEER 2.0] ADT + pembrolizumab,394,377

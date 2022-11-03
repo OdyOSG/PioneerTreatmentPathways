@@ -1,8 +1,12 @@
 name,atlasName,atlasId,cohortId
-202,[PIONEER O1] Death,46,202
-201,[PIONEER O2] Symptomatic progression,45,201
-203,[PIONEER O3] Treatment initiation,61,203
-204,[PIONEER O4] Curative treatment,73,204
-205,[PIONEER O5] Palliative treatment,74,205
-206,[PIONEER O6] Hospitalization,87,206
-207,[PIONEER O7] ED visit,90,207
+201,[PIONEER 2.0] Symptomatic progression-FINAL,361,201
+202,[Pioneer 2.0] Death O4 1,362,202
+203,[PIONEER 2.0] RT after pain and or hematuria FINAL,341,203
+204,[PIONEER 2.0] Placement of urethral stent or neprhrostomy for AKI FINAL,339,204
+205,[PIONEER 2.0] Colostomy FINAL,333,205
+206,[Pioneer 2.0] Chronic foley catheter FINAL,334,206
+207,[PIONEER 2.0] Pelvic exenteration FINAL,338,207
+208,[PIONEER 2.0] Suprapubic catheter FINAL,337,208
+209,[PIONEER 2.0] TUR FINAL,332,209
+210,[PIONEER 2.0] Hospitalization,324,210
+211,[PIONEER 2.0] ER Visit,327,211

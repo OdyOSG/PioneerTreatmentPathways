@@ -1,0 +1,955 @@
+cohortId,targetId,targetName,strataId,strataName,cohortType
+101,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),0,All,Target
+102,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),0,All,Target
+103,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),0,All,Target
+104,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,0,All,Target
+105,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],0,All,Target
+106,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",0,All,Target
+101003012,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),301,without [PIONEER 2.0] Performance Status ECOG=0,TwoS
+102003012,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),301,without [PIONEER 2.0] Performance Status ECOG=0,TwoS
+103003012,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),301,without [PIONEER 2.0] Performance Status ECOG=0,TwoS
+104003012,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,301,without [PIONEER 2.0] Performance Status ECOG=0,TwoS
+105003012,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],301,without [PIONEER 2.0] Performance Status ECOG=0,TwoS
+106003012,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",301,without [PIONEER 2.0] Performance Status ECOG=0,TwoS
+101003022,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),302,without [PIONEER 2.0] Performance Status ECOG=1,TwoS
+102003022,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),302,without [PIONEER 2.0] Performance Status ECOG=1,TwoS
+103003022,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),302,without [PIONEER 2.0] Performance Status ECOG=1,TwoS
+104003022,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,302,without [PIONEER 2.0] Performance Status ECOG=1,TwoS
+105003022,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],302,without [PIONEER 2.0] Performance Status ECOG=1,TwoS
+106003022,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",302,without [PIONEER 2.0] Performance Status ECOG=1,TwoS
+101003032,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),303,without [PIONEER 2.0] Performance Status ECOG=2+,TwoS
+102003032,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),303,without [PIONEER 2.0] Performance Status ECOG=2+,TwoS
+103003032,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),303,without [PIONEER 2.0] Performance Status ECOG=2+,TwoS
+104003032,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,303,without [PIONEER 2.0] Performance Status ECOG=2+,TwoS
+105003032,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],303,without [PIONEER 2.0] Performance Status ECOG=2+,TwoS
+106003032,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",303,without [PIONEER 2.0] Performance Status ECOG=2+,TwoS
+101003042,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),304,without [Pioneer 2.0] Prevalent obesity S11,TwoS
+102003042,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),304,without [Pioneer 2.0] Prevalent obesity S11,TwoS
+103003042,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),304,without [Pioneer 2.0] Prevalent obesity S11,TwoS
+104003042,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,304,without [Pioneer 2.0] Prevalent obesity S11,TwoS
+105003042,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],304,without [Pioneer 2.0] Prevalent obesity S11,TwoS
+106003042,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",304,without [Pioneer 2.0] Prevalent obesity S11,TwoS
+101003052,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),305,without [Pioneer 2.0] Prevalent hypertension S12,TwoS
+102003052,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),305,without [Pioneer 2.0] Prevalent hypertension S12,TwoS
+103003052,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),305,without [Pioneer 2.0] Prevalent hypertension S12,TwoS
+104003052,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,305,without [Pioneer 2.0] Prevalent hypertension S12,TwoS
+105003052,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],305,without [Pioneer 2.0] Prevalent hypertension S12,TwoS
+106003052,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",305,without [Pioneer 2.0] Prevalent hypertension S12,TwoS
+101003062,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),306,without [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwoS
+102003062,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),306,without [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwoS
+103003062,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),306,without [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwoS
+104003062,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,306,without [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwoS
+105003062,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],306,without [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwoS
+106003062,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",306,without [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwoS
+101003072,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),307,without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwoS
+102003072,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),307,without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwoS
+103003072,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),307,without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwoS
+104003072,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,307,without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwoS
+105003072,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],307,without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwoS
+106003072,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",307,without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwoS
+101003082,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),308,without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwoS
+102003082,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),308,without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwoS
+103003082,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),308,without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwoS
+104003082,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,308,without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwoS
+105003082,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],308,without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwoS
+106003082,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",308,without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwoS
+101003092,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),309,without [Pioneer 2.0] Anxiety S17,TwoS
+102003092,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),309,without [Pioneer 2.0] Anxiety S17,TwoS
+103003092,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),309,without [Pioneer 2.0] Anxiety S17,TwoS
+104003092,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,309,without [Pioneer 2.0] Anxiety S17,TwoS
+105003092,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],309,without [Pioneer 2.0] Anxiety S17,TwoS
+106003092,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",309,without [Pioneer 2.0] Anxiety S17,TwoS
+101003102,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),310,without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwoS
+102003102,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),310,without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwoS
+103003102,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),310,without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwoS
+104003102,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,310,without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwoS
+105003102,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],310,without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwoS
+106003102,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",310,without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwoS
+101003112,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),311,without [Pioneer 2.0] Family History of PCa S22,TwoS
+102003112,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),311,without [Pioneer 2.0] Family History of PCa S22,TwoS
+103003112,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),311,without [Pioneer 2.0] Family History of PCa S22,TwoS
+104003112,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,311,without [Pioneer 2.0] Family History of PCa S22,TwoS
+105003112,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],311,without [Pioneer 2.0] Family History of PCa S22,TwoS
+106003112,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",311,without [Pioneer 2.0] Family History of PCa S22,TwoS
+101003122,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),312,without [Pioneer 2.0] Physical Therapy S23,TwoS
+102003122,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),312,without [Pioneer 2.0] Physical Therapy S23,TwoS
+103003122,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),312,without [Pioneer 2.0] Physical Therapy S23,TwoS
+104003122,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,312,without [Pioneer 2.0] Physical Therapy S23,TwoS
+105003122,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],312,without [Pioneer 2.0] Physical Therapy S23,TwoS
+106003122,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",312,without [Pioneer 2.0] Physical Therapy S23,TwoS
+101003132,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),313,without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwoS
+102003132,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),313,without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwoS
+103003132,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),313,without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwoS
+104003132,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,313,without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwoS
+105003132,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],313,without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwoS
+106003132,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",313,without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwoS
+101003142,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),314,without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwoS
+102003142,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),314,without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwoS
+103003142,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),314,without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwoS
+104003142,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,314,without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwoS
+105003142,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],314,without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwoS
+106003142,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",314,without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwoS
+101003152,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
+102003152,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
+103003152,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
+104003152,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
+105003152,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
+106003152,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
+101003162,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),316,without [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwoS
+102003162,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),316,without [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwoS
+103003162,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),316,without [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwoS
+104003162,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,316,without [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwoS
+105003162,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],316,without [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwoS
+106003162,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",316,without [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwoS
+101003172,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),317,without [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwoS
+102003172,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),317,without [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwoS
+103003172,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),317,without [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwoS
+104003172,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,317,without [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwoS
+105003172,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],317,without [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwoS
+106003172,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",317,without [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwoS
+101003182,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),318,without [PIONEER 2.0] MRI of prostate FINAL,TwoS
+102003182,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),318,without [PIONEER 2.0] MRI of prostate FINAL,TwoS
+103003182,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),318,without [PIONEER 2.0] MRI of prostate FINAL,TwoS
+104003182,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,318,without [PIONEER 2.0] MRI of prostate FINAL,TwoS
+105003182,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],318,without [PIONEER 2.0] MRI of prostate FINAL,TwoS
+106003182,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",318,without [PIONEER 2.0] MRI of prostate FINAL,TwoS
+101003192,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),319,without [Pioneer 2.0] Bone scan S30,TwoS
+102003192,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),319,without [Pioneer 2.0] Bone scan S30,TwoS
+103003192,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),319,without [Pioneer 2.0] Bone scan S30,TwoS
+104003192,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,319,without [Pioneer 2.0] Bone scan S30,TwoS
+105003192,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],319,without [Pioneer 2.0] Bone scan S30,TwoS
+106003192,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",319,without [Pioneer 2.0] Bone scan S30,TwoS
+101003202,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),320,without [PIONEER 2.0] Abdominal CT scan,TwoS
+102003202,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),320,without [PIONEER 2.0] Abdominal CT scan,TwoS
+103003202,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),320,without [PIONEER 2.0] Abdominal CT scan,TwoS
+104003202,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,320,without [PIONEER 2.0] Abdominal CT scan,TwoS
+105003202,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],320,without [PIONEER 2.0] Abdominal CT scan,TwoS
+106003202,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",320,without [PIONEER 2.0] Abdominal CT scan,TwoS
+101003212,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),321,without [PIONEER 2.0] CT scan of whole body S32,TwoS
+102003212,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),321,without [PIONEER 2.0] CT scan of whole body S32,TwoS
+103003212,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),321,without [PIONEER 2.0] CT scan of whole body S32,TwoS
+104003212,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,321,without [PIONEER 2.0] CT scan of whole body S32,TwoS
+105003212,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],321,without [PIONEER 2.0] CT scan of whole body S32,TwoS
+106003212,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",321,without [PIONEER 2.0] CT scan of whole body S32,TwoS
+101003222,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),322,without [PIONEER 2.0] PET-CT imaging FINAL,TwoS
+102003222,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),322,without [PIONEER 2.0] PET-CT imaging FINAL,TwoS
+103003222,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),322,without [PIONEER 2.0] PET-CT imaging FINAL,TwoS
+104003222,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,322,without [PIONEER 2.0] PET-CT imaging FINAL,TwoS
+105003222,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],322,without [PIONEER 2.0] PET-CT imaging FINAL,TwoS
+106003222,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",322,without [PIONEER 2.0] PET-CT imaging FINAL,TwoS
+101003232,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),323,without [PIONEER S7] PSA>20,TwoS
+102003232,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),323,without [PIONEER S7] PSA>20,TwoS
+103003232,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),323,without [PIONEER S7] PSA>20,TwoS
+104003232,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,323,without [PIONEER S7] PSA>20,TwoS
+105003232,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],323,without [PIONEER S7] PSA>20,TwoS
+106003232,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",323,without [PIONEER S7] PSA>20,TwoS
+101003242,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),324,without [PIONEER S8] PSA<10,TwoS
+102003242,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),324,without [PIONEER S8] PSA<10,TwoS
+103003242,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),324,without [PIONEER S8] PSA<10,TwoS
+104003242,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,324,without [PIONEER S8] PSA<10,TwoS
+105003242,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],324,without [PIONEER S8] PSA<10,TwoS
+106003242,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",324,without [PIONEER S8] PSA<10,TwoS
+101003252,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),325,without [PIONEER S9] PSA 10-20,TwoS
+102003252,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),325,without [PIONEER S9] PSA 10-20,TwoS
+103003252,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),325,without [PIONEER S9] PSA 10-20,TwoS
+104003252,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,325,without [PIONEER S9] PSA 10-20,TwoS
+105003252,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],325,without [PIONEER S9] PSA 10-20,TwoS
+106003252,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",325,without [PIONEER S9] PSA 10-20,TwoS
+101003262,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),326,without [PIONEER V2.0] Earliest Gleason Grade 1,TwoS
+102003262,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),326,without [PIONEER V2.0] Earliest Gleason Grade 1,TwoS
+103003262,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),326,without [PIONEER V2.0] Earliest Gleason Grade 1,TwoS
+104003262,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,326,without [PIONEER V2.0] Earliest Gleason Grade 1,TwoS
+105003262,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],326,without [PIONEER V2.0] Earliest Gleason Grade 1,TwoS
+106003262,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",326,without [PIONEER V2.0] Earliest Gleason Grade 1,TwoS
+101003272,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),327,without [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwoS
+102003272,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),327,without [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwoS
+103003272,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),327,without [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwoS
+104003272,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,327,without [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwoS
+105003272,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],327,without [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwoS
+106003272,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",327,without [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwoS
+101003282,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),328,without [PIONEER V2.0] Earliest Gleason Grade 4,TwoS
+102003282,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),328,without [PIONEER V2.0] Earliest Gleason Grade 4,TwoS
+103003282,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),328,without [PIONEER V2.0] Earliest Gleason Grade 4,TwoS
+104003282,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,328,without [PIONEER V2.0] Earliest Gleason Grade 4,TwoS
+105003282,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],328,without [PIONEER V2.0] Earliest Gleason Grade 4,TwoS
+106003282,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",328,without [PIONEER V2.0] Earliest Gleason Grade 4,TwoS
+101003292,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),329,without [PIONEER V2.0] Earliest Gleason Grade 5,TwoS
+102003292,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),329,without [PIONEER V2.0] Earliest Gleason Grade 5,TwoS
+103003292,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),329,without [PIONEER V2.0] Earliest Gleason Grade 5,TwoS
+104003292,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,329,without [PIONEER V2.0] Earliest Gleason Grade 5,TwoS
+105003292,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],329,without [PIONEER V2.0] Earliest Gleason Grade 5,TwoS
+106003292,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",329,without [PIONEER V2.0] Earliest Gleason Grade 5,TwoS
+101003302,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),330,without [PIONEER S1] High-Risk,TwoS
+102003302,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),330,without [PIONEER S1] High-Risk,TwoS
+103003302,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),330,without [PIONEER S1] High-Risk,TwoS
+104003302,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,330,without [PIONEER S1] High-Risk,TwoS
+105003302,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],330,without [PIONEER S1] High-Risk,TwoS
+106003302,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",330,without [PIONEER S1] High-Risk,TwoS
+101003312,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),331,without [PIONEER S2] Low-Risk,TwoS
+102003312,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),331,without [PIONEER S2] Low-Risk,TwoS
+103003312,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),331,without [PIONEER S2] Low-Risk,TwoS
+104003312,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,331,without [PIONEER S2] Low-Risk,TwoS
+105003312,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],331,without [PIONEER S2] Low-Risk,TwoS
+106003312,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",331,without [PIONEER S2] Low-Risk,TwoS
+101003322,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),332,without [PIONEER S3] Intermediate-Risk,TwoS
+102003322,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),332,without [PIONEER S3] Intermediate-Risk,TwoS
+103003322,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),332,without [PIONEER S3] Intermediate-Risk,TwoS
+104003322,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,332,without [PIONEER S3] Intermediate-Risk,TwoS
+105003322,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],332,without [PIONEER S3] Intermediate-Risk,TwoS
+106003322,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",332,without [PIONEER S3] Intermediate-Risk,TwoS
+101003332,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),333,without [Pioneer 2.0] MRI of prostate S59,TwoS
+102003332,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),333,without [Pioneer 2.0] MRI of prostate S59,TwoS
+103003332,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),333,without [Pioneer 2.0] MRI of prostate S59,TwoS
+104003332,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,333,without [Pioneer 2.0] MRI of prostate S59,TwoS
+105003332,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],333,without [Pioneer 2.0] MRI of prostate S59,TwoS
+106003332,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",333,without [Pioneer 2.0] MRI of prostate S59,TwoS
+101003342,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),334,without [PIONEER 2.0] Bone scan FINAL,TwoS
+102003342,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),334,without [PIONEER 2.0] Bone scan FINAL,TwoS
+103003342,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),334,without [PIONEER 2.0] Bone scan FINAL,TwoS
+104003342,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,334,without [PIONEER 2.0] Bone scan FINAL,TwoS
+105003342,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],334,without [PIONEER 2.0] Bone scan FINAL,TwoS
+106003342,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",334,without [PIONEER 2.0] Bone scan FINAL,TwoS
+101003352,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),335,without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwoS
+102003352,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),335,without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwoS
+103003352,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),335,without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwoS
+104003352,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,335,without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwoS
+105003352,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],335,without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwoS
+106003352,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",335,without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwoS
+101003362,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),336,without REVIEW [Pioneer v2.0] PSA higher than 20,TwoS
+102003362,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),336,without REVIEW [Pioneer v2.0] PSA higher than 20,TwoS
+103003362,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),336,without REVIEW [Pioneer v2.0] PSA higher than 20,TwoS
+104003362,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,336,without REVIEW [Pioneer v2.0] PSA higher than 20,TwoS
+105003362,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],336,without REVIEW [Pioneer v2.0] PSA higher than 20,TwoS
+106003362,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",336,without REVIEW [Pioneer v2.0] PSA higher than 20,TwoS
+101003372,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),337,without REVIEW [Pioneer v2.0] PSA lower than 10,TwoS
+102003372,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),337,without REVIEW [Pioneer v2.0] PSA lower than 10,TwoS
+103003372,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),337,without REVIEW [Pioneer v2.0] PSA lower than 10,TwoS
+104003372,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,337,without REVIEW [Pioneer v2.0] PSA lower than 10,TwoS
+105003372,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],337,without REVIEW [Pioneer v2.0] PSA lower than 10,TwoS
+106003372,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",337,without REVIEW [Pioneer v2.0] PSA lower than 10,TwoS
+101003382,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),338,without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwoS
+102003382,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),338,without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwoS
+103003382,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),338,without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwoS
+104003382,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,338,without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwoS
+105003382,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],338,without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwoS
+106003382,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",338,without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwoS
+101003392,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),339,without [Pioneer 2.0] Fatigue,TwoS
+102003392,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),339,without [Pioneer 2.0] Fatigue,TwoS
+103003392,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),339,without [Pioneer 2.0] Fatigue,TwoS
+104003392,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,339,without [Pioneer 2.0] Fatigue,TwoS
+105003392,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],339,without [Pioneer 2.0] Fatigue,TwoS
+106003392,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",339,without [Pioneer 2.0] Fatigue,TwoS
+101003402,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),340,without [Pioneer 2.0] Diarrhea,TwoS
+102003402,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),340,without [Pioneer 2.0] Diarrhea,TwoS
+103003402,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),340,without [Pioneer 2.0] Diarrhea,TwoS
+104003402,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,340,without [Pioneer 2.0] Diarrhea,TwoS
+105003402,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],340,without [Pioneer 2.0] Diarrhea,TwoS
+106003402,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",340,without [Pioneer 2.0] Diarrhea,TwoS
+101003412,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),341,without FDA AESI Immune thrombocytopenia (ITP) events,TwoS
+102003412,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),341,without FDA AESI Immune thrombocytopenia (ITP) events,TwoS
+103003412,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),341,without FDA AESI Immune thrombocytopenia (ITP) events,TwoS
+104003412,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,341,without FDA AESI Immune thrombocytopenia (ITP) events,TwoS
+105003412,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],341,without FDA AESI Immune thrombocytopenia (ITP) events,TwoS
+106003412,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",341,without FDA AESI Immune thrombocytopenia (ITP) events,TwoS
+101003422,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),342,without {PIONEER 2.0] Neutropenia,TwoS
+102003422,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),342,without {PIONEER 2.0] Neutropenia,TwoS
+103003422,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),342,without {PIONEER 2.0] Neutropenia,TwoS
+104003422,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,342,without {PIONEER 2.0] Neutropenia,TwoS
+105003422,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],342,without {PIONEER 2.0] Neutropenia,TwoS
+106003422,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",342,without {PIONEER 2.0] Neutropenia,TwoS
+101003432,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),343,without [PIONEER 2.0] Convulsion,TwoS
+102003432,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),343,without [PIONEER 2.0] Convulsion,TwoS
+103003432,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),343,without [PIONEER 2.0] Convulsion,TwoS
+104003432,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,343,without [PIONEER 2.0] Convulsion,TwoS
+105003432,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],343,without [PIONEER 2.0] Convulsion,TwoS
+106003432,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",343,without [PIONEER 2.0] Convulsion,TwoS
+101003442,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),344,without [Pioneer 2.0] Acute myocardial infarction,TwoS
+102003442,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),344,without [Pioneer 2.0] Acute myocardial infarction,TwoS
+103003442,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),344,without [Pioneer 2.0] Acute myocardial infarction,TwoS
+104003442,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,344,without [Pioneer 2.0] Acute myocardial infarction,TwoS
+105003442,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],344,without [Pioneer 2.0] Acute myocardial infarction,TwoS
+106003442,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",344,without [Pioneer 2.0] Acute myocardial infarction,TwoS
+101003452,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),345,without [PIONEER 2.0] Constipation,TwoS
+102003452,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),345,without [PIONEER 2.0] Constipation,TwoS
+103003452,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),345,without [PIONEER 2.0] Constipation,TwoS
+104003452,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,345,without [PIONEER 2.0] Constipation,TwoS
+105003452,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],345,without [PIONEER 2.0] Constipation,TwoS
+106003452,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",345,without [PIONEER 2.0] Constipation,TwoS
+101003462,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),346,without [PIONEER 2.0] Hypokalemia,TwoS
+102003462,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),346,without [PIONEER 2.0] Hypokalemia,TwoS
+103003462,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),346,without [PIONEER 2.0] Hypokalemia,TwoS
+104003462,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,346,without [PIONEER 2.0] Hypokalemia,TwoS
+105003462,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],346,without [PIONEER 2.0] Hypokalemia,TwoS
+106003462,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",346,without [PIONEER 2.0] Hypokalemia,TwoS
+101003472,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),347,without [PIONEER 2.0] Index date 2016,TwoS
+102003472,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),347,without [PIONEER 2.0] Index date 2016,TwoS
+103003472,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),347,without [PIONEER 2.0] Index date 2016,TwoS
+104003472,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,347,without [PIONEER 2.0] Index date 2016,TwoS
+105003472,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],347,without [PIONEER 2.0] Index date 2016,TwoS
+106003472,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",347,without [PIONEER 2.0] Index date 2016,TwoS
+101003482,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),348,without [PIONEER 2.0] Index date 2017,TwoS
+102003482,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),348,without [PIONEER 2.0] Index date 2017,TwoS
+103003482,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),348,without [PIONEER 2.0] Index date 2017,TwoS
+104003482,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,348,without [PIONEER 2.0] Index date 2017,TwoS
+105003482,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],348,without [PIONEER 2.0] Index date 2017,TwoS
+106003482,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",348,without [PIONEER 2.0] Index date 2017,TwoS
+101003492,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),349,without [PIONEER 2.0] Index date 2018,TwoS
+102003492,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),349,without [PIONEER 2.0] Index date 2018,TwoS
+103003492,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),349,without [PIONEER 2.0] Index date 2018,TwoS
+104003492,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,349,without [PIONEER 2.0] Index date 2018,TwoS
+105003492,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],349,without [PIONEER 2.0] Index date 2018,TwoS
+106003492,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",349,without [PIONEER 2.0] Index date 2018,TwoS
+101003502,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),350,without [PIONEER 2.0] Index date 2019,TwoS
+102003502,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),350,without [PIONEER 2.0] Index date 2019,TwoS
+103003502,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),350,without [PIONEER 2.0] Index date 2019,TwoS
+104003502,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,350,without [PIONEER 2.0] Index date 2019,TwoS
+105003502,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],350,without [PIONEER 2.0] Index date 2019,TwoS
+106003502,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",350,without [PIONEER 2.0] Index date 2019,TwoS
+101003512,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),351,without [PIONEER 2.0] Index date 2020,TwoS
+102003512,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),351,without [PIONEER 2.0] Index date 2020,TwoS
+103003512,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),351,without [PIONEER 2.0] Index date 2020,TwoS
+104003512,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,351,without [PIONEER 2.0] Index date 2020,TwoS
+105003512,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],351,without [PIONEER 2.0] Index date 2020,TwoS
+106003512,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",351,without [PIONEER 2.0] Index date 2020,TwoS
+101003522,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),352,without [PIONEER 2.0] Index year 2021,TwoS
+102003522,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),352,without [PIONEER 2.0] Index year 2021,TwoS
+103003522,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),352,without [PIONEER 2.0] Index year 2021,TwoS
+104003522,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,352,without [PIONEER 2.0] Index year 2021,TwoS
+105003522,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],352,without [PIONEER 2.0] Index year 2021,TwoS
+106003522,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",352,without [PIONEER 2.0] Index year 2021,TwoS
+101003532,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),353,without [PIONEER 2.0] Index year 2022,TwoS
+102003532,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),353,without [PIONEER 2.0] Index year 2022,TwoS
+103003532,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),353,without [PIONEER 2.0] Index year 2022,TwoS
+104003532,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,353,without [PIONEER 2.0] Index year 2022,TwoS
+105003532,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],353,without [PIONEER 2.0] Index year 2022,TwoS
+106003532,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",353,without [PIONEER 2.0] Index year 2022,TwoS
+101003542,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),354,without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwoS
+102003542,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),354,without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwoS
+103003542,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),354,without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwoS
+104003542,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,354,without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwoS
+105003542,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],354,without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwoS
+106003542,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",354,without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwoS
+101003552,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),355,without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwoS
+102003552,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),355,without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwoS
+103003552,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),355,without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwoS
+104003552,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,355,without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwoS
+105003552,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],355,without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwoS
+106003552,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",355,without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwoS
+101003562,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),356,without REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwoS
+102003562,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),356,without REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwoS
+103003562,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),356,without REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwoS
+104003562,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,356,without REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwoS
+105003562,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],356,without REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwoS
+106003562,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",356,without REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwoS
+101003572,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),357,without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwoS
+102003572,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),357,without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwoS
+103003572,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),357,without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwoS
+104003572,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,357,without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwoS
+105003572,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],357,without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwoS
+106003572,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",357,without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwoS
+101003582,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),358,without REVIEW [PIONEER 2.0] ADT + ARTA,TwoS
+102003582,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),358,without REVIEW [PIONEER 2.0] ADT + ARTA,TwoS
+103003582,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),358,without REVIEW [PIONEER 2.0] ADT + ARTA,TwoS
+104003582,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,358,without REVIEW [PIONEER 2.0] ADT + ARTA,TwoS
+105003582,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],358,without REVIEW [PIONEER 2.0] ADT + ARTA,TwoS
+106003582,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",358,without REVIEW [PIONEER 2.0] ADT + ARTA,TwoS
+101003592,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),359,without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwoS
+102003592,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),359,without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwoS
+103003592,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),359,without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwoS
+104003592,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,359,without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwoS
+105003592,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],359,without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwoS
+106003592,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",359,without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwoS
+101003602,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),360,without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwoS
+102003602,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),360,without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwoS
+103003602,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),360,without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwoS
+104003602,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,360,without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwoS
+105003602,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],360,without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwoS
+106003602,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",360,without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwoS
+101003612,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),361,without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwoS
+102003612,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),361,without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwoS
+103003612,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),361,without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwoS
+104003612,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,361,without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwoS
+105003612,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],361,without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwoS
+106003612,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",361,without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwoS
+101003622,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),362,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwoS
+102003622,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),362,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwoS
+103003622,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),362,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwoS
+104003622,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,362,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwoS
+105003622,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],362,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwoS
+106003622,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",362,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwoS
+101003632,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),363,without REVIEW [PIONEER 2.0] ADT + CHEMO,TwoS
+102003632,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),363,without REVIEW [PIONEER 2.0] ADT + CHEMO,TwoS
+103003632,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),363,without REVIEW [PIONEER 2.0] ADT + CHEMO,TwoS
+104003632,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,363,without REVIEW [PIONEER 2.0] ADT + CHEMO,TwoS
+105003632,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],363,without REVIEW [PIONEER 2.0] ADT + CHEMO,TwoS
+106003632,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",363,without REVIEW [PIONEER 2.0] ADT + CHEMO,TwoS
+101003642,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),364,without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwoS
+102003642,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),364,without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwoS
+103003642,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),364,without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwoS
+104003642,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,364,without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwoS
+105003642,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],364,without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwoS
+106003642,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",364,without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwoS
+101003652,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),365,without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwoS
+102003652,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),365,without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwoS
+103003652,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),365,without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwoS
+104003652,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,365,without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwoS
+105003652,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],365,without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwoS
+106003652,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",365,without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwoS
+101003662,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),366,without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwoS
+102003662,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),366,without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwoS
+103003662,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),366,without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwoS
+104003662,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,366,without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwoS
+105003662,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],366,without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwoS
+106003662,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",366,without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwoS
+101003672,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),367,without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwoS
+102003672,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),367,without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwoS
+103003672,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),367,without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwoS
+104003672,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,367,without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwoS
+105003672,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],367,without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwoS
+106003672,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",367,without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwoS
+101003682,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),368,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwoS
+102003682,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),368,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwoS
+103003682,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),368,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwoS
+104003682,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,368,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwoS
+105003682,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],368,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwoS
+106003682,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",368,without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwoS
+101003692,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),369,without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwoS
+102003692,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),369,without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwoS
+103003692,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),369,without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwoS
+104003692,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,369,without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwoS
+105003692,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],369,without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwoS
+106003692,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",369,without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwoS
+101003702,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),370,without REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwoS
+102003702,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),370,without REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwoS
+103003702,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),370,without REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwoS
+104003702,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,370,without REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwoS
+105003702,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],370,without REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwoS
+106003702,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",370,without REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwoS
+101003712,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),371,without REVIEW [PIONEER 2.0] ADT +Radium 223,TwoS
+102003712,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),371,without REVIEW [PIONEER 2.0] ADT +Radium 223,TwoS
+103003712,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),371,without REVIEW [PIONEER 2.0] ADT +Radium 223,TwoS
+104003712,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,371,without REVIEW [PIONEER 2.0] ADT +Radium 223,TwoS
+105003712,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],371,without REVIEW [PIONEER 2.0] ADT +Radium 223,TwoS
+106003712,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",371,without REVIEW [PIONEER 2.0] ADT +Radium 223,TwoS
+101003722,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),372,without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwoS
+102003722,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),372,without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwoS
+103003722,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),372,without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwoS
+104003722,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,372,without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwoS
+105003722,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],372,without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwoS
+106003722,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",372,without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwoS
+101003732,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),373,without REVIEW [PIONEER 2.0] ADT + olaparib,TwoS
+102003732,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),373,without REVIEW [PIONEER 2.0] ADT + olaparib,TwoS
+103003732,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),373,without REVIEW [PIONEER 2.0] ADT + olaparib,TwoS
+104003732,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,373,without REVIEW [PIONEER 2.0] ADT + olaparib,TwoS
+105003732,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],373,without REVIEW [PIONEER 2.0] ADT + olaparib,TwoS
+106003732,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",373,without REVIEW [PIONEER 2.0] ADT + olaparib,TwoS
+101003742,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),374,without REVIEW [PIONEER 2.0] ADT + rucaparib,TwoS
+102003742,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),374,without REVIEW [PIONEER 2.0] ADT + rucaparib,TwoS
+103003742,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),374,without REVIEW [PIONEER 2.0] ADT + rucaparib,TwoS
+104003742,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,374,without REVIEW [PIONEER 2.0] ADT + rucaparib,TwoS
+105003742,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],374,without REVIEW [PIONEER 2.0] ADT + rucaparib,TwoS
+106003742,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",374,without REVIEW [PIONEER 2.0] ADT + rucaparib,TwoS
+101003752,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),375,without REVIEW [PIONEER 2.0] ADT + immunotherapy,TwoS
+102003752,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),375,without REVIEW [PIONEER 2.0] ADT + immunotherapy,TwoS
+103003752,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),375,without REVIEW [PIONEER 2.0] ADT + immunotherapy,TwoS
+104003752,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,375,without REVIEW [PIONEER 2.0] ADT + immunotherapy,TwoS
+105003752,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],375,without REVIEW [PIONEER 2.0] ADT + immunotherapy,TwoS
+106003752,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",375,without REVIEW [PIONEER 2.0] ADT + immunotherapy,TwoS
+101003762,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),376,without REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwoS
+102003762,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),376,without REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwoS
+103003762,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),376,without REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwoS
+104003762,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,376,without REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwoS
+105003762,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],376,without REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwoS
+106003762,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",376,without REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwoS
+101003772,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),377,without REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwoS
+102003772,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),377,without REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwoS
+103003772,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),377,without REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwoS
+104003772,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,377,without REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwoS
+105003772,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],377,without REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwoS
+106003772,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",377,without REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwoS
+101000011,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),1,with Age < 60,TwS
+102000011,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),1,with Age < 60,TwS
+103000011,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),1,with Age < 60,TwS
+104000011,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,1,with Age < 60,TwS
+105000011,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],1,with Age < 60,TwS
+106000011,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",1,with Age < 60,TwS
+101000021,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),2,with Age 60 - 69,TwS
+102000021,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),2,with Age 60 - 69,TwS
+103000021,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),2,with Age 60 - 69,TwS
+104000021,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,2,with Age 60 - 69,TwS
+105000021,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],2,with Age 60 - 69,TwS
+106000021,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",2,with Age 60 - 69,TwS
+101000031,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),3,with Age 70 - 79,TwS
+102000031,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),3,with Age 70 - 79,TwS
+103000031,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),3,with Age 70 - 79,TwS
+104000031,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,3,with Age 70 - 79,TwS
+105000031,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],3,with Age 70 - 79,TwS
+106000031,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",3,with Age 70 - 79,TwS
+101000041,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),4,with Age >= 80,TwS
+102000041,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),4,with Age >= 80,TwS
+103000041,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),4,with Age >= 80,TwS
+104000041,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,4,with Age >= 80,TwS
+105000041,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],4,with Age >= 80,TwS
+106000041,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",4,with Age >= 80,TwS
+101003011,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),301,with [PIONEER 2.0] Performance Status ECOG=0,TwS
+102003011,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),301,with [PIONEER 2.0] Performance Status ECOG=0,TwS
+103003011,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),301,with [PIONEER 2.0] Performance Status ECOG=0,TwS
+104003011,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,301,with [PIONEER 2.0] Performance Status ECOG=0,TwS
+105003011,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],301,with [PIONEER 2.0] Performance Status ECOG=0,TwS
+106003011,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",301,with [PIONEER 2.0] Performance Status ECOG=0,TwS
+101003021,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),302,with [PIONEER 2.0] Performance Status ECOG=1,TwS
+102003021,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),302,with [PIONEER 2.0] Performance Status ECOG=1,TwS
+103003021,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),302,with [PIONEER 2.0] Performance Status ECOG=1,TwS
+104003021,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,302,with [PIONEER 2.0] Performance Status ECOG=1,TwS
+105003021,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],302,with [PIONEER 2.0] Performance Status ECOG=1,TwS
+106003021,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",302,with [PIONEER 2.0] Performance Status ECOG=1,TwS
+101003031,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),303,with [PIONEER 2.0] Performance Status ECOG=2+,TwS
+102003031,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),303,with [PIONEER 2.0] Performance Status ECOG=2+,TwS
+103003031,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),303,with [PIONEER 2.0] Performance Status ECOG=2+,TwS
+104003031,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,303,with [PIONEER 2.0] Performance Status ECOG=2+,TwS
+105003031,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],303,with [PIONEER 2.0] Performance Status ECOG=2+,TwS
+106003031,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",303,with [PIONEER 2.0] Performance Status ECOG=2+,TwS
+101003041,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),304,with [Pioneer 2.0] Prevalent obesity S11,TwS
+102003041,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),304,with [Pioneer 2.0] Prevalent obesity S11,TwS
+103003041,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),304,with [Pioneer 2.0] Prevalent obesity S11,TwS
+104003041,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,304,with [Pioneer 2.0] Prevalent obesity S11,TwS
+105003041,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],304,with [Pioneer 2.0] Prevalent obesity S11,TwS
+106003041,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",304,with [Pioneer 2.0] Prevalent obesity S11,TwS
+101003051,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),305,with [Pioneer 2.0] Prevalent hypertension S12,TwS
+102003051,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),305,with [Pioneer 2.0] Prevalent hypertension S12,TwS
+103003051,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),305,with [Pioneer 2.0] Prevalent hypertension S12,TwS
+104003051,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,305,with [Pioneer 2.0] Prevalent hypertension S12,TwS
+105003051,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],305,with [Pioneer 2.0] Prevalent hypertension S12,TwS
+106003051,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",305,with [Pioneer 2.0] Prevalent hypertension S12,TwS
+101003061,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),306,with [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwS
+102003061,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),306,with [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwS
+103003061,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),306,with [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwS
+104003061,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,306,with [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwS
+105003061,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],306,with [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwS
+106003061,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",306,with [Pioneer 2.0] Total Cardiovascular Disease Event S13,TwS
+101003071,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),307,with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwS
+102003071,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),307,with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwS
+103003071,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),307,with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwS
+104003071,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,307,with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwS
+105003071,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],307,with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwS
+106003071,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",307,with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15,TwS
+101003081,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),308,with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwS
+102003081,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),308,with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwS
+103003081,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),308,with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwS
+104003081,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,308,with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwS
+105003081,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],308,with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwS
+106003081,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",308,with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16,TwS
+101003091,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),309,with [Pioneer 2.0] Anxiety S17,TwS
+102003091,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),309,with [Pioneer 2.0] Anxiety S17,TwS
+103003091,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),309,with [Pioneer 2.0] Anxiety S17,TwS
+104003091,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,309,with [Pioneer 2.0] Anxiety S17,TwS
+105003091,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],309,with [Pioneer 2.0] Anxiety S17,TwS
+106003091,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",309,with [Pioneer 2.0] Anxiety S17,TwS
+101003101,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),310,with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwS
+102003101,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),310,with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwS
+103003101,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),310,with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwS
+104003101,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,310,with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwS
+105003101,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],310,with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwS
+106003101,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",310,with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18,TwS
+101003111,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),311,with [Pioneer 2.0] Family History of PCa S22,TwS
+102003111,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),311,with [Pioneer 2.0] Family History of PCa S22,TwS
+103003111,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),311,with [Pioneer 2.0] Family History of PCa S22,TwS
+104003111,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,311,with [Pioneer 2.0] Family History of PCa S22,TwS
+105003111,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],311,with [Pioneer 2.0] Family History of PCa S22,TwS
+106003111,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",311,with [Pioneer 2.0] Family History of PCa S22,TwS
+101003121,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),312,with [Pioneer 2.0] Physical Therapy S23,TwS
+102003121,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),312,with [Pioneer 2.0] Physical Therapy S23,TwS
+103003121,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),312,with [Pioneer 2.0] Physical Therapy S23,TwS
+104003121,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,312,with [Pioneer 2.0] Physical Therapy S23,TwS
+105003121,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],312,with [Pioneer 2.0] Physical Therapy S23,TwS
+106003121,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",312,with [Pioneer 2.0] Physical Therapy S23,TwS
+101003131,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),313,with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwS
+102003131,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),313,with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwS
+103003131,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),313,with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwS
+104003131,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,313,with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwS
+105003131,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],313,with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwS
+106003131,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",313,with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a,TwS
+101003141,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),314,with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwS
+102003141,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),314,with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwS
+103003141,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),314,with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwS
+104003141,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,314,with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwS
+105003141,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],314,with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwS
+106003141,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",314,with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b,TwS
+101003151,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
+102003151,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
+103003151,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
+104003151,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
+105003151,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
+106003151,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
+101003161,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),316,with [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwS
+102003161,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),316,with [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwS
+103003161,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),316,with [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwS
+104003161,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,316,with [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwS
+105003161,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],316,with [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwS
+106003161,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",316,with [PIONEER 2.0] Metastasis recurrent RT-FINAL,TwS
+101003171,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),317,with [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwS
+102003171,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),317,with [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwS
+103003171,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),317,with [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwS
+104003171,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,317,with [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwS
+105003171,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],317,with [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwS
+106003171,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",317,with [PIONEER 2.0] Metastasis recurrent RP-FINAL,TwS
+101003181,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),318,with [PIONEER 2.0] MRI of prostate FINAL,TwS
+102003181,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),318,with [PIONEER 2.0] MRI of prostate FINAL,TwS
+103003181,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),318,with [PIONEER 2.0] MRI of prostate FINAL,TwS
+104003181,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,318,with [PIONEER 2.0] MRI of prostate FINAL,TwS
+105003181,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],318,with [PIONEER 2.0] MRI of prostate FINAL,TwS
+106003181,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",318,with [PIONEER 2.0] MRI of prostate FINAL,TwS
+101003191,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),319,with [Pioneer 2.0] Bone scan S30,TwS
+102003191,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),319,with [Pioneer 2.0] Bone scan S30,TwS
+103003191,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),319,with [Pioneer 2.0] Bone scan S30,TwS
+104003191,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,319,with [Pioneer 2.0] Bone scan S30,TwS
+105003191,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],319,with [Pioneer 2.0] Bone scan S30,TwS
+106003191,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",319,with [Pioneer 2.0] Bone scan S30,TwS
+101003201,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),320,with [PIONEER 2.0] Abdominal CT scan,TwS
+102003201,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),320,with [PIONEER 2.0] Abdominal CT scan,TwS
+103003201,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),320,with [PIONEER 2.0] Abdominal CT scan,TwS
+104003201,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,320,with [PIONEER 2.0] Abdominal CT scan,TwS
+105003201,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],320,with [PIONEER 2.0] Abdominal CT scan,TwS
+106003201,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",320,with [PIONEER 2.0] Abdominal CT scan,TwS
+101003211,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),321,with [PIONEER 2.0] CT scan of whole body S32,TwS
+102003211,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),321,with [PIONEER 2.0] CT scan of whole body S32,TwS
+103003211,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),321,with [PIONEER 2.0] CT scan of whole body S32,TwS
+104003211,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,321,with [PIONEER 2.0] CT scan of whole body S32,TwS
+105003211,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],321,with [PIONEER 2.0] CT scan of whole body S32,TwS
+106003211,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",321,with [PIONEER 2.0] CT scan of whole body S32,TwS
+101003221,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),322,with [PIONEER 2.0] PET-CT imaging FINAL,TwS
+102003221,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),322,with [PIONEER 2.0] PET-CT imaging FINAL,TwS
+103003221,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),322,with [PIONEER 2.0] PET-CT imaging FINAL,TwS
+104003221,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,322,with [PIONEER 2.0] PET-CT imaging FINAL,TwS
+105003221,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],322,with [PIONEER 2.0] PET-CT imaging FINAL,TwS
+106003221,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",322,with [PIONEER 2.0] PET-CT imaging FINAL,TwS
+101003231,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),323,with [PIONEER S7] PSA>20,TwS
+102003231,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),323,with [PIONEER S7] PSA>20,TwS
+103003231,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),323,with [PIONEER S7] PSA>20,TwS
+104003231,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,323,with [PIONEER S7] PSA>20,TwS
+105003231,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],323,with [PIONEER S7] PSA>20,TwS
+106003231,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",323,with [PIONEER S7] PSA>20,TwS
+101003241,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),324,with [PIONEER S8] PSA<10,TwS
+102003241,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),324,with [PIONEER S8] PSA<10,TwS
+103003241,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),324,with [PIONEER S8] PSA<10,TwS
+104003241,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,324,with [PIONEER S8] PSA<10,TwS
+105003241,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],324,with [PIONEER S8] PSA<10,TwS
+106003241,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",324,with [PIONEER S8] PSA<10,TwS
+101003251,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),325,with [PIONEER S9] PSA 10-20,TwS
+102003251,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),325,with [PIONEER S9] PSA 10-20,TwS
+103003251,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),325,with [PIONEER S9] PSA 10-20,TwS
+104003251,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,325,with [PIONEER S9] PSA 10-20,TwS
+105003251,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],325,with [PIONEER S9] PSA 10-20,TwS
+106003251,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",325,with [PIONEER S9] PSA 10-20,TwS
+101003261,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),326,with [PIONEER V2.0] Earliest Gleason Grade 1,TwS
+102003261,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),326,with [PIONEER V2.0] Earliest Gleason Grade 1,TwS
+103003261,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),326,with [PIONEER V2.0] Earliest Gleason Grade 1,TwS
+104003261,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,326,with [PIONEER V2.0] Earliest Gleason Grade 1,TwS
+105003261,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],326,with [PIONEER V2.0] Earliest Gleason Grade 1,TwS
+106003261,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",326,with [PIONEER V2.0] Earliest Gleason Grade 1,TwS
+101003271,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),327,with [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwS
+102003271,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),327,with [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwS
+103003271,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),327,with [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwS
+104003271,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,327,with [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwS
+105003271,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],327,with [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwS
+106003271,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",327,with [PIONEER V2.0] Earliest Gleason Grade 2 - 3,TwS
+101003281,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),328,with [PIONEER V2.0] Earliest Gleason Grade 4,TwS
+102003281,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),328,with [PIONEER V2.0] Earliest Gleason Grade 4,TwS
+103003281,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),328,with [PIONEER V2.0] Earliest Gleason Grade 4,TwS
+104003281,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,328,with [PIONEER V2.0] Earliest Gleason Grade 4,TwS
+105003281,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],328,with [PIONEER V2.0] Earliest Gleason Grade 4,TwS
+106003281,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",328,with [PIONEER V2.0] Earliest Gleason Grade 4,TwS
+101003291,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),329,with [PIONEER V2.0] Earliest Gleason Grade 5,TwS
+102003291,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),329,with [PIONEER V2.0] Earliest Gleason Grade 5,TwS
+103003291,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),329,with [PIONEER V2.0] Earliest Gleason Grade 5,TwS
+104003291,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,329,with [PIONEER V2.0] Earliest Gleason Grade 5,TwS
+105003291,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],329,with [PIONEER V2.0] Earliest Gleason Grade 5,TwS
+106003291,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",329,with [PIONEER V2.0] Earliest Gleason Grade 5,TwS
+101003301,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),330,with [PIONEER S1] High-Risk,TwS
+102003301,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),330,with [PIONEER S1] High-Risk,TwS
+103003301,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),330,with [PIONEER S1] High-Risk,TwS
+104003301,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,330,with [PIONEER S1] High-Risk,TwS
+105003301,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],330,with [PIONEER S1] High-Risk,TwS
+106003301,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",330,with [PIONEER S1] High-Risk,TwS
+101003311,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),331,with [PIONEER S2] Low-Risk,TwS
+102003311,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),331,with [PIONEER S2] Low-Risk,TwS
+103003311,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),331,with [PIONEER S2] Low-Risk,TwS
+104003311,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,331,with [PIONEER S2] Low-Risk,TwS
+105003311,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],331,with [PIONEER S2] Low-Risk,TwS
+106003311,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",331,with [PIONEER S2] Low-Risk,TwS
+101003321,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),332,with [PIONEER S3] Intermediate-Risk,TwS
+102003321,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),332,with [PIONEER S3] Intermediate-Risk,TwS
+103003321,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),332,with [PIONEER S3] Intermediate-Risk,TwS
+104003321,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,332,with [PIONEER S3] Intermediate-Risk,TwS
+105003321,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],332,with [PIONEER S3] Intermediate-Risk,TwS
+106003321,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",332,with [PIONEER S3] Intermediate-Risk,TwS
+101003331,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),333,with [Pioneer 2.0] MRI of prostate S59,TwS
+102003331,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),333,with [Pioneer 2.0] MRI of prostate S59,TwS
+103003331,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),333,with [Pioneer 2.0] MRI of prostate S59,TwS
+104003331,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,333,with [Pioneer 2.0] MRI of prostate S59,TwS
+105003331,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],333,with [Pioneer 2.0] MRI of prostate S59,TwS
+106003331,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",333,with [Pioneer 2.0] MRI of prostate S59,TwS
+101003341,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),334,with [PIONEER 2.0] Bone scan FINAL,TwS
+102003341,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),334,with [PIONEER 2.0] Bone scan FINAL,TwS
+103003341,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),334,with [PIONEER 2.0] Bone scan FINAL,TwS
+104003341,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,334,with [PIONEER 2.0] Bone scan FINAL,TwS
+105003341,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],334,with [PIONEER 2.0] Bone scan FINAL,TwS
+106003341,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",334,with [PIONEER 2.0] Bone scan FINAL,TwS
+101003351,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),335,with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwS
+102003351,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),335,with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwS
+103003351,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),335,with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwS
+104003351,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,335,with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwS
+105003351,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],335,with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwS
+106003351,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",335,with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,TwS
+101003361,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),336,with REVIEW [Pioneer v2.0] PSA higher than 20,TwS
+102003361,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),336,with REVIEW [Pioneer v2.0] PSA higher than 20,TwS
+103003361,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),336,with REVIEW [Pioneer v2.0] PSA higher than 20,TwS
+104003361,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,336,with REVIEW [Pioneer v2.0] PSA higher than 20,TwS
+105003361,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],336,with REVIEW [Pioneer v2.0] PSA higher than 20,TwS
+106003361,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",336,with REVIEW [Pioneer v2.0] PSA higher than 20,TwS
+101003371,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),337,with REVIEW [Pioneer v2.0] PSA lower than 10,TwS
+102003371,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),337,with REVIEW [Pioneer v2.0] PSA lower than 10,TwS
+103003371,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),337,with REVIEW [Pioneer v2.0] PSA lower than 10,TwS
+104003371,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,337,with REVIEW [Pioneer v2.0] PSA lower than 10,TwS
+105003371,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],337,with REVIEW [Pioneer v2.0] PSA lower than 10,TwS
+106003371,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",337,with REVIEW [Pioneer v2.0] PSA lower than 10,TwS
+101003381,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),338,with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwS
+102003381,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),338,with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwS
+103003381,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),338,with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwS
+104003381,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,338,with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwS
+105003381,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],338,with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwS
+106003381,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",338,with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index,TwS
+101003391,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),339,with [Pioneer 2.0] Fatigue,TwS
+102003391,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),339,with [Pioneer 2.0] Fatigue,TwS
+103003391,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),339,with [Pioneer 2.0] Fatigue,TwS
+104003391,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,339,with [Pioneer 2.0] Fatigue,TwS
+105003391,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],339,with [Pioneer 2.0] Fatigue,TwS
+106003391,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",339,with [Pioneer 2.0] Fatigue,TwS
+101003401,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),340,with [Pioneer 2.0] Diarrhea,TwS
+102003401,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),340,with [Pioneer 2.0] Diarrhea,TwS
+103003401,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),340,with [Pioneer 2.0] Diarrhea,TwS
+104003401,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,340,with [Pioneer 2.0] Diarrhea,TwS
+105003401,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],340,with [Pioneer 2.0] Diarrhea,TwS
+106003401,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",340,with [Pioneer 2.0] Diarrhea,TwS
+101003411,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),341,with FDA AESI Immune thrombocytopenia (ITP) events,TwS
+102003411,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),341,with FDA AESI Immune thrombocytopenia (ITP) events,TwS
+103003411,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),341,with FDA AESI Immune thrombocytopenia (ITP) events,TwS
+104003411,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,341,with FDA AESI Immune thrombocytopenia (ITP) events,TwS
+105003411,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],341,with FDA AESI Immune thrombocytopenia (ITP) events,TwS
+106003411,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",341,with FDA AESI Immune thrombocytopenia (ITP) events,TwS
+101003421,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),342,with {PIONEER 2.0] Neutropenia,TwS
+102003421,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),342,with {PIONEER 2.0] Neutropenia,TwS
+103003421,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),342,with {PIONEER 2.0] Neutropenia,TwS
+104003421,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,342,with {PIONEER 2.0] Neutropenia,TwS
+105003421,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],342,with {PIONEER 2.0] Neutropenia,TwS
+106003421,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",342,with {PIONEER 2.0] Neutropenia,TwS
+101003431,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),343,with [PIONEER 2.0] Convulsion,TwS
+102003431,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),343,with [PIONEER 2.0] Convulsion,TwS
+103003431,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),343,with [PIONEER 2.0] Convulsion,TwS
+104003431,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,343,with [PIONEER 2.0] Convulsion,TwS
+105003431,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],343,with [PIONEER 2.0] Convulsion,TwS
+106003431,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",343,with [PIONEER 2.0] Convulsion,TwS
+101003441,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),344,with [Pioneer 2.0] Acute myocardial infarction,TwS
+102003441,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),344,with [Pioneer 2.0] Acute myocardial infarction,TwS
+103003441,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),344,with [Pioneer 2.0] Acute myocardial infarction,TwS
+104003441,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,344,with [Pioneer 2.0] Acute myocardial infarction,TwS
+105003441,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],344,with [Pioneer 2.0] Acute myocardial infarction,TwS
+106003441,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",344,with [Pioneer 2.0] Acute myocardial infarction,TwS
+101003451,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),345,with [PIONEER 2.0] Constipation,TwS
+102003451,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),345,with [PIONEER 2.0] Constipation,TwS
+103003451,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),345,with [PIONEER 2.0] Constipation,TwS
+104003451,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,345,with [PIONEER 2.0] Constipation,TwS
+105003451,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],345,with [PIONEER 2.0] Constipation,TwS
+106003451,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",345,with [PIONEER 2.0] Constipation,TwS
+101003461,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),346,with [PIONEER 2.0] Hypokalemia,TwS
+102003461,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),346,with [PIONEER 2.0] Hypokalemia,TwS
+103003461,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),346,with [PIONEER 2.0] Hypokalemia,TwS
+104003461,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,346,with [PIONEER 2.0] Hypokalemia,TwS
+105003461,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],346,with [PIONEER 2.0] Hypokalemia,TwS
+106003461,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",346,with [PIONEER 2.0] Hypokalemia,TwS
+101003471,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),347,with [PIONEER 2.0] Index date 2016,TwS
+102003471,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),347,with [PIONEER 2.0] Index date 2016,TwS
+103003471,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),347,with [PIONEER 2.0] Index date 2016,TwS
+104003471,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,347,with [PIONEER 2.0] Index date 2016,TwS
+105003471,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],347,with [PIONEER 2.0] Index date 2016,TwS
+106003471,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",347,with [PIONEER 2.0] Index date 2016,TwS
+101003481,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),348,with [PIONEER 2.0] Index date 2017,TwS
+102003481,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),348,with [PIONEER 2.0] Index date 2017,TwS
+103003481,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),348,with [PIONEER 2.0] Index date 2017,TwS
+104003481,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,348,with [PIONEER 2.0] Index date 2017,TwS
+105003481,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],348,with [PIONEER 2.0] Index date 2017,TwS
+106003481,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",348,with [PIONEER 2.0] Index date 2017,TwS
+101003491,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),349,with [PIONEER 2.0] Index date 2018,TwS
+102003491,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),349,with [PIONEER 2.0] Index date 2018,TwS
+103003491,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),349,with [PIONEER 2.0] Index date 2018,TwS
+104003491,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,349,with [PIONEER 2.0] Index date 2018,TwS
+105003491,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],349,with [PIONEER 2.0] Index date 2018,TwS
+106003491,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",349,with [PIONEER 2.0] Index date 2018,TwS
+101003501,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),350,with [PIONEER 2.0] Index date 2019,TwS
+102003501,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),350,with [PIONEER 2.0] Index date 2019,TwS
+103003501,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),350,with [PIONEER 2.0] Index date 2019,TwS
+104003501,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,350,with [PIONEER 2.0] Index date 2019,TwS
+105003501,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],350,with [PIONEER 2.0] Index date 2019,TwS
+106003501,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",350,with [PIONEER 2.0] Index date 2019,TwS
+101003511,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),351,with [PIONEER 2.0] Index date 2020,TwS
+102003511,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),351,with [PIONEER 2.0] Index date 2020,TwS
+103003511,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),351,with [PIONEER 2.0] Index date 2020,TwS
+104003511,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,351,with [PIONEER 2.0] Index date 2020,TwS
+105003511,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],351,with [PIONEER 2.0] Index date 2020,TwS
+106003511,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",351,with [PIONEER 2.0] Index date 2020,TwS
+101003521,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),352,with [PIONEER 2.0] Index year 2021,TwS
+102003521,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),352,with [PIONEER 2.0] Index year 2021,TwS
+103003521,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),352,with [PIONEER 2.0] Index year 2021,TwS
+104003521,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,352,with [PIONEER 2.0] Index year 2021,TwS
+105003521,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],352,with [PIONEER 2.0] Index year 2021,TwS
+106003521,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",352,with [PIONEER 2.0] Index year 2021,TwS
+101003531,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),353,with [PIONEER 2.0] Index year 2022,TwS
+102003531,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),353,with [PIONEER 2.0] Index year 2022,TwS
+103003531,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),353,with [PIONEER 2.0] Index year 2022,TwS
+104003531,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,353,with [PIONEER 2.0] Index year 2022,TwS
+105003531,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],353,with [PIONEER 2.0] Index year 2022,TwS
+106003531,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",353,with [PIONEER 2.0] Index year 2022,TwS
+101003541,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),354,with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwS
+102003541,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),354,with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwS
+103003541,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),354,with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwS
+104003541,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,354,with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwS
+105003541,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],354,with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwS
+106003541,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",354,with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen),TwS
+101003551,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),355,with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwS
+102003551,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),355,with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwS
+103003551,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),355,with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwS
+104003551,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,355,with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwS
+105003551,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],355,with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwS
+106003551,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",355,with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive),TwS
+101003561,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),356,with REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwS
+102003561,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),356,with REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwS
+103003561,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),356,with REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwS
+104003561,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,356,with REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwS
+105003561,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],356,with REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwS
+106003561,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",356,with REVIEW [PIONEER 2.0] ADT (LHRH exclusive),TwS
+101003571,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),357,with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwS
+102003571,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),357,with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwS
+103003571,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),357,with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwS
+104003571,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,357,with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwS
+105003571,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],357,with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwS
+106003571,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",357,with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens),TwS
+101003581,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),358,with REVIEW [PIONEER 2.0] ADT + ARTA,TwS
+102003581,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),358,with REVIEW [PIONEER 2.0] ADT + ARTA,TwS
+103003581,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),358,with REVIEW [PIONEER 2.0] ADT + ARTA,TwS
+104003581,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,358,with REVIEW [PIONEER 2.0] ADT + ARTA,TwS
+105003581,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],358,with REVIEW [PIONEER 2.0] ADT + ARTA,TwS
+106003581,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",358,with REVIEW [PIONEER 2.0] ADT + ARTA,TwS
+101003591,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),359,with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwS
+102003591,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),359,with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwS
+103003591,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),359,with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwS
+104003591,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,359,with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwS
+105003591,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],359,with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwS
+106003591,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",359,with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide),TwS
+101003601,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),360,with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwS
+102003601,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),360,with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwS
+103003601,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),360,with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwS
+104003601,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,360,with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwS
+105003601,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],360,with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwS
+106003601,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",360,with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone),TwS
+101003611,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),361,with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwS
+102003611,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),361,with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwS
+103003611,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),361,with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwS
+104003611,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,361,with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwS
+105003611,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],361,with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwS
+106003611,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",361,with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide),TwS
+101003621,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),362,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwS
+102003621,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),362,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwS
+103003621,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),362,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwS
+104003621,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,362,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwS
+105003621,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],362,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwS
+106003621,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",362,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide),TwS
+101003631,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),363,with REVIEW [PIONEER 2.0] ADT + CHEMO,TwS
+102003631,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),363,with REVIEW [PIONEER 2.0] ADT + CHEMO,TwS
+103003631,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),363,with REVIEW [PIONEER 2.0] ADT + CHEMO,TwS
+104003631,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,363,with REVIEW [PIONEER 2.0] ADT + CHEMO,TwS
+105003631,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],363,with REVIEW [PIONEER 2.0] ADT + CHEMO,TwS
+106003631,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",363,with REVIEW [PIONEER 2.0] ADT + CHEMO,TwS
+101003641,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),364,with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwS
+102003641,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),364,with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwS
+103003641,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),364,with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwS
+104003641,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,364,with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwS
+105003641,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],364,with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwS
+106003641,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",364,with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel),TwS
+101003651,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),365,with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwS
+102003651,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),365,with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwS
+103003651,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),365,with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwS
+104003651,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,365,with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwS
+105003651,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],365,with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwS
+106003651,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",365,with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel),TwS
+101003661,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),366,with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwS
+102003661,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),366,with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwS
+103003661,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),366,with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwS
+104003661,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,366,with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwS
+105003661,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],366,with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwS
+106003661,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",366,with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel),TwS
+101003671,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),367,with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwS
+102003671,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),367,with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwS
+103003671,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),367,with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwS
+104003671,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,367,with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwS
+105003671,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],367,with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwS
+106003671,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",367,with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO,TwS
+101003681,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),368,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwS
+102003681,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),368,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwS
+103003681,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),368,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwS
+104003681,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,368,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwS
+105003681,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],368,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwS
+106003681,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",368,with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel),TwS
+101003691,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),369,with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwS
+102003691,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),369,with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwS
+103003691,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),369,with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwS
+104003691,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,369,with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwS
+105003691,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],369,with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwS
+106003691,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",369,with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel),TwS
+101003701,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),370,with REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwS
+102003701,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),370,with REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwS
+103003701,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),370,with REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwS
+104003701,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,370,with REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwS
+105003701,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],370,with REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwS
+106003701,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",370,with REVIEW [PIONEER 2.0] ADT + lutetium PSMA,TwS
+101003711,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),371,with REVIEW [PIONEER 2.0] ADT +Radium 223,TwS
+102003711,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),371,with REVIEW [PIONEER 2.0] ADT +Radium 223,TwS
+103003711,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),371,with REVIEW [PIONEER 2.0] ADT +Radium 223,TwS
+104003711,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,371,with REVIEW [PIONEER 2.0] ADT +Radium 223,TwS
+105003711,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],371,with REVIEW [PIONEER 2.0] ADT +Radium 223,TwS
+106003711,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",371,with REVIEW [PIONEER 2.0] ADT +Radium 223,TwS
+101003721,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),372,with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwS
+102003721,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),372,with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwS
+103003721,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),372,with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwS
+104003721,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,372,with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwS
+105003721,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],372,with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwS
+106003721,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",372,with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor,TwS
+101003731,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),373,with REVIEW [PIONEER 2.0] ADT + olaparib,TwS
+102003731,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),373,with REVIEW [PIONEER 2.0] ADT + olaparib,TwS
+103003731,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),373,with REVIEW [PIONEER 2.0] ADT + olaparib,TwS
+104003731,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,373,with REVIEW [PIONEER 2.0] ADT + olaparib,TwS
+105003731,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],373,with REVIEW [PIONEER 2.0] ADT + olaparib,TwS
+106003731,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",373,with REVIEW [PIONEER 2.0] ADT + olaparib,TwS
+101003741,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),374,with REVIEW [PIONEER 2.0] ADT + rucaparib,TwS
+102003741,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),374,with REVIEW [PIONEER 2.0] ADT + rucaparib,TwS
+103003741,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),374,with REVIEW [PIONEER 2.0] ADT + rucaparib,TwS
+104003741,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,374,with REVIEW [PIONEER 2.0] ADT + rucaparib,TwS
+105003741,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],374,with REVIEW [PIONEER 2.0] ADT + rucaparib,TwS
+106003741,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",374,with REVIEW [PIONEER 2.0] ADT + rucaparib,TwS
+101003751,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),375,with REVIEW [PIONEER 2.0] ADT + immunotherapy,TwS
+102003751,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),375,with REVIEW [PIONEER 2.0] ADT + immunotherapy,TwS
+103003751,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),375,with REVIEW [PIONEER 2.0] ADT + immunotherapy,TwS
+104003751,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,375,with REVIEW [PIONEER 2.0] ADT + immunotherapy,TwS
+105003751,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],375,with REVIEW [PIONEER 2.0] ADT + immunotherapy,TwS
+106003751,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",375,with REVIEW [PIONEER 2.0] ADT + immunotherapy,TwS
+101003761,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),376,with REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwS
+102003761,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),376,with REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwS
+103003761,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),376,with REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwS
+104003761,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,376,with REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwS
+105003761,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],376,with REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwS
+106003761,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",376,with REVIEW [PIONEER 2.0] ADT + sipuleucel-T,TwS
+101003771,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),377,with REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwS
+102003771,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous),377,with REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwS
+103003771,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC (update ADT),377,with REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwS
+104003771,104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,377,with REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwS
+105003771,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) [update ADT list cancer modifieres],377,with REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwS
+106003771,106,"[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated [update ADT, Cancer Modifiers]",377,with REVIEW [PIONEER 2.0] ADT + pembrolizumab,TwS
