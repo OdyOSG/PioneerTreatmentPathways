@@ -26,7 +26,7 @@
 library(PioneerMetastaticTreatement)
 
 # get this token from an active ATLAS web session
-bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NDc0MDkyfQ.viGbin-HHHNLgiFU90OQTP9Qf8KK_g171gisv2fQsj0HxNGGolw5yzsOD1pDiRBJvjMiN1F3z3Hu_rU9tKsm0Q"
+bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NDkzODgzfQ.QH6rgLgnk4mmbrqnHZeYQY9U214cNmFAAsz97vvqEVVEQ3YZ_TrCuHNE91xl3pkj8rh8v0e79IF0pvaWu_UwTQ"
 
 baseUrl <- "https://pioneer.hzdr.de/WebAPI"
 ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
@@ -34,7 +34,8 @@ ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
 cohortGroups <- read.csv(file.path("inst/settings/CohortGroups.csv"))
 for(i in 1:nrow(cohortGroups)) {
   ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = file.path('inst', cohortGroups$fileName[i]),
-                                                   baseUrl, packageName = getThisPackageName())
+                                                   baseUrl, insertCohortCreationR = FALSE,
+                                                   packageName = getThisPackageName())
 }
 
 

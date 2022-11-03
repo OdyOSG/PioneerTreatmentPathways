@@ -98,7 +98,7 @@ verifyDependencies()
 # *******************************************************
 # SECTION 2: Running the package ---------------------------------------------------------------
 # *******************************************************
-library(PioneerWatchfulWaiting)
+library(PioneerMetastaticTreatement)
 
 # Optional: specify where the temporary files (used by the ff package) will be created:
 fftempdir <- if (Sys.getenv("FFTEMP_DIR") == "") "~/fftemp" else Sys.getenv("FFTEMP_DIR")

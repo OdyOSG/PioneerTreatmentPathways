@@ -25,7 +25,7 @@ library(tidyverse, warn.conflicts = FALSE)
 cols <- c('Pheno ID', 'Phenotype name', 'Intended use', 'Where <link to PIONEER CENTRAL ATLAS>')
 cohorts_base_url <- 'https://pioneer.hzdr.de/atlas/#/cohortdefinition/'
 wepapi_base_url <- 'https://pioneer.hzdr.de/WebAPI'
-bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NDc0MDkyfQ.viGbin-HHHNLgiFU90OQTP9Qf8KK_g171gisv2fQsj0HxNGGolw5yzsOD1pDiRBJvjMiN1F3z3Hu_rU9tKsm0Q"
+bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NDkzODgzfQ.QH6rgLgnk4mmbrqnHZeYQY9U214cNmFAAsz97vvqEVVEQ3YZ_TrCuHNE91xl3pkj8rh8v0e79IF0pvaWu_UwTQ"
 ROhdsiWebApi::setAuthHeader(wepapi_base_url, bearer)
 
 cohort_types <- c('t', 'o', 's')
@@ -90,7 +90,8 @@ for (i in 1:nrow(cohortGroups)) {
   for (i in 1:nrow(group_cohorts)) {
     tryCatch(
       expr = {
-            name <- group_cohorts[[i, 'Name']]
+            # name <- group_cohorts[[i, 'Name']]
+            name <- cohort_group_to_code[cohort_group] + i
             atlas_id <- as.integer(group_cohorts[[i, 'AtlasId']])
             cohort_id <- cohort_group_to_code[cohort_group] + i
             atlas_name <- ROhdsiWebApi::getCohortDefinition(baseUrl = wepapi_base_url, cohortId = atlas_id)$name

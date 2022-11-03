@@ -1,12 +1,2 @@
 name,atlasName,atlasId,cohortId
-Symptomatic progression,[PIONEER 2.0] Symptomatic progression-FINAL,361,201
-Death,[Pioneer 2.0] Death O4 1,362,202
-Radiotherapy following symptoms of pain and or hematuria,[PIONEER 2.0] RT after pain and or hematuria FINAL,341,203
-Placement of ureteral stent or nephrostomy for acute kidney failure,[PIONEER 2.0] Placement of urethral stent or neprhrostomy for AKI FINAL,339,204
-Colostomy,[PIONEER 2.0] Colostomy FINAL,333,205
-Chronic foley catheter placement,[Pioneer 2.0] Chronic foley catheter FINAL,334,206
-Pelvectomy (Total pelvic exenteration),[PIONEER 2.0] Pelvic exenteration FINAL,338,207
-Suprapubic catheter placement,[PIONEER 2.0] Suprapubic catheter FINAL,337,208
-TUR,[PIONEER 2.0] TUR FINAL,332,209
-Hospitalization,[PIONEER 2.0] Hospitalization,324,210
-ED visit,[PIONEER 2.0] ER Visit,327,211
+201,[PIONEER 2.0] Symptomatic progression-FINAL,361,201

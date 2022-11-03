@@ -15,7 +15,7 @@
 # limitations under the License.
 
 
-cohortGroups <- readr::read_csv("inst/settings/CohortGroups.csv", col_types=readr::cols())
+cohortGroups <- readr::read_csv("inst/settings/CohortGroups.csv", col_types = readr::cols())
 
 # Create the corresponding diagnostic file 
 for (i in 1:nrow(cohortGroups)) {
