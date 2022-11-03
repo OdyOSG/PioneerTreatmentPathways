@@ -25,7 +25,7 @@ library(tidyverse, warn.conflicts = FALSE)
 cols <- c('Pheno ID', 'Phenotype name', 'Intended use', 'Where <link to PIONEER CENTRAL ATLAS>')
 cohorts_base_url <- 'https://pioneer.hzdr.de/atlas/#/cohortdefinition/'
 wepapi_base_url <- 'https://pioneer.hzdr.de/WebAPI'
-bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NTEyMTk2fQ.96KA66TPEYHo9qa3V3PgUeZmiVHAUk3pduKNmKQDNZNvqSEOcfe-gGNMSTjvxXvaXZJ4qwM9g9JMfAcSi3QuFg"
+bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NTIzNTgyfQ.QsJBEKw_UMU7nHPtpyl0cqsEd7vWvUNscIvrGDMsHxqtT4eG7exya2Ev-eYlKQoiLYjuoUwtfDd68xmKMRm9eA"
 ROhdsiWebApi::setAuthHeader(wepapi_base_url, bearer)
 
 cohort_types <- c('t', 'o', 's')
@@ -33,11 +33,11 @@ letter_to_cohort_type <- c('t' = 'Target', 'o' = 'Outcome', 's' = 'Strata')
 cohort_group_to_code <- c('target' = 100, 'outcome' = 200, 'strata' = 300)
 
 # will be filtered from phenotypes. Ideally should be empty 
-invalid_atlas_ids <- c(342, 368)
+invalid_atlas_ids <- c()
 
 
 phenotypes <- readxl::read_excel('extras/PIONEER studyathon phenotype tracker OCTOBER 2022.xlsx',
-                                 sheet = 'Feuil1')
+                                 sheet = 'Tracker')
 
 for (column in cols) {
   if (!column %in% names(phenotypes)) {

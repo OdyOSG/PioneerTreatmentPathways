@@ -2,948 +2,948 @@ targetId,strataId,cohortId,cohortType,name
 101,1,101000011,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with Age < 60
 102,1,102000011,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with Age < 60
 103,1,103000011,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with Age < 60
-104,1,104000011,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with Age < 60
+104,1,104000011,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with Age < 60
 105,1,105000011,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with Age < 60
 106,1,106000011,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with Age < 60
 101,2,101000021,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with Age 60 - 69
 102,2,102000021,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with Age 60 - 69
 103,2,103000021,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with Age 60 - 69
-104,2,104000021,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with Age 60 - 69
+104,2,104000021,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with Age 60 - 69
 105,2,105000021,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with Age 60 - 69
 106,2,106000021,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with Age 60 - 69
 101,3,101000031,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with Age 70 - 79
 102,3,102000031,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with Age 70 - 79
 103,3,103000031,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with Age 70 - 79
-104,3,104000031,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with Age 70 - 79
+104,3,104000031,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with Age 70 - 79
 105,3,105000031,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with Age 70 - 79
 106,3,106000031,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with Age 70 - 79
 101,4,101000041,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with Age >= 80
 102,4,102000041,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with Age >= 80
 103,4,103000041,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with Age >= 80
-104,4,104000041,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with Age >= 80
+104,4,104000041,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with Age >= 80
 105,4,105000041,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with Age >= 80
 106,4,106000041,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with Age >= 80
 101,301,101003011,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Performance Status ECOG=0
 102,301,102003011,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Performance Status ECOG=0
 103,301,103003011,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Performance Status ECOG=0
-104,301,104003011,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Performance Status ECOG=0
+104,301,104003011,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Performance Status ECOG=0
 105,301,105003011,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Performance Status ECOG=0
 106,301,106003011,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Performance Status ECOG=0
 101,302,101003021,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Performance Status ECOG=1
 102,302,102003021,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Performance Status ECOG=1
 103,302,103003021,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Performance Status ECOG=1
-104,302,104003021,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Performance Status ECOG=1
+104,302,104003021,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Performance Status ECOG=1
 105,302,105003021,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Performance Status ECOG=1
 106,302,106003021,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Performance Status ECOG=1
 101,303,101003031,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Performance Status ECOG=2+
 102,303,102003031,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Performance Status ECOG=2+
 103,303,103003031,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Performance Status ECOG=2+
-104,303,104003031,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Performance Status ECOG=2+
+104,303,104003031,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Performance Status ECOG=2+
 105,303,105003031,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Performance Status ECOG=2+
 106,303,106003031,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Performance Status ECOG=2+
 101,304,101003041,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Prevalent obesity S11
 102,304,102003041,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Prevalent obesity S11
 103,304,103003041,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Prevalent obesity S11
-104,304,104003041,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Prevalent obesity S11
+104,304,104003041,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Prevalent obesity S11
 105,304,105003041,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Prevalent obesity S11
 106,304,106003041,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Prevalent obesity S11
 101,305,101003051,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Prevalent hypertension S12
 102,305,102003051,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Prevalent hypertension S12
 103,305,103003051,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Prevalent hypertension S12
-104,305,104003051,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Prevalent hypertension S12
+104,305,104003051,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Prevalent hypertension S12
 105,305,105003051,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Prevalent hypertension S12
 106,305,106003051,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Prevalent hypertension S12
 101,306,101003061,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Total Cardiovascular Disease Event S13
 102,306,102003061,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Total Cardiovascular Disease Event S13
 103,306,103003061,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Total Cardiovascular Disease Event S13
-104,306,104003061,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Total Cardiovascular Disease Event S13
+104,306,104003061,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Total Cardiovascular Disease Event S13
 105,306,105003061,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Total Cardiovascular Disease Event S13
 106,306,106003061,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Total Cardiovascular Disease Event S13
 101,307,101003071,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 102,307,102003071,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 103,307,103003071,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
-104,307,104003071,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
+104,307,104003071,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 105,307,105003071,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 106,307,106003071,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 101,308,101003081,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 102,308,102003081,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 103,308,103003081,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
-104,308,104003081,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
+104,308,104003081,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 105,308,105003081,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 106,308,106003081,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 101,309,101003091,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Anxiety S17
 102,309,102003091,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Anxiety S17
 103,309,103003091,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Anxiety S17
-104,309,104003091,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Anxiety S17
+104,309,104003091,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Anxiety S17
 105,309,105003091,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Anxiety S17
 106,309,106003091,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Anxiety S17
 101,310,101003101,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 102,310,102003101,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 103,310,103003101,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
-104,310,104003101,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
+104,310,104003101,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 105,310,105003101,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 106,310,106003101,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 101,311,101003111,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Family History of PCa S22
 102,311,102003111,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Family History of PCa S22
 103,311,103003111,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Family History of PCa S22
-104,311,104003111,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Family History of PCa S22
+104,311,104003111,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Family History of PCa S22
 105,311,105003111,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Family History of PCa S22
 106,311,106003111,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Family History of PCa S22
 101,312,101003121,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Physical Therapy S23
 102,312,102003121,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Physical Therapy S23
 103,312,103003121,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Physical Therapy S23
-104,312,104003121,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Physical Therapy S23
+104,312,104003121,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Physical Therapy S23
 105,312,105003121,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Physical Therapy S23
 106,312,106003121,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Physical Therapy S23
 101,313,101003131,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 102,313,102003131,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 103,313,103003131,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
-104,313,104003131,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
+104,313,104003131,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 105,313,105003131,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 106,313,106003131,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 101,314,101003141,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 102,314,102003141,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 103,314,103003141,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
-104,314,104003141,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
+104,314,104003141,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 105,314,105003141,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 106,314,106003141,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 101,315,101003151,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 102,315,102003151,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 103,315,103003151,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
-104,315,104003151,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
+104,315,104003151,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 105,315,105003151,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 106,315,106003151,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 101,316,101003161,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Metastasis recurrent RT-FINAL
 102,316,102003161,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Metastasis recurrent RT-FINAL
 103,316,103003161,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Metastasis recurrent RT-FINAL
-104,316,104003161,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Metastasis recurrent RT-FINAL
+104,316,104003161,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Metastasis recurrent RT-FINAL
 105,316,105003161,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Metastasis recurrent RT-FINAL
 106,316,106003161,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Metastasis recurrent RT-FINAL
 101,317,101003171,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Metastasis recurrent RP-FINAL
 102,317,102003171,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Metastasis recurrent RP-FINAL
 103,317,103003171,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Metastasis recurrent RP-FINAL
-104,317,104003171,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Metastasis recurrent RP-FINAL
+104,317,104003171,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Metastasis recurrent RP-FINAL
 105,317,105003171,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Metastasis recurrent RP-FINAL
 106,317,106003171,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Metastasis recurrent RP-FINAL
 101,318,101003181,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] MRI of prostate FINAL
 102,318,102003181,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] MRI of prostate FINAL
 103,318,103003181,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] MRI of prostate FINAL
-104,318,104003181,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] MRI of prostate FINAL
+104,318,104003181,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] MRI of prostate FINAL
 105,318,105003181,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] MRI of prostate FINAL
 106,318,106003181,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] MRI of prostate FINAL
 101,319,101003191,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Bone scan S30
 102,319,102003191,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Bone scan S30
 103,319,103003191,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Bone scan S30
-104,319,104003191,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Bone scan S30
+104,319,104003191,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Bone scan S30
 105,319,105003191,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Bone scan S30
 106,319,106003191,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Bone scan S30
 101,320,101003201,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Abdominal CT scan
 102,320,102003201,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Abdominal CT scan
 103,320,103003201,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Abdominal CT scan
-104,320,104003201,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Abdominal CT scan
+104,320,104003201,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Abdominal CT scan
 105,320,105003201,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Abdominal CT scan
 106,320,106003201,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Abdominal CT scan
 101,321,101003211,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] CT scan of whole body S32
 102,321,102003211,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] CT scan of whole body S32
 103,321,103003211,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] CT scan of whole body S32
-104,321,104003211,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] CT scan of whole body S32
+104,321,104003211,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] CT scan of whole body S32
 105,321,105003211,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] CT scan of whole body S32
 106,321,106003211,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] CT scan of whole body S32
 101,322,101003221,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] PET-CT imaging FINAL
 102,322,102003221,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] PET-CT imaging FINAL
 103,322,103003221,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] PET-CT imaging FINAL
-104,322,104003221,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] PET-CT imaging FINAL
+104,322,104003221,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] PET-CT imaging FINAL
 105,322,105003221,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] PET-CT imaging FINAL
 106,322,106003221,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] PET-CT imaging FINAL
 101,323,101003231,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER S7] PSA>20
 102,323,102003231,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER S7] PSA>20
 103,323,103003231,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER S7] PSA>20
-104,323,104003231,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER S7] PSA>20
+104,323,104003231,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER S7] PSA>20
 105,323,105003231,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER S7] PSA>20
 106,323,106003231,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER S7] PSA>20
 101,324,101003241,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER S8] PSA<10
 102,324,102003241,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER S8] PSA<10
 103,324,103003241,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER S8] PSA<10
-104,324,104003241,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER S8] PSA<10
+104,324,104003241,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER S8] PSA<10
 105,324,105003241,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER S8] PSA<10
 106,324,106003241,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER S8] PSA<10
 101,325,101003251,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER S9] PSA 10-20
 102,325,102003251,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER S9] PSA 10-20
 103,325,103003251,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER S9] PSA 10-20
-104,325,104003251,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER S9] PSA 10-20
+104,325,104003251,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER S9] PSA 10-20
 105,325,105003251,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER S9] PSA 10-20
 106,325,106003251,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER S9] PSA 10-20
 101,326,101003261,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER V2.0] Earliest Gleason Grade 1
 102,326,102003261,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER V2.0] Earliest Gleason Grade 1
 103,326,103003261,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER V2.0] Earliest Gleason Grade 1
-104,326,104003261,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER V2.0] Earliest Gleason Grade 1
+104,326,104003261,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER V2.0] Earliest Gleason Grade 1
 105,326,105003261,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER V2.0] Earliest Gleason Grade 1
 106,326,106003261,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER V2.0] Earliest Gleason Grade 1
 101,327,101003271,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 102,327,102003271,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 103,327,103003271,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER V2.0] Earliest Gleason Grade 2 - 3
-104,327,104003271,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER V2.0] Earliest Gleason Grade 2 - 3
+104,327,104003271,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 105,327,105003271,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 106,327,106003271,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 101,328,101003281,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER V2.0] Earliest Gleason Grade 4
 102,328,102003281,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER V2.0] Earliest Gleason Grade 4
 103,328,103003281,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER V2.0] Earliest Gleason Grade 4
-104,328,104003281,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER V2.0] Earliest Gleason Grade 4
+104,328,104003281,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER V2.0] Earliest Gleason Grade 4
 105,328,105003281,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER V2.0] Earliest Gleason Grade 4
 106,328,106003281,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER V2.0] Earliest Gleason Grade 4
 101,329,101003291,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER V2.0] Earliest Gleason Grade 5
 102,329,102003291,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER V2.0] Earliest Gleason Grade 5
 103,329,103003291,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER V2.0] Earliest Gleason Grade 5
-104,329,104003291,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER V2.0] Earliest Gleason Grade 5
+104,329,104003291,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER V2.0] Earliest Gleason Grade 5
 105,329,105003291,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER V2.0] Earliest Gleason Grade 5
 106,329,106003291,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER V2.0] Earliest Gleason Grade 5
 101,330,101003301,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER S1] High-Risk
 102,330,102003301,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER S1] High-Risk
 103,330,103003301,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER S1] High-Risk
-104,330,104003301,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER S1] High-Risk
+104,330,104003301,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER S1] High-Risk
 105,330,105003301,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER S1] High-Risk
 106,330,106003301,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER S1] High-Risk
 101,331,101003311,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER S2] Low-Risk
 102,331,102003311,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER S2] Low-Risk
 103,331,103003311,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER S2] Low-Risk
-104,331,104003311,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER S2] Low-Risk
+104,331,104003311,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER S2] Low-Risk
 105,331,105003311,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER S2] Low-Risk
 106,331,106003311,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER S2] Low-Risk
 101,332,101003321,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER S3] Intermediate-Risk
 102,332,102003321,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER S3] Intermediate-Risk
 103,332,103003321,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER S3] Intermediate-Risk
-104,332,104003321,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER S3] Intermediate-Risk
+104,332,104003321,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER S3] Intermediate-Risk
 105,332,105003321,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER S3] Intermediate-Risk
 106,332,106003321,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER S3] Intermediate-Risk
 101,333,101003331,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] MRI of prostate S59
 102,333,102003331,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] MRI of prostate S59
 103,333,103003331,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] MRI of prostate S59
-104,333,104003331,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] MRI of prostate S59
+104,333,104003331,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] MRI of prostate S59
 105,333,105003331,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] MRI of prostate S59
 106,333,106003331,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] MRI of prostate S59
 101,334,101003341,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Bone scan FINAL
 102,334,102003341,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Bone scan FINAL
 103,334,103003341,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Bone scan FINAL
-104,334,104003341,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Bone scan FINAL
+104,334,104003341,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Bone scan FINAL
 105,334,105003341,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Bone scan FINAL
 106,334,106003341,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Bone scan FINAL
 101,335,101003351,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 102,335,102003351,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 103,335,103003351,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
-104,335,104003351,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
+104,335,104003351,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 105,335,105003351,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 106,335,106003351,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 101,336,101003361,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [Pioneer v2.0] PSA higher than 20
 102,336,102003361,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [Pioneer v2.0] PSA higher than 20
 103,336,103003361,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [Pioneer v2.0] PSA higher than 20
-104,336,104003361,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [Pioneer v2.0] PSA higher than 20
+104,336,104003361,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [Pioneer v2.0] PSA higher than 20
 105,336,105003361,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [Pioneer v2.0] PSA higher than 20
 106,336,106003361,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [Pioneer v2.0] PSA higher than 20
 101,337,101003371,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [Pioneer v2.0] PSA lower than 10
 102,337,102003371,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [Pioneer v2.0] PSA lower than 10
 103,337,103003371,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [Pioneer v2.0] PSA lower than 10
-104,337,104003371,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [Pioneer v2.0] PSA lower than 10
+104,337,104003371,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [Pioneer v2.0] PSA lower than 10
 105,337,105003371,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [Pioneer v2.0] PSA lower than 10
 106,337,106003371,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [Pioneer v2.0] PSA lower than 10
 101,338,101003381,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 102,338,102003381,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 103,338,103003381,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
-104,338,104003381,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
+104,338,104003381,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 105,338,105003381,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 106,338,106003381,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 101,339,101003391,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Fatigue
 102,339,102003391,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Fatigue
 103,339,103003391,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Fatigue
-104,339,104003391,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Fatigue
+104,339,104003391,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Fatigue
 105,339,105003391,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Fatigue
 106,339,106003391,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Fatigue
 101,340,101003401,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Diarrhea
 102,340,102003401,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Diarrhea
 103,340,103003401,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Diarrhea
-104,340,104003401,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Diarrhea
+104,340,104003401,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Diarrhea
 105,340,105003401,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Diarrhea
 106,340,106003401,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Diarrhea
 101,341,101003411,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with FDA AESI Immune thrombocytopenia (ITP) events
 102,341,102003411,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with FDA AESI Immune thrombocytopenia (ITP) events
 103,341,103003411,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with FDA AESI Immune thrombocytopenia (ITP) events
-104,341,104003411,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with FDA AESI Immune thrombocytopenia (ITP) events
+104,341,104003411,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with FDA AESI Immune thrombocytopenia (ITP) events
 105,341,105003411,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with FDA AESI Immune thrombocytopenia (ITP) events
 106,341,106003411,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with FDA AESI Immune thrombocytopenia (ITP) events
 101,342,101003421,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with {PIONEER 2.0] Neutropenia
 102,342,102003421,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with {PIONEER 2.0] Neutropenia
 103,342,103003421,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with {PIONEER 2.0] Neutropenia
-104,342,104003421,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with {PIONEER 2.0] Neutropenia
+104,342,104003421,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with {PIONEER 2.0] Neutropenia
 105,342,105003421,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with {PIONEER 2.0] Neutropenia
 106,342,106003421,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with {PIONEER 2.0] Neutropenia
 101,343,101003431,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Convulsion
 102,343,102003431,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Convulsion
 103,343,103003431,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Convulsion
-104,343,104003431,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Convulsion
+104,343,104003431,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Convulsion
 105,343,105003431,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Convulsion
 106,343,106003431,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Convulsion
 101,344,101003441,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [Pioneer 2.0] Acute myocardial infarction
 102,344,102003441,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [Pioneer 2.0] Acute myocardial infarction
 103,344,103003441,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [Pioneer 2.0] Acute myocardial infarction
-104,344,104003441,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [Pioneer 2.0] Acute myocardial infarction
+104,344,104003441,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [Pioneer 2.0] Acute myocardial infarction
 105,344,105003441,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [Pioneer 2.0] Acute myocardial infarction
 106,344,106003441,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [Pioneer 2.0] Acute myocardial infarction
 101,345,101003451,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Constipation
 102,345,102003451,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Constipation
 103,345,103003451,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Constipation
-104,345,104003451,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Constipation
+104,345,104003451,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Constipation
 105,345,105003451,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Constipation
 106,345,106003451,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Constipation
 101,346,101003461,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Hypokalemia
 102,346,102003461,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Hypokalemia
 103,346,103003461,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Hypokalemia
-104,346,104003461,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Hypokalemia
+104,346,104003461,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Hypokalemia
 105,346,105003461,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Hypokalemia
 106,346,106003461,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Hypokalemia
 101,347,101003471,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Index date 2016
 102,347,102003471,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Index date 2016
 103,347,103003471,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Index date 2016
-104,347,104003471,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Index date 2016
+104,347,104003471,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Index date 2016
 105,347,105003471,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Index date 2016
 106,347,106003471,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Index date 2016
 101,348,101003481,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Index date 2017
 102,348,102003481,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Index date 2017
 103,348,103003481,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Index date 2017
-104,348,104003481,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Index date 2017
+104,348,104003481,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Index date 2017
 105,348,105003481,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Index date 2017
 106,348,106003481,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Index date 2017
 101,349,101003491,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Index date 2018
 102,349,102003491,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Index date 2018
 103,349,103003491,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Index date 2018
-104,349,104003491,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Index date 2018
+104,349,104003491,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Index date 2018
 105,349,105003491,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Index date 2018
 106,349,106003491,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Index date 2018
 101,350,101003501,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Index date 2019
 102,350,102003501,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Index date 2019
 103,350,103003501,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Index date 2019
-104,350,104003501,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Index date 2019
+104,350,104003501,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Index date 2019
 105,350,105003501,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Index date 2019
 106,350,106003501,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Index date 2019
 101,351,101003511,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Index date 2020
 102,351,102003511,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Index date 2020
 103,351,103003511,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Index date 2020
-104,351,104003511,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Index date 2020
+104,351,104003511,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Index date 2020
 105,351,105003511,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Index date 2020
 106,351,106003511,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Index date 2020
 101,352,101003521,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Index year 2021
 102,352,102003521,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Index year 2021
 103,352,103003521,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Index year 2021
-104,352,104003521,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Index year 2021
+104,352,104003521,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Index year 2021
 105,352,105003521,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Index year 2021
 106,352,106003521,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Index year 2021
 101,353,101003531,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with [PIONEER 2.0] Index year 2022
 102,353,102003531,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with [PIONEER 2.0] Index year 2022
 103,353,103003531,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with [PIONEER 2.0] Index year 2022
-104,353,104003531,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with [PIONEER 2.0] Index year 2022
+104,353,104003531,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with [PIONEER 2.0] Index year 2022
 105,353,105003531,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with [PIONEER 2.0] Index year 2022
 106,353,106003531,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with [PIONEER 2.0] Index year 2022
 101,354,101003541,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 102,354,102003541,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 103,354,103003541,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
-104,354,104003541,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
+104,354,104003541,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 105,354,105003541,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 106,354,106003541,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 101,355,101003551,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 102,355,102003551,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 103,355,103003551,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
-104,355,104003551,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
+104,355,104003551,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 105,355,105003551,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 106,355,106003551,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 101,356,101003561,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 102,356,102003561,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 103,356,103003561,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
-104,356,104003561,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
+104,356,104003561,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 105,356,105003561,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 106,356,106003561,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 101,357,101003571,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 102,357,102003571,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 103,357,103003571,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
-104,357,104003571,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
+104,357,104003571,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 105,357,105003571,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 106,357,106003571,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 101,358,101003581,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA
 102,358,102003581,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA
 103,358,103003581,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA
-104,358,104003581,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + ARTA
+104,358,104003581,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA
 105,358,105003581,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA
 106,358,106003581,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA
 101,359,101003591,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 102,359,102003591,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 103,359,103003591,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
-104,359,104003591,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
+104,359,104003591,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 105,359,105003591,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 106,359,106003591,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 101,360,101003601,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 102,360,102003601,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 103,360,103003601,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
-104,360,104003601,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
+104,360,104003601,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 105,360,105003601,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 106,360,106003601,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 101,361,101003611,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 102,361,102003611,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 103,361,103003611,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
-104,361,104003611,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
+104,361,104003611,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 105,361,105003611,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 106,361,106003611,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 101,362,101003621,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 102,362,102003621,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 103,362,103003621,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
-104,362,104003621,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
+104,362,104003621,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 105,362,105003621,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 106,362,106003621,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 101,363,101003631,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO
 102,363,102003631,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO
 103,363,103003631,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO
-104,363,104003631,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + CHEMO
+104,363,104003631,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO
 105,363,105003631,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO
 106,363,106003631,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO
 101,364,101003641,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 102,364,102003641,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 103,364,103003641,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
-104,364,104003641,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
+104,364,104003641,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 105,364,105003641,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 106,364,106003641,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 101,365,101003651,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 102,365,102003651,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 103,365,103003651,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
-104,365,104003651,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
+104,365,104003651,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 105,365,105003651,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 106,365,106003651,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 101,366,101003661,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 102,366,102003661,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 103,366,103003661,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
-104,366,104003661,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
+104,366,104003661,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 105,366,105003661,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 106,366,106003661,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 101,367,101003671,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 102,367,102003671,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 103,367,103003671,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
-104,367,104003671,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
+104,367,104003671,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 105,367,105003671,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 106,367,106003671,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 101,368,101003681,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 102,368,102003681,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 103,368,103003681,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
-104,368,104003681,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
+104,368,104003681,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 105,368,105003681,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 106,368,106003681,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 101,369,101003691,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 102,369,102003691,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 103,369,103003691,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
-104,369,104003691,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
+104,369,104003691,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 105,369,105003691,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 106,369,106003691,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 101,370,101003701,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 102,370,102003701,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 103,370,103003701,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + lutetium PSMA
-104,370,104003701,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + lutetium PSMA
+104,370,104003701,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 105,370,105003701,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 106,370,106003701,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 101,371,101003711,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT +Radium 223
 102,371,102003711,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT +Radium 223
 103,371,103003711,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT +Radium 223
-104,371,104003711,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT +Radium 223
+104,371,104003711,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT +Radium 223
 105,371,105003711,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT +Radium 223
 106,371,106003711,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT +Radium 223
 101,372,101003721,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 102,372,102003721,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 103,372,103003721,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
-104,372,104003721,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
+104,372,104003721,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 105,372,105003721,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 106,372,106003721,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 101,373,101003731,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + olaparib
 102,373,102003731,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + olaparib
 103,373,103003731,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + olaparib
-104,373,104003731,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + olaparib
+104,373,104003731,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + olaparib
 105,373,105003731,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + olaparib
 106,373,106003731,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + olaparib
 101,374,101003741,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + rucaparib
 102,374,102003741,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + rucaparib
 103,374,103003741,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + rucaparib
-104,374,104003741,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + rucaparib
+104,374,104003741,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + rucaparib
 105,374,105003741,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + rucaparib
 106,374,106003741,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + rucaparib
 101,375,101003751,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + immunotherapy
 102,375,102003751,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + immunotherapy
 103,375,103003751,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + immunotherapy
-104,375,104003751,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + immunotherapy
+104,375,104003751,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + immunotherapy
 105,375,105003751,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + immunotherapy
 106,375,106003751,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + immunotherapy
 101,376,101003761,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 102,376,102003761,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 103,376,103003761,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + sipuleucel-T
-104,376,104003761,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + sipuleucel-T
+104,376,104003761,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 105,376,105003761,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 106,376,106003761,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 101,377,101003771,TwS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + pembrolizumab
 102,377,102003771,TwS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + pembrolizumab
 103,377,103003771,TwS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL with REVIEW [PIONEER 2.0] ADT + pembrolizumab
-104,377,104003771,TwS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment with REVIEW [PIONEER 2.0] ADT + pembrolizumab
+104,377,104003771,TwS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + pembrolizumab
 105,377,105003771,TwS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL with REVIEW [PIONEER 2.0] ADT + pembrolizumab
 106,377,106003771,TwS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL with REVIEW [PIONEER 2.0] ADT + pembrolizumab
 101,301,101003012,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Performance Status ECOG=0
 102,301,102003012,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Performance Status ECOG=0
 103,301,103003012,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Performance Status ECOG=0
-104,301,104003012,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Performance Status ECOG=0
+104,301,104003012,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Performance Status ECOG=0
 105,301,105003012,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Performance Status ECOG=0
 106,301,106003012,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Performance Status ECOG=0
 101,302,101003022,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Performance Status ECOG=1
 102,302,102003022,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Performance Status ECOG=1
 103,302,103003022,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Performance Status ECOG=1
-104,302,104003022,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Performance Status ECOG=1
+104,302,104003022,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Performance Status ECOG=1
 105,302,105003022,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Performance Status ECOG=1
 106,302,106003022,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Performance Status ECOG=1
 101,303,101003032,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Performance Status ECOG=2+
 102,303,102003032,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Performance Status ECOG=2+
 103,303,103003032,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Performance Status ECOG=2+
-104,303,104003032,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Performance Status ECOG=2+
+104,303,104003032,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Performance Status ECOG=2+
 105,303,105003032,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Performance Status ECOG=2+
 106,303,106003032,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Performance Status ECOG=2+
 101,304,101003042,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Prevalent obesity S11
 102,304,102003042,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Prevalent obesity S11
 103,304,103003042,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Prevalent obesity S11
-104,304,104003042,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Prevalent obesity S11
+104,304,104003042,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Prevalent obesity S11
 105,304,105003042,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Prevalent obesity S11
 106,304,106003042,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Prevalent obesity S11
 101,305,101003052,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Prevalent hypertension S12
 102,305,102003052,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Prevalent hypertension S12
 103,305,103003052,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Prevalent hypertension S12
-104,305,104003052,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Prevalent hypertension S12
+104,305,104003052,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Prevalent hypertension S12
 105,305,105003052,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Prevalent hypertension S12
 106,305,106003052,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Prevalent hypertension S12
 101,306,101003062,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Total Cardiovascular Disease Event S13
 102,306,102003062,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Total Cardiovascular Disease Event S13
 103,306,103003062,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Total Cardiovascular Disease Event S13
-104,306,104003062,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Total Cardiovascular Disease Event S13
+104,306,104003062,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Total Cardiovascular Disease Event S13
 105,306,105003062,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Total Cardiovascular Disease Event S13
 106,306,106003062,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Total Cardiovascular Disease Event S13
 101,307,101003072,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 102,307,102003072,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 103,307,103003072,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
-104,307,104003072,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
+104,307,104003072,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 105,307,105003072,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 106,307,106003072,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Prevalent Type 2 Diabetes Mellitus S15
 101,308,101003082,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 102,308,102003082,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 103,308,103003082,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
-104,308,104003082,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
+104,308,104003082,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 105,308,105003082,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 106,308,106003082,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events S16
 101,309,101003092,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Anxiety S17
 102,309,102003092,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Anxiety S17
 103,309,103003092,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Anxiety S17
-104,309,104003092,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Anxiety S17
+104,309,104003092,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Anxiety S17
 105,309,105003092,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Anxiety S17
 106,309,106003092,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Anxiety S17
 101,310,101003102,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 102,310,102003102,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 103,310,103003102,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
-104,310,104003102,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
+104,310,104003102,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 105,310,105003102,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 106,310,106003102,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD) S18
 101,311,101003112,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Family History of PCa S22
 102,311,102003112,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Family History of PCa S22
 103,311,103003112,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Family History of PCa S22
-104,311,104003112,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Family History of PCa S22
+104,311,104003112,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Family History of PCa S22
 105,311,105003112,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Family History of PCa S22
 106,311,106003112,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Family History of PCa S22
 101,312,101003122,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Physical Therapy S23
 102,312,102003122,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Physical Therapy S23
 103,312,103003122,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Physical Therapy S23
-104,312,104003122,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Physical Therapy S23
+104,312,104003122,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Physical Therapy S23
 105,312,105003122,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Physical Therapy S23
 106,312,106003122,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Physical Therapy S23
 101,313,101003132,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 102,313,102003132,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 103,313,103003132,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
-104,313,104003132,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
+104,313,104003132,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 105,313,105003132,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 106,313,106003132,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0]Â Strata Cohort S24 Metastasis stage M1a
 101,314,101003142,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 102,314,102003142,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 103,314,103003142,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
-104,314,104003142,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
+104,314,104003142,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 105,314,105003142,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 106,314,106003142,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Strata Cohort S25 Metastasis stage M1b
 101,315,101003152,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 102,315,102003152,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 103,315,103003152,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
-104,315,104003152,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
+104,315,104003152,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 105,315,105003152,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 106,315,106003152,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c
 101,316,101003162,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Metastasis recurrent RT-FINAL
 102,316,102003162,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Metastasis recurrent RT-FINAL
 103,316,103003162,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Metastasis recurrent RT-FINAL
-104,316,104003162,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Metastasis recurrent RT-FINAL
+104,316,104003162,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Metastasis recurrent RT-FINAL
 105,316,105003162,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Metastasis recurrent RT-FINAL
 106,316,106003162,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Metastasis recurrent RT-FINAL
 101,317,101003172,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Metastasis recurrent RP-FINAL
 102,317,102003172,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Metastasis recurrent RP-FINAL
 103,317,103003172,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Metastasis recurrent RP-FINAL
-104,317,104003172,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Metastasis recurrent RP-FINAL
+104,317,104003172,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Metastasis recurrent RP-FINAL
 105,317,105003172,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Metastasis recurrent RP-FINAL
 106,317,106003172,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Metastasis recurrent RP-FINAL
 101,318,101003182,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] MRI of prostate FINAL
 102,318,102003182,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] MRI of prostate FINAL
 103,318,103003182,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] MRI of prostate FINAL
-104,318,104003182,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] MRI of prostate FINAL
+104,318,104003182,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] MRI of prostate FINAL
 105,318,105003182,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] MRI of prostate FINAL
 106,318,106003182,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] MRI of prostate FINAL
 101,319,101003192,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Bone scan S30
 102,319,102003192,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Bone scan S30
 103,319,103003192,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Bone scan S30
-104,319,104003192,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Bone scan S30
+104,319,104003192,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Bone scan S30
 105,319,105003192,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Bone scan S30
 106,319,106003192,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Bone scan S30
 101,320,101003202,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Abdominal CT scan
 102,320,102003202,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Abdominal CT scan
 103,320,103003202,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Abdominal CT scan
-104,320,104003202,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Abdominal CT scan
+104,320,104003202,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Abdominal CT scan
 105,320,105003202,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Abdominal CT scan
 106,320,106003202,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Abdominal CT scan
 101,321,101003212,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] CT scan of whole body S32
 102,321,102003212,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] CT scan of whole body S32
 103,321,103003212,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] CT scan of whole body S32
-104,321,104003212,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] CT scan of whole body S32
+104,321,104003212,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] CT scan of whole body S32
 105,321,105003212,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] CT scan of whole body S32
 106,321,106003212,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] CT scan of whole body S32
 101,322,101003222,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] PET-CT imaging FINAL
 102,322,102003222,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] PET-CT imaging FINAL
 103,322,103003222,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] PET-CT imaging FINAL
-104,322,104003222,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] PET-CT imaging FINAL
+104,322,104003222,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] PET-CT imaging FINAL
 105,322,105003222,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] PET-CT imaging FINAL
 106,322,106003222,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] PET-CT imaging FINAL
 101,323,101003232,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER S7] PSA>20
 102,323,102003232,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER S7] PSA>20
 103,323,103003232,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER S7] PSA>20
-104,323,104003232,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER S7] PSA>20
+104,323,104003232,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER S7] PSA>20
 105,323,105003232,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER S7] PSA>20
 106,323,106003232,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER S7] PSA>20
 101,324,101003242,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER S8] PSA<10
 102,324,102003242,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER S8] PSA<10
 103,324,103003242,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER S8] PSA<10
-104,324,104003242,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER S8] PSA<10
+104,324,104003242,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER S8] PSA<10
 105,324,105003242,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER S8] PSA<10
 106,324,106003242,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER S8] PSA<10
 101,325,101003252,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER S9] PSA 10-20
 102,325,102003252,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER S9] PSA 10-20
 103,325,103003252,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER S9] PSA 10-20
-104,325,104003252,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER S9] PSA 10-20
+104,325,104003252,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER S9] PSA 10-20
 105,325,105003252,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER S9] PSA 10-20
 106,325,106003252,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER S9] PSA 10-20
 101,326,101003262,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER V2.0] Earliest Gleason Grade 1
 102,326,102003262,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER V2.0] Earliest Gleason Grade 1
 103,326,103003262,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER V2.0] Earliest Gleason Grade 1
-104,326,104003262,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER V2.0] Earliest Gleason Grade 1
+104,326,104003262,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER V2.0] Earliest Gleason Grade 1
 105,326,105003262,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER V2.0] Earliest Gleason Grade 1
 106,326,106003262,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER V2.0] Earliest Gleason Grade 1
 101,327,101003272,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 102,327,102003272,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 103,327,103003272,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER V2.0] Earliest Gleason Grade 2 - 3
-104,327,104003272,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER V2.0] Earliest Gleason Grade 2 - 3
+104,327,104003272,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 105,327,105003272,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 106,327,106003272,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER V2.0] Earliest Gleason Grade 2 - 3
 101,328,101003282,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER V2.0] Earliest Gleason Grade 4
 102,328,102003282,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER V2.0] Earliest Gleason Grade 4
 103,328,103003282,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER V2.0] Earliest Gleason Grade 4
-104,328,104003282,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER V2.0] Earliest Gleason Grade 4
+104,328,104003282,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER V2.0] Earliest Gleason Grade 4
 105,328,105003282,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER V2.0] Earliest Gleason Grade 4
 106,328,106003282,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER V2.0] Earliest Gleason Grade 4
 101,329,101003292,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER V2.0] Earliest Gleason Grade 5
 102,329,102003292,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER V2.0] Earliest Gleason Grade 5
 103,329,103003292,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER V2.0] Earliest Gleason Grade 5
-104,329,104003292,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER V2.0] Earliest Gleason Grade 5
+104,329,104003292,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER V2.0] Earliest Gleason Grade 5
 105,329,105003292,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER V2.0] Earliest Gleason Grade 5
 106,329,106003292,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER V2.0] Earliest Gleason Grade 5
 101,330,101003302,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER S1] High-Risk
 102,330,102003302,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER S1] High-Risk
 103,330,103003302,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER S1] High-Risk
-104,330,104003302,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER S1] High-Risk
+104,330,104003302,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER S1] High-Risk
 105,330,105003302,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER S1] High-Risk
 106,330,106003302,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER S1] High-Risk
 101,331,101003312,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER S2] Low-Risk
 102,331,102003312,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER S2] Low-Risk
 103,331,103003312,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER S2] Low-Risk
-104,331,104003312,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER S2] Low-Risk
+104,331,104003312,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER S2] Low-Risk
 105,331,105003312,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER S2] Low-Risk
 106,331,106003312,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER S2] Low-Risk
 101,332,101003322,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER S3] Intermediate-Risk
 102,332,102003322,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER S3] Intermediate-Risk
 103,332,103003322,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER S3] Intermediate-Risk
-104,332,104003322,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER S3] Intermediate-Risk
+104,332,104003322,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER S3] Intermediate-Risk
 105,332,105003322,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER S3] Intermediate-Risk
 106,332,106003322,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER S3] Intermediate-Risk
 101,333,101003332,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] MRI of prostate S59
 102,333,102003332,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] MRI of prostate S59
 103,333,103003332,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] MRI of prostate S59
-104,333,104003332,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] MRI of prostate S59
+104,333,104003332,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] MRI of prostate S59
 105,333,105003332,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] MRI of prostate S59
 106,333,106003332,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] MRI of prostate S59
 101,334,101003342,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Bone scan FINAL
 102,334,102003342,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Bone scan FINAL
 103,334,103003342,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Bone scan FINAL
-104,334,104003342,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Bone scan FINAL
+104,334,104003342,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Bone scan FINAL
 105,334,105003342,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Bone scan FINAL
 106,334,106003342,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Bone scan FINAL
 101,335,101003352,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 102,335,102003352,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 103,335,103003352,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
-104,335,104003352,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
+104,335,104003352,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 105,335,105003352,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 106,335,106003352,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL
 101,336,101003362,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [Pioneer v2.0] PSA higher than 20
 102,336,102003362,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [Pioneer v2.0] PSA higher than 20
 103,336,103003362,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [Pioneer v2.0] PSA higher than 20
-104,336,104003362,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [Pioneer v2.0] PSA higher than 20
+104,336,104003362,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [Pioneer v2.0] PSA higher than 20
 105,336,105003362,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [Pioneer v2.0] PSA higher than 20
 106,336,106003362,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [Pioneer v2.0] PSA higher than 20
 101,337,101003372,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [Pioneer v2.0] PSA lower than 10
 102,337,102003372,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [Pioneer v2.0] PSA lower than 10
 103,337,103003372,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [Pioneer v2.0] PSA lower than 10
-104,337,104003372,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [Pioneer v2.0] PSA lower than 10
+104,337,104003372,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [Pioneer v2.0] PSA lower than 10
 105,337,105003372,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [Pioneer v2.0] PSA lower than 10
 106,337,106003372,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [Pioneer v2.0] PSA lower than 10
 101,338,101003382,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 102,338,102003382,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 103,338,103003382,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
-104,338,104003382,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
+104,338,104003382,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 105,338,105003382,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 106,338,106003382,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [Pioneer v2.0] PSA between 10 - 20 at index
 101,339,101003392,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Fatigue
 102,339,102003392,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Fatigue
 103,339,103003392,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Fatigue
-104,339,104003392,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Fatigue
+104,339,104003392,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Fatigue
 105,339,105003392,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Fatigue
 106,339,106003392,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Fatigue
 101,340,101003402,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Diarrhea
 102,340,102003402,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Diarrhea
 103,340,103003402,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Diarrhea
-104,340,104003402,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Diarrhea
+104,340,104003402,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Diarrhea
 105,340,105003402,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Diarrhea
 106,340,106003402,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Diarrhea
 101,341,101003412,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without FDA AESI Immune thrombocytopenia (ITP) events
 102,341,102003412,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without FDA AESI Immune thrombocytopenia (ITP) events
 103,341,103003412,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without FDA AESI Immune thrombocytopenia (ITP) events
-104,341,104003412,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without FDA AESI Immune thrombocytopenia (ITP) events
+104,341,104003412,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without FDA AESI Immune thrombocytopenia (ITP) events
 105,341,105003412,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without FDA AESI Immune thrombocytopenia (ITP) events
 106,341,106003412,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without FDA AESI Immune thrombocytopenia (ITP) events
 101,342,101003422,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without {PIONEER 2.0] Neutropenia
 102,342,102003422,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without {PIONEER 2.0] Neutropenia
 103,342,103003422,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without {PIONEER 2.0] Neutropenia
-104,342,104003422,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without {PIONEER 2.0] Neutropenia
+104,342,104003422,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without {PIONEER 2.0] Neutropenia
 105,342,105003422,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without {PIONEER 2.0] Neutropenia
 106,342,106003422,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without {PIONEER 2.0] Neutropenia
 101,343,101003432,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Convulsion
 102,343,102003432,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Convulsion
 103,343,103003432,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Convulsion
-104,343,104003432,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Convulsion
+104,343,104003432,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Convulsion
 105,343,105003432,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Convulsion
 106,343,106003432,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Convulsion
 101,344,101003442,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [Pioneer 2.0] Acute myocardial infarction
 102,344,102003442,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [Pioneer 2.0] Acute myocardial infarction
 103,344,103003442,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [Pioneer 2.0] Acute myocardial infarction
-104,344,104003442,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [Pioneer 2.0] Acute myocardial infarction
+104,344,104003442,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [Pioneer 2.0] Acute myocardial infarction
 105,344,105003442,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [Pioneer 2.0] Acute myocardial infarction
 106,344,106003442,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [Pioneer 2.0] Acute myocardial infarction
 101,345,101003452,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Constipation
 102,345,102003452,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Constipation
 103,345,103003452,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Constipation
-104,345,104003452,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Constipation
+104,345,104003452,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Constipation
 105,345,105003452,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Constipation
 106,345,106003452,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Constipation
 101,346,101003462,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Hypokalemia
 102,346,102003462,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Hypokalemia
 103,346,103003462,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Hypokalemia
-104,346,104003462,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Hypokalemia
+104,346,104003462,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Hypokalemia
 105,346,105003462,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Hypokalemia
 106,346,106003462,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Hypokalemia
 101,347,101003472,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Index date 2016
 102,347,102003472,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Index date 2016
 103,347,103003472,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Index date 2016
-104,347,104003472,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Index date 2016
+104,347,104003472,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Index date 2016
 105,347,105003472,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Index date 2016
 106,347,106003472,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Index date 2016
 101,348,101003482,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Index date 2017
 102,348,102003482,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Index date 2017
 103,348,103003482,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Index date 2017
-104,348,104003482,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Index date 2017
+104,348,104003482,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Index date 2017
 105,348,105003482,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Index date 2017
 106,348,106003482,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Index date 2017
 101,349,101003492,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Index date 2018
 102,349,102003492,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Index date 2018
 103,349,103003492,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Index date 2018
-104,349,104003492,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Index date 2018
+104,349,104003492,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Index date 2018
 105,349,105003492,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Index date 2018
 106,349,106003492,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Index date 2018
 101,350,101003502,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Index date 2019
 102,350,102003502,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Index date 2019
 103,350,103003502,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Index date 2019
-104,350,104003502,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Index date 2019
+104,350,104003502,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Index date 2019
 105,350,105003502,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Index date 2019
 106,350,106003502,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Index date 2019
 101,351,101003512,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Index date 2020
 102,351,102003512,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Index date 2020
 103,351,103003512,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Index date 2020
-104,351,104003512,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Index date 2020
+104,351,104003512,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Index date 2020
 105,351,105003512,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Index date 2020
 106,351,106003512,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Index date 2020
 101,352,101003522,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Index year 2021
 102,352,102003522,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Index year 2021
 103,352,103003522,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Index year 2021
-104,352,104003522,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Index year 2021
+104,352,104003522,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Index year 2021
 105,352,105003522,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Index year 2021
 106,352,106003522,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Index year 2021
 101,353,101003532,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without [PIONEER 2.0] Index year 2022
 102,353,102003532,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without [PIONEER 2.0] Index year 2022
 103,353,103003532,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without [PIONEER 2.0] Index year 2022
-104,353,104003532,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without [PIONEER 2.0] Index year 2022
+104,353,104003532,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without [PIONEER 2.0] Index year 2022
 105,353,105003532,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without [PIONEER 2.0] Index year 2022
 106,353,106003532,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without [PIONEER 2.0] Index year 2022
 101,354,101003542,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 102,354,102003542,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 103,354,103003542,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
-104,354,104003542,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
+104,354,104003542,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 105,354,105003542,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 106,354,106003542,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT (LHRH or anti-androgen)
 101,355,101003552,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 102,355,102003552,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 103,355,103003552,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
-104,355,104003552,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
+104,355,104003552,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 105,355,105003552,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 106,355,106003552,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT (Anti-androgen exclusive)
 101,356,101003562,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 102,356,102003562,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 103,356,103003562,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
-104,356,104003562,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
+104,356,104003562,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 105,356,105003562,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 106,356,106003562,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT (LHRH exclusive)
 101,357,101003572,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 102,357,102003572,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 103,357,103003572,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
-104,357,104003572,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
+104,357,104003572,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 105,357,105003572,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 106,357,106003572,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT (LHRH AND anti-androgens)
 101,358,101003582,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA
 102,358,102003582,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA
 103,358,103003582,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA
-104,358,104003582,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + ARTA
+104,358,104003582,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA
 105,358,105003582,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA
 106,358,106003582,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA
 101,359,101003592,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 102,359,102003592,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 103,359,103003592,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
-104,359,104003592,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
+104,359,104003592,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 105,359,105003592,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 106,359,106003592,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (enzalutamide)
 101,360,101003602,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 102,360,102003602,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 103,360,103003602,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
-104,360,104003602,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
+104,360,104003602,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 105,360,105003602,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 106,360,106003602,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (Abiraterone)
 101,361,101003612,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 102,361,102003612,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 103,361,103003612,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
-104,361,104003612,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
+104,361,104003612,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 105,361,105003612,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 106,361,106003612,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (apalutamide)
 101,362,101003622,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 102,362,102003622,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 103,362,103003622,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
-104,362,104003622,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
+104,362,104003622,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 105,362,105003622,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 106,362,106003622,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide)
 101,363,101003632,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO
 102,363,102003632,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO
 103,363,103003632,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO
-104,363,104003632,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + CHEMO
+104,363,104003632,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO
 105,363,105003632,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO
 106,363,106003632,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO
 101,364,101003642,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 102,364,102003642,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 103,364,103003642,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
-104,364,104003642,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
+104,364,104003642,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 105,364,105003642,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 106,364,106003642,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (docetaxel)
 101,365,101003652,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 102,365,102003652,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 103,365,103003652,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
-104,365,104003652,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
+104,365,104003652,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 105,365,105003652,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 106,365,106003652,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Paclitaxel)
 101,366,101003662,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 102,366,102003662,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 103,366,103003662,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
-104,366,104003662,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
+104,366,104003662,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 105,366,105003662,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 106,366,106003662,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + CHEMO (Cabazitaxel)
 101,367,101003672,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 102,367,102003672,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 103,367,103003672,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
-104,367,104003672,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
+104,367,104003672,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 105,367,105003672,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 106,367,106003672,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA + CHEMO
 101,368,101003682,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 102,368,102003682,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 103,368,103003682,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
-104,368,104003682,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
+104,368,104003682,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 105,368,105003682,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 106,368,106003682,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (darolutamide) + CHEMO (docetaxel)
 101,369,101003692,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 102,369,102003692,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 103,369,103003692,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
-104,369,104003692,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
+104,369,104003692,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 105,369,105003692,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 106,369,106003692,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + ARTA (abiraterone) + CHEMO (docetaxel)
 101,370,101003702,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 102,370,102003702,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 103,370,103003702,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + lutetium PSMA
-104,370,104003702,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + lutetium PSMA
+104,370,104003702,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 105,370,105003702,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 106,370,106003702,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + lutetium PSMA
 101,371,101003712,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT +Radium 223
 102,371,102003712,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT +Radium 223
 103,371,103003712,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT +Radium 223
-104,371,104003712,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT +Radium 223
+104,371,104003712,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT +Radium 223
 105,371,105003712,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT +Radium 223
 106,371,106003712,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT +Radium 223
 101,372,101003722,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 102,372,102003722,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 103,372,103003722,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
-104,372,104003722,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
+104,372,104003722,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 105,372,105003722,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 106,372,106003722,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT +PARP Inhibitor
 101,373,101003732,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + olaparib
 102,373,102003732,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + olaparib
 103,373,103003732,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + olaparib
-104,373,104003732,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + olaparib
+104,373,104003732,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + olaparib
 105,373,105003732,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + olaparib
 106,373,106003732,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + olaparib
 101,374,101003742,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + rucaparib
 102,374,102003742,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + rucaparib
 103,374,103003742,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + rucaparib
-104,374,104003742,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + rucaparib
+104,374,104003742,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + rucaparib
 105,374,105003742,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + rucaparib
 106,374,106003742,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + rucaparib
 101,375,101003752,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + immunotherapy
 102,375,102003752,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + immunotherapy
 103,375,103003752,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + immunotherapy
-104,375,104003752,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + immunotherapy
+104,375,104003752,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + immunotherapy
 105,375,105003752,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + immunotherapy
 106,375,106003752,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + immunotherapy
 101,376,101003762,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 102,376,102003762,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 103,376,103003762,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + sipuleucel-T
-104,376,104003762,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + sipuleucel-T
+104,376,104003762,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 105,376,105003762,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 106,376,106003762,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + sipuleucel-T
 101,377,101003772,TwoS,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + pembrolizumab
 102,377,102003772,TwoS,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + pembrolizumab
 103,377,103003772,TwoS,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL without REVIEW [PIONEER 2.0] ADT + pembrolizumab
-104,377,104003772,TwoS,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment without REVIEW [PIONEER 2.0] ADT + pembrolizumab
+104,377,104003772,TwoS,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + pembrolizumab
 105,377,105003772,TwoS,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL without REVIEW [PIONEER 2.0] ADT + pembrolizumab
 106,377,106003772,TwoS,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL without REVIEW [PIONEER 2.0] ADT + pembrolizumab

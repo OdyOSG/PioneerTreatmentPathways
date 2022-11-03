@@ -2568,7 +2568,6 @@
 								},
 								"StartWindow" : {
 									"Start" : {
-										"Days" : 183,
 										"Coeff" : -1
 									},
 									"End" : {

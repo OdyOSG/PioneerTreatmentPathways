@@ -4,40 +4,75 @@
 		"CriteriaList" : [
 			{
 				"DrugExposure" : {
-					"CodesetId" : 0,
+					"CodesetId" : 11,
 					"OccurrenceStartDate" : {
 						"Value" : "2016-01-01",
 						"Op" : "bt",
-						"Extent" : "2022-11-01"
+						"Extent" : "2020-12-31"
 					},
 					"DrugTypeExclude" : false
 				}
 			},
 			{
-				"Observation" : {
-					"CodesetId" : 0,
+				"DrugExposure" : {
+					"CorrelatedCriteria" : {
+						"Type" : "ALL",
+						"CriteriaList" : [
+							{
+								"Criteria" : {
+									"DrugExposure" : {
+										"CodesetId" : 11,
+										"DrugTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : 1
+									},
+									"End" : {
+										"Days" : 183,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							}
+						],
+						"DemographicCriteriaList" : [],
+						"Groups" : []
+					},
+					"CodesetId" : 9,
+					"First" : true,
 					"OccurrenceStartDate" : {
 						"Value" : "2016-01-01",
 						"Op" : "bt",
-						"Extent" : "2022-11-01"
+						"Extent" : "2020-12-31"
 					},
-					"ObservationTypeExclude" : false
+					"DrugTypeExclude" : false
 				}
 			},
 			{
 				"ProcedureOccurrence" : {
-					"CodesetId" : 0,
+					"CodesetId" : 4,
 					"OccurrenceStartDate" : {
 						"Value" : "2016-01-01",
 						"Op" : "bt",
-						"Extent" : "2022-11-01"
+						"Extent" : "2020-12-31"
 					},
 					"ProcedureTypeExclude" : false
 				}
 			}
 		],
 		"ObservationWindow" : {
-			"PriorDays" : 365,
+			"PriorDays" : 183,
 			"PostDays" : 0
 		},
 		"PrimaryCriteriaLimit" : {
@@ -45,405 +80,6 @@
 		}
 	},
 	"ConceptSets" : [
-		{
-			"id" : 0,
-			"name" : "[PIONEER] ADT",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 2108678,
-							"CONCEPT_NAME" : "Adjuvant (ie, in combination with external beam radiotherapy to the prostate for prostate cancer) hormonal therapy (gonadotropin-releasing hormone [GnRH] agonist or antagonist) prescribed/administered (PRCA)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "4164F",
-							"DOMAIN_ID" : "Observation",
-							"VOCABULARY_ID" : "CPT4",
-							"CONCEPT_CLASS_ID" : "CPT4"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 45768763,
-							"CONCEPT_NAME" : "Androgen deprivation therapy",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "707266006",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 937694,
-							"CONCEPT_NAME" : "Androgen deprivation therapy prescribed/administered in combination with external beam radiotherapy to the prostate",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "G9894",
-							"DOMAIN_ID" : "Observation",
-							"VOCABULARY_ID" : "HCPCS",
-							"CONCEPT_CLASS_ID" : "HCPCS"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 21603834,
-							"CONCEPT_NAME" : "Anti-androgens",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02BB",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 4th"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 21603823,
-							"CONCEPT_NAME" : "Gonadotropin releasing hormone analogues",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02AE",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 4th"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 2721577,
-							"CONCEPT_NAME" : "Home injectable therapy; hormonal therapy (e.g.; leuprolide, goserelin), including administrative services, professional pharmacy services, care coordination, and all necessary supplies and equipment (drugs and nursing visits coded separately), per diem",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "S9560",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "HCPCS",
-							"CONCEPT_CLASS_ID" : "HCPCS"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 21603845,
-							"CONCEPT_NAME" : "Other hormone antagonists and related agents",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02BX",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 4th"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 45893476,
-							"CONCEPT_NAME" : "enzalutamide; oral",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02BB04",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 5th"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 42900250,
-							"CONCEPT_NAME" : "enzalutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1307298",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 40239056,
-							"CONCEPT_NAME" : "abiraterone",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1100072",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 963987,
-							"CONCEPT_NAME" : "apalutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1999574",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1361291,
-							"CONCEPT_NAME" : "darolutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "2180325",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1344381,
-							"CONCEPT_NAME" : "bicalutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "83008",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1356461,
-							"CONCEPT_NAME" : "flutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "4508",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1315286,
-							"CONCEPT_NAME" : "nilutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "31805",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 739471,
-							"CONCEPT_NAME" : "relugolix",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "2472778",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 19010868,
-							"CONCEPT_NAME" : "abarelix",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "301739",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1366773,
-							"CONCEPT_NAME" : "histrelin",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "50975",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 40253469,
-							"CONCEPT_NAME" : "abiraterone; oral",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02BX03",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 5th"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 21603836,
-							"CONCEPT_NAME" : "nilutamide; oral",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02BB02",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 5th"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 21603835,
-							"CONCEPT_NAME" : "flutamide; oral",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02BB01",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 5th"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 715926,
-							"CONCEPT_NAME" : "apalutamide; oral",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02BB05",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 5th"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 715835,
-							"CONCEPT_NAME" : "darolutamide",
-							"STANDARD_CONCEPT" : "C",
-							"STANDARD_CONCEPT_CAPTION" : "Classification",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "L02BB06",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "ATC",
-							"CONCEPT_CLASS_ID" : "ATC 5th"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
 		{
 			"id" : 1,
 			"name" : "[PIONEER 2.0] Secondary malignant neoplasm",
@@ -556,218 +192,6 @@
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
 						},
 						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
-		{
-			"id" : 3,
-			"name" : "[PIONEER 2.0] other primaries",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 432851,
-							"CONCEPT_NAME" : "Secondary malignant neoplastic disease",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "128462008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 443392,
-							"CONCEPT_NAME" : "Malignant neoplastic disease",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "363346000",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4112752,
-							"CONCEPT_NAME" : "Basal cell carcinoma of skin",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "254701007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4111921,
-							"CONCEPT_NAME" : "Squamous cell carcinoma of skin",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "254651007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 764971,
-							"CONCEPT_NAME" : "Prostate cancer metastatic to eye",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "96901000119105",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4314337,
-							"CONCEPT_NAME" : "Secondary malignant neoplasm of prostate",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "94503003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36716186,
-							"CONCEPT_NAME" : "Hormone sensitive prostate cancer",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "722103009",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 200962,
-							"CONCEPT_NAME" : "Primary malignant neoplasm of prostate",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "93974005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36712762,
-							"CONCEPT_NAME" : "Recurrent malignant neoplasm of prostate",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1098981000119101",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37395835,
-							"CONCEPT_NAME" : "Familial prostate cancer",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "715412008",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4164017,
-							"CONCEPT_NAME" : "Squamous cell carcinoma of prostate",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "399590005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4141960,
-							"CONCEPT_NAME" : "Hormone refractory prostate cancer",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "427492003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : true,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					}
@@ -1240,6 +664,743 @@
 					}
 				]
 			}
+		},
+		{
+			"id" : 6,
+			"name" : "[PIONEER 2.0] Cancer Modifier Metastasis",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36769180,
+							"CONCEPT_NAME" : "Metastasis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "OMOP4998856",
+							"DOMAIN_ID" : "Measurement",
+							"VOCABULARY_ID" : "Cancer Modifier",
+							"CONCEPT_CLASS_ID" : "Metastasis"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1635142,
+							"CONCEPT_NAME" : "AJCC/UICC M1 Category",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "AJCC/UICC-M1",
+							"DOMAIN_ID" : "Measurement",
+							"VOCABULARY_ID" : "Cancer Modifier",
+							"CONCEPT_CLASS_ID" : "Staging/Grading"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 7,
+			"name" : "[PIONEER 2.0] Metastasis measurement require value",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 3006575,
+							"CONCEPT_NAME" : "Distant metastases.clinical [Class] Cancer",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "21907-1",
+							"DOMAIN_ID" : "Measurement",
+							"VOCABULARY_ID" : "LOINC",
+							"CONCEPT_CLASS_ID" : "Clinical Observation"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 9,
+			"name" : "[PIONEER 2.0] ADT+meds",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40239056,
+							"CONCEPT_NAME" : "abiraterone",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1100072",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 963987,
+							"CONCEPT_NAME" : "apalutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1999574",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1344381,
+							"CONCEPT_NAME" : "bicalutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "83008",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1361291,
+							"CONCEPT_NAME" : "darolutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "2180325",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1315942,
+							"CONCEPT_NAME" : "docetaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "72962",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1349025,
+							"CONCEPT_NAME" : "estramustine",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "4089",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 42900250,
+							"CONCEPT_NAME" : "enzalutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1307298",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 10,
+			"name" : "[PIONEER 2.0] other primaries",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 432851,
+							"CONCEPT_NAME" : "Secondary malignant neoplastic disease",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "128462008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 443392,
+							"CONCEPT_NAME" : "Malignant neoplastic disease",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "363346000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4112752,
+							"CONCEPT_NAME" : "Basal cell carcinoma of skin",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "254701007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4111921,
+							"CONCEPT_NAME" : "Squamous cell carcinoma of skin",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "254651007",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 764971,
+							"CONCEPT_NAME" : "Prostate cancer metastatic to eye",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "96901000119105",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36716186,
+							"CONCEPT_NAME" : "Hormone sensitive prostate cancer",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "722103009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 200962,
+							"CONCEPT_NAME" : "Primary malignant neoplasm of prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "93974005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 36712762,
+							"CONCEPT_NAME" : "Recurrent malignant neoplasm of prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1098981000119101",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 37395835,
+							"CONCEPT_NAME" : "Familial prostate cancer",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "715412008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4164017,
+							"CONCEPT_NAME" : "Squamous cell carcinoma of prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "399590005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4141960,
+							"CONCEPT_NAME" : "Hormone refractory prostate cancer",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "427492003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4163261,
+							"CONCEPT_NAME" : "Malignant tumor of prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "399068003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4183913,
+							"CONCEPT_NAME" : "Malignant tumor involving an organ by direct extension from prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "369598006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4283614,
+							"CONCEPT_NAME" : "Malignant tumor involving bladder by direct extension from prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "369472002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4289246,
+							"CONCEPT_NAME" : "Malignant tumor involving rectum by direct extension from prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "369451000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4283740,
+							"CONCEPT_NAME" : "Malignant tumor involving seminal vesicle by direct extension from prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "369490001",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4280897,
+							"CONCEPT_NAME" : "Malignant tumor involving urethra by direct extension from prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "369466002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4289379,
+							"CONCEPT_NAME" : "Malignant tumor involving vasa deferentia by direct extension from prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "369483006",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : true,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 11,
+			"name" : "[PIONEER V2.0] ADT (LHRH & anti-androgen)",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 19058410,
+							"CONCEPT_NAME" : "degarelix",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "475230",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 739471,
+							"CONCEPT_NAME" : "relugolix",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "2472778",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 35834903,
+							"CONCEPT_NAME" : "relugolix",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "OMOP5040508",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm Extension",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1343039,
+							"CONCEPT_NAME" : "triptorelin",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "38782",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 19089810,
+							"CONCEPT_NAME" : "gonadorelin",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "6384",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1366310,
+							"CONCEPT_NAME" : "goserelin",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "50610",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1351541,
+							"CONCEPT_NAME" : "leuprolide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "42375",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1344381,
+							"CONCEPT_NAME" : "bicalutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "83008",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 19010792,
+							"CONCEPT_NAME" : "cyproterone",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "3014",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1356461,
+							"CONCEPT_NAME" : "flutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "4508",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1500211,
+							"CONCEPT_NAME" : "medroxyprogesterone",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "6691",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1300978,
+							"CONCEPT_NAME" : "megestrol",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "6703",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1315286,
+							"CONCEPT_NAME" : "nilutamide",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "31805",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
 		}
 	],
 	"QualifiedLimit" : {
@@ -1276,7 +1437,7 @@
 			}
 		},
 		{
-			"name" : "18+",
+			"name" : "age 18+",
 			"expression" : {
 				"Type" : "ALL",
 				"CriteriaList" : [],
@@ -1292,152 +1453,7 @@
 			}
 		},
 		{
-			"name" : "Diagnosis of metastatic disease ",
-			"expression" : {
-				"Type" : "ALL",
-				"CriteriaList" : [
-					{
-						"Criteria" : {
-							"ConditionOccurrence" : {
-								"CodesetId" : 1,
-								"ConditionTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Days" : 60,
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 90,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
-						}
-					}
-				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
-			}
-		},
-		{
-			"name" : "At least one diagnosis of PCa",
-			"expression" : {
-				"Type" : "ALL",
-				"CriteriaList" : [
-					{
-						"Criteria" : {
-							"ConditionOccurrence" : {
-								"CodesetId" : 2,
-								"ConditionTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 30,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
-						}
-					}
-				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
-			}
-		},
-		{
-			"name" : "No other primary cancer",
-			"expression" : {
-				"Type" : "ALL",
-				"CriteriaList" : [
-					{
-						"Criteria" : {
-							"ConditionOccurrence" : {
-								"CodesetId" : 3,
-								"ConditionTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 30,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : true,
-						"Occurrence" : {
-							"Type" : 0,
-							"Count" : 0,
-							"IsDistinct" : false
-						}
-					}
-				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
-			}
-		},
-		{
-			"name" : "No orchiectomy",
-			"expression" : {
-				"Type" : "ALL",
-				"CriteriaList" : [
-					{
-						"Criteria" : {
-							"ProcedureOccurrence" : {
-								"CodesetId" : 4,
-								"ProcedureTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 0,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 0,
-							"Count" : 0,
-							"IsDistinct" : false
-						}
-					}
-				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
-			}
-		},
-		{
-			"name" : "No ADT more than 6 months prior to index",
+			"name" : "metastasis ",
 			"expression" : {
 				"Type" : "ALL",
 				"CriteriaList" : [],
@@ -1448,18 +1464,53 @@
 						"CriteriaList" : [
 							{
 								"Criteria" : {
-									"DrugExposure" : {
-										"CodesetId" : 0,
-										"DrugTypeExclude" : false
+									"ConditionOccurrence" : {
+										"CorrelatedCriteria" : {
+											"Type" : "ALL",
+											"CriteriaList" : [
+												{
+													"Criteria" : {
+														"ConditionOccurrence" : {
+															"CodesetId" : 2,
+															"ConditionTypeExclude" : false
+														}
+													},
+													"StartWindow" : {
+														"Start" : {
+															"Coeff" : -1
+														},
+														"End" : {
+															"Days" : 30,
+															"Coeff" : 1
+														},
+														"UseIndexEnd" : false,
+														"UseEventEnd" : false
+													},
+													"RestrictVisit" : false,
+													"IgnoreObservationPeriod" : false,
+													"Occurrence" : {
+														"Type" : 2,
+														"Count" : 1,
+														"IsDistinct" : false
+													}
+												}
+											],
+											"DemographicCriteriaList" : [],
+											"Groups" : []
+										},
+										"CodesetId" : 1,
+										"First" : true,
+										"ConditionTypeExclude" : false
 									}
 								},
 								"StartWindow" : {
 									"Start" : {
+										"Days" : 183,
 										"Coeff" : -1
 									},
 									"End" : {
-										"Days" : 183,
-										"Coeff" : -1
+										"Days" : 30,
+										"Coeff" : 1
 									},
 									"UseIndexEnd" : false,
 									"UseEventEnd" : false
@@ -1467,25 +1518,110 @@
 								"RestrictVisit" : false,
 								"IgnoreObservationPeriod" : false,
 								"Occurrence" : {
-									"Type" : 0,
-									"Count" : 0,
+									"Type" : 2,
+									"Count" : 1,
 									"IsDistinct" : false
 								}
 							},
 							{
 								"Criteria" : {
-									"Observation" : {
-										"CodesetId" : 0,
-										"ObservationTypeExclude" : false
+									"Measurement" : {
+										"CorrelatedCriteria" : {
+											"Type" : "ALL",
+											"CriteriaList" : [
+												{
+													"Criteria" : {
+														"ConditionOccurrence" : {
+															"CodesetId" : 2,
+															"ConditionTypeExclude" : false
+														}
+													},
+													"StartWindow" : {
+														"Start" : {
+															"Coeff" : -1
+														},
+														"End" : {
+															"Days" : 30,
+															"Coeff" : 1
+														},
+														"UseIndexEnd" : false,
+														"UseEventEnd" : false
+													},
+													"RestrictVisit" : false,
+													"IgnoreObservationPeriod" : false,
+													"Occurrence" : {
+														"Type" : 2,
+														"Count" : 1,
+														"IsDistinct" : false
+													}
+												}
+											],
+											"DemographicCriteriaList" : [],
+											"Groups" : []
+										},
+										"CodesetId" : 7,
+										"First" : true,
+										"MeasurementTypeExclude" : false,
+										"ValueAsConcept" : [
+											{
+												"CONCEPT_ID" : 45878386,
+												"CONCEPT_NAME" : "M1C",
+												"STANDARD_CONCEPT" : null,
+												"STANDARD_CONCEPT_CAPTION" : "Unknown",
+												"INVALID_REASON" : null,
+												"INVALID_REASON_CAPTION" : "Unknown",
+												"CONCEPT_CODE" : "LA4625-5",
+												"DOMAIN_ID" : "Meas Value",
+												"VOCABULARY_ID" : "LOINC",
+												"CONCEPT_CLASS_ID" : null
+											},
+											{
+												"CONCEPT_ID" : 45881618,
+												"CONCEPT_NAME" : "M1B",
+												"STANDARD_CONCEPT" : null,
+												"STANDARD_CONCEPT_CAPTION" : "Unknown",
+												"INVALID_REASON" : null,
+												"INVALID_REASON_CAPTION" : "Unknown",
+												"CONCEPT_CODE" : "LA4626-3",
+												"DOMAIN_ID" : "Meas Value",
+												"VOCABULARY_ID" : "LOINC",
+												"CONCEPT_CLASS_ID" : null
+											},
+											{
+												"CONCEPT_ID" : 45882500,
+												"CONCEPT_NAME" : "M1A",
+												"STANDARD_CONCEPT" : null,
+												"STANDARD_CONCEPT_CAPTION" : "Unknown",
+												"INVALID_REASON" : null,
+												"INVALID_REASON_CAPTION" : "Unknown",
+												"CONCEPT_CODE" : "LA4627-1",
+												"DOMAIN_ID" : "Meas Value",
+												"VOCABULARY_ID" : "LOINC",
+												"CONCEPT_CLASS_ID" : null
+											},
+											{
+												"CONCEPT_ID" : 45876322,
+												"CONCEPT_NAME" : "M1",
+												"STANDARD_CONCEPT" : null,
+												"STANDARD_CONCEPT_CAPTION" : "Unknown",
+												"INVALID_REASON" : null,
+												"INVALID_REASON_CAPTION" : "Unknown",
+												"CONCEPT_CODE" : "LA4628-9",
+												"DOMAIN_ID" : "Meas Value",
+												"VOCABULARY_ID" : "LOINC",
+												"CONCEPT_CLASS_ID" : null
+											}
+										]
 									}
 								},
 								"StartWindow" : {
 									"Start" : {
+										"Days" : 183,
 										"Coeff" : -1
 									},
 									"End" : {
-										"Days" : 183,
-										"Coeff" : -1
+										"Days" : 30,
+										"Coeff" : 1
 									},
 									"UseIndexEnd" : false,
 									"UseEventEnd" : false
@@ -1493,24 +1629,60 @@
 								"RestrictVisit" : false,
 								"IgnoreObservationPeriod" : false,
 								"Occurrence" : {
-									"Type" : 0,
-									"Count" : 0,
+									"Type" : 2,
+									"Count" : 1,
 									"IsDistinct" : false
 								}
 							},
 							{
 								"Criteria" : {
-									"ProcedureOccurrence" : {
-										"ProcedureTypeExclude" : false
+									"Measurement" : {
+										"CorrelatedCriteria" : {
+											"Type" : "ALL",
+											"CriteriaList" : [
+												{
+													"Criteria" : {
+														"ConditionOccurrence" : {
+															"CodesetId" : 2,
+															"ConditionTypeExclude" : false
+														}
+													},
+													"StartWindow" : {
+														"Start" : {
+															"Coeff" : -1
+														},
+														"End" : {
+															"Days" : 30,
+															"Coeff" : 1
+														},
+														"UseIndexEnd" : false,
+														"UseEventEnd" : false
+													},
+													"RestrictVisit" : false,
+													"IgnoreObservationPeriod" : false,
+													"Occurrence" : {
+														"Type" : 2,
+														"Count" : 1,
+														"IsDistinct" : false
+													}
+												}
+											],
+											"DemographicCriteriaList" : [],
+											"Groups" : []
+										},
+										"CodesetId" : 6,
+										"First" : true,
+										"MeasurementTypeExclude" : false
 									}
 								},
 								"StartWindow" : {
 									"Start" : {
+										"Days" : 183,
 										"Coeff" : -1
 									},
 									"End" : {
-										"Days" : 183,
-										"Coeff" : -1
+										"Days" : 30,
+										"Coeff" : 1
 									},
 									"UseIndexEnd" : false,
 									"UseEventEnd" : false
@@ -1518,8 +1690,8 @@
 								"RestrictVisit" : false,
 								"IgnoreObservationPeriod" : false,
 								"Occurrence" : {
-									"Type" : 0,
-									"Count" : 0,
+									"Type" : 2,
+									"Count" : 1,
 									"IsDistinct" : false
 								}
 							}
@@ -1529,9 +1701,52 @@
 					}
 				]
 			}
+		},
+		{
+			"name" : "No other primary",
+			"expression" : {
+				"Type" : "ALL",
+				"CriteriaList" : [
+					{
+						"Criteria" : {
+							"ConditionOccurrence" : {
+								"CodesetId" : 10,
+								"ConditionTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 30,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					}
+				],
+				"DemographicCriteriaList" : [],
+				"Groups" : []
+			}
 		}
 	],
-	"CensoringCriteria" : [],
+	"CensoringCriteria" : [
+		{
+			"ConditionOccurrence" : {
+				"CodesetId" : 10,
+				"ConditionTypeExclude" : false
+			}
+		}
+	],
 	"CollapseSettings" : {
 		"CollapseType" : "ERA",
 		"EraPad" : 0
