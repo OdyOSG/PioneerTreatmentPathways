@@ -132,7 +132,7 @@ oracleTempSchema <- NULL
 databaseId <- "SP"
 databaseName <- "Synpuf"
 databaseDescription <- "Testing"
-outputFolderPath <- getwd() # if needed, set up a different path for results
+outputFolderPath <- "C:/Users/Artem/R_studies_results/PIONEER_3" # if needed, set up a different path for results
 
 # Details for connecting to the CDM and storing the results
 outputFolder <- normalizePath(file.path(outputFolderPath, databaseId))
@@ -164,47 +164,49 @@ runCohortDiagnostics(connectionDetails = connectionDetails,
                      databaseDescription = databaseDescription,
                      minCellCount = minCellCount)
 
-# The following 2 commands will allow you to inspect the cohort diagnostics results locally, in case you want to do this.
-# Optionally, preMerge the data for shiny App. Replace "target" with
-# one of these options: "target", "outcome", "strata"
-# CohortDiagnostics::preMergeDiagnosticsFiles(file.path(outputFolder, "diagnostics", "strata"))
-# Use the next command to review cohort diagnostics and replace "target" with
-# one of these options: "target", "outcome", "strata"
-# CohortDiagnostics::launchDiagnosticsExplorer(file.path(outputFolder, "diagnostics", "target"))
+# # Combine diagnostics into sqlite file.
+# # Use one of these options: "target", "outcome", "strata"
+# path = file.path(outputFolder, "diagnostics", "outcome")
+# CohortDiagnostics::createMergedResultsFile(path,
+#                                            sqliteDbPath = file.path(path, 'MergedCohortDiagnosticsData.sqlite'),
+#                                            overwrite = TRUE)
+# # Use the next command to review cohort diagnostics 
+# CohortDiagnostics::launchDiagnosticsExplorer(file.path(path, 'MergedCohortDiagnosticsData.sqlite'))
+
 
 # When finished with reviewing the diagnostics, use the next command
 # to upload the diagnostic results
-uploadDiagnosticsResults(outputFolder, keyFileName, userName)
-
-
-# Use this to run the study. The results will be stored in a zip file called
-# 'Results_<databaseId>.zip in the outputFolder.
-runStudy(connectionDetails = connectionDetails,
-         cdmDatabaseSchema = cdmDatabaseSchema,
-         cohortDatabaseSchema = cohortDatabaseSchema,
-         cohortStagingTable = cohortStagingTable,
-         cohortTable = cohortTable,
-         featureSummaryTable = featureSummaryTable,
-         oracleTempSchema = cohortDatabaseSchema,
-         exportFolder = outputFolder,
-         databaseId = databaseId,
-         databaseName = databaseName,
-         databaseDescription = databaseDescription,
-         #cohortGroups = c("target"), # Optional - will use all groups by default
-         cohortIdsToExcludeFromExecution = cohortIdsToExcludeFromExecution,
-         cohortIdsToExcludeFromResultsExport = cohortIdsToExcludeFromResultsExport,
-         incremental = TRUE,
-         useBulkCharacterization = useBulkCharacterization,
-         minCellCount = minCellCount)
-
-
-# Use the next set of commands to compress results
-# and view the output.
-preMergeResultsFiles(outputFolder)
-launchShinyApp(outputFolder)
-
-
-# When finished with reviewing the results, use the next command
-# upload study results to OHDSI SFTP server:
-uploadStudyResults(outputFolder, keyFileName, userName)
+# uploadDiagnosticsResults(outputFolder, keyFileName, userName)
+# 
+# 
+# # Use this to run the study. The results will be stored in a zip file called
+# # 'Results_<databaseId>.zip in the outputFolder.
+# runStudy(connectionDetails = connectionDetails,
+#          cdmDatabaseSchema = cdmDatabaseSchema,
+#          cohortDatabaseSchema = cohortDatabaseSchema,
+#          cohortStagingTable = cohortStagingTable,
+#          cohortTable = cohortTable,
+#          featureSummaryTable = featureSummaryTable,
+#          oracleTempSchema = cohortDatabaseSchema,
+#          exportFolder = outputFolder,
+#          databaseId = databaseId,
+#          databaseName = databaseName,
+#          databaseDescription = databaseDescription,
+#          #cohortGroups = c("target"), # Optional - will use all groups by default
+#          cohortIdsToExcludeFromExecution = cohortIdsToExcludeFromExecution,
+#          cohortIdsToExcludeFromResultsExport = cohortIdsToExcludeFromResultsExport,
+#          incremental = TRUE,
+#          useBulkCharacterization = useBulkCharacterization,
+#          minCellCount = minCellCount)
+# 
+# 
+# # Use the next set of commands to compress results
+# # and view the output.
+# preMergeResultsFiles(outputFolder)
+# launchShinyApp(outputFolder)
+# 
+# 
+# # When finished with reviewing the results, use the next command
+# # upload study results to OHDSI SFTP server:
+# uploadStudyResults(outputFolder, keyFileName, userName)
 

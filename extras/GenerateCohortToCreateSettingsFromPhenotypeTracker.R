@@ -25,7 +25,7 @@ library(tidyverse, warn.conflicts = FALSE)
 cols <- c('Pheno ID', 'Phenotype name', 'Intended use', 'Where <link to PIONEER CENTRAL ATLAS>')
 cohorts_base_url <- 'https://pioneer.hzdr.de/atlas/#/cohortdefinition/'
 wepapi_base_url <- 'https://pioneer.hzdr.de/WebAPI'
-bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NDkzODgzfQ.QH6rgLgnk4mmbrqnHZeYQY9U214cNmFAAsz97vvqEVVEQ3YZ_TrCuHNE91xl3pkj8rh8v0e79IF0pvaWu_UwTQ"
+bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NTEyMTk2fQ.96KA66TPEYHo9qa3V3PgUeZmiVHAUk3pduKNmKQDNZNvqSEOcfe-gGNMSTjvxXvaXZJ4qwM9g9JMfAcSi3QuFg"
 ROhdsiWebApi::setAuthHeader(wepapi_base_url, bearer)
 
 cohort_types <- c('t', 'o', 's')

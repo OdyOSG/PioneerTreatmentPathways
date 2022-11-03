@@ -26,8 +26,7 @@
 library(PioneerMetastaticTreatement)
 
 # get this token from an active ATLAS web session
-bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NDkzODgzfQ.QH6rgLgnk4mmbrqnHZeYQY9U214cNmFAAsz97vvqEVVEQ3YZ_TrCuHNE91xl3pkj8rh8v0e79IF0pvaWu_UwTQ"
-
+bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NTEyMTk2fQ.96KA66TPEYHo9qa3V3PgUeZmiVHAUk3pduKNmKQDNZNvqSEOcfe-gGNMSTjvxXvaXZJ4qwM9g9JMfAcSi3QuFg"
 baseUrl <- "https://pioneer.hzdr.de/WebAPI"
 ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
 

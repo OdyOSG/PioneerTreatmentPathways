@@ -1,7 +1,7 @@
 Package: PioneerMetastaticTreatement
 Type: Package
 Title: PIONEER / EHDEN / OHDSI prostate cancer study
-Version: 0.4.4
+Version: 0.1.0
 Author: Anthony G. Sena, Artem Gorbachev, Kees van Bochove
 Authors@R: c(
     person("Anthony G.", "Sena", email = "asena5@its.jnj.com", role = c("aut")),

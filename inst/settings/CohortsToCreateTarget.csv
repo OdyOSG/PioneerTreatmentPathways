@@ -1,2 +1,7 @@
 name,atlasName,atlasId,cohortId
-101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC (update ADT),254,101
+101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL,254,101
+102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL,273,102
+103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL,274,103
+104,[PIONEER 2.0] Target Cohort 2.0 diagnosed mHSPC (all) with any treatment,266,104
+105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL,300,105
+106,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL,306,106

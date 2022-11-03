@@ -35,14 +35,14 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   if (!file.exists(diagnosticOutputFolder)) {
     dir.create(diagnosticOutputFolder, recursive = TRUE)
   }
-
+  
   if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
     warning("fftempdir '", getOption("fftempdir"), "' not found. Attempting to create folder")
     dir.create(getOption("fftempdir"), recursive = TRUE)
   }
   ParallelLogger::addDefaultFileLogger(file.path(diagnosticOutputFolder, "cohortDiagnosticsLog.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
-
+  
   # Write out the system information
   ParallelLogger::logInfo(.systemInfo())
   
@@ -50,7 +50,7 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-
+  
   # Create cohorts -----------------------------
   cohorts <- getCohortsToCreate(cohortGroups = cohortGroups)
   # cohorts <- cohorts[1:10,]
@@ -69,36 +69,47 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
                        incremental = TRUE,
                        incrementalFolder = incrementalFolder,
                        inclusionStatisticsFolder = diagnosticOutputFolder)
-
+  
   ParallelLogger::logInfo("Running cohort diagnostics")
   for (i in 1:nrow(cohortGroups)) {
-    tryCatch(expr ={
-      CohortDiagnostics::runCohortDiagnostics(packageName = getThisPackageName(),
-                                              connection = connection,
-                                              cohortToCreateFile = cohortGroups$fileName[i],
-                                              connectionDetails = connectionDetails,
-                                              cdmDatabaseSchema = cdmDatabaseSchema,
-                                              oracleTempSchema = oracleTempSchema,
-                                              cohortDatabaseSchema = cohortDatabaseSchema,
-                                              cohortTable = cohortStagingTable,
-                                              cohortIds = cohorts$cohortId,
-                                              inclusionStatisticsFolder = diagnosticOutputFolder,
-                                              exportFolder = cohortGroups$outputFolder[i],
-                                              databaseId = databaseId,
-                                              databaseName = databaseName,
-                                              databaseDescription = databaseDescription,
-                                              runInclusionStatistics = FALSE,
-                                              runIncludedSourceConcepts = TRUE,
-                                              runOrphanConcepts = TRUE,
-                                              runTimeDistributions = TRUE,
-                                              runBreakdownIndexEvents = TRUE,
-                                              runIncidenceRate = TRUE,
-                                              runCohortOverlap = FALSE,
-                                              runCohortCharacterization = FALSE,
-                                              runTemporalCohortCharacterization = FALSE,
-                                              minCellCount = minCellCount,
-                                              incremental = TRUE,
-                                              incrementalFolder = incrementalFolder)
+    tryCatch(expr = {
+      target_file = read.csv(system.file(cohortGroups$fileName[i], package = getThisPackageName(), mustWork = TRUE))
+      target_file_ids = target_file$cohortId
+      cohorts_set = data.frame(cohortId = NULL, cohortName = NULL, sql = NULL, json = NULL)
+      for(id in target_file_ids){
+        cohort_name <- target_file[i, 'name']
+        sql_file <- system.file('sql', 'sql_server', paste(id, 'sql', sep = '.'), package = getThisPackageName(), mustWork = TRUE)
+        json_file <- system.file('cohorts', paste(id, 'json', sep = '.'), package = getThisPackageName(), mustWork = TRUE)
+        cohorts_set <- rbind(cohorts_set, data.frame(cohortId = id, 
+                                                     cohortName = cohort_name,
+                                                     sql = readChar(sql_file, file.info(sql_file)$size),
+                                                     json = readChar(json_file, file.info(json_file)$size),
+                                                     stringsAsFactors = FALSE))
+      }
+      
+      
+      
+      CohortDiagnostics::executeDiagnostics(cohortDefinitionSet = cohorts_set,
+                                            exportFolder = cohortGroups$outputFolder[i],
+                                            databaseId = databaseId,
+                                            databaseName = databaseName,
+                                            databaseDescription = databaseDescription,
+                                            connection = connection,
+                                            connectionDetails = connectionDetails,
+                                            cdmDatabaseSchema = cdmDatabaseSchema,
+                                            tempEmulationSchema = oracleTempSchema,
+                                            cohortDatabaseSchema = cohortDatabaseSchema,
+                                            cohortTable = cohortStagingTable,
+                                            cohortIds = cohorts$cohortId,
+                                            runInclusionStatistics = FALSE,
+                                            runIncludedSourceConcepts = TRUE,
+                                            runOrphanConcepts = TRUE,
+                                            runBreakdownIndexEvents = TRUE,
+                                            runIncidenceRate = TRUE,
+                                            runTemporalCohortCharacterization = FALSE,
+                                            minCellCount = minCellCount,
+                                            incremental = TRUE,
+                                            incrementalFolder = incrementalFolder)
     },error = function(e){
       ParallelLogger::logError(paste0("Error when running CohortDiagnostics::runCohortDiagnostics on CohortGroup: ", cohortGroups$cohortGroup[i]))
       ParallelLogger::logError(e)
@@ -112,11 +123,14 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
 
 #' @export
 bundleDiagnosticsResults <- function(diagnosticOutputFolder, databaseId) {
- 
+  # Prepare additional metadata files
+  # codemetar::write_codemeta(pkg = find.package(getThisPackageName()), 
+  #                           path = file.path(diagnosticOutputFolder, "codemeta.json"))
+  
   # Write metadata, log, and diagnostics results files to single ZIP file
   date <- format(Sys.time(), "%Y%m%dT%H%M%S")
-  zipName <- file.path(diagnosticOutputFolder, paste0("Results_diagnostics_v", getThisPackageVersion(), "_", databaseId, "_", date, ".zip")) 
-  files <- list.files(diagnosticOutputFolder, "^Results_.*.zip$|cohortDiagnosticsLog.txt", full.names = TRUE, recursive = TRUE)
+  zipName <- file.path(diagnosticOutputFolder, paste0("Results_diagnostics_", databaseId, "_", date, ".zip")) 
+  files <- list.files(diagnosticOutputFolder, "^Results_.*.zip$|codemeta.json|cohortDiagnosticsLog.txt", full.names = TRUE, recursive = TRUE)
   oldWd <- setwd(diagnosticOutputFolder)
   on.exit(setwd(oldWd), add = TRUE)
   DatabaseConnector::createZipFile(zipFile = zipName, files = files)
