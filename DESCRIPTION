@@ -1,53 +1,56 @@
-Package: PioneerMetastaticTreatement
 Type: Package
+Package: PioneerMetastaticTreatement
 Title: PIONEER / EHDEN / OHDSI prostate cancer study
 Version: 0.1.0
-Author: Anthony G. Sena, Artem Gorbachev, Kees van Bochove
 Authors@R: c(
-    person("Anthony G.", "Sena", email = "asena5@its.jnj.com", role = c("aut")),
-    person("Artem", "Gorbachev", email = "artem.gorbachev@odysseusinc.com", role = c("aut")),
-    person("Kees", "van Bochove", email = "kees@thehyve.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8589-0609")),
-    person("Bertrand", "De Meulder", role = c("aut")),
-    person("IMI2 PIONEER", role=c("fnd")),
-    person("IMI2 EHDEN", role=c("fnd")),
-    person("Observational Health Data Science and Informatics", role = c("cph"))
+    person("Anthony G.", "Sena", , "asena5@its.jnj.com", role = "aut"),
+    person("Artem", "Gorbachev", , "artem.gorbachev@odysseusinc.com", role = "aut"),
+    person("Kees", "van Bochove", , "kees@thehyve.nl", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-8589-0609")),
+    person("Bertrand", "De Meulder", role = "aut"),
+    person("IMI2 PIONEER", role = "fnd"),
+    person("IMI2 EHDEN", role = "fnd"),
+    person("Observational Health Data Science and Informatics", role = "cph")
   )
-Description: Describe the baseline demographic, clinical characteristics, treatments and outcomes of interest among individuals with PCa.
-Depends:
-  DatabaseConnector (>= 2.2.0),
-  data.table
-Imports:
-  CohortDiagnostics (>= 2.1.0),
-  FeatureExtraction (>= 3.1.0),
-  ParallelLogger,
-  OhdsiSharing (>= 0.2.1),
-  SqlRender,
-  ff,
-  magrittr,
-  digest,
-  readr,
-  dplyr,
-  data.table,
-  ggplot2,
-  tibble,
-  magrittr,
-  survival,
-  survminer
-Suggests:
-  codemeta,
-  knitr,
-  renv,
-  rmarkdown
-Remotes:
-  OHDSI/CohortDiagnostics,
-  OHDSI/FeatureExtraction,
-  OHDSI/ParallelLogger,
-  OHDSI/SqlRender,
-  OHDSI/OhdsiSharing
+Author: Anthony G. Sena, Artem Gorbachev, Kees van Bochove
+Description: Describe the baseline demographic, clinical characteristics,
+    treatments and outcomes of interest among individuals with PCa.
 License: Apache License 2.0
-VignetteBuilder: knitr
 URL: https://github.com/ohdsi-studies/PioneerWatchfulWaiting
 BugReports: https://github.com/ohdsi-studies/PioneerWatchfulWaiting/issues
+Depends:
+    R (>= 4.0.1)
+Imports:
+    CohortDiagnostics (>= 2.4.0),
+    data.table,
+    DatabaseConnector,
+    digest,
+    dplyr,
+    FeatureExtraction (>= 3.1.0),
+    ff,
+    ggplot2,
+    magrittr,
+    magrittr,
+    OhdsiSharing (>= 0.2.1),
+    ParallelLogger,
+    readr,
+    SqlRender,
+    survival,
+    survminer,
+    tibble
+Suggests:
+    codemeta,
+    knitr,
+    renv,
+    rmarkdown
+VignetteBuilder: 
+    knitr
+Remotes:
+    OHDSI/CohortDiagnostics,
+    OHDSI/FeatureExtraction,
+    OHDSI/OhdsiSharing,
+    OHDSI/ParallelLogger,
+    OHDSI/SqlRender
 Encoding: UTF-8
 LazyData: TRUE
 RoxygenNote: 7.1.2

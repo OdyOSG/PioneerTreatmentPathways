@@ -53,7 +53,6 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   
   # Create cohorts -----------------------------
   cohorts <- getCohortsToCreate(cohortGroups = cohortGroups)
-  # cohorts <- cohorts[1:10,]
   cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution) & cohorts$atlasId > 0, ] # cohorts$atlasId > 0 is used to avoid those cohorts that use custom SQL identified with an atlasId == -1
   ParallelLogger::logInfo("Creating cohorts in incremental mode")
   instantiateCohortSet(connectionDetails = connectionDetails,
@@ -73,43 +72,32 @@ runCohortDiagnostics <- function(connectionDetails = NULL,
   ParallelLogger::logInfo("Running cohort diagnostics")
   for (i in 1:nrow(cohortGroups)) {
     tryCatch(expr = {
-      target_file = read.csv(system.file(cohortGroups$fileName[i], package = getThisPackageName(), mustWork = TRUE))
-      target_file_ids = target_file$cohortId
-      cohorts_set = data.frame(cohortId = NULL, cohortName = NULL, sql = NULL, json = NULL)
-      for(id in target_file_ids){
-        cohort_name <- target_file[i, 'name']
-        sql_file <- system.file('sql', 'sql_server', paste(id, 'sql', sep = '.'), package = getThisPackageName(), mustWork = TRUE)
-        json_file <- system.file('cohorts', paste(id, 'json', sep = '.'), package = getThisPackageName(), mustWork = TRUE)
-        cohorts_set <- rbind(cohorts_set, data.frame(cohortId = id, 
-                                                     cohortName = cohort_name,
-                                                     sql = readChar(sql_file, file.info(sql_file)$size),
-                                                     json = readChar(json_file, file.info(json_file)$size),
-                                                     stringsAsFactors = FALSE))
-      }
-      
-      
-      
-      CohortDiagnostics::executeDiagnostics(cohortDefinitionSet = cohorts_set,
-                                            exportFolder = cohortGroups$outputFolder[i],
-                                            databaseId = databaseId,
-                                            databaseName = databaseName,
-                                            databaseDescription = databaseDescription,
-                                            connection = connection,
-                                            connectionDetails = connectionDetails,
-                                            cdmDatabaseSchema = cdmDatabaseSchema,
-                                            tempEmulationSchema = oracleTempSchema,
-                                            cohortDatabaseSchema = cohortDatabaseSchema,
-                                            cohortTable = cohortStagingTable,
-                                            cohortIds = cohorts$cohortId,
-                                            runInclusionStatistics = FALSE,
-                                            runIncludedSourceConcepts = TRUE,
-                                            runOrphanConcepts = TRUE,
-                                            runBreakdownIndexEvents = TRUE,
-                                            runIncidenceRate = TRUE,
-                                            runTemporalCohortCharacterization = FALSE,
-                                            minCellCount = minCellCount,
-                                            incremental = TRUE,
-                                            incrementalFolder = incrementalFolder)
+      CohortDiagnostics::runCohortDiagnostics(packageName = getThisPackageName(),
+                                              connection = connection,
+                                              cohortToCreateFile = cohortGroups$fileName[i],
+                                              connectionDetails = connectionDetails,
+                                              cdmDatabaseSchema = cdmDatabaseSchema,
+                                              oracleTempSchema = oracleTempSchema,
+                                              cohortDatabaseSchema = cohortDatabaseSchema,
+                                              cohortTable = cohortStagingTable,
+                                              cohortIds = cohorts$cohortId,
+                                              inclusionStatisticsFolder = diagnosticOutputFolder,
+                                              exportFolder = cohortGroups$outputFolder[i],
+                                              databaseId = databaseId,
+                                              databaseName = databaseName,
+                                              databaseDescription = databaseDescription,
+                                              runInclusionStatistics = FALSE,
+                                              runIncludedSourceConcepts = TRUE,
+                                              runOrphanConcepts = TRUE,
+                                              runTimeDistributions = TRUE,
+                                              runBreakdownIndexEvents = TRUE,
+                                              runIncidenceRate = TRUE,
+                                              runCohortOverlap = FALSE,
+                                              runCohortCharacterization = FALSE,
+                                              runTemporalCohortCharacterization = FALSE,
+                                              minCellCount = minCellCount,
+                                              incremental = TRUE,
+                                              incrementalFolder = incrementalFolder)
     },error = function(e){
       ParallelLogger::logError(paste0("Error when running CohortDiagnostics::runCohortDiagnostics on CohortGroup: ", cohortGroups$cohortGroup[i]))
       ParallelLogger::logError(e)
