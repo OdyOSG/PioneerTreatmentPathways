@@ -1,12 +1,11 @@
--- create subject age table
-IF OBJECT_ID('#subject_age', 'U') IS NOT NULL
-   DROP TABLE #subject_age;
+-- Subject_age table
+DROP TABLE IF EXISTS @cohort_database_schema.subject_age;
+CREATE TABLE @cohort_database_schema.subject_age AS 
 SELECT tab.cohort_definition_id,
        tab.person_id,
        tab.cohort_start_date,
        DATEDIFF(year, DATEFROMPARTS(tab.year_of_birth, tab.month_of_birth, tab.day_of_birth),
                 tab.cohort_start_date) AS age
-INTO #subject_age
 FROM (
      SELECT c.cohort_definition_id, p.person_id, c.cohort_start_date, p.year_of_birth,
                CASE WHEN ISNUMERIC(p.month_of_birth) = 1 THEN p.month_of_birth ELSE 1 END AS month_of_birth,
@@ -18,18 +17,17 @@ FROM (
      ) tab
 ;
 
+
 -- Charlson analysis
-IF OBJECT_ID('#charlson_concepts', 'U') IS NOT NULL
-   DROP TABLE #charlson_concepts;
-CREATE TABLE #charlson_concepts
+DROP TABLE IF EXISTS @cohort_database_schema.charlson_concepts;
+CREATE TABLE @cohort_database_schema.charlson_concepts
 (
     diag_category_id INT,
     concept_id       INT
 );
 
-IF OBJECT_ID('#charlson_scoring', 'U') IS NOT NULL
-   DROP TABLE #charlson_scoring;
-CREATE TABLE #charlson_scoring
+DROP TABLE IF EXISTS @cohort_database_schema.charlson_scoring;
+CREATE TABLE @cohort_database_schema.charlson_scoring
 (
     diag_category_id   INT,
     diag_category_name VARCHAR(255),
@@ -37,508 +35,671 @@ CREATE TABLE #charlson_scoring
 );
 
 
---acute myocardial infarction
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (1, 'Myocardial infarction', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 1, descendant_concept_id
-FROM @cdm_database_schema.concept_ancestor
-WHERE ancestor_concept_id IN (4329847);
-
-
---Congestive heart failure
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (2, 'Congestive heart failure', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 2, descendant_concept_id
-FROM @cdm_database_schema.concept_ancestor
-WHERE ancestor_concept_id IN (316139);
-
-
---Peripheral vascular disease
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (3, 'Peripheral vascular disease', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 3,
-	c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (317585,312934,315558,195834,4099184,4247790,4188336,199064,320739,321882,37312529,4045408,321052,317305,312939,4134603)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (317585,312934,315558,195834,4099184,4247790,4188336,199064,320739,321882,37312529,4045408,321052,317305,312939,4134603)
-  and c.invalid_reason is null
-) I
-LEFT JOIN
+DROP TABLE IF EXISTS #charlson_incl;
+CREATE TABLE #charlson_incl
 (
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4243371,3184873,42599607,42572961,4289307,321822,42597028,4202511,4263089,42597030)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4243371,321822)
-  and c.invalid_reason is null
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C;
+    diag_category_id   INT,
+    diag_category_name VARCHAR(255),
+    concept_id         INT
+);
 
 
---Cerebrovascular disease
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (4, 'Cerebrovascular disease', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 4, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (381591,434056,4112026,43530727,4148906)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (381591,434056,4112026,43530727,4148906)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
+DROP TABLE IF EXISTS #charlson_excl;
+CREATE TABLE #charlson_excl
 (
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4121629,4119617,37204809,4062269,435875,372721,4267553,441406,762585,765899,762583,762584,37108913,37117075,432346,192763,43021816,379778,37017075,4061473,4088927,4173794,380943,762351,4079430,4079433,4082161,764707,42536193,4079431,4079432,4079434,4082162,42536192,45766085,4111707,4120104,4079120,4079021,4082163,42535879,42535880,4046364,4234089,313543,4180026,4121637)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4121629,4119617,37204809,4062269,435875,372721,4267553,441406,762585,765899,762583,762584,37108913,37117075,432346,192763,43021816,379778,37017075,4061473,4088927,4173794,380943,762351,4079430,4079433,4082161,764707,42536193,4079431,4079432,4079434,4082162,42536192,45766085,4111707,4120104,4079120,4079021,4082163,42535879,42535880,4046364,4234089,313543,4180026,4121637)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C;
+    diag_category_id   INT,
+    diag_category_name VARCHAR(255),
+    concept_id         INT
+);
 
 
---Dementia
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (5, 'Dementia', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 5, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4182210,373179)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4182210,373179)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (378726,37311999,376095,377788,4139421,372610,4009647,375504,4108943,4047745)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (378726,37311999,376095,377788,4139421,372610,4009647,375504,4108943,4047745)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C;
+INSERT INTO @cohort_database_schema.charlson_scoring (diag_category_id, diag_category_name, weight)
+VALUES (1, 'Myocardial infarction', 1),
+       (2, 'Congestive heart failure', 1),
+       (3, 'Peripheral vascular disease', 1),
+       (4, 'Cerebrovascular disease', 1),
+       (5, 'Dementia', 1),
+       (6, 'Chronic pulmonary disease', 1),
+       (7, 'Rheumatologic disease', 1),
+       (8, 'Peptic ulcer disease', 1),
+       (9, 'Mild liver disease', 1),
+       (10, 'Diabetes (mild to moderate)', 1),
+       (11, 'Diabetes with chronic complications', 2),
+       (12, 'Hemoplegia or paralegia', 2),
+       (13, 'Renal disease', 2),
+       (14, 'Any malignancy', 2),
+       (15, 'Moderate to severe liver disease', 3),
+       (16, 'Metastatic solid tumor', 6),
+       (17, 'AIDS', 6);
 
 
---Chronic pulmonary disease
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (6, 'Chronic pulmonary disease', 1);
+INSERT INTO charlson_incl (diag_category_id, diag_category_name, concept_id)
+VALUES (1, 'Myocardial infarction', 4329847),
+       (2, 'Congestive heart failure', 316139),
+       (3, 'Peripheral vascular disease', 4247790),
+       (3, 'Peripheral vascular disease', 195834),
+       (3, 'Peripheral vascular disease', 199064),
+       (3, 'Peripheral vascular disease', 312934),
+       (3, 'Peripheral vascular disease', 312939),
+       (3, 'Peripheral vascular disease', 315558),
+       (3, 'Peripheral vascular disease', 317305),
+       (3, 'Peripheral vascular disease', 317585),
+       (3, 'Peripheral vascular disease', 320739),
+       (3, 'Peripheral vascular disease', 321052),
+       (3, 'Peripheral vascular disease', 321882),
+       (3, 'Peripheral vascular disease', 4045408),
+       (3, 'Peripheral vascular disease', 4099184),
+       (3, 'Peripheral vascular disease', 4134603),
+       (3, 'Peripheral vascular disease', 4188336),
+       (4, 'Cerebrovascular disease', 381591),
+       (4, 'Cerebrovascular disease', 434056),
+       (4, 'Cerebrovascular disease', 4112026),
+       (4, 'Cerebrovascular disease', 43530727),
+       (4, 'Cerebrovascular disease', 4148906),
+       (5, 'Dementia', 4182210),
+       (5, 'Dementia', 373179),
+       (6, 'Chronic pulmonary disease', 312940),
+       (6, 'Chronic pulmonary disease', 256450),
+       (6, 'Chronic pulmonary disease', 317009),
+       (6, 'Chronic pulmonary disease', 256449),
+       (6, 'Chronic pulmonary disease', 4063381),
+       (6, 'Chronic pulmonary disease', 4112814),
+       (6, 'Chronic pulmonary disease', 4279553),
+       (6, 'Chronic pulmonary disease', 444084),
+       (6, 'Chronic pulmonary disease', 259044),
+       (7, 'Rheumatologic disease', 80182),
+       (7, 'Rheumatologic disease', 4079978),
+       (7, 'Rheumatologic disease', 255348),
+       (7, 'Rheumatologic disease', 80800),
+       (7, 'Rheumatologic disease', 80809),
+       (7, 'Rheumatologic disease', 256197),
+       (7, 'Rheumatologic disease', 438688),
+       (7, 'Rheumatologic disease', 254443),
+       (7, 'Rheumatologic disease', 257628),
+       (7, 'Rheumatologic disease', 134442),
+       (8, 'Peptic ulcer disease', 4027663),
+       (9, 'Mild liver disease', 201612),
+       (9, 'Mild liver disease', 4212540),
+       (9, 'Mild liver disease', 4064161),
+       (9, 'Mild liver disease', 4267417),
+       (9, 'Mild liver disease', 194417),
+       (9, 'Mild liver disease', 4159144),
+       (9, 'Mild liver disease', 4240725),
+       (9, 'Mild liver disease', 4059290),
+       (9, 'Mild liver disease', 4055224),
+       (10, 'Diabetes (mild to moderate)', 46270484),
+       (10, 'Diabetes (mild to moderate)', 36684827),
+       (10, 'Diabetes (mild to moderate)', 4008576),
+       (10, 'Diabetes (mild to moderate)', 4159742),
+       (10, 'Diabetes (mild to moderate)', 443727),
+       (10, 'Diabetes (mild to moderate)', 37311673),
+       (10, 'Diabetes (mild to moderate)', 4226238),
+       (10, 'Diabetes (mild to moderate)', 4029423),
+       (10, 'Diabetes (mild to moderate)', 37110593),
+       (10, 'Diabetes (mild to moderate)', 45770902),
+       (10, 'Diabetes (mild to moderate)', 45757277),
+       (11, 'Diabetes with chronic complications', 442793),
+       (12, 'Hemoplegia or paralegia', 4102342),
+       (12, 'Hemoplegia or paralegia', 132617),
+       (12, 'Hemoplegia or paralegia', 374022),
+       (12, 'Hemoplegia or paralegia', 381548),
+       (12, 'Hemoplegia or paralegia', 192606),
+       (12, 'Hemoplegia or paralegia', 44806793),
+       (12, 'Hemoplegia or paralegia', 374914),
+       (13, 'Renal disease', 312358),
+       (13, 'Renal disease', 44782429),
+       (13, 'Renal disease', 439695),
+       (13, 'Renal disease', 443919),
+       (13, 'Renal disease', 4298809),
+       (13, 'Renal disease', 4030518),
+       (13, 'Renal disease', 197921),
+       (13, 'Renal disease', 42539502),
+       (13, 'Renal disease', 4147716),
+       (13, 'Renal disease', 4019967),
+       (13, 'Renal disease', 2617400),
+       (13, 'Renal disease', 2617401),
+       (13, 'Renal disease', 2617545),
+       (13, 'Renal disease', 2213597),
+       (13, 'Renal disease', 2213592),
+       (13, 'Renal disease', 2213591),
+       (13, 'Renal disease', 2213593),
+       (13, 'Renal disease', 2213590),
+       (13, 'Renal disease', 2101833),
+       (13, 'Renal disease', 40664693),
+       (13, 'Renal disease', 40664745),
+       (13, 'Renal disease', 2108567),
+       (13, 'Renal disease', 2108564),
+       (13, 'Renal disease', 2108566),
+       (13, 'Renal disease', 4286500),
+       (13, 'Renal disease', 313232),
+       (13, 'Renal disease', 2514586),
+       (13, 'Renal disease', 46270032),
+       (13, 'Renal disease', 2101834),
+       (13, 'Renal disease', 4300839),
+       (13, 'Renal disease', 4146536),
+       (13, 'Renal disease', 4021107),
+       (13, 'Renal disease', 4197300),
+       (13, 'Renal disease', 2833286),
+       (13, 'Renal disease', 2877118),
+       (13, 'Renal disease', 45888790),
+       (13, 'Renal disease', 4322471),
+       (14, 'Any malignancy', 438701),
+       (14, 'Any malignancy', 443392),
+       (15, 'Moderate to severe liver disease', 4340386),
+       (15, 'Moderate to severe liver disease', 24966),
+       (15, 'Moderate to severe liver disease', 4237824),
+       (15, 'Moderate to severe liver disease', 4029488),
+       (15, 'Moderate to severe liver disease', 4245975),
+       (15, 'Moderate to severe liver disease', 192680),
+       (15, 'Moderate to severe liver disease', 4026136),
+       (15, 'Moderate to severe liver disease', 4277276),
+       (16, 'Metastatic solid tumor', 432851),
+       (17, 'AIDS', 4013106),
+       (17, 'AIDS', 439727)
+;
 
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 6, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (312940,256450,317009,256449,4063381,4112814,4279553,444084,259044)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (256450,317009,256449,4063381,4112814,4279553,444084,259044)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (257583,4250128,42535716,432347,37396824,4073287,24970,441321,26711,4080753,259848,257012,255362,4166508,4244339,4049965,4334649,4110492,4256228,4280726)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (257583,4250128,42535716,432347,4073287,24970,441321,26711,4080753,259848,257012,255362,4166508,4244339,4049965,4334649,4110492,4256228,4280726)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
+INSERT INTO charlson_excl (diag_category_id, diag_category_name, concept_id)
+VALUES (3, 'Peripheral vascular disease', 4243371),
+       (3, 'Peripheral vascular disease', 3184873),
+       (3, 'Peripheral vascular disease', 42599607),
+       (3, 'Peripheral vascular disease', 42572961),
+       (3, 'Peripheral vascular disease', 4289307),
+       (3, 'Peripheral vascular disease', 321822),
+       (3, 'Peripheral vascular disease', 42597028),
+       (3, 'Peripheral vascular disease', 4202511),
+       (3, 'Peripheral vascular disease', 4263089),
+       (3, 'Peripheral vascular disease', 42597030),
+       (4, 'Cerebrovascular disease', 4121629),
+       (4, 'Cerebrovascular disease', 4119617),
+       (4, 'Cerebrovascular disease', 37204809),
+       (4, 'Cerebrovascular disease', 4062269),
+       (4, 'Cerebrovascular disease', 435875),
+       (4, 'Cerebrovascular disease', 372721),
+       (4, 'Cerebrovascular disease', 4267553),
+       (4, 'Cerebrovascular disease', 441406),
+       (4, 'Cerebrovascular disease', 762585),
+       (4, 'Cerebrovascular disease', 765899),
+       (4, 'Cerebrovascular disease', 762583),
+       (4, 'Cerebrovascular disease', 762584),
+       (4, 'Cerebrovascular disease', 37108913),
+       (4, 'Cerebrovascular disease', 37117075),
+       (4, 'Cerebrovascular disease', 432346),
+       (4, 'Cerebrovascular disease', 192763),
+       (4, 'Cerebrovascular disease', 43021816),
+       (4, 'Cerebrovascular disease', 379778),
+       (4, 'Cerebrovascular disease', 37017075),
+       (4, 'Cerebrovascular disease', 4061473),
+       (4, 'Cerebrovascular disease', 4088927),
+       (4, 'Cerebrovascular disease', 4173794),
+       (4, 'Cerebrovascular disease', 380943),
+       (4, 'Cerebrovascular disease', 762351),
+       (4, 'Cerebrovascular disease', 4079430),
+       (4, 'Cerebrovascular disease', 4079433),
+       (4, 'Cerebrovascular disease', 4082161),
+       (4, 'Cerebrovascular disease', 764707),
+       (4, 'Cerebrovascular disease', 42536193),
+       (4, 'Cerebrovascular disease', 4079431),
+       (4, 'Cerebrovascular disease', 4079432),
+       (4, 'Cerebrovascular disease', 4079434),
+       (4, 'Cerebrovascular disease', 4082162),
+       (4, 'Cerebrovascular disease', 42536192),
+       (4, 'Cerebrovascular disease', 45766085),
+       (4, 'Cerebrovascular disease', 4111707),
+       (4, 'Cerebrovascular disease', 4120104),
+       (4, 'Cerebrovascular disease', 4079120),
+       (4, 'Cerebrovascular disease', 4079021),
+       (4, 'Cerebrovascular disease', 4082163),
+       (4, 'Cerebrovascular disease', 42535879),
+       (4, 'Cerebrovascular disease', 42535880),
+       (4, 'Cerebrovascular disease', 4046364),
+       (4, 'Cerebrovascular disease', 4234089),
+       (4, 'Cerebrovascular disease', 313543),
+       (4, 'Cerebrovascular disease', 4180026),
+       (4, 'Cerebrovascular disease', 4121637),
+       (5, 'Dementia', 378726),
+       (5, 'Dementia', 37311999),
+       (5, 'Dementia', 376095),
+       (5, 'Dementia', 377788),
+       (5, 'Dementia', 4139421),
+       (5, 'Dementia', 372610),
+       (5, 'Dementia', 4009647),
+       (5, 'Dementia', 375504),
+       (5, 'Dementia', 4108943),
+       (5, 'Dementia', 4047745),
+       (6, 'Chronic pulmonary disease', 257583),
+       (6, 'Chronic pulmonary disease', 4250128),
+       (6, 'Chronic pulmonary disease', 42535716),
+       (6, 'Chronic pulmonary disease', 432347),
+       (6, 'Chronic pulmonary disease', 37396824),
+       (6, 'Chronic pulmonary disease', 4073287),
+       (6, 'Chronic pulmonary disease', 24970),
+       (6, 'Chronic pulmonary disease', 441321),
+       (6, 'Chronic pulmonary disease', 26711),
+       (6, 'Chronic pulmonary disease', 4080753),
+       (6, 'Chronic pulmonary disease', 259848),
+       (6, 'Chronic pulmonary disease', 257012),
+       (6, 'Chronic pulmonary disease', 255362),
+       (6, 'Chronic pulmonary disease', 4166508),
+       (6, 'Chronic pulmonary disease', 4244339),
+       (6, 'Chronic pulmonary disease', 4049965),
+       (6, 'Chronic pulmonary disease', 4334649),
+       (6, 'Chronic pulmonary disease', 4110492),
+       (6, 'Chronic pulmonary disease', 4256228),
+       (6, 'Chronic pulmonary disease', 4280726),
+       (8, 'Peptic ulcer disease', 42575826),
+       (8, 'Peptic ulcer disease', 42598770),
+       (8, 'Peptic ulcer disease', 42572784),
+       (8, 'Peptic ulcer disease', 42598976),
+       (8, 'Peptic ulcer disease', 42598722),
+       (8, 'Peptic ulcer disease', 4340230),
+       (8, 'Peptic ulcer disease', 42572805),
+       (8, 'Peptic ulcer disease', 4341234),
+       (8, 'Peptic ulcer disease', 201340),
+       (8, 'Peptic ulcer disease', 37203820),
+       (8, 'Peptic ulcer disease', 4206524),
+       (9, 'Mild liver disease', 4048083),
+       (9, 'Mild liver disease', 4340386),
+       (9, 'Mild liver disease', 197654),
+       (9, 'Mild liver disease', 4194229),
+       (9, 'Mild liver disease', 37396401),
+       (9, 'Mild liver disease', 42599120),
+       (9, 'Mild liver disease', 36716035),
+       (9, 'Mild liver disease', 42599522),
+       (9, 'Mild liver disease', 4342775),
+       (9, 'Mild liver disease', 4026136),
+       (10, 'Diabetes (mild to moderate)', 37016355),
+       (10, 'Diabetes (mild to moderate)', 44809809),
+       (10, 'Diabetes (mild to moderate)', 44789319),
+       (10, 'Diabetes (mild to moderate)', 44789318),
+       (10, 'Diabetes (mild to moderate)', 4096041),
+       (10, 'Diabetes (mild to moderate)', 3180411),
+       (10, 'Diabetes (mild to moderate)', 195771),
+       (11, 'Diabetes with chronic complications', 46270484),
+       (11, 'Diabetes with chronic complications', 761051),
+       (11, 'Diabetes with chronic complications', 4159742),
+       (11, 'Diabetes with chronic complications', 443727),
+       (11, 'Diabetes with chronic complications', 4317258),
+       (11, 'Diabetes with chronic complications', 761048),
+       (11, 'Diabetes with chronic complications', 37311673),
+       (11, 'Diabetes with chronic complications', 4226238),
+       (11, 'Diabetes with chronic complications', 37109305),
+       (11, 'Diabetes with chronic complications', 4029423),
+       (11, 'Diabetes with chronic complications', 37110593),
+       (11, 'Diabetes with chronic complications', 37016356),
+       (11, 'Diabetes with chronic complications', 37016358),
+       (11, 'Diabetes with chronic complications', 37016357),
+       (11, 'Diabetes with chronic complications', 134398),
+       (11, 'Diabetes with chronic complications', 195771),
+       (11, 'Diabetes with chronic complications', 197304),
+       (12, 'Hemoplegia or paralegia', 4044233),
+       (12, 'Hemoplegia or paralegia', 4219507),
+       (12, 'Hemoplegia or paralegia', 42537693),
+       (12, 'Hemoplegia or paralegia', 81425),
+       (12, 'Hemoplegia or paralegia', 4008510),
+       (12, 'Hemoplegia or paralegia', 4136090),
+       (12, 'Hemoplegia or paralegia', 37396338),
+       (12, 'Hemoplegia or paralegia', 36684263),
+       (12, 'Hemoplegia or paralegia', 374336),
+       (12, 'Hemoplegia or paralegia', 35622325),
+       (12, 'Hemoplegia or paralegia', 4222487),
+       (12, 'Hemoplegia or paralegia', 434056),
+       (12, 'Hemoplegia or paralegia', 36716141),
+       (12, 'Hemoplegia or paralegia', 4077819),
+       (12, 'Hemoplegia or paralegia', 43530607),
+       (12, 'Hemoplegia or paralegia', 4013309),
+       (12, 'Hemoplegia or paralegia', 372654),
+       (12, 'Hemoplegia or paralegia', 37116389),
+       (12, 'Hemoplegia or paralegia', 37312156),
+       (12, 'Hemoplegia or paralegia', 37111591),
+       (12, 'Hemoplegia or paralegia', 37116294),
+       (12, 'Hemoplegia or paralegia', 35622086),
+       (12, 'Hemoplegia or paralegia', 37116656),
+       (12, 'Hemoplegia or paralegia', 36716260),
+       (12, 'Hemoplegia or paralegia', 37117747),
+       (12, 'Hemoplegia or paralegia', 35622085),
+       (12, 'Hemoplegia or paralegia', 37110771),
+       (12, 'Hemoplegia or paralegia', 37109775),
+       (12, 'Hemoplegia or paralegia', 4318559),
+       (12, 'Hemoplegia or paralegia', 40483180),
+       (13, 'Renal disease', 37016359),
+       (13, 'Renal disease', 4054915),
+       (13, 'Renal disease', 4189531),
+       (13, 'Renal disease', 4126305),
+       (13, 'Renal disease', 442793),
+       (13, 'Renal disease', 4149398),
+       (13, 'Renal disease', 192279),
+       (13, 'Renal disease', 2313999),
+       (13, 'Renal disease', 4059475),
+       (13, 'Renal disease', 46270934),
+       (13, 'Renal disease', 46270933),
+       (13, 'Renal disease', 37396069),
+       (13, 'Renal disease', 3171077),
+       (13, 'Renal disease', 4139443),
+       (13, 'Renal disease', 2213596),
+       (13, 'Renal disease', 2213595),
+       (13, 'Renal disease', 2213597),
+       (13, 'Renal disease', 2213594),
+       (13, 'Renal disease', 2213592),
+       (13, 'Renal disease', 2213591),
+       (13, 'Renal disease', 2213593),
+       (13, 'Renal disease', 2213590),
+       (13, 'Renal disease', 2213586),
+       (13, 'Renal disease', 2213585),
+       (13, 'Renal disease', 2213584),
+       (13, 'Renal disease', 2213583),
+       (13, 'Renal disease', 2213582),
+       (13, 'Renal disease', 2213581),
+       (13, 'Renal disease', 2213589),
+       (13, 'Renal disease', 2213588),
+       (13, 'Renal disease', 2213587),
+       (13, 'Renal disease', 2213580),
+       (13, 'Renal disease', 2213579),
+       (13, 'Renal disease', 2213578),
+       (13, 'Renal disease', 2101833),
+       (13, 'Renal disease', 40664693),
+       (13, 'Renal disease', 40664745),
+       (13, 'Renal disease', 2108567),
+       (13, 'Renal disease', 2108564),
+       (13, 'Renal disease', 2108566),
+       (13, 'Renal disease', 4286500),
+       (13, 'Renal disease', 2514586),
+       (13, 'Renal disease', 2108568),
+       (13, 'Renal disease', 2101834),
+       (13, 'Renal disease', 4022474),
+       (13, 'Renal disease', 45887599),
+       (13, 'Renal disease', 2109583),
+       (13, 'Renal disease', 2109584),
+       (13, 'Renal disease', 2109582),
+       (13, 'Renal disease', 2109580),
+       (13, 'Renal disease', 2109581),
+       (14, 'Any malignancy', 36403050),
+       (14, 'Any malignancy', 36403028),
+       (14, 'Any malignancy', 36403071),
+       (14, 'Any malignancy', 36402997),
+       (14, 'Any malignancy', 36403059),
+       (14, 'Any malignancy', 36403077),
+       (14, 'Any malignancy', 36403012),
+       (14, 'Any malignancy', 36402991),
+       (14, 'Any malignancy', 36403070),
+       (14, 'Any malignancy', 36403044),
+       (14, 'Any malignancy', 36403007),
+       (14, 'Any malignancy', 36403014),
+       (14, 'Any malignancy', 36403066),
+       (14, 'Any malignancy', 36403006),
+       (14, 'Any malignancy', 36403031),
+       (14, 'Any malignancy', 36403020),
+       (14, 'Any malignancy', 36403061),
+       (14, 'Any malignancy', 36403004),
+       (14, 'Any malignancy', 36403009),
+       (14, 'Any malignancy', 36403056),
+       (14, 'Any malignancy', 36403010),
+       (14, 'Any malignancy', 36403042),
+       (14, 'Any malignancy', 36403046),
+       (14, 'Any malignancy', 36403036),
+       (14, 'Any malignancy', 36403143),
+       (14, 'Any malignancy', 36403115),
+       (14, 'Any malignancy', 36403083),
+       (14, 'Any malignancy', 36403138),
+       (14, 'Any malignancy', 36403141),
+       (14, 'Any malignancy', 36403128),
+       (14, 'Any malignancy', 36403152),
+       (14, 'Any malignancy', 36403107),
+       (14, 'Any malignancy', 36403090),
+       (14, 'Any malignancy', 36403132),
+       (14, 'Any malignancy', 36403091),
+       (14, 'Any malignancy', 36403142),
+       (14, 'Any malignancy', 36403134),
+       (14, 'Any malignancy', 36403148),
+       (14, 'Any malignancy', 36403120),
+       (14, 'Any malignancy', 36403095),
+       (14, 'Any malignancy', 36403112),
+       (14, 'Any malignancy', 36403093),
+       (14, 'Any malignancy', 36403139),
+       (14, 'Any malignancy', 36403145),
+       (14, 'Any malignancy', 36403109),
+       (14, 'Any malignancy', 42512800),
+       (14, 'Any malignancy', 42511869),
+       (14, 'Any malignancy', 42512038),
+       (14, 'Any malignancy', 42511724),
+       (14, 'Any malignancy', 42511824),
+       (14, 'Any malignancy', 42511643),
+       (14, 'Any malignancy', 36403149),
+       (14, 'Any malignancy', 42512747),
+       (14, 'Any malignancy', 42512286),
+       (14, 'Any malignancy', 42512532),
+       (14, 'Any malignancy', 42512028),
+       (14, 'Any malignancy', 36403081),
+       (14, 'Any malignancy', 36403026),
+       (14, 'Any malignancy', 36403058),
+       (14, 'Any malignancy', 36403034),
+       (14, 'Any malignancy', 36402992),
+       (14, 'Any malignancy', 36403054),
+       (14, 'Any malignancy', 36403041),
+       (14, 'Any malignancy', 36403043),
+       (14, 'Any malignancy', 36403073),
+       (14, 'Any malignancy', 435506),
+       (14, 'Any malignancy', 36403030),
+       (14, 'Any malignancy', 36403024),
+       (14, 'Any malignancy', 36403117),
+       (14, 'Any malignancy', 36403102),
+       (14, 'Any malignancy', 433435),
+       (14, 'Any malignancy', 36402628),
+       (14, 'Any malignancy', 36403078),
+       (14, 'Any malignancy', 36402440),
+       (14, 'Any malignancy', 36403047),
+       (14, 'Any malignancy', 36403129),
+       (14, 'Any malignancy', 36403013),
+       (14, 'Any malignancy', 36403049),
+       (14, 'Any malignancy', 36402466),
+       (14, 'Any malignancy', 42514272),
+       (14, 'Any malignancy', 42514300),
+       (14, 'Any malignancy', 42514069),
+       (14, 'Any malignancy', 42514087),
+       (14, 'Any malignancy', 42513173),
+       (14, 'Any malignancy', 42513168),
+       (14, 'Any malignancy', 42514355),
+       (14, 'Any malignancy', 42514250),
+       (14, 'Any malignancy', 42514287),
+       (14, 'Any malignancy', 42514264),
+       (14, 'Any malignancy', 42514252),
+       (14, 'Any malignancy', 42514189),
+       (14, 'Any malignancy', 42514379),
+       (14, 'Any malignancy', 42514157),
+       (14, 'Any malignancy', 42514198),
+       (14, 'Any malignancy', 42514109),
+       (14, 'Any malignancy', 42514206),
+       (14, 'Any malignancy', 42514341),
+       (14, 'Any malignancy', 42514251),
+       (14, 'Any malignancy', 42514168),
+       (14, 'Any malignancy', 42514350),
+       (14, 'Any malignancy', 42514129),
+       (14, 'Any malignancy', 42514102),
+       (14, 'Any malignancy', 42514156),
+       (14, 'Any malignancy', 42514291),
+       (14, 'Any malignancy', 42514378),
+       (14, 'Any malignancy', 42514367),
+       (14, 'Any malignancy', 42514217),
+       (14, 'Any malignancy', 42514165),
+       (14, 'Any malignancy', 42514372),
+       (14, 'Any malignancy', 42514202),
+       (14, 'Any malignancy', 42514326),
+       (14, 'Any malignancy', 42514143),
+       (14, 'Any malignancy', 42514304),
+       (14, 'Any malignancy', 42514180),
+       (14, 'Any malignancy', 42514373),
+       (14, 'Any malignancy', 42514103),
+       (14, 'Any malignancy', 42514334),
+       (14, 'Any malignancy', 42514182),
+       (14, 'Any malignancy', 42513234),
+       (14, 'Any malignancy', 42514239),
+       (14, 'Any malignancy', 42514278),
+       (14, 'Any malignancy', 42514169),
+       (14, 'Any malignancy', 42514212),
+       (14, 'Any malignancy', 42514362),
+       (14, 'Any malignancy', 42514093),
+       (14, 'Any malignancy', 42514097),
+       (14, 'Any malignancy', 42514376),
+       (14, 'Any malignancy', 42514163),
+       (14, 'Any malignancy', 42514297),
+       (14, 'Any malignancy', 42514369),
+       (14, 'Any malignancy', 42514363),
+       (14, 'Any malignancy', 42514178),
+       (14, 'Any malignancy', 42514307),
+       (14, 'Any malignancy', 42514214),
+       (14, 'Any malignancy', 42514288),
+       (14, 'Any malignancy', 42514208),
+       (14, 'Any malignancy', 42514263),
+       (14, 'Any malignancy', 42514201),
+       (14, 'Any malignancy', 42514175),
+       (14, 'Any malignancy', 42514303),
+       (14, 'Any malignancy', 42514290),
+       (14, 'Any malignancy', 42514100),
+       (14, 'Any malignancy', 42514327),
+       (14, 'Any malignancy', 42514271),
+       (14, 'Any malignancy', 42514329),
+       (14, 'Any malignancy', 42514240),
+       (14, 'Any malignancy', 42514144),
+       (14, 'Any malignancy', 42514254),
+       (14, 'Any malignancy', 42514294),
+       (14, 'Any malignancy', 42514170),
+       (14, 'Any malignancy', 42514147),
+       (14, 'Any malignancy', 42514215),
+       (14, 'Any malignancy', 42514104),
+       (14, 'Any malignancy', 42514374),
+       (14, 'Any malignancy', 42514126),
+       (14, 'Any malignancy', 42514199),
+       (14, 'Any malignancy', 42514338),
+       (14, 'Any malignancy', 42514173),
+       (14, 'Any malignancy', 42514315),
+       (14, 'Any malignancy', 42514225),
+       (14, 'Any malignancy', 42514107),
+       (14, 'Any malignancy', 42514131),
+       (14, 'Any malignancy', 42514277),
+       (14, 'Any malignancy', 42514231),
+       (14, 'Any malignancy', 42514108),
+       (14, 'Any malignancy', 42514141),
+       (14, 'Any malignancy', 42514091),
+       (14, 'Any malignancy', 42514232),
+       (14, 'Any malignancy', 42514260),
+       (14, 'Any malignancy', 42514302),
+       (14, 'Any malignancy', 42514191),
+       (14, 'Any malignancy', 42514365),
+       (14, 'Any malignancy', 42514136),
+       (14, 'Any malignancy', 42514237),
+       (14, 'Any malignancy', 42514325),
+       (14, 'Any malignancy', 42514337),
+       (14, 'Any malignancy', 42514359),
+       (14, 'Any malignancy', 42514110),
+       (14, 'Any malignancy', 42514324),
+       (14, 'Any malignancy', 42514228),
+       (14, 'Any malignancy', 42514098),
+       (14, 'Any malignancy', 42514048),
+       (14, 'Any malignancy', 42514137),
+       (14, 'Any malignancy', 42514218),
+       (14, 'Any malignancy', 42514125),
+       (14, 'Any malignancy', 42514080),
+       (14, 'Any malignancy', 42514209),
+       (14, 'Any malignancy', 42514357),
+       (14, 'Any malignancy', 42514348),
+       (14, 'Any malignancy', 42514335),
+       (14, 'Any malignancy', 42514305),
+       (14, 'Any malignancy', 432582),
+       (14, 'Any malignancy', 36402451),
+       (14, 'Any malignancy', 36402490),
+       (14, 'Any malignancy', 42512086),
+       (14, 'Any malignancy', 36402509),
+       (14, 'Any malignancy', 36402513),
+       (14, 'Any malignancy', 36402587),
+       (14, 'Any malignancy', 42512566),
+       (14, 'Any malignancy', 4283739),
+       (14, 'Any malignancy', 432851),
+       (14, 'Any malignancy', 36402471),
+       (14, 'Any malignancy', 42512846),
+       (14, 'Any malignancy', 36403151),
+       (14, 'Any malignancy', 36403082),
+       (14, 'Any malignancy', 36403123),
+       (14, 'Any malignancy', 36403080),
+       (14, 'Any malignancy', 36402645),
+       (14, 'Any malignancy', 36403076),
+       (14, 'Any malignancy', 36403068),
+       (14, 'Any malignancy', 36403039),
+       (14, 'Any malignancy', 36403033),
+       (14, 'Any malignancy', 36403057),
+       (14, 'Any malignancy', 36403001),
+       (14, 'Any malignancy', 36403069),
+       (14, 'Any malignancy', 36403072),
+       (14, 'Any malignancy', 36403003),
+       (14, 'Any malignancy', 36403048),
+       (14, 'Any malignancy', 36403086),
+       (14, 'Any malignancy', 36403154),
+       (14, 'Any malignancy', 36402417),
+       (14, 'Any malignancy', 36402373),
+       (14, 'Any malignancy', 42512691),
+       (14, 'Any malignancy', 36402391),
+       (14, 'Any malignancy', 36402644),
+       (15, 'Moderate to severe liver disease', 36716708),
+       (15, 'Moderate to severe liver disease', 763021),
+       (15, 'Moderate to severe liver disease', 4163687),
+       (15, 'Moderate to severe liver disease', 4314443),
+       (15, 'Moderate to severe liver disease', 439675),
+       (15, 'Moderate to severe liver disease', 46270037),
+       (15, 'Moderate to severe liver disease', 4308946),
+       (15, 'Moderate to severe liver disease', 46270152),
+       (15, 'Moderate to severe liver disease', 46270142),
+       (15, 'Moderate to severe liver disease', 196029),
+       (15, 'Moderate to severe liver disease', 194856),
+       (15, 'Moderate to severe liver disease', 200031),
+       (15, 'Moderate to severe liver disease', 439672),
+       (15, 'Moderate to severe liver disease', 4331292),
+       (15, 'Moderate to severe liver disease', 3183806),
+       (15, 'Moderate to severe liver disease', 4291005)
 ;
 
 
---Rheumatologic disease
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (7, 'Rheumatologic disease', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 7, descendant_concept_id
-FROM @cdm_database_schema.concept_ancestor
-WHERE ancestor_concept_id IN (80182,4079978,255348,80800,80809,256197,438688,254443,257628,134442);
-
-
---Peptic ulcer disease
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (8, 'Peptic ulcer disease', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 8,c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4027663)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4027663)
-  and c.invalid_reason is null
-
-) I
+INSERT INTO @cohort_database_schema.charlson_concepts
+SELECT DISTINCT I.diag_category_id, I.descendant_concept_id
+FROM (
+     SELECT incl.diag_category_id, ca.ancestor_concept_id, ca.descendant_concept_id
+     FROM @cdm_database_schema.concept_ancestor ca
+     JOIN charlson_incl incl
+         ON ca.ancestor_concept_id = incl.concept_id
+     ) I
 LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (42575826,42598770,42572784,42598976,42598722,4340230,42572805,4341234,201340,37203820,4206524)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (42575826,42598770,42572784,42598976,42598722,4340230,42572805,4341234,201340,37203820,4206524)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
-;
+    (
+    SELECT excl.diag_category_id, ca.ancestor_concept_id, ca.descendant_concept_id
+    FROM @cdm_database_schema.concept_ancestor ca
+    JOIN charlson_excl excl
+        ON ca.ancestor_concept_id = excl.concept_id
+    ) E
+    ON I.diag_category_id = E.diag_category_id
+        AND I.descendant_concept_id = E.descendant_concept_id;
 
 
---Mild liver disease
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (9, 'Mild liver disease', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 9,c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (201612,4212540,4064161,4267417,194417,4159144,4240725,4059290,4055224)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (201612,4212540,4064161,4267417,194417,4159144,4240725,4059290,4055224)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4048083,4340386,197654,4194229,37396401,42599120,36716035,42599522,4342775,4026136)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (197654,4194229,37396401,36716035,42599522,4342775)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
-;
-
-
---Diabetes (mild to moderate)
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (10, 'Diabetes (mild to moderate)', 1);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 10,c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (46270484,36684827,4008576,4159742,443727,37311673,4226238,4029423,37110593,45770902,45757277)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (46270484,36684827,4008576,4159742,443727,37311673,4226238,4029423,37110593,45770902,45757277)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (1567906,37016355,44809809,44789319,44789318,4096041,3180411,195771)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (1567906,37016355,44809809,44789319,44789318,4096041,3180411,195771)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
-;
-
-
---Diabetes with chronic complications
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (11, 'Diabetes with chronic complications', 2);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 11, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (442793)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (442793)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (46270484,761051,1567906,4159742,443727,4317258,761048,37311673,4226238,37109305,4029423,37110593,37016356,37016358,37016357,134398,195771,197304)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (46270484,761051,1567906,4159742,443727,4317258,761048,37311673,4226238,37109305,4029423,37110593,37016356,37016358,37016357,134398,195771,197304)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
-;
-
-
-
---Hemoplegia or paralegia
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (12, 'Hemoplegia or paralegia', 2);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 12, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4102342,132617,374022,381548,192606,44806793,374914)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4102342,132617,374022,381548,192606,44806793,374914)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4044233,4219507,42537693,81425,4008510,4136090,37396338,37204522,36684263,374336,35622325,4222487,434056,36716141,4077819,43530607,4013309,372654,37116389,37312156,37111591,37116294,35622086,37116656,36716260,37117747,35622085,37110771,37109775,4318559,40483180)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4008510,434056,4013309,372654)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
-;
-
-
---Renal disease
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (13, 'Renal disease', 2);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 13,  c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (312358,44782429,4019967,439695,443919,4298809,4030518,197921,42539502)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (312358,44782429,4019967,439695,443919,4298809,4030518,197921,42539502)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (37016359,4054915,4189531,4126305,442793,4149398,45552372,192279,35205724)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4054915,4189531,4126305,442793,192279)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C UNION ALL 
-SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4147716,4019967,2617400,2617401,2617545,2213597,2213592,2213591,2213593,2213590,2101833,40664693,40664745,2108567,2108564,2108566,4286500,313232,2514586,46270032,2108568,2101834)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4147716,4019967,2617400,2617401,2617545,2213597,2213592,2213591,2213593,2213590,2101833,40664693,40664745,2108567,2108564,2108566,4286500,313232,2514586,46270032,2108568,2101834)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (2313999,4059475)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (2313999,4059475)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C UNION ALL 
-SELECT 2 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4300839,4146536)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4300839,4146536)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (46270934,46270933,37396069,3171077,4139443,2213596,2213595,2213597,2213594,2213592,2213591,2213593,2213590,2213586,2213585,2213584,2213583,2213582,2213581,2213589,2213588,2213587,2213580,2213579,2213578,2101833,40664693,40664745,2108567,2108564,2108566,4286500,2514586,2108568,2101834)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (2213596,2213595,2213597,2213594,2213592,2213591,2213593,2213590,2213586,2213585,2213584,2213583,2213582,2213581,2213589,2213588,2213587,2213580,2213579,2213578)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C UNION ALL 
-SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4021107,4197300,2833286,2877118,45888790,4322471)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4021107,4197300,2833286,2877118,45888790,4322471)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4022474,45887599,2109583,2109584,2109582,2109580,2109581)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4022474)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
-;
-
-
---Any malignancy
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (14, 'Any malignancy', 2);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 14, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (438701,443392)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (438701,443392)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (36403050,36403028,36403071,36402997,36403059,36403077,36403012,36402991,36403070,36403044,36403007,36403014,36403066,36403006,36403031,36403020,36403061,36403004,36403009,36403056,36403010,36403042,36403046,36403036,36403143,36403115,36403083,36403138,36403141,36403128,36403152,36403107,36403090,36403132,36403091,36403142,36403134,36403148,36403120,36403095,36403112,36403093,36403139,36403145,36403109,42512800,42511869,42512038,42511724,42511824,42511643,36403149,42512747,42512286,42512532,42512028,36403081,36403026,36403058,36403034,36402992,36403054,36403041,36403043,36403073,435506,36403030,36403024,36403117,36403102,433435,36402628,36403078,36402440,36403047,36403129,36403013,36403049,36402466,36402579,42514272,42514300,42514069,42514087,42513173,42513168,42514220,42514355,42514250,42514287,42514264,42514252,42514189,42514379,42514157,42514198,42514109,42514206,42514341,42514251,42514168,42514350,42514129,42514102,42514156,42514291,42514378,42514367,42514217,42514165,42514372,42514202,42514326,42514143,42514304,42514180,42514373,42514103,42514334,42514182,42513234,42514239,42514278,42514169,42514212,42514362,42514093,42514097,42514376,42514163,42514297,42514369,42514363,42514178,42514307,42514214,42514288,42514208,42514263,42514201,42514175,42514303,42514290,42514100,42514327,42514271,42514329,42514240,42514144,42514254,42514294,42514170,42514147,42514215,42514104,42514374,42514126,42514199,42514338,42514173,42514315,42514225,42514107,42514131,42514277,42514231,42514211,42514108,42514141,42514091,42514232,42514260,42514302,42514191,42514365,42514136,42514237,42514325,42514337,42514359,42514110,42514324,42514228,42514098,42514048,42514137,42514218,42514125,42514080,42514209,42514357,42514348,42514335,42514305,432582,36402451,36402490,42512086,36402509,36402513,36402587,36402575,42512566,4283739,432851,36402471,42512846,36403151,36403082,36403123,36403080,36402645,36403076,36403068,36403039,36403033,36403057,36403001,36403069,36403072,36403003,36403048,36403086,36403154,36402417,36402373,42512691,36402391,36402644)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (36403050,36403028,36403071,36402997,36403059,36403077,36403012,36402991,36403070,36403044,36403007,36403014,36403066,36403006,36403031,36403020,36403061,36403004,36403009,36403056,36403010,36403042,36403046,36403036,36403143,36403115,36403083,36403138,36403141,36403128,36403152,36403107,36403090,36403132,36403091,36403142,36403134,36403148,36403120,36403095,36403112,36403093,36403139,36403145,36403109,42512800,42511869,42512038,42511724,42511824,42511643,36403149,42512747,42512286,42512532,42512028,36403081,36403026,36403058,36403034,36402992,36403054,36403041,36403043,36403073,435506,36403030,36403024,36403117,36403102,433435,36402628,36403078,36402440,36403047,36403129,36403013,36403049,36402466,36402579,42514272,42514300,42514069,42514087,42513173,42513168,42514220,42514355,42514250,42514287,42514264,42514252,42514189,42514379,42514157,42514198,42514109,42514206,42514341,42514251,42514168,42514350,42514129,42514102,42514156,42514291,42514378,42514367,42514217,42514165,42514372,42514202,42514326,42514143,42514304,42514180,42514373,42514103,42514334,42514182,42513234,42514239,42514278,42514169,42514212,42514362,42514093,42514097,42514376,42514163,42514297,42514369,42514363,42514178,42514307,42514214,42514288,42514208,42514263,42514201,42514175,42514303,42514290,42514100,42514327,42514271,42514329,42514240,42514144,42514254,42514294,42514170,42514147,42514215,42514104,42514374,42514126,42514199,42514338,42514173,42514315,42514225,42514107,42514131,42514277,42514231,42514211,42514108,42514141,42514091,42514232,42514260,42514302,42514191,42514365,42514136,42514237,42514325,42514337,42514359,42514110,42514324,42514228,42514098,42514048,42514137,42514218,42514125,42514080,42514209,42514357,42514348,42514335,42514305,432582,36402451,36402490,42512086,36402509,36402513,36402587,36402575,42512566,4283739,432851,36402471,42512846,36403151,36403082,36403123,36403080,36402645,36403076,36403068,36403039,36403033,36403057,36403001,36403069,36403072,36403003,36403048,36403086,36403154,36402417,36402373,42512691,36402391,36402644)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
-;
-
-
---Moderate to severe liver disease
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (15, 'Moderate to severe liver disease', 3);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 15, c.concept_id FROM (select distinct I.concept_id FROM
-( 
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (4340386,24966,4237824,4029488,4245975,192680,4026136,4277276)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4340386,24966,4237824,4029488,4245975,192680,4026136,4277276)
-  and c.invalid_reason is null
-
-) I
-LEFT JOIN
-(
-  select concept_id from @cdm_database_schema.CONCEPT where concept_id in (36716708,763021,4163687,4314443,439675,46270037,4308946,46270152,46270142,196029,194856,200031,439672,4331292,3183806,4291005)
-UNION  select c.concept_id
-  from @cdm_database_schema.CONCEPT c
-  join @cdm_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (36716708,763021,4163687,4314443,439675,46270037,4308946,46270152,46270142,196029,194856,200031,439672,4331292,3183806,4291005)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
-) C
-;
-
-
---Metastatic solid tumor
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (16, 'Metastatic solid tumor', 6);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 16, descendant_concept_id
-FROM @cdm_database_schema.concept_ancestor
-WHERE ancestor_concept_id IN (432851);
-
-
---AIDS
-INSERT INTO #charlson_scoring (diag_category_id, diag_category_name, weight)
-VALUES (17, 'AIDS', 6);
-
-INSERT INTO #charlson_concepts (diag_category_id, concept_id)
-SELECT 17, descendant_concept_id
-FROM @cdm_database_schema.concept_ancestor
-WHERE ancestor_concept_id IN  (4013106,439727);
-
-
-
-IF OBJECT_ID('#charlson_map', 'U') IS NOT NULL
-   DROP TABLE #charlson_map;
-SELECT DISTINCT diag_category_id,
-                weight,
+DROP TABLE IF EXISTS @cohort_database_schema.charlson_map;
+CREATE TABLE @cohort_database_schema.charlson_map AS
+SELECT DISTINCT COALESCE(diag_category_id, 0) as diag_category_id,
+                COALESCE (weight, 0) as weight,
                 c.cohort_definition_id,
                 c.subject_id,
                 c.cohort_start_date
-INTO #charlson_map
 FROM (SELECT concepts.diag_category_id, score.weight, cohort.subject_id, cohort.cohort_definition_id
 	FROM 
 	@cohort_database_schema.@cohort_table cohort
 	INNER JOIN @cdm_database_schema.condition_era condition_era
 		ON cohort.subject_id = condition_era.person_id
-	INNER JOIN #charlson_concepts concepts
+	INNER JOIN @cohort_database_schema.charlson_concepts concepts
 		ON condition_era.condition_concept_id = concepts.concept_id
-	INNER JOIN #charlson_scoring score
+	INNER JOIN @cohort_database_schema.charlson_scoring score
 		ON concepts.diag_category_id = score.diag_category_id
 	WHERE condition_era_start_date < cohort.cohort_start_date	
 	) temp
 	RIGHT JOIN @cohort_database_schema.@cohort_table c
-		ON c.subject_id = temp.subject_id and c.cohort_definition_id=temp.cohort_definition_id
-	
-	;
+		ON c.subject_id = temp.subject_id and c.cohort_definition_id=temp.cohort_definition_id;
 
 
 -- Update weights to avoid double counts of mild/severe course of the disease
 -- Diabetes
-UPDATE #charlson_map
+UPDATE @cohort_database_schema.charlson_map
 SET weight = 0
 FROM (
   SELECT
@@ -546,8 +707,8 @@ FROM (
   , t1.cohort_definition_id AS coh_id
   , t1.diag_category_id AS d1
   , t2.diag_category_id AS d2
-  FROM #charlson_map t1
-  INNER JOIN #charlson_map t2 ON
+  FROM @cohort_database_schema.charlson_map t1
+  INNER JOIN @cohort_database_schema.charlson_map t2 ON
     t1.subject_id = t2.subject_id
     AND t1.cohort_definition_id = t2.cohort_definition_id
 ) x
@@ -559,7 +720,7 @@ WHERE
   AND x.d2 = 11;
 
 -- Liver disease
-UPDATE #charlson_map
+UPDATE @cohort_database_schema.charlson_map
 SET weight = 0
 FROM (
   SELECT
@@ -567,8 +728,8 @@ FROM (
   , t1.cohort_definition_id AS coh_id
   , t1.diag_category_id AS d1
   , t2.diag_category_id AS d2
-  FROM #charlson_map t1
-  INNER JOIN #charlson_map t2 ON
+  FROM @cohort_database_schema.charlson_map t1
+  INNER JOIN @cohort_database_schema.charlson_map t2 ON
     t1.subject_id = t2.subject_id
     AND t1.cohort_definition_id = t2.cohort_definition_id
 ) x
@@ -580,7 +741,7 @@ WHERE
   AND x.d2 = 15;
 
 -- Malignancy
-UPDATE #charlson_map
+UPDATE @cohort_database_schema.charlson_map
 SET weight = 0
 FROM (
   SELECT
@@ -588,8 +749,8 @@ FROM (
   , t1.cohort_definition_id AS coh_id
   , t1.diag_category_id AS d1
   , t2.diag_category_id AS d2
-  FROM #charlson_map t1
-  INNER JOIN #charlson_map t2 ON
+  FROM @cohort_database_schema.charlson_map t1
+  INNER JOIN @cohort_database_schema.charlson_map t2 ON
     t1.subject_id = t2.subject_id
     AND t1.cohort_definition_id = t2.cohort_definition_id
 ) x
@@ -599,9 +760,7 @@ WHERE
   AND diag_category_id = 14
   AND x.d1 = 14
   AND x.d2 = 16;
-
-
-drop table if exists @cohort_database_schema.qf_pioneer_temp;
-create table @cohort_database_schema.qf_pioneer_temp as 
-select * from #charlson_map;
-
+  
+  
+DROP TABLE IF EXISTS #charlson_incl;
+DROP TABLE IF EXISTS #charlson_excl;
