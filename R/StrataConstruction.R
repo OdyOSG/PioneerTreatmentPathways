@@ -33,9 +33,9 @@ createBulkStrataFromFile <- function(connection,
   targetStrataXref <- getTargetStrataXref()
   
   for (i in 1:nrow(bulkStrataToCreate)) {
-    strataId <- bulkStrataToCreate$cohortId[i]
+    .strataId <- bulkStrataToCreate$cohortId[i]
     # Get the strata to create for the targets selected
-    tsXrefSubset <- targetStrataXref[targetStrataXref$targetId %in% targetIds & targetStrataXref$strataId == strataId, ]
+    tsXrefSubset <- targetStrataXref[targetStrataXref$targetId %in% targetIds & targetStrataXref$strataId == .strataId, ]
     # Create the SQL for the temp table to hold the cohorts to be stratified
     tsXrefTempTableSql <- cohortStrataXrefTempTableSql(connection, tsXrefSubset, oracleTempSchema)
     # Execute the SQL to create the stratified cohorts

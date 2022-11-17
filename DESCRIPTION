@@ -1,5 +1,5 @@
 Type: Package
-Package: PioneerMetastaticTreatement
+Package: PIONEERmetastaticTreatment
 Title: PIONEER / EHDEN / OHDSI prostate cancer study
 Version: 0.1.0
 Authors@R: c(
@@ -21,7 +21,7 @@ BugReports: https://github.com/ohdsi-studies/PioneerWatchfulWaiting/issues
 Depends:
     R (>= 4.0.1)
 Imports:
-    CohortDiagnostics (>= 2.4.0),
+    CohortDiagnostics (>= 2.2.4),
     data.table,
     DatabaseConnector,
     digest,
@@ -29,7 +29,6 @@ Imports:
     FeatureExtraction (>= 3.1.0),
     ff,
     ggplot2,
-    magrittr,
     magrittr,
     OhdsiSharing (>= 0.2.1),
     ParallelLogger,
@@ -53,5 +52,5 @@ Remotes:
     OHDSI/SqlRender
 Encoding: UTF-8
 LazyData: TRUE
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 X-schema.org-isPartOf: https://ohdsi.org

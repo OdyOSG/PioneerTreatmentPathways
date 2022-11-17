@@ -27,7 +27,7 @@ runStudy <- function(connectionDetails = NULL,
     dir.create(exportFolder, recursive = TRUE)
   }
   
-  ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "PioneerWatchfulWaiting.txt"))
+  ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "PioneerMetastaticTreatment.txt"))
   on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
   
   # Write out the system information
@@ -56,15 +56,15 @@ runStudy <- function(connectionDetails = NULL,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
-  
+
   # Instantiate cohorts -----------------------------------------------------------------------
   cohorts <- getCohortsToCreate()
   # Remove any cohorts that are to be excluded
   cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution), ]
-  targetCohortIds <- cohorts[cohorts$cohortType %in% cohortGroups, "cohortId"][[1]]
-  strataCohortIds <- cohorts[cohorts$cohortType == "strata", "cohortId"][[1]]
-  # featureCohortIds <- cohorts[cohorts$cohortType == "feature", "cohortId"][[1]]
-  featureCohortIds <- cohorts[cohorts$cohortType == "outcome", "cohortId"][[1]]
+  # targetCohortIds <- cohorts[cohorts$cohortType %in% cohortGroups, "cohortId"][[1]]
+  targetCohortIds  <- cohorts[cohorts$cohortType == "target",  "cohortId"][[1]]
+  strataCohortIds  <- cohorts[cohorts$cohortType == "strata",  "cohortId"][[1]]
+  outcomeCohortIds <- cohorts[cohorts$cohortType == "outcome", "cohortId"][[1]]
   
   # Start with the target cohorts
   ParallelLogger::logInfo("**********************************************************")
@@ -104,7 +104,7 @@ runStudy <- function(connectionDetails = NULL,
   
   # Create the feature cohorts
   ParallelLogger::logInfo("**********************************************************")
-  ParallelLogger::logInfo(" ---- Creating feature cohorts ---- ")
+  ParallelLogger::logInfo(" ---- Creating outcome cohorts ---- ")
   ParallelLogger::logInfo("**********************************************************")
   instantiateCohortSet(connectionDetails = connectionDetails,
                        connection = connection,
@@ -112,7 +112,7 @@ runStudy <- function(connectionDetails = NULL,
                        oracleTempSchema = oracleTempSchema,
                        cohortDatabaseSchema = cohortDatabaseSchema,
                        cohortTable = cohortStagingTable,
-                       cohortIds = featureCohortIds,
+                       cohortIds = outcomeCohortIds,
                        minCellCount = minCellCount,
                        createCohortTable = FALSE,
                        generateInclusionStats = FALSE,
@@ -178,74 +178,84 @@ runStudy <- function(connectionDetails = NULL,
   counts <- dplyr::left_join(x = allStudyCohorts, y = counts, by="cohortId")
   writeToCsv(counts, file.path(exportFolder, "cohort_staging_count.csv"), incremental = incremental, cohortId = counts$cohortId)
 
+
   # Generate survival info -----------------------------------------------------------------
   ParallelLogger::logInfo("Generating time to event data")
-  targetIds <- allStudyCohorts[[2]]
-  targetIds <- setdiff(targetIds, featureCohortIds)
-  targetIds <- setdiff(targetIds, strataCohortIds)
+  targetIds <- c(targetCohortIds, getTargetStrataXref()$cohortId)
   KMOutcomes <- getFeatures()
   # KMOutcomesIds <- KMOutcomes$cohortId[KMOutcomes$createKMPlot == TRUE]
   KMOutcomesIds <- KMOutcomes$cohortId
-  timeToEvent <- generateSurvival(connection, cohortDatabaseSchema, cohortTable = cohortStagingTable,
-                                  targetIds = targetIds, outcomeIds = KMOutcomesIds, databaseId = databaseId, packageName = getThisPackageName())
+  timeToEvent <- generateSurvival(connection = connection,
+                                  cohortDatabaseSchema = cohortDatabaseSchema,
+                                  cohortTable = cohortStagingTable,
+                                  targetIds = targetIds,
+                                  outcomeIds = KMOutcomesIds,
+                                  databaseId = databaseId,
+                                  packageName = getThisPackageName())
 
-
-  KMOutcomesIds <- KMOutcomes$cohortId[KMOutcomes$name %in% c('Death', 'Symptomatic progression')]
-  combinedOutcomeId <- max(allStudyCohorts$cohortId) + 1
-  timeToCombinedEvent <- generateCombinedSurvival(connection, cohortDatabaseSchema, cohortTable = cohortStagingTable,
-                                                  targetIds = targetIds, outcomeIds = KMOutcomesIds,
-                                                  combinedOutcomeId = combinedOutcomeId, databaseId = databaseId, packageName = getThisPackageName())
-  timeToEvent <- rbind(timeToEvent, timeToCombinedEvent)
-
+  # KMOutcomesIds <- KMOutcomes$cohortId[KMOutcomes$name %in% c('Death', 'Symptomatic progression')]
+  # combinedOutcomeId <- max(allStudyCohorts$cohortId) + 1
+  # timeToCombinedEvent <- generateCombinedSurvival(connection,
+  #                                                 cohortDatabaseSchema,
+  #                                                 cohortTable = cohortStagingTable,
+  #                                                 targetIds = targetIds,
+  #                                                 outcomeIds = KMOutcomesIds,
+  #                                                 combinedOutcomeId = combinedOutcomeId,
+  #                                                 databaseId = databaseId,
+  #                                                 packageName = getThisPackageName())
+  # timeToEvent <- rbind(timeToEvent, timeToCombinedEvent)
 
   writeToCsv(timeToEvent, file.path(exportFolder, "cohort_time_to_event.csv"), incremental = incremental, targetId = timeToEvent$targetId)
 
 
-  # Generate metricsDistribution info -----------------------------------------------------
+  # Generate Metrics Distribution info -----------------------------------------------------
   ParallelLogger::logInfo("Generating metrics distribution")
+  ParallelLogger::logInfo("Creating auxiliary tables")
+  # sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+  #                                          sqlFilename = file.path("quartiles", "IQRComplementaryTables.sql"),
+  #                                          packageName = getThisPackageName(),
+  #                                          warnOnMissingParameters = TRUE,
+  #                                          cdm_database_schema = cdmDatabaseSchema,
+  #                                          cohort_database_schema = cohortDatabaseSchema,
+  #                                          cohort_table = cohortTable,
+  #                                          target_ids = paste(targetIds, collapse = ', '))
+  # DatabaseConnector::executeSql(connection, sql)
 
-
-  # prepare necessary tables
-  targetIdsFormatted <- paste(targetIds, collapse = ', ')
-  pathToSql <- system.file("sql", "sql_server","quartiles", "IQRComplementaryTables.sql", package = getThisPackageName())
-  sql <- readChar(pathToSql, file.info(pathToSql)$size)
-  DatabaseConnector::renderTranslateExecuteSql(connection,
-                                               sql = sql,
-                                               cdm_database_schema = cdmDatabaseSchema,
-                                               cohort_database_schema = cohortDatabaseSchema,
-                                               cohort_table = cohortStagingTable,
-                                               target_ids = targetIdsFormatted)
-  
   outcomeBasedAnalyses <- c('TimeToDeath', 'TimeToSymptomaticProgression', 'TimeToTreatmentInitiation')
-  DistribAnalyses <- c('AgeAtDiagnosis', 'YearOfDiagnosis', 'CharlsonAtDiagnosis', 'PsaAtDiagnosis', outcomeBasedAnalyses)
+  distribAnalyses <- c('AgeAtDiagnosis', 'YearOfDiagnosis', 'CharlsonAtDiagnosis', 'PsaAtDiagnosis', outcomeBasedAnalyses)
   outcomes <- getFeatures()
-  
+
   metricsDistribution <- data.table::data.table()
-  
-  for(analysis in DistribAnalyses){
+
+  for (analysis in distribAnalyses) {
     outcome <- gsub("TimeTo", "", analysis)
     outcome <- substring(SqlRender::camelCaseToTitleCase(outcome), 2)
     outcomeId <- outcomes[tolower(outcomes$name) == tolower(outcome), "cohortId"][[1]]
     
-    if (length(outcomeId) == 0 & analysis %in% outcomeBasedAnalyses){
+
+    if (length(outcomeId) == 0 & analysis %in% outcomeBasedAnalyses) {
       next
     }
-    
-    result <- getAtEventDistribution(connection, cohortDatabaseSchema, cdmDatabaseSchema, cohortTable = cohortStagingTable,
-                                     targetIds = targetIds, outcomeId = outcomeId, databaseId = databaseId, 
-                                     packageName = getThisPackageName(), analysisName <- analysis)
-    metricsDistribution<- rbind(metricsDistribution, result)
+    result <- getAtEventDistribution(connection,
+                                     cohortDatabaseSchema,
+                                     cdmDatabaseSchema,
+                                     cohortTable = cohortTable,
+                                     targetIds = targetIds,
+                                     outcomeId = outcomeId,
+                                     databaseId = databaseId,
+                                     analysisName = analysis)
+    metricsDistribution <- rbind(metricsDistribution, result)
   }
-  
+
    writeToCsv(metricsDistribution, file.path(exportFolder, "metrics_distribution.csv"), incremental = incremental,
              cohortDefinitionId = metricsDistribution$cohortDefinitionId)
-   
-   pathToSql <- system.file("sql", "sql_server","quartiles", "RemoveComplementaryTables.sql", package = getThisPackageName())
-   sql <- readChar(pathToSql, file.info(pathToSql)$size)
-   DatabaseConnector::renderTranslateExecuteSql(connection,
-                                                sql = sql,
-                                                cohort_database_schema = cohortDatabaseSchema
-                                                )
+
+
+   # sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+   #                                          sqlFilename = file.path("quartiles", "RemoveComplementaryTables.sql"),
+   #                                          packageName = getThisPackageName(),
+   #                                          cohort_database_schema = cohortDatabaseSchema)
+   # DatabaseConnector::executeSql(connection, sql)
 
   
   # Counting cohorts -----------------------------------------------------------------------
@@ -283,7 +293,7 @@ runStudy <- function(connectionDetails = NULL,
   writeToCsv(features, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = features$covariateId)
   featureValues <- formatCovariateValues(featureProportions, counts, minCellCount, databaseId)
   featureValues <- featureValues[,c("cohortId", "covariateId", "mean", "sd", "databaseId")]
-  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = incremental, cohortId = featureValues$cohortId, covariateId = featureValues$covariateId)
+  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = FALSE, cohortId = featureValues$cohortId, covariateId = featureValues$covariateId)
   # Also keeping a raw output for debugging
   writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
   
@@ -380,7 +390,7 @@ runStudy <- function(connectionDetails = NULL,
   ParallelLogger::logInfo("********************************************************************************************")
   ParallelLogger::logInfo("Formatting Results")
   ParallelLogger::logInfo("********************************************************************************************")
-  # Ensure that the covariate_value.csv is free of any duplicative values. This can happen after more than
+  # Ensure that the covariate_value.csv is free of any duplicate values. This can happen after more than
   # one run of the package.
   cv <- data.table::fread(file.path(exportFolder, "covariate_value.csv"))
   cv <- unique(cv)
