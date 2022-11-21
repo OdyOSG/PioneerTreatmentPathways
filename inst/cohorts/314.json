@@ -4,34 +4,8 @@
 		"CriteriaList" : [
 			{
 				"ConditionOccurrence" : {
-					"CodesetId" : 5,
+					"CodesetId" : 3,
 					"ConditionTypeExclude" : false
-				}
-			},
-			{
-				"Measurement" : {
-					"CodesetId" : 4,
-					"MeasurementTypeExclude" : false
-				}
-			},
-			{
-				"Measurement" : {
-					"CodesetId" : 2,
-					"MeasurementTypeExclude" : false,
-					"ValueAsConcept" : [
-						{
-							"CONCEPT_ID" : 45881618,
-							"CONCEPT_NAME" : "M1B",
-							"STANDARD_CONCEPT" : null,
-							"STANDARD_CONCEPT_CAPTION" : "Unknown",
-							"INVALID_REASON" : null,
-							"INVALID_REASON_CAPTION" : "Unknown",
-							"CONCEPT_CODE" : "LA4626-3",
-							"DOMAIN_ID" : "Meas Value",
-							"VOCABULARY_ID" : "LOINC",
-							"CONCEPT_CLASS_ID" : null
-						}
-					]
 				}
 			}
 		],
@@ -187,40 +161,115 @@
 	},
 	"InclusionRules" : [
 		{
-			"name" : "PCa diagnosis",
+			"name" : "M1b",
 			"expression" : {
 				"Type" : "ALL",
-				"CriteriaList" : [
-					{
-						"Criteria" : {
-							"ConditionOccurrence" : {
-								"CodesetId" : 3,
-								"ConditionTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Days" : 183,
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 30,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
-						}
-					}
-				],
+				"CriteriaList" : [],
 				"DemographicCriteriaList" : [],
-				"Groups" : []
+				"Groups" : [
+					{
+						"Type" : "ANY",
+						"CriteriaList" : [
+							{
+								"Criteria" : {
+									"ConditionOccurrence" : {
+										"CodesetId" : 5,
+										"ConditionTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 30,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 183,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							},
+							{
+								"Criteria" : {
+									"Measurement" : {
+										"CodesetId" : 4,
+										"MeasurementTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 30,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 183,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							},
+							{
+								"Criteria" : {
+									"Measurement" : {
+										"CodesetId" : 2,
+										"MeasurementTypeExclude" : false,
+										"ValueAsConcept" : [
+											{
+												"CONCEPT_ID" : 45881618,
+												"CONCEPT_NAME" : "M1B",
+												"STANDARD_CONCEPT" : null,
+												"STANDARD_CONCEPT_CAPTION" : "Unknown",
+												"INVALID_REASON" : null,
+												"INVALID_REASON_CAPTION" : "Unknown",
+												"CONCEPT_CODE" : "LA4626-3",
+												"DOMAIN_ID" : "Meas Value",
+												"VOCABULARY_ID" : "LOINC",
+												"CONCEPT_CLASS_ID" : null
+											}
+										]
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 30,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 183,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							}
+						],
+						"DemographicCriteriaList" : [],
+						"Groups" : []
+					}
+				]
 			}
 		}
 	],

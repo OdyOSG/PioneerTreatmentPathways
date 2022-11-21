@@ -20,18 +20,15 @@
 # One should get valid JWT Atlas session token and store it in bearer variable.
 # If script crashes try to update bearer variable with a new token.
 
-# ROhdsiWebApi version to install:
-# remotes::install_github("ohdsi/ROhdsiWebApi", ref="develop")
-
-library(PioneerMetastaticTreatement)
 
 # get this token from an active ATLAS web session
-bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NTIzNTgyfQ.QsJBEKw_UMU7nHPtpyl0cqsEd7vWvUNscIvrGDMsHxqtT4eG7exya2Ev-eYlKQoiLYjuoUwtfDd68xmKMRm9eA"
+bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY5MTA3OTAyfQ.d4hGbKOeEX-4BnQo_Rqj5zjBIJau3oKpiEFQwfvstWg1tism_MTvwxFxqxhxgA3muUsEiySgmRr-s-boi3F2zQ"
+
 baseUrl <- "https://pioneer.hzdr.de/WebAPI"
 ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
 
 cohortGroups <- read.csv(file.path("inst/settings/CohortGroups.csv"))
-for(i in 1:nrow(cohortGroups)) {
+for (i in 1:nrow(cohortGroups)) {
   ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = file.path('inst', cohortGroups$fileName[i]),
                                                    baseUrl, insertCohortCreationR = FALSE,
                                                    packageName = getThisPackageName())

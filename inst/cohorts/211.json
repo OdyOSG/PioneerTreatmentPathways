@@ -3,9 +3,15 @@
 	"PrimaryCriteria" : {
 		"CriteriaList" : [
 			{
-				"VisitOccurrence" : {
-					"CodesetId" : 1,
-					"VisitTypeExclude" : false
+				"ConditionOccurrence" : {
+					"CodesetId" : 0,
+					"ConditionTypeExclude" : false
+				}
+			},
+			{
+				"Measurement" : {
+					"CodesetId" : 0,
+					"MeasurementTypeExclude" : false
 				}
 			}
 		],
@@ -20,46 +26,21 @@
 	"ConceptSets" : [
 		{
 			"id" : 0,
-			"name" : "[PIONEER] ER Visit",
+			"name" : "Convulsion",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 9203,
-							"CONCEPT_NAME" : "Emergency Room Visit",
+							"CONCEPT_ID" : 4243340,
+							"CONCEPT_NAME" : "Central convulsion",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "ER",
-							"DOMAIN_ID" : "Visit",
-							"VOCABULARY_ID" : "Visit",
-							"CONCEPT_CLASS_ID" : "Visit"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
-		{
-			"id" : 1,
-			"name" : "[PIONEER 2.0] ER Visit",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 9203,
-							"CONCEPT_NAME" : "Emergency Room Visit",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "ER",
-							"DOMAIN_ID" : "Visit",
-							"VOCABULARY_ID" : "Visit",
-							"CONCEPT_CLASS_ID" : "Visit"
+							"CONCEPT_CODE" : "58895005",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
 						},
 						"isExcluded" : false,
 						"includeDescendants" : true,
@@ -67,16 +48,50 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 262,
-							"CONCEPT_NAME" : "Emergency Room and Inpatient Visit",
+							"CONCEPT_ID" : 4265182,
+							"CONCEPT_NAME" : "Clonic seizure",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "ERIP",
-							"DOMAIN_ID" : "Visit",
-							"VOCABULARY_ID" : "Visit",
-							"CONCEPT_CLASS_ID" : "Visit"
+							"CONCEPT_CODE" : "6208003",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 377091,
+							"CONCEPT_NAME" : "Seizure",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "91175000",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 45877118,
+							"CONCEPT_NAME" : "Seizures or convulsions",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "LA16362-8",
+							"DOMAIN_ID" : "Meas Value",
+							"VOCABULARY_ID" : "LOINC",
+							"CONCEPT_CLASS_ID" : "Answer"
 						},
 						"isExcluded" : false,
 						"includeDescendants" : true,
@@ -96,7 +111,7 @@
 	"EndStrategy" : {
 		"DateOffset" : {
 			"DateField" : "EndDate",
-			"Offset" : 0
+			"Offset" : 1
 		}
 	},
 	"CensoringCriteria" : [],

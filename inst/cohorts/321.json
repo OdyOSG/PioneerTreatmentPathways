@@ -4,7 +4,7 @@
 		"CriteriaList" : [
 			{
 				"ConditionOccurrence" : {
-					"CodesetId" : 0,
+					"CodesetId" : 1,
 					"ConditionTypeExclude" : false
 				}
 			}
@@ -19,19 +19,19 @@
 	},
 	"ConceptSets" : [
 		{
-			"id" : 0,
-			"name" : "[PIONEER 2.0] Secondary malignant neoplasm",
+			"id" : 1,
+			"name" : "[PIONEER 2.0] prostate cancer",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 432851,
-							"CONCEPT_NAME" : "Secondary malignant neoplastic disease",
+							"CONCEPT_ID" : 4163261,
+							"CONCEPT_NAME" : "Malignant tumor of prostate",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "128462008",
+							"CONCEPT_CODE" : "399068003",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -42,30 +42,30 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4205430,
-							"CONCEPT_NAME" : "M1 category",
+							"CONCEPT_ID" : 4314337,
+							"CONCEPT_NAME" : "Secondary malignant neoplasm of prostate",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "55440008",
+							"CONCEPT_CODE" : "94503003",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
 						},
-						"isExcluded" : false,
+						"isExcluded" : true,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4201930,
-							"CONCEPT_NAME" : "Pain from metastases",
+							"CONCEPT_ID" : 37208188,
+							"CONCEPT_NAME" : "Non-metastatic prostate cancer",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "315241008",
+							"CONCEPT_CODE" : "461511000124101",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -78,7 +78,7 @@
 			}
 		},
 		{
-			"id" : 1,
+			"id" : 2,
 			"name" : "CT of whole body",
 			"expression" : {
 				"items" : [
@@ -264,14 +264,14 @@
 	},
 	"InclusionRules" : [
 		{
-			"name" : "CT scan of whole body",
+			"name" : "CT of whole body",
 			"expression" : {
 				"Type" : "ALL",
 				"CriteriaList" : [
 					{
 						"Criteria" : {
 							"ProcedureOccurrence" : {
-								"CodesetId" : 1,
+								"CodesetId" : 2,
 								"ProcedureTypeExclude" : false
 							}
 						},

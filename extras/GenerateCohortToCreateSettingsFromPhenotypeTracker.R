@@ -25,7 +25,7 @@ library(tidyverse, warn.conflicts = FALSE)
 cols <- c('Pheno ID', 'Phenotype name', 'Intended use', 'Where <link to PIONEER CENTRAL ATLAS>')
 cohorts_base_url <- 'https://pioneer.hzdr.de/atlas/#/cohortdefinition/'
 wepapi_base_url <- 'https://pioneer.hzdr.de/WebAPI'
-bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY3NTIzNTgyfQ.QsJBEKw_UMU7nHPtpyl0cqsEd7vWvUNscIvrGDMsHxqtT4eG7exya2Ev-eYlKQoiLYjuoUwtfDd68xmKMRm9eA"
+bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY5MTA3OTAyfQ.d4hGbKOeEX-4BnQo_Rqj5zjBIJau3oKpiEFQwfvstWg1tism_MTvwxFxqxhxgA3muUsEiySgmRr-s-boi3F2zQ"
 ROhdsiWebApi::setAuthHeader(wepapi_base_url, bearer)
 
 cohort_types <- c('t', 'o', 's')
@@ -86,6 +86,11 @@ for (i in 1:nrow(cohortGroups)) {
   group_cohorts <- phenotypes[phenotypes$IntendedUse == str_to_title(cohort_group),]
   cohorts_to_create = data.frame()
   print(paste0('Updating ', str_to_title(cohort_group)))
+  
+  if (nrow(group_cohorts) == 0){
+    print(paste0('No cohort records for ', str_to_title(cohort_group), ' has been found'))
+    next()
+  }
   
   for (i in 1:nrow(group_cohorts)) {
     tryCatch(

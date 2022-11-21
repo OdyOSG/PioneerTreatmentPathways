@@ -117,11 +117,11 @@ WHERE E.concept_id is null
 ) C UNION ALL 
 SELECT 11 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (19058410,739471,35834903,1343039,19089810,1366310,1351541,1344381,19010792,1356461,1500211,1300978,1315286)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (19058410,739471,35834903,1343039,19089810,1366310,1351541,1344381,19010792,1356461,1500211,1300978,1315286,35807385,35807349)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (19058410,739471,35834903,1343039,19089810,1366310,1351541,1344381,19010792,1356461,1500211,1300978,1315286)
+  and ca.ancestor_concept_id in (19058410,739471,35834903,1343039,19089810,1366310,1351541,1344381,19010792,1356461,1500211,1300978,1315286,35807385,35807349)
   and c.invalid_reason is null
 
 ) I

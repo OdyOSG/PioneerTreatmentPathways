@@ -134,25 +134,14 @@ UNION  select c.concept_id
 ) C UNION ALL 
 SELECT 10 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4235738)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4330932,37396025,2108724,2108725,4198015,43533205,2790073,1781260,2789856,1524039,2789850,2789851,2789848,2789849,2789854,2789855,2789852,2789853,2789846,2789847,2789845)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4235738)
+  and ca.ancestor_concept_id in (4330932,37396025,2108724,2108725,4198015,43533205,2790073,1781260,2789856,1524039,2789850,2789851,2789848,2789849,2789854,2789855,2789852,2789853,2789846,2789847,2789845)
   and c.invalid_reason is null
 
 ) I
-LEFT JOIN
-(
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (2108677,4216658,4306299,4338661,3187777,40487861,4176312,4193061,2777698,2777697,2777700,2777699,2777702,2777701,2777704,2777703,2777706,2777705,44783041,4239543,2003966,4021570,2780477,2780478,2780479,2780480,4341384,4341893,4212360,4147673,4078386,4073700,4234536,4287859,44783043,4071791,4054558)
-UNION  select c.concept_id
-  from @vocabulary_database_schema.CONCEPT c
-  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (2108677,4306299,4338661,3187777,40487861,4176312,4193061,2777698,2777697,2777700,2777699,2777702,2777701,2777704,2777703,2777706,2777705,44783041,4239543,2003966,4021570,2780477,2780478,2780479,2780480,4341384,4341893,4212360,4147673,4078386,4073700,4234536,4287859,44783043,4071791,4054558)
-  and c.invalid_reason is null
-
-) E ON I.concept_id = E.concept_id
-WHERE E.concept_id is null
 ) C UNION ALL 
 SELECT 11 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
@@ -540,6 +529,29 @@ with cohort_ends (event_id, person_id, end_date) as
 	-- cohort exit dates
   -- By default, cohort exit at the event's op end date
 select event_id, person_id, op_end_date as end_date from #included_events
+UNION ALL
+-- Censor Events
+select i.event_id, i.person_id, MIN(c.start_date) as end_date
+FROM #included_events i
+JOIN
+(
+-- Begin Condition Occurrence Criteria
+SELECT C.person_id, C.condition_occurrence_id as event_id, C.condition_start_date as start_date, COALESCE(C.condition_end_date, DATEADD(day,1,C.condition_start_date)) as end_date,
+  C.visit_occurrence_id, C.condition_start_date as sort_date
+FROM 
+(
+  SELECT co.* 
+  FROM @cdm_database_schema.CONDITION_OCCURRENCE co
+  JOIN #Codesets cs on (co.condition_concept_id = cs.concept_id and cs.codeset_id = 11)
+) C
+
+
+-- End Condition Occurrence Criteria
+
+) C on C.person_id = I.person_id and C.start_date >= I.start_date and C.START_DATE <= I.op_end_date
+GROUP BY i.event_id, i.person_id
+
+
 ),
 first_ends (person_id, start_date, end_date) as
 (

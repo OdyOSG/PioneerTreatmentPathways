@@ -20,18 +20,18 @@
 	"ConceptSets" : [
 		{
 			"id" : 0,
-			"name" : "[PIONEER 2.0] prostate cancer",
+			"name" : "[PIONEER 2.0] Secondary malignant neoplasm",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4163261,
-							"CONCEPT_NAME" : "Malignant tumor of prostate",
+							"CONCEPT_ID" : 432851,
+							"CONCEPT_NAME" : "Secondary malignant neoplastic disease",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "399068003",
+							"CONCEPT_CODE" : "128462008",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -42,30 +42,30 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4314337,
-							"CONCEPT_NAME" : "Secondary malignant neoplasm of prostate",
+							"CONCEPT_ID" : 4205430,
+							"CONCEPT_NAME" : "M1 category",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "94503003",
+							"CONCEPT_CODE" : "55440008",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 37208188,
-							"CONCEPT_NAME" : "Non-metastatic prostate cancer",
+							"CONCEPT_ID" : 4201930,
+							"CONCEPT_NAME" : "Pain from metastases",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "461511000124101",
+							"CONCEPT_CODE" : "315241008",
 							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Clinical Finding"
@@ -79,18 +79,18 @@
 		},
 		{
 			"id" : 1,
-			"name" : "[PIONEER 2.0] PET-CT",
+			"name" : "CT of whole body",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 42872445,
-							"CONCEPT_NAME" : "Positron emission tomography with computed tomography",
+							"CONCEPT_ID" : 36713614,
+							"CONCEPT_NAME" : "CT of whole body with contrast",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "450436003",
+							"CONCEPT_CODE" : "718527007",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
@@ -101,188 +101,154 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 35608074,
-							"CONCEPT_NAME" : "Positron emission tomography with computed tomography of brain using fluorodeoxyglucose (18-F)",
+							"CONCEPT_ID" : 37109428,
+							"CONCEPT_NAME" : "PET CT of whole body",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "764665003",
+							"CONCEPT_CODE" : "480621000119104",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 36685489,
-							"CONCEPT_NAME" : "PET CT FDG (fluorodeoxyglucose) imaging of cranial vertex to mid-thigh for cardiac sarcoidosis",
+							"CONCEPT_ID" : 37310734,
+							"CONCEPT_NAME" : "PET CT of whole body using 18F-FDOPA (fluorodopa 18-F)",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1098261000000106",
+							"CONCEPT_CODE" : "144811000000100",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 44783489,
-							"CONCEPT_NAME" : "Positron emission tomography with computed tomography of liver using yttrium 90 microspheres",
+							"CONCEPT_ID" : 35622651,
+							"CONCEPT_NAME" : "PET CT of whole body using 18F fluciclovine",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "699586000",
+							"CONCEPT_CODE" : "764705009",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 2793605,
-							"CONCEPT_NAME" : "Positron Emission Tomographic (PET) Imaging of Heart using Other Radionuclide",
+							"CONCEPT_ID" : 37310747,
+							"CONCEPT_NAME" : "PET CT of whole body using 18F PSMA (prostate specific membrane antigen)",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "C23YYZZ",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 2793370,
-							"CONCEPT_NAME" : "Positron Emission Tomographic (PET) Imaging of Brain using Oxygen 15 (O-15)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "C030MZZ",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 2793371,
-							"CONCEPT_NAME" : "Positron Emission Tomographic (PET) Imaging of Brain using Other Radionuclide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "C030YZZ",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 2793368,
-							"CONCEPT_NAME" : "Positron Emission Tomographic (PET) Imaging of Brain using Carbon 11 (C-11)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "C030BZZ",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "ICD10PCS",
-							"CONCEPT_CLASS_ID" : "ICD10PCS"
-						},
-						"isExcluded" : true,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 37109092,
-							"CONCEPT_NAME" : "PET CT of heart",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "16554411000119104",
+							"CONCEPT_CODE" : "144541000000102",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 37109091,
-							"CONCEPT_NAME" : "PET CT of brain",
+							"CONCEPT_ID" : 35622620,
+							"CONCEPT_NAME" : "PET CT of whole body using fluoromisonidazole (18-F)",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "16554361000119106",
+							"CONCEPT_CODE" : "764644009",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 44782531,
-							"CONCEPT_NAME" : "Positron emission tomography using 11c-metomidate with computed tomography",
+							"CONCEPT_ID" : 35622621,
+							"CONCEPT_NAME" : "PET CT of whole body using fluorothymidine (18-F)",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "699587009",
+							"CONCEPT_CODE" : "764646006",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 44808386,
-							"CONCEPT_NAME" : "PET CT fluorodeoxyglucose imaging of head and neck",
+							"CONCEPT_ID" : 44808546,
+							"CONCEPT_NAME" : "SPECT CT of whole body",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "858321000000103",
+							"CONCEPT_CODE" : "859221000000100",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 44808544,
+							"CONCEPT_NAME" : "SPECT of whole body",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "859201000000109",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 42535298,
+							"CONCEPT_NAME" : "SPECT of whole body for localization of neoplasm",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "16552301000119102",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					}
@@ -298,7 +264,7 @@
 	},
 	"InclusionRules" : [
 		{
-			"name" : "PET/CT within 90 days",
+			"name" : "CT scan of whole body",
 			"expression" : {
 				"Type" : "ALL",
 				"CriteriaList" : [
@@ -335,12 +301,6 @@
 			}
 		}
 	],
-	"EndStrategy" : {
-		"DateOffset" : {
-			"DateField" : "EndDate",
-			"Offset" : 1
-		}
-	},
 	"CensoringCriteria" : [],
 	"CollapseSettings" : {
 		"CollapseType" : "ERA",

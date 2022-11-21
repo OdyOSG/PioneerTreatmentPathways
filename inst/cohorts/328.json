@@ -1603,175 +1603,6 @@
 					}
 				]
 			}
-		},
-		{
-			"id" : 8,
-			"name" : "[PIONEER V2.0] Gleason Grade 4 (condition)",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 3655247,
-							"CONCEPT_NAME" : "Gleason grade group 4",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "860745005",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4140825,
-							"CONCEPT_NAME" : "Gleason grade score 8 out of 10",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "33013007",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4120176,
-							"CONCEPT_NAME" : "G4 grade",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "258245003",
-							"DOMAIN_ID" : "Condition",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Clinical Finding"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : false,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
-		{
-			"id" : 9,
-			"name" : "[PIONEER 2.0] Gleason Grade 4 (measurement)",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36769497,
-							"CONCEPT_NAME" : "Gleason Grade group 4 (Gleason Score 3 + 5 = 8)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "OMOP4999174",
-							"DOMAIN_ID" : "Measurement",
-							"VOCABULARY_ID" : "Cancer Modifier",
-							"CONCEPT_CLASS_ID" : "Staging/Grading"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36769010,
-							"CONCEPT_NAME" : "Gleason Grade group 4 (Gleason Score 4 + 4 = 8)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "OMOP4998687",
-							"DOMAIN_ID" : "Measurement",
-							"VOCABULARY_ID" : "Cancer Modifier",
-							"CONCEPT_CLASS_ID" : "Staging/Grading"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36769177,
-							"CONCEPT_NAME" : "Gleason Grade group 4 (Gleason Score 5 + 3 = 8)",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "OMOP4998853",
-							"DOMAIN_ID" : "Measurement",
-							"VOCABULARY_ID" : "Cancer Modifier",
-							"CONCEPT_CLASS_ID" : "Staging/Grading"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1635475,
-							"CONCEPT_NAME" : "Gleason Score 8",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "Gleason-Score-8",
-							"DOMAIN_ID" : "Measurement",
-							"VOCABULARY_ID" : "Cancer Modifier",
-							"CONCEPT_CLASS_ID" : "Staging/Grading"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36770045,
-							"CONCEPT_NAME" : "Gleason Score Clinical 8",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "OMOP4999723",
-							"DOMAIN_ID" : "Measurement",
-							"VOCABULARY_ID" : "Cancer Modifier",
-							"CONCEPT_CLASS_ID" : "Staging/Grading"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 36768867,
-							"CONCEPT_NAME" : "Gleason Score Pathological 8",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "OMOP4998543",
-							"DOMAIN_ID" : "Measurement",
-							"VOCABULARY_ID" : "Cancer Modifier",
-							"CONCEPT_CLASS_ID" : "Staging/Grading"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
 		}
 	],
 	"QualifiedLimit" : {
@@ -1782,14 +1613,14 @@
 	},
 	"InclusionRules" : [
 		{
-			"name" : "Grade4",
+			"name" : "Grade 2 - 3",
 			"expression" : {
 				"Type" : "ALL",
 				"CriteriaList" : [
 					{
 						"Criteria" : {
 							"ConditionOccurrence" : {
-								"CodesetId" : 8,
+								"CodesetId" : 6,
 								"ConditionTypeExclude" : false
 							}
 						},
@@ -1814,7 +1645,7 @@
 					{
 						"Criteria" : {
 							"Measurement" : {
-								"CodesetId" : 9,
+								"CodesetId" : 7,
 								"MeasurementTypeExclude" : false
 							}
 						},
@@ -1842,8 +1673,8 @@
 								"CodesetId" : 2,
 								"MeasurementTypeExclude" : false,
 								"ValueAsNumber" : {
-									"Value" : 4,
-									"Op" : "eq",
+									"Value" : 2,
+									"Op" : "bt",
 									"Extent" : 3
 								}
 							}
@@ -1872,7 +1703,7 @@
 								"CodesetId" : 3,
 								"MeasurementTypeExclude" : false,
 								"ValueAsNumber" : {
-									"Value" : 8,
+									"Value" : 7,
 									"Op" : "eq"
 								}
 							}

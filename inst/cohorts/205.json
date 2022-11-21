@@ -3,9 +3,9 @@
 	"PrimaryCriteria" : {
 		"CriteriaList" : [
 			{
-				"ProcedureOccurrence" : {
+				"ConditionOccurrence" : {
 					"CodesetId" : 0,
-					"ProcedureTypeExclude" : false
+					"ConditionTypeExclude" : false
 				}
 			}
 		],
@@ -20,21 +20,21 @@
 	"ConceptSets" : [
 		{
 			"id" : 0,
-			"name" : "[Pioneer 2.0] Colostomy",
+			"name" : "Male hot flash",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4162987,
-							"CONCEPT_NAME" : "Colostomy",
+							"CONCEPT_ID" : 46270113,
+							"CONCEPT_NAME" : "Male hot flash",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "398740003",
-							"DOMAIN_ID" : "Procedure",
+							"CONCEPT_CODE" : "141631000119100",
+							"DOMAIN_ID" : "Condition",
 							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
 						},
 						"isExcluded" : false,
 						"includeDescendants" : true,
@@ -48,7 +48,7 @@
 		"Type" : "First"
 	},
 	"ExpressionLimit" : {
-		"Type" : "First"
+		"Type" : "All"
 	},
 	"InclusionRules" : [],
 	"EndStrategy" : {

@@ -77,7 +77,7 @@
 			"PostDays" : 0
 		},
 		"PrimaryCriteriaLimit" : {
-			"Type" : "First"
+			"Type" : "All"
 		}
 	},
 	"ConceptSets" : [
@@ -2427,6 +2427,40 @@
 						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 35807385,
+							"CONCEPT_NAME" : "GnRH agonist",
+							"STANDARD_CONCEPT" : "C",
+							"STANDARD_CONCEPT_CAPTION" : "Classification",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "45768",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "HemOnc",
+							"CONCEPT_CLASS_ID" : "Component Class"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 35807349,
+							"CONCEPT_NAME" : "GnRH antagonist",
+							"STANDARD_CONCEPT" : "C",
+							"STANDARD_CONCEPT_CAPTION" : "Classification",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "45632",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "HemOnc",
+							"CONCEPT_CLASS_ID" : "Component Class"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
 					}
 				]
 			}
@@ -2586,7 +2620,7 @@
 													"Groups" : []
 												},
 												{
-													"Type" : "ALL",
+													"Type" : "ANY",
 													"CriteriaList" : [
 														{
 															"Criteria" : {
@@ -2761,7 +2795,7 @@
 											"DemographicCriteriaList" : [],
 											"Groups" : [
 												{
-													"Type" : "ALL",
+													"Type" : "ANY",
 													"CriteriaList" : [
 														{
 															"Criteria" : {
@@ -2936,7 +2970,7 @@
 											"DemographicCriteriaList" : [],
 											"Groups" : [
 												{
-													"Type" : "ALL",
+													"Type" : "ANY",
 													"CriteriaList" : [
 														{
 															"Criteria" : {

@@ -139,11 +139,11 @@ WHERE E.concept_id is null
 ) C UNION ALL 
 SELECT 13 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (19058410,739471,35834903,1343039,19089810,1366310,1351541,1344381,19010792,1356461,1500211,1300978,1315286)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (19058410,739471,35834903,1343039,19089810,1366310,1351541,1344381,19010792,1356461,1500211,1300978,1315286,35807385,35807349)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (19058410,739471,35834903,1343039,19089810,1366310,1351541,1344381,19010792,1356461,1500211,1300978,1315286)
+  and ca.ancestor_concept_id in (19058410,739471,35834903,1343039,19089810,1366310,1351541,1344381,19010792,1356461,1500211,1300978,1315286,35807385,35807349)
   and c.invalid_reason is null
 
 ) I
@@ -288,7 +288,7 @@ AND C.ordinal = 1
 	JOIN @cdm_database_schema.observation_period OP on E.person_id = OP.person_id and E.start_date >=  OP.observation_period_start_date and E.start_date <= op.observation_period_end_date
   WHERE DATEADD(day,183,OP.OBSERVATION_PERIOD_START_DATE) <= E.START_DATE AND DATEADD(day,0,E.START_DATE) <= OP.OBSERVATION_PERIOD_END_DATE
 ) P
-WHERE P.ordinal = 1
+
 -- End Primary Events
 
 )
@@ -732,7 +732,7 @@ HAVING COUNT(cc.event_id) >= 1
 
   ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
   GROUP BY E.person_id, E.event_id
-  HAVING COUNT(index_id) = 2
+  HAVING COUNT(index_id) > 0
 ) G
 -- End Criteria Group
 
@@ -1056,7 +1056,7 @@ HAVING COUNT(cc.event_id) >= 1
 
   ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
   GROUP BY E.person_id, E.event_id
-  HAVING COUNT(index_id) = 2
+  HAVING COUNT(index_id) > 0
 ) G
 -- End Criteria Group
 
@@ -1390,7 +1390,7 @@ HAVING COUNT(cc.event_id) >= 1
 
   ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
   GROUP BY E.person_id, E.event_id
-  HAVING COUNT(index_id) = 2
+  HAVING COUNT(index_id) > 0
 ) G
 -- End Criteria Group
 
