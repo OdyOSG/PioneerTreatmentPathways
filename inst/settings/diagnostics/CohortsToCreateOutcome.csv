@@ -1,1 +1,26 @@
 name,atlasName,atlasId,cohortId
+201,[PIONEER 2.0] Symptomatic progression-FINAL,361,201
+202,[PIONEER 2.0] Death FINAL,362,202
+203,[PIONEER 2.0] Fatigue or malaise FINAL,310,203
+204,[PIONEER 2.0] Diarrhea FINAL,318,204
+205,[PIONEER 2.0] Hot flashes FINAL,405,205
+206,[PIONEER 2.0] Anemia (male only) FINAL,407,206
+207,[PIONEER 2.0] FDA AESI Immune thrombocytopenia (ITP) events FINAL,312,207
+208,[PIONEER 2.0] Neutropenia FINAL,340,208
+209,[PIONEER 2.0] Edema FINAL,343,209
+210,[PIONEER 2.0] Arrythmia FINAL,404,210
+211,[PIONEER 2.0] Convulsion,345,211
+212,[PIONEER 2.0] Acute myocardial infarction FINAL,313,212
+213,[PIONEER 2.0] Hematuria FINAL,348,213
+214,[PIONEER 2.0] Constipation FINAL,402,214
+215,[PIONEER 2.0] Osteopenia and Osteoporosis FINAL,403,215
+216,[PIONEER 2.0] Hypokalemia FINAL,406,216
+217,[PIONEER 2.0] RT after pain and or hematuria FINAL,341,217
+218,[PIONEER 2.0] Placement of urethral stent or neprhrostomy for AKI FINAL,339,218
+219,[PIONEER 2.0] Colostomy FINAL,333,219
+220,[PIONEER 2.0] Chronic foley catheter FINAL,334,220
+221,[PIONEER 2.0] Pelvic exenteration FINAL,338,221
+222,[PIONEER 2.0] Suprapubic catheter FINAL,337,222
+223,[PIONEER 2.0] TUR FINAL,332,223
+224,[PIONEER 2.0] Hospitalization FINAL,324,224
+225,[PIONEER 2.0] ER Visit FINAL,327,225
