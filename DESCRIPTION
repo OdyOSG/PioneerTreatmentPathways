@@ -38,10 +38,13 @@ Imports:
     survminer,
     tibble
 Suggests:
-    codemeta,
     knitr,
     renv,
-    rmarkdown
+    rmarkdown,
+    shiny,
+    shinydashboard,
+    shinyWidgets,
+    VennDiagram
 VignetteBuilder: 
     knitr
 Remotes:
