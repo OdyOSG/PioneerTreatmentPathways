@@ -17,18 +17,13 @@ generateSurvival <- function(connection,
                                                cohort_table = cohortTable,
                                                outcome_id = outcomeId, 
                                                target_id = targetId)
-      km_raw <- DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
+      km <- DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
       
       ## edit
-      if (nrow(km_raw) < 100 | length(km_raw$event[km_raw$event == 1]) < 1) {return(NULL)}
-      
-      km_proc <- km_raw %>%
-        dplyr::mutate(timeToEvent = as.integer(as.Date(eventDate) - as.Date(cohortStartDate)),
-                      id = dplyr::row_number()) %>%
-        dplyr::select(id, timeToEvent, event)
+      if (nrow(km) < 100 | length(km$event[km$event == 1]) < 1) {return(NULL)}
       
       # TODO: Change to Cyclops
-      surv_info <- survival::survfit(survival::Surv(timeToEvent, event) ~ 1, data = km_proc)
+      surv_info <- survival::survfit(survival::Surv(timeToEvent, event) ~ 1, data = km)
       surv_info <- survminer::surv_summary(surv_info)
       data.frame(targetId = targetId, outcomeId = outcomeId, time = surv_info$time, surv = surv_info$surv, 
                  n.censor = surv_info$n.censor, n.event = surv_info$n.event, n.risk = surv_info$n.risk,

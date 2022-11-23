@@ -56,15 +56,17 @@ runStudy <- function(connectionDetails = NULL,
     connection <- DatabaseConnector::connect(connectionDetails)
     on.exit(DatabaseConnector::disconnect(connection))
   }
+  
+  andrData <- Andromeda::andromeda()
 
   # Instantiate cohorts -----------------------------------------------------------------------
   cohorts <- getCohortsToCreate()
   # Remove any cohorts that are to be excluded
   cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution), ]
-  # targetCohortIds <- cohorts[cohorts$cohortType %in% cohortGroups, "cohortId"][[1]]
   targetCohortIds  <- cohorts[cohorts$cohortType == "target",  "cohortId"][[1]]
   strataCohortIds  <- cohorts[cohorts$cohortType == "strata",  "cohortId"][[1]]
   outcomeCohortIds <- cohorts[cohorts$cohortType == "outcome", "cohortId"][[1]]
+  # treatmentCohortIds <- cohorts[cohorts$cohortType == "treatment", "cohortId"][[1]]
   
   # Start with the target cohorts
   ParallelLogger::logInfo("**********************************************************")
@@ -120,6 +122,24 @@ runStudy <- function(connectionDetails = NULL,
                        incrementalFolder = incrementalFolder,
                        inclusionStatisticsFolder = exportFolder)
   
+  # # Create the treatment cohorts
+  # ParallelLogger::logInfo("**********************************************************")
+  # ParallelLogger::logInfo(" ---- Creating treatment cohorts ---- ")
+  # ParallelLogger::logInfo("**********************************************************")
+  # instantiateCohortSet(connectionDetails = connectionDetails,
+  #                      connection = connection,
+  #                      cdmDatabaseSchema = cdmDatabaseSchema,
+  #                      oracleTempSchema = oracleTempSchema,
+  #                      cohortDatabaseSchema = cohortDatabaseSchema,
+  #                      cohortTable = cohortStagingTable,
+  #                      cohortIds = treatmentCohortIds,
+  #                      minCellCount = minCellCount,
+  #                      createCohortTable = FALSE,
+  #                      generateInclusionStats = FALSE,
+  #                      incremental = incremental,
+  #                      incrementalFolder = incrementalFolder,
+  #                      inclusionStatisticsFolder = exportFolder)
+  
   # Create the stratified cohorts
   ParallelLogger::logInfo("**********************************************************")
   ParallelLogger::logInfo(" ---- Creating stratified target cohorts ---- ")
@@ -163,6 +183,7 @@ runStudy <- function(connectionDetails = NULL,
                                                                oracleTempSchema = oracleTempSchema),
                          isMetaAnalysis = 0)
   writeToCsv(database, file.path(exportFolder, "database.csv"))
+  andrData$database <-  database
   
   # Counting staging cohorts ---------------------------------------------------------------
   ParallelLogger::logInfo("Counting staging cohorts")
@@ -175,21 +196,21 @@ runStudy <- function(connectionDetails = NULL,
     counts <- enforceMinCellValue(counts, "cohortSubjects", minCellCount)
   }
   allStudyCohorts <- getAllStudyCohorts()
-  counts <- dplyr::left_join(x = allStudyCohorts, y = counts, by="cohortId")
+  counts <- dplyr::left_join(x = allStudyCohorts, y = counts, by = "cohortId")
   writeToCsv(counts, file.path(exportFolder, "cohort_staging_count.csv"), incremental = incremental, cohortId = counts$cohortId)
-
+  andrData$cohort_staging_count = counts
 
   # Generate survival info -----------------------------------------------------------------
   ParallelLogger::logInfo("Generating time to event data")
   targetIds <- c(targetCohortIds, getTargetStrataXref()$cohortId)
   KMOutcomes <- getFeatures()
   # KMOutcomesIds <- KMOutcomes$cohortId[KMOutcomes$createKMPlot == TRUE]
-  KMOutcomesIds <- KMOutcomes$cohortId
+  # KMOutcomesIds <- KMOutcomes$cohortId
   timeToEvent <- generateSurvival(connection = connection,
                                   cohortDatabaseSchema = cohortDatabaseSchema,
                                   cohortTable = cohortStagingTable,
                                   targetIds = targetIds,
-                                  outcomeIds = KMOutcomesIds,
+                                  outcomeIds = KMOutcomes$cohortId,
                                   databaseId = databaseId,
                                   packageName = getThisPackageName())
 
@@ -206,21 +227,25 @@ runStudy <- function(connectionDetails = NULL,
   # timeToEvent <- rbind(timeToEvent, timeToCombinedEvent)
 
   writeToCsv(timeToEvent, file.path(exportFolder, "cohort_time_to_event.csv"), incremental = incremental, targetId = timeToEvent$targetId)
+  andrData$cohort_time_to_event <- timeToEvent
+  
+  # Save as Andromeda object due to huge object size for real data
+  # tte <- Andromeda::andromeda(time_to_event = timeToEvent)
+  # Andromeda::saveAndromeda(tte, file.path(exportFolder, "tte.zip"))
 
-
+  
   # Generate Metrics Distribution info -----------------------------------------------------
   ParallelLogger::logInfo("Generating metrics distribution")
   ParallelLogger::logInfo("Creating auxiliary tables")
-  # sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
-  #                                          sqlFilename = file.path("quartiles", "IQRComplementaryTables.sql"),
-  #                                          packageName = getThisPackageName(),
-  #                                          warnOnMissingParameters = TRUE,
-  #                                          cdm_database_schema = cdmDatabaseSchema,
-  #                                          cohort_database_schema = cohortDatabaseSchema,
-  #                                          cohort_table = cohortTable,
-  #                                          target_ids = paste(targetIds, collapse = ', '))
-  # DatabaseConnector::executeSql(connection, sql)
-
+  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                           sqlFilename = file.path("quartiles", "IQRComplementaryTables.sql"),
+                                           packageName = getThisPackageName(),
+                                           warnOnMissingParameters = TRUE,
+                                           cdm_database_schema = cdmDatabaseSchema,
+                                           cohort_database_schema = cohortDatabaseSchema,
+                                           cohort_table = cohortTable,
+                                           target_ids = paste(targetIds, collapse = ', '))
+  DatabaseConnector::executeSql(connection, sql)
   outcomeBasedAnalyses <- c('TimeToDeath', 'TimeToSymptomaticProgression', 'TimeToTreatmentInitiation')
   distribAnalyses <- c('AgeAtDiagnosis', 'YearOfDiagnosis', 'CharlsonAtDiagnosis', 'PsaAtDiagnosis', outcomeBasedAnalyses)
   outcomes <- getFeatures()
@@ -249,14 +274,15 @@ runStudy <- function(connectionDetails = NULL,
 
    writeToCsv(metricsDistribution, file.path(exportFolder, "metrics_distribution.csv"), incremental = incremental,
              cohortDefinitionId = metricsDistribution$cohortDefinitionId)
+   
+   andrData$metrics_distribution <- metricsDistribution
 
 
-   # sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
-   #                                          sqlFilename = file.path("quartiles", "RemoveComplementaryTables.sql"),
-   #                                          packageName = getThisPackageName(),
-   #                                          cohort_database_schema = cohortDatabaseSchema)
-   # DatabaseConnector::executeSql(connection, sql)
-
+   sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                            sqlFilename = file.path("quartiles", "RemoveComplementaryTables.sql"),
+                                            packageName = getThisPackageName(),
+                                            cohort_database_schema = cohortDatabaseSchema)
+   DatabaseConnector::executeSql(connection, sql)
   
   # Counting cohorts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Counting cohorts")
@@ -269,6 +295,7 @@ runStudy <- function(connectionDetails = NULL,
     counts <- enforceMinCellValue(counts, "cohortSubjects", minCellCount)
   }
   writeToCsv(counts, file.path(exportFolder, "cohort_count.csv"), incremental = incremental, cohortId = counts$cohortId)
+  andrData$cohort_count <- counts
   
   # Read in the cohort counts
   counts <- data.table::fread(file.path(exportFolder, "cohort_count.csv"))
@@ -277,6 +304,8 @@ runStudy <- function(connectionDetails = NULL,
   # Export the cohorts from the study
   cohortsForExport <- loadCohortsForExportFromPackage(cohortIds = counts$cohortId)
   writeToCsv(cohortsForExport, file.path(exportFolder, "cohort.csv"))
+  andrData$cohort <- cohortsForExport
+  
   
   # Extract feature counts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Extract feature counts")
@@ -291,12 +320,14 @@ runStudy <- function(connectionDetails = NULL,
   }
   features <- formatCovariates(featureProportions)
   writeToCsv(features, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = features$covariateId)
+  andrData$covariate <- features
   featureValues <- formatCovariateValues(featureProportions, counts, minCellCount, databaseId)
   featureValues <- featureValues[,c("cohortId", "covariateId", "mean", "sd", "databaseId")]
   writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = FALSE, cohortId = featureValues$cohortId, covariateId = featureValues$covariateId)
+  andrData$covariate_value <- featureValues
   # Also keeping a raw output for debugging
   writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
-  
+  andrData$feature_proportions <- featureProportions
   # Cohort characterization ---------------------------------------------------------------
   # Note to package maintainer: If any of the logic to this changes, you'll need to revist
   # the function createBulkCharacteristics
@@ -402,6 +433,7 @@ runStudy <- function(connectionDetails = NULL,
   ParallelLogger::logInfo(paste("Running study took",
                                 signif(delta, 3),
                                 attr(delta, "units")))
+  Andromeda::saveAndromeda(andrData, file.path(exportFolder, "tte.sqlite"))
 }
 
 #' @export

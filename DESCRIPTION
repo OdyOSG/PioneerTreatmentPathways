@@ -34,6 +34,7 @@ Imports:
     ParallelLogger,
     readr,
     SqlRender,
+    CirceR,
     survival,
     survminer,
     tibble
@@ -44,7 +45,8 @@ Suggests:
     shiny,
     shinydashboard,
     shinyWidgets,
-    VennDiagram
+    VennDiagram,
+    ggiraph
 VignetteBuilder: 
     knitr
 Remotes:
