@@ -46,7 +46,9 @@ Suggests:
     shinydashboard,
     shinyWidgets,
     VennDiagram,
-    ggiraph
+    ggiraph,
+    DT,
+    pool
 VignetteBuilder: 
     knitr
 Remotes:
@@ -54,7 +56,8 @@ Remotes:
     OHDSI/FeatureExtraction,
     OHDSI/OhdsiSharing,
     OHDSI/ParallelLogger,
-    OHDSI/SqlRender
+    OHDSI/SqlRender,
+    OHDSI/CirceR
 Encoding: UTF-8
 LazyData: TRUE
 RoxygenNote: 7.2.1

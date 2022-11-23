@@ -993,6 +993,42 @@
 			"Source" : "Repository",
 			"Repository" : "CRAN"
 		},
+		"tinytex" : {
+			"Package" : "tinytex",
+			"Version" : "0.42",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"rmarkdown" : {
+			"Package" : "rmarkdown",
+			"Version" : "2.18",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"lazyeval" : {
+			"Package" : "lazyeval",
+			"Version" : "0.2.2",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"crosstalk" : {
+			"Package" : "crosstalk",
+			"Version" : "1.2.0",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"DT" : {
+			"Package" : "DT",
+			"Version" : "0.26",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
+		"pool" : {
+			"Package" : "pool",
+			"Version" : "0.1.6",
+			"Source" : "Repository",
+			"Repository" : "CRAN"
+		},
 		"renv" : {
 			"Package" : "renv",
 			"Version" : "0.16.0",
@@ -1028,6 +1064,16 @@
 			"RemoteRepo" : "ROhdsiWebApi",
 			"RemoteUsername" : "ohdsi",
 			"RemoteRef" : "v1.3.1"
+		},
+		"CirceR" : {
+			"Package" : "CirceR",
+			"Version" : "1.1.1",
+			"Source" : "GitHub",
+			"RemoteType" : "github",
+			"RemoteHost" : "api.github.com",
+			"RemoteRepo" : "CirceR",
+			"RemoteUsername" : "ohdsi",
+			"RemoteRef" : "v1.1.1"
 		},
 		"CohortDiagnostics" : {
 			"Package" : "CohortDiagnostics",
