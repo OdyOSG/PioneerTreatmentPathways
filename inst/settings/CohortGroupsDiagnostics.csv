@@ -1,2 +1,4 @@
 cohortGroup,fileName,userCanSelect
 target,settings/diagnostics/CohortsToCreateTarget.csv,TRUE
+outcome,settings/diagnostics/CohortsToCreateOutcome.csv,TRUE
+strata,settings/diagnostics/CohortsToCreateStrata.csv,TRUE
