@@ -164,14 +164,13 @@ runCohortDiagnostics(connectionDetails = connectionDetails,
                      databaseDescription = databaseDescription,
                      minCellCount = minCellCount)
 
-# # Combine diagnostics into sqlite file.
-# # Use one of these options: "target", "outcome", "strata"
-# path = file.path(outputFolder, "diagnostics", "outcome")
-# CohortDiagnostics::createMergedResultsFile(path,
-#                                            sqliteDbPath = file.path(path, 'MergedCohortDiagnosticsData.sqlite'),
-#                                            overwrite = TRUE)
-# # Use the next command to review cohort diagnostics 
-# CohortDiagnostics::launchDiagnosticsExplorer(file.path(path, 'MergedCohortDiagnosticsData.sqlite'))
+# The following 2 commands will allow you to inspect the cohort diagnostics results locally, in case you want to do this.
+# Optionally, preMerge the data for shiny App. Replace "target" with
+# one of these options: "target", "outcome", "strata"
+# CohortDiagnostics::preMergeDiagnosticsFiles(file.path(outputFolder, "diagnostics", "target"))
+# Use the next command to review cohort diagnostics and replace "target" with2
+# one of these options: "target", "outcome", "strata"
+# CohortDiagnostics::launchDiagnosticsExplorer(file.path(outputFolder, "diagnostics", "target"))
 
 
 # When finished with reviewing the diagnostics, use the next command
