@@ -59,7 +59,7 @@ update.packages(ask = "graphics")
 # When asked to update packages, select '1' ('update all') (could be multiple times)
 # When asked whether to install from source, select 'No' (could be multiple times)
 install.packages("devtools")
-devtools::install_github("ohdsi-studies/PioneerWatchfulWaiting")
+devtools::install_github("bdemeulder/PIONEERmetastaticTreatment")
 
 # If this runs correctly, it should have installed the package and its dependencies, and you can proceed to section 2.
 
