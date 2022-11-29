@@ -2,6 +2,7 @@ library(shiny)
 library(pool)
 library(DatabaseConnector)
 library(data.table)
+library(DT)
 source("DataPulls.R")
 
 connPool <- NULL # Will be initialized if using a DB
@@ -24,8 +25,9 @@ is_installed <- function(pkg, version = 0) {
 }
 
 usingDbStorage <- function() {
-  return(shinySettings$storage=='database')
+  return(shinySettings$storage == 'database')
 }
+
 
 # Data Loading Priority: Database, "/data" folder, S3
 if (!exists("shinySettings")) {
@@ -64,13 +66,13 @@ if (dataStorage == "database") {
   }
 } else {
   if (file.exists(file.path(dataFolder, dataFile))) {
-    writeLines("Using merged data detected in data folder")
-    load(file.path(dataFolder, dataFile))
+    writeLines("Reading data using Andromeda")
+    andrData <- Andromeda::loadAndromeda(file.path(dataFolder, 'study_results.zip'))
+    
   } else {
     zipFiles <- list.files(dataFolder, pattern = ".zip", full.names = TRUE)
     
     loadFile <- function(file, folder, overwrite) {
-      # print(file)
       tableName <- gsub(".csv$", "", file)
       camelCaseName <- SqlRender::snakeCaseToCamelCase(tableName)
       data <- data.table::fread(file.path(folder, file))
@@ -115,28 +117,29 @@ if (dataStorage == "database") {
   }  
 }
 
-if (exists("covariate")) {
-  covariate <- unique(covariate)
-  covNameWithId <- grepl(': \\d\\d\\d$', covariate$covariateName)
-  if (any(covNameWithId)) {
-    # Temporary quick fix to replace cohortId with atlasName
-    cohorts <- readr::read_csv("./cohorts.csv", col_types = readr::cols())
-    newCovariateName <- sapply(covariate$covariateName[covNameWithId],
-                       function(x) {
-                         cohortId <- substr(x, nchar(x)-2, nchar(x))
-                         cohort <- cohorts[cohorts$cohortId==cohortId,]
-                         if (nrow(cohort) > 0) {
-                           return(paste0(substr(x, 1, nchar(x)-3), cohort$name))
-                         } else {
-                           # cohortId not found, return original
-                           return(x)
-                         }
+
+
+covariate <- andrData$covariate %>% dplyr::distinct() %>% dplyr::collect()
+covNameWithId <- grepl(': \\d\\d\\d$', covariate$covariateName)
+if (any(covNameWithId)) {
+  # Temporary quick fix to replace cohortId with atlasName
+  cohorts <- readr::read_csv("./cohorts.csv", col_types = readr::cols())
+  newCovariateName <- sapply(covariate$covariateName[covNameWithId],
+                     function(x) {
+                       cohortId <- substr(x, nchar(x) - 2, nchar(x))
+                       cohort <- cohorts[cohorts$cohortId == cohortId,]
+                       if (nrow(cohort) > 0) {
+                         return(paste0(substr(x, 1, nchar(x) - 3), cohort$name))
+                       } else {
+                         # cohortId not found, return original
+                         return(x)
                        }
-   )
-   covariate$covariateName[covNameWithId] <- newCovariateName
-  }
-  covariate$windowId <- covariate$covariateId %% 10
+                     }
+ )
+ covariate$covariateName[covNameWithId] <- newCovariateName
 }
+covariate$windowId <- covariate$covariateId %% 10
+
 
 # Setup filters
 domain <- data.table()
@@ -150,7 +153,7 @@ domain$name <- as.character(domain$name)
 domainName <- "All"
 
 # This must match the featureTimeWindow.csv from the Pioneer study
-timeWindow <- data.table(windowId=c(1:4), name=c("-365 to index", "index to 365", "366d to 730d", "731d+"))
+timeWindow <- data.table(windowId = c(1:4), name = c("-365 to index", "index to 365", "366d to 730d", "731d+"))
 timeWindow$name <- as.character(timeWindow$name)
 
 cohortXref <- data.table::fread("./cohortXref.csv")
@@ -164,7 +167,11 @@ strataCohort <- strataCohort[order(strataCohort$strataId),]
 # Cohort characterization & comparison will be restricted
 # to those cohorts where the count is >= 140 per the study
 # protocol 
-hasCharacterization <- cohortCount[cohortCount$cohortSubjects >= 140,] # Filter to those cohorts that are characterized in Charybdis
+
+# Filter to those cohorts that are characterized in study
+hasCharacterization <- andrData$cohort_count %>% 
+  dplyr::filter(cohortSubjects >= 140) %>% 
+  dplyr::collect()
 characterizationCohortIds <- unique(hasCharacterization$cohortId) # Get the unique cohorts across all databases
 characterizationTargetCohort <- unique(cohortXref[cohortXref$cohortId %in% characterizationCohortIds,c("targetId","targetName")])
 characterizationTargetCohort <- characterizationTargetCohort[order(characterizationTargetCohort$targetName),]
@@ -182,18 +189,27 @@ cohortInfo <- data.table::fread("./cohorts.csv")
 cohortInfo <- cohortInfo[order(cohortInfo$name),]
 
 # Read in the database terms of use
+database <- andrData$database %>%
+  dplyr::select(databaseId, databaseName, description) %>%
+  dplyr::collect()
 dbTermsOfUse <- readr::read_csv("./databaseTermsOfUse.csv", col_types = readr::cols())
 colnames(dbTermsOfUse) <- SqlRender::snakeCaseToCamelCase(colnames(dbTermsOfUse))
-database <- dplyr::left_join(database, dbTermsOfUse, by="databaseId")
+database <- dplyr::left_join(database, dbTermsOfUse, by = "databaseId")
 database <- database[order(database$databaseId),]
 
 
 # Add Time to Event names and ids
 
-# Gather unique outcome ids in time to event table
-ids <- unique(cohortTimeToEvent$outcomeId)
+# Get unique outcome ids in time to event table
+ids <- andrData$cohort_time_to_event %>%
+  dplyr::distinct(outcomeId) %>%
+  dplyr::pull()
+
 # Find corresponding cohort names
-names <- sapply(ids,function(id){ cohortStagingCount$name[cohortStagingCount$cohortId == id ][1]})
+names <- sapply(ids, function(id){
+  andrData$cohort_staging_count %>%
+    dplyr::filter(cohortId == id) %>% 
+    dplyr::pull(name)})
 
 # hack/fix which I don't understand
 #if(length(cohortStagingCount$name[cohortStagingCount$cohortId == max(ids)]) == 0){

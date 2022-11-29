@@ -46,8 +46,8 @@ exportFeatureProportions <- function(connection,
 formatFeatureProportions <- function(data) {
   featureTimeWindows <- getFeatureTimeWindows()
   featureCohorts <- getAllFeatures()
-  data <- merge(data, featureTimeWindows, by="windowId")
-  data <- merge(data, featureCohorts, by.x="featureCohortDefinitionId", by.y="cohortId")
+  data <- merge(data, featureTimeWindows, by = "windowId")
+  data <- merge(data, featureCohorts, by.x = "featureCohortDefinitionId", by.y = "cohortId")
   names(data)[names(data) == 'name'] <- 'featureName'
   names(data)[names(data) == 'cohortDefinitionId'] <- 'cohortId'
   

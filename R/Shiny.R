@@ -18,7 +18,7 @@
 launchShinyApp <- function(outputFolder, 
                            shinySettings = list(storage = "filesystem", 
                                                 dataFolder = outputFolder, 
-                                                dataFile = "PreMerged.RData")) 
+                                                dataFile = "study_results.zip")) 
 {
   ensure_installed("shiny")
   ensure_installed("shinydashboard")

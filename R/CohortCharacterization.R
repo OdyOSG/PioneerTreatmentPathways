@@ -161,7 +161,7 @@ createBulkCharacteristics <- function(connection,
 #' This function will retrieve the results from the temp tables created
 #' in createBulkCharacteristics
 #'
-writeBulkCharacteristics <- function(connection, oracleTempSchema, counts, minCellCount, databaseId, exportFolder) {
+writeBulkCharacteristics <- function(connection, oracleTempSchema, counts, minCellCount, databaseId, exportFolder, andromedaData = NULL) {
   sql <- "SELECT ar.cohort_id, ar.covariate_id, ar.mean, ar.sd, cr.covariate_name, cr.analysis_id
           FROM #analysis_results ar
           INNER JOIN #cov_ref cr ON ar.covariate_id = cr.covariate_id
@@ -172,9 +172,13 @@ writeBulkCharacteristics <- function(connection, oracleTempSchema, counts, minCe
   data <- DatabaseConnector::querySql(connection, sql = sql)
   names(data) <- SqlRender::snakeCaseToCamelCase(colnames(data))
   covariates <- formatCovariates(data)
-  writeToCsv(covariates, file.path(exportFolder, "covariate.csv"), incremental = TRUE, covariateId = covariates$covariateId)
+  if (!is.null(andromedaData)) {
+    Andromeda::appendToTable(andromedaData$covariate, covariates)
+  }
   data <- formatCovariateValues(data, counts, minCellCount, databaseId)
-  writeToCsv(data, file.path(exportFolder, "covariate_value.csv"), incremental = TRUE, cohortId = data$cohortId, data$covariateId)
+  if (!is.null(andromedaData)) {
+    Andromeda::appendToTable(andromedaData$covariate_value, data)
+  }
 }
 
 cohortSubsetTempTableSql <- function(connection, cohortIds, oracleTempSchema) {

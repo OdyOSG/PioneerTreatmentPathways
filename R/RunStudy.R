@@ -197,7 +197,6 @@ runStudy <- function(connectionDetails = NULL,
   }
   allStudyCohorts <- getAllStudyCohorts()
   counts <- dplyr::left_join(x = allStudyCohorts, y = counts, by = "cohortId")
-  writeToCsv(counts, file.path(exportFolder, "cohort_staging_count.csv"), incremental = incremental, cohortId = counts$cohortId)
   andrData$cohort_staging_count = counts
 
   # Generate survival info -----------------------------------------------------------------
@@ -226,14 +225,9 @@ runStudy <- function(connectionDetails = NULL,
   #                                                 packageName = getThisPackageName())
   # timeToEvent <- rbind(timeToEvent, timeToCombinedEvent)
 
-  writeToCsv(timeToEvent, file.path(exportFolder, "cohort_time_to_event.csv"), incremental = incremental, targetId = timeToEvent$targetId)
   andrData$cohort_time_to_event <- timeToEvent
   
-  # Save as Andromeda object due to huge object size for real data
-  # tte <- Andromeda::andromeda(time_to_event = timeToEvent)
-  # Andromeda::saveAndromeda(tte, file.path(exportFolder, "tte.zip"))
 
-  
   # Generate Metrics Distribution info -----------------------------------------------------
   ParallelLogger::logInfo("Generating metrics distribution")
   ParallelLogger::logInfo("Creating auxiliary tables")
@@ -272,9 +266,6 @@ runStudy <- function(connectionDetails = NULL,
     metricsDistribution <- rbind(metricsDistribution, result)
   }
 
-   writeToCsv(metricsDistribution, file.path(exportFolder, "metrics_distribution.csv"), incremental = incremental,
-             cohortDefinitionId = metricsDistribution$cohortDefinitionId)
-   
    andrData$metrics_distribution <- metricsDistribution
 
 
@@ -303,9 +294,7 @@ runStudy <- function(connectionDetails = NULL,
   
   # Export the cohorts from the study
   cohortsForExport <- loadCohortsForExportFromPackage(cohortIds = counts$cohortId)
-  writeToCsv(cohortsForExport, file.path(exportFolder, "cohort.csv"))
   andrData$cohort <- cohortsForExport
-  
   
   # Extract feature counts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Extract feature counts")
@@ -319,15 +308,13 @@ runStudy <- function(connectionDetails = NULL,
     featureProportions <- featureProportions[featureProportions$totalCount >= minimumSubjectCountForCharacterization, ]
   }
   features <- formatCovariates(featureProportions)
-  writeToCsv(features, file.path(exportFolder, "covariate.csv"), incremental = incremental, covariateId = features$covariateId)
   andrData$covariate <- features
   featureValues <- formatCovariateValues(featureProportions, counts, minCellCount, databaseId)
   featureValues <- featureValues[,c("cohortId", "covariateId", "mean", "sd", "databaseId")]
-  writeToCsv(featureValues, file.path(exportFolder, "covariate_value.csv"), incremental = FALSE, cohortId = featureValues$cohortId, covariateId = featureValues$covariateId)
   andrData$covariate_value <- featureValues
   # Also keeping a raw output for debugging
-  writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
-  andrData$feature_proportions <- featureProportions
+  # writeToCsv(featureProportions, file.path(exportFolder, "feature_proportions.csv"))
+  
   # Cohort characterization ---------------------------------------------------------------
   # Note to package maintainer: If any of the logic to this changes, you'll need to revist
   # the function createBulkCharacteristics
@@ -362,7 +349,7 @@ runStudy <- function(connectionDetails = NULL,
                               cdmDatabaseSchema, 
                               cohortDatabaseSchema, 
                               cohortTable)
-    writeBulkCharacteristics(connection, oracleTempSchema, counts, minCellCount, databaseId, exportFolder)
+    writeBulkCharacteristics(connection, oracleTempSchema, counts, minCellCount, databaseId, exportFolder, andrData)
   } else {
     # Sequential Approach --------------------------------
     if (incremental) {
@@ -421,19 +408,18 @@ runStudy <- function(connectionDetails = NULL,
   ParallelLogger::logInfo("********************************************************************************************")
   ParallelLogger::logInfo("Formatting Results")
   ParallelLogger::logInfo("********************************************************************************************")
-  # Ensure that the covariate_value.csv is free of any duplicate values. This can happen after more than
+  # Ensure that the covariate_value is free of any duplicate values. This can happen after more than
   # one run of the package.
-  cv <- data.table::fread(file.path(exportFolder, "covariate_value.csv"))
-  cv <- unique(cv)
-  writeToCsv(cv, file.path(exportFolder, "covariate_value.csv"), incremental = FALSE)
+  andrData$covariate_value <- andrData$covariate_value %>% dplyr::distinct()
   
-  # Export to zip file -------------------------------------------------------------------------------
-  exportResults(exportFolder, databaseId, cohortIdsToExcludeFromResultsExport)
-  delta <- Sys.time() - start
-  ParallelLogger::logInfo(paste("Running study took",
-                                signif(delta, 3),
-                                attr(delta, "units")))
-  Andromeda::saveAndromeda(andrData, file.path(exportFolder, "tte.sqlite"))
+  
+  # # Export to zip file -------------------------------------------------------------------------------
+  # exportResults(exportFolder, databaseId, cohortIdsToExcludeFromResultsExport)
+  # delta <- Sys.time() - start
+  # ParallelLogger::logInfo(paste("Running study took",
+  #                               signif(delta, 3),
+  #                               attr(delta, "units")))
+  Andromeda::saveAndromeda(andrData, file.path(exportFolder, "study_results.zip"))
 }
 
 #' @export
@@ -450,7 +436,7 @@ exportResults <- function(exportFolder, databaseId, cohortIdsToExcludeFromResult
       dir.create(tempFolder)
     }
     file.copy(file.path(exportFolder, files), tempFolder)
-    
+
     # Censor out the cohorts based on the IDs passed in
     for(i in 1:length(filesWithCohortIds)) {
       fileName <- file.path(tempFolder, filesWithCohortIds[i])
@@ -458,7 +444,7 @@ exportResults <- function(exportFolder, databaseId, cohortIdsToExcludeFromResult
       fileContents <- fileContents[!(fileContents$cohort_id %in% cohortIdsToExcludeFromResultsExport),]
       data.table::fwrite(fileContents, fileName)
     }
-    
+
     # Zip the results and copy to the main export folder
     zipName <- zipResults(tempFolder, databaseId)
     file.copy(zipName, exportFolder)
@@ -471,7 +457,6 @@ exportResults <- function(exportFolder, databaseId, cohortIdsToExcludeFromResult
 }
 
 zipResults <- function(exportFolder, databaseId) {
-  
   date <- format(Sys.time(), "%Y%m%dT%H%M%S")
   zipName <- file.path(exportFolder, paste0("Results_v", getThisPackageVersion(), "_", databaseId, "_", date, ".zip")) 
   files <- list.files(exportFolder, ".*\\.csv$")
@@ -596,7 +581,7 @@ loadCohortsForExportWithChecksumFromPackage <- function(cohortIds) {
   
   # Match up the cohorts in the study w/ the targetStrataXref and 
   # set the target/strata columns
-  cohortsWithStrata <- dplyr::left_join(cohorts, targetStrataXref, by="cohortId")
+  cohortsWithStrata <- dplyr::left_join(cohorts, targetStrataXref, by = "cohortId")
   cohortsWithStrata <- dplyr::rename(cohortsWithStrata, cohortType = "cohortType.x")
   cohortsWithStrata$targetId <- ifelse(is.na(cohortsWithStrata$targetId), cohortsWithStrata$cohortId, cohortsWithStrata$targetId)
   cohortsWithStrata$strataId <- ifelse(is.na(cohortsWithStrata$strataId), 0, cohortsWithStrata$strataId)

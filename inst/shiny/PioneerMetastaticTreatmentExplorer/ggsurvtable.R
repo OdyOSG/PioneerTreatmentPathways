@@ -1,5 +1,5 @@
 cb_palette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-ggsurvtable_custom <- function (fit, data = NULL, survtable = c("cumevents",  "cumcensor", "risk.table"),
+ggsurvtable_custom <- function(fit, data = NULL, survtable = c("cumevents",  "cumcensor", "risk.table"),
                          risk.table.type = c("absolute", "percentage", "abs_pct", "nrisk_cumcensor", "nrisk_cumevents"),
                          title = NULL, risk.table.title = NULL, cumevents.title = title, cumcensor.title = title,
                          color = "black", palette = cb_palette, break.time.by = NULL,  xlim = NULL,
