@@ -30,7 +30,7 @@ dashboardPage(
                     width = "200px"),
                 style = "padding-top:0px; padding-bottom:0px;"),
             class = "dropdown")    
-    ),  
+  ),  
   dashboardSidebar(
     tags$head(tags$style(HTML(paste0('.main-header { background-color: ', ohdsiBlueHex, '; }')))),
     sidebarMenu(id = "tabs",
@@ -44,30 +44,31 @@ dashboardPage(
                 if (length(andrData$cohort_time_to_event) > 0) addInfo(menuItem("Time To Event", tabName = "timeToEvent"), "cohortCountsInfo"),
                 if (length(andrData$metrics_distribution) > 0) addInfo(menuItem("Metrics Distribution", tabName = "metricsDistribution"), "cohortsCountsInfo"),
                 if (length(andrData$covariate_value) > 0) addInfo(menuItem("Compare Cohort Char.", tabName = "compareCohortCharacterization"), "compareCohortCharacterizationInfo"),
+                if (TRUE) addInfo(menuItem("Treatment patterns", tabName = "treatmentPatterns"), "treatmentPatternsInfo"),
                 menuItem("Database information", tabName = "databaseInformation"), 
                 menuItem("Change Log", tabName = "changeLog"),
                 conditionalPanel(condition = "input.tabs=='compareCohortCharacterization'",
-                   selectInput("database", "Database", database$databaseId, selectize = FALSE)
+                                 selectInput("database", "Database", database$databaseId, selectize = FALSE)
                 ),
                 conditionalPanel(condition = "input.tabs=='cohortCharacterization' | input.tabs=='cohortCounts'",
-                   #checkboxGroupInput("databases", "Database", database$databaseId, selected = database$databaseId[1])
-                   shinyWidgets::pickerInput("databases", "Database",
-                                             choices = database$databaseId,
-                                             selected = database$databaseId,
-                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
-                                             multiple = TRUE)
+                                 #checkboxGroupInput("databases", "Database", database$databaseId, selected = database$databaseId[1])
+                                 shinyWidgets::pickerInput("databases", "Database",
+                                                           choices = database$databaseId,
+                                                           selected = database$databaseId,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = TRUE)
                 ),
                 conditionalPanel(condition = "input.tabs=='cohortCounts'",
-                   shinyWidgets::pickerInput("targetCohortList", "Cohort",
-                                             choices = targetCohort$targetName,
-                                             selected = targetCohort$targetName,
-                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
-                                             multiple = TRUE),
-                   shinyWidgets::pickerInput("strataCohortList", "Strata",
-                                             choices = strataCohort$strataName,
-                                             selected = strataCohort$strataName,
-                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
-                                             multiple = TRUE)
+                                 shinyWidgets::pickerInput("targetCohortList", "Cohort",
+                                                           choices = targetCohort$targetName,
+                                                           selected = targetCohort$targetName,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = TRUE),
+                                 shinyWidgets::pickerInput("strataCohortList", "Strata",
+                                                           choices = strataCohort$strataName,
+                                                           selected = strataCohort$strataName,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = TRUE)
                 ),
                 
                 conditionalPanel(condition = "input.tabs=='timeToEvent'",
@@ -110,31 +111,51 @@ dashboardPage(
                                                            options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
                                                            multiple = FALSE)
                 ),
-
-                conditionalPanel(condition = "input.tabs!='about' & input.tabs!='cohorts' & input.tabs!='cohortCounts' & input.tabs!='timeToEvent' & input.tabs!='metricsDistribution' & input.tabs!='databaseInformation' & input.tabs!='changeLog'" ,
-                   shinyWidgets::pickerInput("targetCohort", "Cohort (Target)",
-                                             choices = characterizationTargetCohort$targetName,
-                                             selected = targetName,
-                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
-                                             multiple = FALSE),
-                   shinyWidgets::pickerInput("strataCohort", "Strata (Target)",
-                                             choices = characterizationStrataCohort$strataName,
-                                             selected = strataName,
-                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
-                                             multiple = FALSE)
+                
+                conditionalPanel(condition = "input.tabs=='treatmentPatterns'",
+                                 shinyWidgets::pickerInput("databasesTreatmentPatterns", "Database",
+                                                           choices = database$databaseId,
+                                                           selected = database$databaseId,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = FALSE),
+                                 shinyWidgets::pickerInput("targetTreatmentPatterns", "Cohort",
+                                                           choices = targetCohort$targetName,
+                                                           selected = 'All',
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = FALSE),
+                                 shinyWidgets::pickerInput("strataTreatmentPatterns", "Strata",
+                                                           choices = strataCohort$strataName,
+                                                           selected = 'All',
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = FALSE)
                 ),
+                
+                conditionalPanel(condition = "input.tabs!='about' & input.tabs!='cohorts' & input.tabs!='cohortCounts' & input.tabs!='timeToEvent' & input.tabs!='metricsDistribution' & input.tabs!='treatmentPatterns' & input.tabs!='databaseInformation' & input.tabs!='changeLog'" ,
+                                 shinyWidgets::pickerInput("targetCohort", "Cohort (Target)",
+                                                           choices = characterizationTargetCohort$targetName,
+                                                           selected = targetName,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = FALSE),
+                                 shinyWidgets::pickerInput("strataCohort", "Strata (Target)",
+                                                           choices = characterizationStrataCohort$strataName,
+                                                           selected = strataName,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = FALSE)
+                ),
+                
                 conditionalPanel(condition = "input.tabs=='compareCohortCharacterization'",
-                   shinyWidgets::pickerInput("comparatorCohort", "Cohort (Comparator)",
-                                             choices = characterizationTargetCohort$targetName,
-                                             selected = comparatorName,
-                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
-                                             multiple = FALSE),
-                   shinyWidgets::pickerInput("comparatorStrataCohort", "Strata (Comparator)",
-                                             choices = characterizationStrataCohort$strataName,
-                                             selected = comparatorStrataName,
-                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
-                                             multiple = FALSE)
+                                 shinyWidgets::pickerInput("comparatorCohort", "Cohort (Comparator)",
+                                                           choices = characterizationTargetCohort$targetName,
+                                                           selected = comparatorName,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = FALSE),
+                                 shinyWidgets::pickerInput("comparatorStrataCohort", "Strata (Comparator)",
+                                                           choices = characterizationStrataCohort$strataName,
+                                                           selected = comparatorStrataName,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, liveSearch = TRUE, dropupAuto = FALSE),
+                                                           multiple = FALSE)
                 ),
+                
                 conditionalPanel(condition = "input.tabs=='cohortCharacterization' | input.tabs=='compareCohortCharacterization'",
                                  shinyWidgets::pickerInput("domainFilter", "Domain",
                                                            choices = unique(domain$name),
@@ -142,15 +163,17 @@ dashboardPage(
                                                            options = shinyWidgets::pickerOptions(actionsBox = TRUE, dropupAuto = FALSE),
                                                            multiple = FALSE)
                 ),
+                
                 conditionalPanel(condition = "(input.tabs=='cohortCharacterization' | input.tabs=='compareCohortCharacterization') & input.domainFilter!='Demographics'",
-                   shinyWidgets::pickerInput("timeWindowFilter", "Time Window",
-                                             choices = timeWindow$name,
-                                             selected = timeWindow$name,
-                                             options = shinyWidgets::pickerOptions(actionsBox = TRUE, dropupAuto = FALSE),
-                                             multiple = TRUE)
+                                 shinyWidgets::pickerInput("timeWindowFilter", "Time Window",
+                                                           choices = timeWindow$name,
+                                                           selected = timeWindow$name,
+                                                           options = shinyWidgets::pickerOptions(actionsBox = TRUE, dropupAuto = FALSE),
+                                                           multiple = TRUE)
                 )
     )
   ),
+  
   dashboardBody(
     tags$head(
       tags$link(rel="stylesheet", type="text/css", href="ohdsi.css"),
@@ -171,18 +194,18 @@ dashboardPage(
               htmltools::withTags(
                 addInfo(
                   div(class="download-container",
-                    shinyWidgets::dropdownButton(
-                      inputId = "cohortCountsDownload",
-                      label = "Download",
-                      icon = icon("download"),
-                      circle = F,
-                      margin="20px",
-                      downloadButton("dlCohortCountsByDb", "Download Table View"),
-                      downloadButton("dlCohortCountsFlat", "Download Flat Data")
-                    ),
+                      shinyWidgets::dropdownButton(
+                        inputId = "cohortCountsDownload",
+                        label = "Download",
+                        icon = icon("download"),
+                        circle = F,
+                        margin="20px",
+                        downloadButton("dlCohortCountsByDb", "Download Table View"),
+                        downloadButton("dlCohortCountsFlat", "Download Flat Data")
+                      ),
                   ),
-                "dlCohortCountsInfo"
-              )),
+                  "dlCohortCountsInfo"
+                )),
               htmlOutput("borderCohortCounts"),
               dataTableOutput("cohortCountsTable")
       ),
@@ -222,7 +245,7 @@ dashboardPage(
                tags$h4(textOutput('metricsHeader')),
                # htmlOutput("borderCharacterization"),
                dataTableOutput("metricsTable")
-               ),
+      ),
       
       tabItem(tabName = "compareCohortCharacterization",
               htmlOutput("comparisonName"),
@@ -239,6 +262,15 @@ dashboardPage(
                                  plotOutput("charComparePlot", height = 700, hover = hoverOpts("plotHoverCharCompare", delay = 100, delayType = "debounce"))
                                )
               )
+      ),
+      tabItem (tabName = "treatmentPatterns",
+               tags$h4(textOutput('treatmentPatternsHeader')),
+               tags$div(
+                 plotOutput("TimeToTreatmentSwitch", height = 650, width = 1050)
+               ),
+               tags$div(
+                 plotOutput("test", height = 650, width = 1050)
+               )
       ),
       tabItem(tabName = "databaseInformation",
               downloadButton("dlDatabaseInformation", "Download Data"),
