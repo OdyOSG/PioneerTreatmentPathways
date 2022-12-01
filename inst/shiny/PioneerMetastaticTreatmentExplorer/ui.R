@@ -236,7 +236,7 @@ dashboardPage(
                   downloadButton("dlTimeToEvent", "Download Data")),
               tags$h4(textOutput('survivalHeader')),
               tags$div(
-                plotOutput("TimeToEventDeath", height = 650, width = 1050)
+                plotOutput("TimeToEventPlot", height = 650, width = 1050)
               )
               
       ),

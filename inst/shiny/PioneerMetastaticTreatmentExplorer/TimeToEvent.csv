@@ -1,0 +1,6 @@
+eventId,name
+1,Time to Death
+2,Time to Symptomatic progression
+3,Time to Other Therapies
+4,Time to Adverse Events
+5,Time to Hospitalization and ED visit

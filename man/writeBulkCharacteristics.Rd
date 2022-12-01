@@ -10,7 +10,8 @@ writeBulkCharacteristics(
   counts,
   minCellCount,
   databaseId,
-  exportFolder
+  exportFolder,
+  andromedaData = NULL
 )
 }
 \description{

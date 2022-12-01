@@ -32,6 +32,11 @@ getFeatureTimeWindows <- function() {
   return(readCsv(resourceFile))
 }
 
+getTimeToEventSettings <- function(){
+  resourceFile <- file.path(getPathToResource(), "TimeToEvent.csv")
+  return(readCsv(resourceFile))
+}
+
 getTargetStrataXref <- function() {
   resourceFile <- file.path(getPathToResource(), "targetStrataXref.csv")
   return(readCsv(resourceFile))

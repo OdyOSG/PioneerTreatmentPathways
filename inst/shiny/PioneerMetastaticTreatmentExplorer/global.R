@@ -199,25 +199,4 @@ database <- database[order(database$databaseId),]
 
 
 # Add Time to Event names and ids
-
-# Get unique outcome ids in time to event table
-ids <- andrData$cohort_time_to_event %>%
-  dplyr::distinct(outcomeId) %>%
-  dplyr::pull()
-
-# Find corresponding cohort names
-names <- sapply(ids, function(id){
-  andrData$cohort_staging_count %>%
-    dplyr::filter(cohortId == id) %>% 
-    dplyr::pull(name)})
-
-# hack/fix which I don't understand
-#if(length(cohortStagingCount$name[cohortStagingCount$cohortId == max(ids)]) == 0){
-#  names <- c(names, 'Symptomatic progr. free surv.')
-#}
-
-KMIds <- data.table(id = ids,
-                    name = names)
-
-#Filter out NA value in name which leads to problems with computations and plotting
-KMIds <- KMIds[!is.na(KMIds$name)]
+KMIds <- read.csv('TimeToEvent.csv')

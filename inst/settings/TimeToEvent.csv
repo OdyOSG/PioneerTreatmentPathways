@@ -1,0 +1,6 @@
+eventId,outcomeCohortIds,name
+1,201,Time to Death
+2,202;201,Time to Symptomatic progression
+3,217;218;219;220;221;222;223,Time to Other Therapies
+4,203;204;205;206;207;208;209;210;211;212;213;214;215;216,Time to Adverse Events
+5,224;225,Time to Hospitalization and ED visit

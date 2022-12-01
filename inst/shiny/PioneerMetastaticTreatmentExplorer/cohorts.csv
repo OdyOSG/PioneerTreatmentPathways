@@ -1,71 +1,87 @@
 cohortId,name,atlasId,circeDef
-101,[PIONEER T1] Newly diagnosed PCa,47,TRUE
-103,[PIONEER T2] PCa treated right away,49,TRUE
-111,[PIONEER T3] PCa under conservative management,137,TRUE
-117,[PIONEER T4] PCa treated after conservative management,143,TRUE
-105,[PIONEER T3.1] PCa high/intermediate risk conservative management,138,TRUE
-107,[PIONEER T3.2] PCa low risk grade conservative management and no intense monitoring,139,TRUE
-109,[PIONEER T3.3] PCa low risk grade conservative management and intense monitoring,140,TRUE
-113,[PIONEER T4.1] Delayed Curative Management,144,TRUE
-115,[PIONEER T4.2] Delayed Palliative Management,145,TRUE
-102,[PIONEER T1a] Newly diagnosed PCa broad,141,TRUE
-104,[PIONEER T2a] PCa treated right away broad,142,TRUE
-112,[PIONEER T3a] PCa under conservative management broad,125,TRUE
-118,[PIONEER T4a] PCa treated after conservative management broad,129,TRUE
-106,[PIONEER T3.1a] PCa high/intermediate risk conservative management broad,126,TRUE
-108,[PIONEER T3.2a] PCa low risk grade conservative management and no intense monitoring broad,127,TRUE
-110,[PIONEER T3.3a] PCa low risk grade conservative management and intense monitoring broad,128,TRUE
-114,[PIONEER T4.1a] Delayed Curative Management broad,131,TRUE
-116,[PIONEER T4.2a] Delayed Palliative Management broad,132,TRUE
-119,[PIONEER T5] Symptom post conservative management,168,TRUE
-120,[PIONEER T5a] Symptom post conservative management broad,167,TRUE
-121,[PIONEER T3a sen1] new PCa conservative management sensitivity_1,182,TRUE
-122,[PIONEER T3a sen2] new PCa conservative management sensitivity_2,173,TRUE
-123,[PIONEER T3a sen3] new PCa conservative management sensitivity_3,174,TRUE
-124,[PIONEER T3a sen4] new PCa conservative management sensitivity_4,175,TRUE
-125,[PIONEER T3a sen5] new PCa conservative management sensitivity_5,176,TRUE
-202,[PIONEER O1] Death,46,TRUE
-201,[PIONEER O2] Symptomatic progression,45,TRUE
-203,[PIONEER O3] Treatment Initiation,61,TRUE
-204,[PIONEER O4] Curative Treatment Initiation,73,TRUE
-205,[PIONEER O5] Palliative Treatment Initiation,74,TRUE
-206,[PIONEER O6] Hospitalization,87,TRUE
-207,[PIONEER O7] ED Visit,90,TRUE
-301,[PIONEER S1] EAU High Risk,52,TRUE
-302,[PIONEER S2] EAU Low Risk,53,TRUE
-303,[PIONEER S3] EAU Intermediate Risk,54,TRUE
-304,[PIONEER S4] Metastatic PCa,55,TRUE
-305,[PIONEER S5] Locally Advanced PCa,56,TRUE
-306,[PIONEER S6] localized PCa,57,TRUE
-307,[PIONEER S7] PSA >20 at Diagnosis ,58,TRUE
-308,[PIONEER S8] PSA <10 at Diagnosis,59,TRUE
-309,[PIONEER S9] PSA 10-20 at Diagnosis,60,TRUE
-310,[PIONEER S10] Stage cT1 at Dx,63,TRUE
-311,[PIONEER S11] Stage cT2 at Dx,64,TRUE
-312,[PIONEER S12] Stage cT3/cT4 at Dx,65,TRUE
-313,[PIONEER S13] Physical Therapy/Exercise,112,TRUE
-314,[PIONEER S14] Grade 1 (GS 2-6),67,TRUE
-315,[PIONEER S15] Grade 2 (GS 3+4),68,TRUE
-316,[PIONEER S16] Grade 3 (GS 4+3),69,TRUE
-317,[PIONEER S17] Grade 4 (GS 8),70,TRUE
-318,[PIONEER S18] Grade 5 (GS 9-10),71,TRUE
-319,[PIONEER S19] Family history of Prostate cancer or history of family history of germline mutations,72,TRUE
-320,"[PIONEER S20] Mutation (germline or somatic) in BRCA2, BRCA1, ATM, MLH1, MSH1, MSH2, MSH6, CHEK2, RAD51B and PALB2 ",83,TRUE
-321,[PIONEER S21] Age at diagnosis <55,111,TRUE
-322,[PIONEER S22] Age at diagnosis 55-80,110,TRUE
-323,[PIONEER S23] Age at diagnosis >80,109,TRUE
-324,[PIONEER S24] Charlson CCI=0,120,TRUE
-325,[PIONEER S25] Charlson CCI=1,121,TRUE
-326,[PIONEER S26] Charlson CCI>=2,122,TRUE
-327,"[PIONEER S27] Any malignancy, except malignant neoplasm of skin",81,TRUE
-334,[PIONEER S28] Performance status ECOG=0,164,TRUE
-335,[PIONEER S29] Performance status ECOG=1,165,TRUE
-336,[PIONEER S30] Performance status ECOG=2+,166,TRUE
-328,[PIONEER S31] Total Cardiovascular Disease Event,152,TRUE
-329,[PIONEER S32] Stroke,153,TRUE
-330,[PIONEER S33] Type 2 Diabetes,154,TRUE
-331,[PIONEER S34] Hypertension,155,TRUE
-332,[PIONEER S35] Obesity,156,TRUE
-333,[PIONEER S36] VTE,157,TRUE
-337,[PIONEER S37] Anxiety,158,TRUE
-338,[PIONEER S38] Prevalent Asthma or Chronic obstructive pulmonary disease (COPD),159,TRUE
+101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL,254,TRUE
+102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL,273,TRUE
+103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL,274,TRUE
+104,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL,360,TRUE
+105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL,300,TRUE
+106,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL,306,TRUE
+107,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT only treated FINAL,436,TRUE
+108,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA treated FINAL,437,TRUE
+109,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+Chemo treated FINAL,439,TRUE
+110,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA+Chemo treated FINAL,440,TRUE
+111,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT only treated (synchronous) FINAL,424,TRUE
+112,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA treated (synchronous) FINAL,429,TRUE
+113,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+Chemo treated (synchronous) FINAL,431,TRUE
+114,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA+Chemo treated (synchronous) FINAL,430,TRUE
+115,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT only treated FINAL,428,TRUE
+116,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+Chemo treated FINAL,435,TRUE
+117,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA treated FINAL,433,TRUE
+118,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA+Chemo treated FINAL,434,TRUE
+201,[PIONEER 2.0] Symptomatic progression-FINAL,361,TRUE
+202,[PIONEER 2.0] Death FINAL,362,TRUE
+203,[PIONEER 2.0] Fatigue or malaise FINAL,310,TRUE
+204,[PIONEER 2.0] Diarrhea FINAL,318,TRUE
+205,[PIONEER 2.0] Hot flashes FINAL,405,TRUE
+206,[PIONEER 2.0] Anemia (male only) FINAL,407,TRUE
+207,[PIONEER 2.0] FDA AESI Immune thrombocytopenia (ITP) events FINAL,312,TRUE
+208,[PIONEER 2.0] Neutropenia FINAL,340,TRUE
+209,[PIONEER 2.0] Edema FINAL,343,TRUE
+210,[PIONEER 2.0] Arrythmia FINAL,404,TRUE
+211,[PIONEER 2.0] Convulsion,345,TRUE
+212,[PIONEER 2.0] Acute myocardial infarction FINAL,313,TRUE
+213,[PIONEER 2.0] Hematuria FINAL,348,TRUE
+214,[PIONEER 2.0] Constipation FINAL,402,TRUE
+215,[PIONEER 2.0] Osteopenia and Osteoporosis FINAL,403,TRUE
+216,[PIONEER 2.0] Hypokalemia FINAL,406,TRUE
+217,[PIONEER 2.0] RT after pain and or hematuria FINAL,341,TRUE
+218,[PIONEER 2.0] Placement of urethral stent or neprhrostomy for AKI FINAL,339,TRUE
+219,[PIONEER 2.0] Colostomy FINAL,333,TRUE
+220,[PIONEER 2.0] Chronic foley catheter FINAL,334,TRUE
+221,[PIONEER 2.0] Pelvic exenteration FINAL,338,TRUE
+222,[PIONEER 2.0] Suprapubic catheter FINAL,337,TRUE
+223,[PIONEER 2.0] TUR FINAL,332,TRUE
+224,[PIONEER 2.0] Hospitalization FINAL,324,TRUE
+225,[PIONEER 2.0] ER Visit FINAL,327,TRUE
+301,[PIONEER 2.0] Performance Status ECOG=0 at met Dx FINAL,283,TRUE
+302,[PIONEER 2.0] Performance Status ECOG=1 at met Dx FINAL,422,TRUE
+303,[PIONEER 2.0] Performance Status ECOG=2+ at met Dx FINAL,423,TRUE
+304,[PIONEER 2.0] Prevalent obesity FINAL,282,TRUE
+305,[PIONEER 2.0] Prevalent hypertension FINAL,284,TRUE
+306,[PIONEER 2.0] Total Cardiovascular Disease Event FINAL,286,TRUE
+307,[PIONEER 2.0] Prevalent Type 2 Diabetes Mellitus FINAL,287,TRUE
+308,[PIONEER 2.0] Venous thromboembolic (pulmonary embolism and deep vein thrombosis) events FINAL,288,TRUE
+309,[PIONEER 2.0] Anxiety FINAL,289,TRUE
+310,[PIONEER 2.0] Prevalent Asthma or COPD FINAL,290,TRUE
+311,[PIONEER 2.0] Family History of PCa FINAL,292,TRUE
+312,[PIONEER 2.0] Physical Therapy FINAL,293,TRUE
+313,[PIONEER 2.0] Metastasis stage M1a FINAL,441,TRUE
+314,[PIONEER 2.0] Metastasis stage M1b FINAL,303,TRUE
+315,[PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,304,TRUE
+316,"[PIONEER 2.0] N1, M0Mx, any T FINAL",409,TRUE
+317,[PIONEER 2.0] Metastasis recurrent RT-FINAL,305,TRUE
+318,[PIONEER 2.0] Metastasis recurrent RP-FINAL,301,TRUE
+319,[PIONEER 2.0] MRI of prostate FINAL,295,TRUE
+320,[PIONEER 2.0] Bone scan FINAL,309,TRUE
+321,[PIONEER 2.0] CT scan of whole body around Dx,285,TRUE
+322,[PIONEER 2.0] CT scan of whole body around metastasis,317,TRUE
+323,[PIONEER 2.0] PET-CT imaging FINAL,299,TRUE
+324,[PIONEER 2.0] PSA above 20 at Dx FINAL,398,TRUE
+325,[PIONEER 2.0] PSA below 10 at Dx FINAL,410,TRUE
+326,[PIONEER 2.0] PSA 10-20 at Dx FINAL,411,TRUE
+327,[PIONEER 2.0] Gleason Grade 1 at Dx FINAL,326,TRUE
+328,[PIONEER V2.0] Earliest Gleason Grade 2 - 3,329,TRUE
+329,[PIONEER V2.0] Earliest Gleason Grade 4,330,TRUE
+330,[PIONEER V2.0] Earliest Gleason Grade 5,331,TRUE
+331,[PIONEER S1] High-Risk,52,TRUE
+332,[PIONEER S2] Low-Risk,53,TRUE
+333,[PIONEER S3] Intermediate-Risk,54,TRUE
+334,[PIONEER 2.0] MRI of prostate FINAL,295,TRUE
+335,[PIONEER 2.0] Bone scan FINAL,309,TRUE
+336,[PIONEER 2.0] CT thorax_abdomen_pelvis OR full body MRI FINAL,316,TRUE
+337,[PIONEER 2.0] PET-CT imaging FINAL,299,TRUE
+338,[PIONEER 2.0] PSA above 20 at mets dx FINAL,414,TRUE
+339,[PIONEER 2.0] PSA below 10 at mets dx FINAL,413,TRUE
+340,[PIONEER 2.0] PSA 10-20 at mets dx FINAL,412,TRUE
+341,[PIONEER 2.0] T1cN0NxM0Mx-FINAL,380,TRUE
+342,[PIONEER 2.0] T2abN0NxM0Mx-FINAL,385,TRUE
+343,[PIONEER 2.0] T2c+N0NxM0Mx-FINAL,384,TRUE

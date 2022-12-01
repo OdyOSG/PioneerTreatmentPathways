@@ -299,34 +299,42 @@ shinyServer(function(input, output, session) {
     }
   )
   
-  output$TimeToEventDeath <- renderPlot({
+  output$TimeToEventPlot <- renderPlot({
     target_id <- andrData$cohort_count %>%
       dplyr::filter(databaseId %in% !!input$databasesTimeToEvent, cohortId %in% !!cohortIdTimeToEvent()) %>% 
       dplyr::pull(cohortId)
-    target_id_entries_num <- andrData$cohort_count %>% 
-      dplyr::filter(cohortId == target_id) %>% 
-      dplyr::pull(cohortEntries)
-    
-    if (length(target_id) == 0 | target_id_entries_num <= 100 | is.null(input$KMPlot)) { ggplot2::ggplot() }
+
+    if (length(target_id) == 0 | is.null(input$KMPlot)) { ggplot2::ggplot() }
     
     targetIdTimeToEventData <- andrData$cohort_time_to_event %>% 
-      dplyr::filter(targetId == target_id, databaseId == !!input$databasesTimeToEvent) %>% 
-      dplyr::collect()
+      dplyr::filter(targetId == target_id, databaseId == !!input$databasesTimeToEvent)
     
     accumulatedData <- data.table(time = c(), surv = c(), n.censor = c(), 
                                   n.event = c(), upper = c(), lower = c())
     for (plotName in input$KMPlot){
-      oId <- KMIds$id[KMIds$name == plotName]
-      data <- targetIdTimeToEventData %>% dplyr::filter(outcomeId == oId)
-      if (length(data) > 0){
+      eId <- KMIds %>%
+        dplyr::filter(name == plotName) %>%
+        dplyr::pull(eventId)
+      data <- targetIdTimeToEventData %>%
+        dplyr::filter(eventId == eId) %>%
+        dplyr::collect()
+      if (nrow(data) > 0) {
         data <- as.data.frame(data[, c('time', 'surv', 'n.risk',  'n.censor', 'n.event', 'upper', 'lower')])
         data$strata <- plotName
       }
       else{
-        data <- targetIdTimeToEventData %>% dplyr::filter(outcomeId == -1)
+        next()
       }
       accumulatedData <- rbind(accumulatedData, data)
     }
+    
+    # eventIds <- KMIds %>% 
+    #   dplyr::filter(name %in% !!input$KMPlot) %>% 
+    #   dplyr::pull(eventId)
+    # 
+    # accumulatedData <- targetIdTimeToEventData %>% 
+    #   dplyr::filter(eventId %in% eventIds) %>% 
+    #   dplyr::collect(time, surv, n.risk, n.censor, n.event, upper, lower)
 
     color_map <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
     names(color_map) <- KMIds$name

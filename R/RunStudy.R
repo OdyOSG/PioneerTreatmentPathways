@@ -199,31 +199,18 @@ runStudy <- function(connectionDetails = NULL,
   counts <- dplyr::left_join(x = allStudyCohorts, y = counts, by = "cohortId")
   andrData$cohort_staging_count = counts
 
+  
   # Generate survival info -----------------------------------------------------------------
   ParallelLogger::logInfo("Generating time to event data")
   targetIds <- c(targetCohortIds, getTargetStrataXref()$cohortId)
-  KMOutcomes <- getFeatures()
-  # KMOutcomesIds <- KMOutcomes$cohortId[KMOutcomes$createKMPlot == TRUE]
-  # KMOutcomesIds <- KMOutcomes$cohortId
+  events <- getTimeToEventSettings()
   timeToEvent <- generateSurvival(connection = connection,
                                   cohortDatabaseSchema = cohortDatabaseSchema,
                                   cohortTable = cohortStagingTable,
                                   targetIds = targetIds,
-                                  outcomeIds = KMOutcomes$cohortId,
+                                  events = events,
                                   databaseId = databaseId,
                                   packageName = getThisPackageName())
-
-  # KMOutcomesIds <- KMOutcomes$cohortId[KMOutcomes$name %in% c('Death', 'Symptomatic progression')]
-  # combinedOutcomeId <- max(allStudyCohorts$cohortId) + 1
-  # timeToCombinedEvent <- generateCombinedSurvival(connection,
-  #                                                 cohortDatabaseSchema,
-  #                                                 cohortTable = cohortStagingTable,
-  #                                                 targetIds = targetIds,
-  #                                                 outcomeIds = KMOutcomesIds,
-  #                                                 combinedOutcomeId = combinedOutcomeId,
-  #                                                 databaseId = databaseId,
-  #                                                 packageName = getThisPackageName())
-  # timeToEvent <- rbind(timeToEvent, timeToCombinedEvent)
 
   andrData$cohort_time_to_event <- timeToEvent
   
