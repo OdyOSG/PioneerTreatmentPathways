@@ -269,24 +269,24 @@ cohortId,targetId,targetName,strataId,strataName,cohortType
 116003142,116,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+Chemo treated FINAL,314,without [PIONEER 2.0] Metastasis stage M1b FINAL,TwoS
 117003142,117,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA treated FINAL,314,without [PIONEER 2.0] Metastasis stage M1b FINAL,TwoS
 118003142,118,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA+Chemo treated FINAL,314,without [PIONEER 2.0] Metastasis stage M1b FINAL,TwoS
-101003152,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-102003152,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-103003152,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-104003152,104,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-105003152,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-106003152,106,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-107003152,107,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT only treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-108003152,108,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-109003152,109,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+Chemo treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-110003152,110,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA+Chemo treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-111003152,111,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT only treated (synchronous) FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-112003152,112,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA treated (synchronous) FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-113003152,113,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+Chemo treated (synchronous) FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-114003152,114,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA+Chemo treated (synchronous) FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-115003152,115,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT only treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-116003152,116,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+Chemo treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-117003152,117,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
-118003152,118,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA+Chemo treated FINAL,315,without [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwoS
+101003152,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+102003152,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+103003152,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+104003152,104,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+105003152,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+106003152,106,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+107003152,107,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT only treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+108003152,108,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+109003152,109,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+Chemo treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+110003152,110,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA+Chemo treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+111003152,111,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT only treated (synchronous) FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+112003152,112,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA treated (synchronous) FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+113003152,113,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+Chemo treated (synchronous) FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+114003152,114,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA+Chemo treated (synchronous) FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+115003152,115,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT only treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+116003152,116,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+Chemo treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+117003152,117,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
+118003152,118,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA+Chemo treated FINAL,315,without [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwoS
 101003162,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL,316,"without [PIONEER 2.0] N1, M0Mx, any T FINAL",TwoS
 102003162,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL,316,"without [PIONEER 2.0] N1, M0Mx, any T FINAL",TwoS
 103003162,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL,316,"without [PIONEER 2.0] N1, M0Mx, any T FINAL",TwoS
@@ -1115,24 +1115,24 @@ cohortId,targetId,targetName,strataId,strataName,cohortType
 116003141,116,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+Chemo treated FINAL,314,with [PIONEER 2.0] Metastasis stage M1b FINAL,TwS
 117003141,117,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA treated FINAL,314,with [PIONEER 2.0] Metastasis stage M1b FINAL,TwS
 118003141,118,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA+Chemo treated FINAL,314,with [PIONEER 2.0] Metastasis stage M1b FINAL,TwS
-101003151,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-102003151,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-103003151,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-104003151,104,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-105003151,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-106003151,106,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-107003151,107,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT only treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-108003151,108,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-109003151,109,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+Chemo treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-110003151,110,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA+Chemo treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-111003151,111,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT only treated (synchronous) FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-112003151,112,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA treated (synchronous) FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-113003151,113,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+Chemo treated (synchronous) FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-114003151,114,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA+Chemo treated (synchronous) FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-115003151,115,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT only treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-116003151,116,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+Chemo treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-117003151,117,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
-118003151,118,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA+Chemo treated FINAL,315,with [PIONEER 2.0]Â Strata Cohort S26 Metastasis stage M1c,TwS
+101003151,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+102003151,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+103003151,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+104003151,104,[PIONEER 2.0] Target Cohort 2.0_mHSPC treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+105003151,105,[PIONEER 2.0] Target Cohort 2.1_mHSPC treated (synchronous) FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+106003151,106,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+107003151,107,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT only treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+108003151,108,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+109003151,109,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+Chemo treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+110003151,110,[PIONEER 2.0] Target Cohort 2.0_mHSPC ADT+ARTA+Chemo treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+111003151,111,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT only treated (synchronous) FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+112003151,112,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA treated (synchronous) FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+113003151,113,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+Chemo treated (synchronous) FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+114003151,114,[PIONEER 2.0] Target Cohort 2.1_mHSPC ADT+ARTA+Chemo treated (synchronous) FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+115003151,115,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT only treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+116003151,116,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+Chemo treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+117003151,117,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
+118003151,118,[PIONEER 2.0] Target Cohort 2.2_metachronous mHSPC ADT+ARTA+Chemo treated FINAL,315,with [PIONEER 2.0] Strata Cohort S26 Metastasis stage M1c,TwS
 101003161,101,[PIONEER 2.0] Target Cohort 1.0_ mHSPC FINAL,316,"with [PIONEER 2.0] N1, M0Mx, any T FINAL",TwS
 102003161,102,[PIONEER 2.0] Target Cohort 1.1_mHSPC (synchronous) FINAL,316,"with [PIONEER 2.0] N1, M0Mx, any T FINAL",TwS
 103003161,103,[PIONEER 2.0] Target Cohort 1.2_metachronous mHSPC FINAL,316,"with [PIONEER 2.0] N1, M0Mx, any T FINAL",TwS
