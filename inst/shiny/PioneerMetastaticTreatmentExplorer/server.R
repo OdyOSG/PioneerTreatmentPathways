@@ -725,6 +725,13 @@ shinyServer(function(input, output, session) {
       write.csv(table, file, row.names = FALSE, na = "")
     }
   )
+  
+  
+  # Treatment Patterns ---------------------
+  data <- read.csv('sankey_grouped.csv')
+  jsonData <- jsonlite::toJSON(data, pretty = TRUE)
+  session$sendCustomMessage(type = "jsondata", jsonData)
+  
 
   # Database Info ------------------
   output$borderDatabaseInformation <- renderUI({ renderBorderTag() })

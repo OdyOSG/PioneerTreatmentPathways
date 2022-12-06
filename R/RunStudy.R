@@ -122,24 +122,6 @@ runStudy <- function(connectionDetails = NULL,
                        incrementalFolder = incrementalFolder,
                        inclusionStatisticsFolder = exportFolder)
   
-  # # Create the treatment cohorts
-  # ParallelLogger::logInfo("**********************************************************")
-  # ParallelLogger::logInfo(" ---- Creating treatment cohorts ---- ")
-  # ParallelLogger::logInfo("**********************************************************")
-  # instantiateCohortSet(connectionDetails = connectionDetails,
-  #                      connection = connection,
-  #                      cdmDatabaseSchema = cdmDatabaseSchema,
-  #                      oracleTempSchema = oracleTempSchema,
-  #                      cohortDatabaseSchema = cohortDatabaseSchema,
-  #                      cohortTable = cohortStagingTable,
-  #                      cohortIds = treatmentCohortIds,
-  #                      minCellCount = minCellCount,
-  #                      createCohortTable = FALSE,
-  #                      generateInclusionStats = FALSE,
-  #                      incremental = incremental,
-  #                      incrementalFolder = incrementalFolder,
-  #                      inclusionStatisticsFolder = exportFolder)
-  
   # Create the stratified cohorts
   ParallelLogger::logInfo("**********************************************************")
   ParallelLogger::logInfo(" ---- Creating stratified target cohorts ---- ")
@@ -211,7 +193,7 @@ runStudy <- function(connectionDetails = NULL,
                                   events = events,
                                   databaseId = databaseId,
                                   packageName = getThisPackageName())
-
+  
   andrData$cohort_time_to_event <- timeToEvent
   
 
