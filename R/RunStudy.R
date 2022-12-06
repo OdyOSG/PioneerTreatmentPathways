@@ -165,7 +165,7 @@ runStudy <- function(connectionDetails = NULL,
                                                                oracleTempSchema = oracleTempSchema),
                          isMetaAnalysis = 0)
   writeToCsv(database, file.path(exportFolder, "database.csv"))
-  andrData$database <-  database
+  andrData$database <- database
   
   # Counting staging cohorts ---------------------------------------------------------------
   ParallelLogger::logInfo("Counting staging cohorts")
@@ -193,10 +193,92 @@ runStudy <- function(connectionDetails = NULL,
                                   events = events,
                                   databaseId = databaseId,
                                   packageName = getThisPackageName())
-  
   andrData$cohort_time_to_event <- timeToEvent
   
-
+  
+  # Generate time to treatment switch info -------------------------------------------------
+  ParallelLogger::logInfo("Generating time to treatment switch data")
+  ParallelLogger::logInfo("Create treatment tables")
+  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                           sqlFilename = "TreatmentComplementaryTables.sql",
+                                           packageName = getThisPackageName(),
+                                           warnOnMissingParameters = TRUE,
+                                           cohort_database_schema = cohortDatabaseSchema,
+                                           cdm_database_schema = cdmDatabaseSchema,
+                                           treatment_cohort_ids = paste(targetIds, collapse = ', '),
+                                           cohort_table = cohortStagingTable
+                                           )
+  DatabaseConnector::executeSql(connection, sql)
+  
+  
+  ParallelLogger::logInfo("Get time to treatment switch")
+  deathCohortId <- events %>% dplyr::filter(name == 'Time to Death') %>% dplyr::pull(outcomeCohortIds)
+  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                           sqlFilename = "TimeToTreatmentSwitch.sql",
+                                           packageName = getThisPackageName(),
+                                           warnOnMissingParameters = TRUE,
+                                           cohort_database_schema = cohortDatabaseSchema,
+                                           cohort_table = cohortStagingTable,
+                                           death_cohort_id = deathCohortId
+                                           )
+  ttts <- DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
+  browser()
+  timeToTreatmentSwitch <- purrr::map_df(targetIds, function(targetId){
+    data = ttts %>% dplyr::filter(cohortDefinitionId == targetId) %>% dplyr::select(id, timeToEvent, event)
+    if (nrow(data) < 100 | length(data$event[data$event == 1]) < 1) {return(NULL)}
+    surv_info <- survival::survfit(survival::Surv(timeToEvent, event) ~ 1, data = data)
+    surv_info <- survminer::surv_summary(surv_info)
+    
+    data.frame(targetId = targetId, time = surv_info$time, surv = surv_info$surv, 
+               n.censor = surv_info$n.censor, n.event = surv_info$n.event, n.risk = surv_info$n.risk,
+               lower = surv_info$lower, upper = surv_info$upper, databaseId = databaseId)
+  })
+  andrData$cohort_time_to_treatment_switch <- timeToTreatmentSwitch
+  
+  
+  ParallelLogger::logInfo("Get sankey data")
+  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                           sqlFilename = "Sankey.sql",
+                                           packageName = getThisPackageName(),
+                                           warnOnMissingParameters = TRUE,
+                                           cohort_database_schema = cohortStagingTable,
+                                           second_line_treatment_gap = '0'
+                                           )
+  data = DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
+  
+  data = data %>% 
+    dplyr::group_by(cohortDefinitionId, id) %>% 
+    dplyr::mutate(first_line = paste(beforeCodesetTag, collapse = " ")) %>%
+    dplyr::mutate(second_line = paste(afterCodesetTag, collapse = " ")) %>%
+    dplyr::select(id, cohortDefinitionId, first_line, second_line) %>%
+    dplyr::distinct() %>%
+    dplyr::mutate(first_line = formatPattern(first_line)) %>%
+    dplyr::mutate(second_line = formatPattern(second_line))
+  
+  treatmentPatternMap = data.frame(name = unique(c(data$first_line, data$second_line)))
+  treatmentPatternMap$code = 1:nrow(treatmentPatternMap)
+  
+  sankeyData <- dplyr::inner_join(data, treatmentPatternMap, by = c('first_line' = 'name')) %>% 
+    dplyr::rename('sourceId' = 'code') %>%
+    dplyr::rename('sourceName' = 'first_line')
+  sankeyData <- dplyr::inner_join(sankeyData, treatmentPatternMap, by = c('second_line' = 'name')) %>%
+    dplyr::rename('targetId' = 'code') %>%
+    dplyr::rename('targetName' = 'second_line')
+  sankeyData <- sankeyData %>%
+    dplyr::group_by(cohortDefinitionId, sourceName, targetName, sourceId, targetId) %>%
+    dplyr::summarise(value = dplyr::n())
+  andrData$treatment_sankey <- sankeyData
+  
+  # drop treatment complementary tables
+  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                           sqlFilename = "TreatmentTablesDrop.sql",
+                                           packageName = getThisPackageName(),
+                                           warnOnMissingParameters = TRUE,
+                                           cohort_database_schema = cohortDatabaseSchema
+                                           )
+  DatabaseConnector::executeSql(connection, sql)
+  
+  
   # Generate Metrics Distribution info -----------------------------------------------------
   ParallelLogger::logInfo("Generating metrics distribution")
   ParallelLogger::logInfo("Creating auxiliary tables")
@@ -423,6 +505,17 @@ exportResults <- function(exportFolder, databaseId, cohortIdsToExcludeFromResult
     zipName <- zipResults(exportFolder, databaseId)
   }
   ParallelLogger::logInfo("Results are ready for sharing at:", zipName)
+}
+
+formatPattern <- function(raw){
+  pattern = sort(strsplit(raw, ' ')[[1]])
+  pattern = pattern[pattern != 'NA']
+  pattern = paste(pattern, collapse = ' + ')
+  if (nchar(pattern) != 0){
+    return(pattern)}
+  else{
+    return('discontinued')
+  }
 }
 
 zipResults <- function(exportFolder, databaseId) {
