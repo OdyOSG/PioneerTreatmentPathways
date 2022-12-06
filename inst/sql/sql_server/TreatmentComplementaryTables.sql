@@ -7,7 +7,7 @@ CREATE TABLE @cohort_database_schema.drug_codesets
 
 
 INSERT INTO @cohort_database_schema.drug_codesets (codeset_tag, concept_id)
-SELECT codeset_tag, c.concept_id
+SELECT codeset_tag, concept_id
 FROM (
      --ADT
      SELECT 'ADT' AS codeset_tag, c.concept_id
