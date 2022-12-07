@@ -221,10 +221,9 @@ runStudy <- function(connectionDetails = NULL,
                                            cohort_table = cohortStagingTable,
                                            death_cohort_id = deathCohortId
                                            )
-  ttts <- DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
-  browser()
+  data <- DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
   timeToTreatmentSwitch <- purrr::map_df(targetIds, function(targetId){
-    data = ttts %>% dplyr::filter(cohortDefinitionId == targetId) %>% dplyr::select(id, timeToEvent, event)
+    data <- data %>% dplyr::filter(cohortDefinitionId == targetId) %>% dplyr::select(id, timeToEvent, event)
     if (nrow(data) < 100 | length(data$event[data$event == 1]) < 1) {return(NULL)}
     surv_info <- survival::survfit(survival::Surv(timeToEvent, event) ~ 1, data = data)
     surv_info <- survminer::surv_summary(surv_info)
