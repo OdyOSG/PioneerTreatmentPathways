@@ -35,8 +35,8 @@ CREATE TABLE @cohort_database_schema.charlson_scoring
 );
 
 
-DROP TABLE IF EXISTS #charlson_incl;
-CREATE TABLE #charlson_incl
+DROP TABLE IF EXISTS @cohort_database_schema.charlson_incl;
+CREATE TABLE @cohort_database_schema.charlson_incl
 (
     diag_category_id   INT,
     diag_category_name VARCHAR(255),
@@ -44,8 +44,8 @@ CREATE TABLE #charlson_incl
 );
 
 
-DROP TABLE IF EXISTS #charlson_excl;
-CREATE TABLE #charlson_excl
+DROP TABLE IF EXISTS @cohort_database_schema.charlson_excl;
+CREATE TABLE @cohort_database_schema.charlson_excl
 (
     diag_category_id   INT,
     diag_category_name VARCHAR(255),
@@ -73,7 +73,7 @@ VALUES (1, 'Myocardial infarction', 1),
        (17, 'AIDS', 6);
 
 
-INSERT INTO charlson_incl (diag_category_id, diag_category_name, concept_id)
+INSERT INTO @cohort_database_schema.charlson_incl (diag_category_id, diag_category_name, concept_id)
 VALUES (1, 'Myocardial infarction', 4329847),
        (2, 'Congestive heart failure', 316139),
        (3, 'Peripheral vascular disease', 4247790),
@@ -198,7 +198,7 @@ VALUES (1, 'Myocardial infarction', 4329847),
        (17, 'AIDS', 439727)
 ;
 
-INSERT INTO charlson_excl (diag_category_id, diag_category_name, concept_id)
+INSERT INTO @cohort_database_schema.charlson_excl (diag_category_id, diag_category_name, concept_id)
 VALUES (3, 'Peripheral vascular disease', 4243371),
        (3, 'Peripheral vascular disease', 3184873),
        (3, 'Peripheral vascular disease', 42599607),
@@ -661,14 +661,14 @@ SELECT DISTINCT I.diag_category_id, I.descendant_concept_id
 FROM (
      SELECT incl.diag_category_id, ca.ancestor_concept_id, ca.descendant_concept_id
      FROM @cdm_database_schema.concept_ancestor ca
-     JOIN charlson_incl incl
+     JOIN @cohort_database_schema.charlson_incl incl
          ON ca.ancestor_concept_id = incl.concept_id
      ) I
 LEFT JOIN
     (
     SELECT excl.diag_category_id, ca.ancestor_concept_id, ca.descendant_concept_id
     FROM @cdm_database_schema.concept_ancestor ca
-    JOIN charlson_excl excl
+    JOIN @cohort_database_schema.charlson_excl excl
         ON ca.ancestor_concept_id = excl.concept_id
     ) E
     ON I.diag_category_id = E.diag_category_id
@@ -762,5 +762,5 @@ WHERE
   AND x.d2 = 16;
   
   
-DROP TABLE IF EXISTS #charlson_incl;
-DROP TABLE IF EXISTS #charlson_excl;
+DROP TABLE IF EXISTS @cohort_database_schema.charlson_incl;
+DROP TABLE IF EXISTS @cohort_database_schema.charlson_excl;
