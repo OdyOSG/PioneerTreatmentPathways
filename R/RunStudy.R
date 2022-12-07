@@ -241,7 +241,7 @@ runStudy <- function(connectionDetails = NULL,
                                            sqlFilename = "Sankey.sql",
                                            packageName = getThisPackageName(),
                                            warnOnMissingParameters = TRUE,
-                                           cohort_database_schema = cohortStagingTable,
+                                           cohort_database_schema = cohortDatabaseSchema,
                                            second_line_treatment_gap = '0'
                                            )
   data = DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
