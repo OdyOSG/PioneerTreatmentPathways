@@ -184,6 +184,8 @@ runStudy <- function(connectionDetails = NULL,
   
   # Generate survival info -----------------------------------------------------------------
   ParallelLogger::logInfo("Generating time to event data")
+  start <- Sys.time()
+
   targetIds <- c(targetCohortIds, getTargetStrataXref()$cohortId)
   events <- getTimeToEventSettings()
   timeToEvent <- generateSurvival(connection = connection,
@@ -195,10 +197,17 @@ runStudy <- function(connectionDetails = NULL,
                                   packageName = getThisPackageName())
   andrData$cohort_time_to_event <- timeToEvent
   
+  delta <- Sys.time() - start
+  ParallelLogger::logInfo(paste("Generating time to event data took",
+                                signif(delta, 3),
+                                attr(delta, "units")))
+  
   
   # Generate time to treatment switch info -------------------------------------------------
   ParallelLogger::logInfo("Generating time to treatment switch data")
   ParallelLogger::logInfo("Create treatment tables")
+  
+  start <- Sys.time()
   sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
                                            sqlFilename = "TreatmentComplementaryTables.sql",
                                            packageName = getThisPackageName(),
@@ -279,53 +288,65 @@ runStudy <- function(connectionDetails = NULL,
                                            )
   DatabaseConnector::executeSql(connection, sql)
   
+  delta <- Sys.time() - start
+  ParallelLogger::logInfo(paste("Generating time to treatment switch data took",
+                                signif(delta, 3),
+                                attr(delta, "units")))
   
-  # Generate Metrics Distribution info -----------------------------------------------------
-  ParallelLogger::logInfo("Generating metrics distribution")
-  ParallelLogger::logInfo("Creating auxiliary tables")
-  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
-                                           sqlFilename = file.path("quartiles", "IQRComplementaryTables.sql"),
-                                           packageName = getThisPackageName(),
-                                           warnOnMissingParameters = TRUE,
-                                           cdm_database_schema = cdmDatabaseSchema,
-                                           cohort_database_schema = cohortDatabaseSchema,
-                                           cohort_table = cohortTable,
-                                           target_ids = paste(targetIds, collapse = ', '))
-  DatabaseConnector::executeSql(connection, sql)
-  outcomeBasedAnalyses <- c('TimeToDeath', 'TimeToSymptomaticProgression', 'TimeToTreatmentInitiation')
-  distribAnalyses <- c('AgeAtDiagnosis', 'YearOfDiagnosis', 'CharlsonAtDiagnosis', 'PsaAtDiagnosis', outcomeBasedAnalyses)
-  outcomes <- getFeatures()
-
-  metricsDistribution <- data.table::data.table()
-
-  for (analysis in distribAnalyses) {
-    outcome <- gsub("TimeTo", "", analysis)
-    outcome <- substring(SqlRender::camelCaseToTitleCase(outcome), 2)
-    outcomeId <- outcomes[tolower(outcomes$name) == tolower(outcome), "cohortId"][[1]]
-    
-
-    if (length(outcomeId) == 0 & analysis %in% outcomeBasedAnalyses) {
-      next
-    }
-    result <- getAtEventDistribution(connection,
-                                     cohortDatabaseSchema,
-                                     cdmDatabaseSchema,
-                                     cohortTable = cohortTable,
-                                     targetIds = targetIds,
-                                     outcomeId = outcomeId,
-                                     databaseId = databaseId,
-                                     analysisName = analysis)
-    metricsDistribution <- rbind(metricsDistribution, result)
-  }
-
-   andrData$metrics_distribution <- metricsDistribution
-
-
-   sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
-                                            sqlFilename = file.path("quartiles", "RemoveComplementaryTables.sql"),
-                                            packageName = getThisPackageName(),
-                                            cohort_database_schema = cohortDatabaseSchema)
-   DatabaseConnector::executeSql(connection, sql)
+  
+  # # Generate Metrics Distribution info -----------------------------------------------------
+  # ParallelLogger::logInfo("Generating metrics distribution")
+  # ParallelLogger::logInfo("Creating auxiliary tables")
+  # 
+  # start <- Sys.time()
+  # sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+  #                                          sqlFilename = file.path("quartiles", "IQRComplementaryTables.sql"),
+  #                                          packageName = getThisPackageName(),
+  #                                          warnOnMissingParameters = TRUE,
+  #                                          cdm_database_schema = cdmDatabaseSchema,
+  #                                          cohort_database_schema = cohortDatabaseSchema,
+  #                                          cohort_table = cohortTable,
+  #                                          target_ids = paste(targetIds, collapse = ', '))
+  # DatabaseConnector::executeSql(connection, sql)
+  # outcomeBasedAnalyses <- c('TimeToDeath', 'TimeToSymptomaticProgression', 'TimeToTreatmentInitiation')
+  # distribAnalyses <- c('AgeAtDiagnosis', 'YearOfDiagnosis', 'CharlsonAtDiagnosis', 'PsaAtDiagnosis', outcomeBasedAnalyses)
+  # outcomes <- getFeatures()
+  # 
+  # metricsDistribution <- data.table::data.table()
+  # 
+  # for (analysis in distribAnalyses) {
+  #   outcome <- gsub("TimeTo", "", analysis)
+  #   outcome <- substring(SqlRender::camelCaseToTitleCase(outcome), 2)
+  #   outcomeId <- outcomes[tolower(outcomes$name) == tolower(outcome), "cohortId"][[1]]
+  #   
+  # 
+  #   if (length(outcomeId) == 0 & analysis %in% outcomeBasedAnalyses) {
+  #     next
+  #   }
+  #   result <- getAtEventDistribution(connection,
+  #                                    cohortDatabaseSchema,
+  #                                    cdmDatabaseSchema,
+  #                                    cohortTable = cohortTable,
+  #                                    targetIds = targetIds,
+  #                                    outcomeId = outcomeId,
+  #                                    databaseId = databaseId,
+  #                                    analysisName = analysis)
+  #   metricsDistribution <- rbind(metricsDistribution, result)
+  # }
+  # 
+  #  andrData$metrics_distribution <- metricsDistribution
+  # 
+  # 
+  #  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+  #                                           sqlFilename = file.path("quartiles", "RemoveComplementaryTables.sql"),
+  #                                           packageName = getThisPackageName(),
+  #                                           cohort_database_schema = cohortDatabaseSchema)
+  #  DatabaseConnector::executeSql(connection, sql)
+  #  
+  #  delta <- Sys.time() - start
+  #  ParallelLogger::logInfo(paste("Generating metrics distribution took",
+  #                                signif(delta, 3),
+  #                                attr(delta, "units")))
   
   # Counting cohorts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Counting cohorts")
