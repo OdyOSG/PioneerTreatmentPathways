@@ -266,7 +266,9 @@ runStudy <- function(connectionDetails = NULL,
     dplyr::rename('targetName' = 'second_line')
   sankeyData <- sankeyData %>%
     dplyr::group_by(cohortDefinitionId, sourceName, targetName, sourceId, targetId) %>%
-    dplyr::summarise(value = dplyr::n())
+    dplyr::summarise(value = dplyr::n()) %>%
+    dplyr::filter(sourceName != 'discontinued') %>% 
+    dplyr::select_all()
   andrData$treatment_sankey <- sankeyData
   
   # drop treatment complementary tables
