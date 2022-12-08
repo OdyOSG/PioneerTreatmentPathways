@@ -113,7 +113,7 @@ ggsurvplot_core <- function(fit, data = NULL, d = NULL, fun = NULL,
   
   # The main plot parameters, will be used to plot survival tables
   pms <- attr(p, "parameters")
-  color <- surv.color <- pms$color <-palette
+  color <- surv.color <- pms$color <- palette
 
 
   res <- list(plot = p)

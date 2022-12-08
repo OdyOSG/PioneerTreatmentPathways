@@ -52,8 +52,15 @@ ul.dropdown-shinyWidgets > li {
   width: 140px;
 }
 
-/*
-table.dataTable > tbody > tr.odd > td {
-  
+#shiny-tab-treatmentPatterns h4, #shiny-tab-treatmentPatterns h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
-*/
+
+.treatment-patterns-container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}

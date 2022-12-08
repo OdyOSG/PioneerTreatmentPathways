@@ -347,7 +347,6 @@ shinyServer(function(input, output, session) {
 
     color_map <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
     names(color_map) <- KMIds$name
-    # browser()
    
     plot <- ggsurvplot_core(accumulatedData,
                             risk.table = "nrisk_cumcensor",
@@ -738,40 +737,29 @@ shinyServer(function(input, output, session) {
   
 
     # Treatment Patterns ---------------------
-
+  output$treatmentPatternsHeader <- renderText({
+    paste(input$targetTreatmentPatterns, input$strataTreatmentPatterns, sep = " ")
+  })
+  
   #Sankey
   sendSankeyData <- function(){
-    sankey = andrData$treatment_sankey %>% dplyr::collect()
-    sankey$databaseId = 'MKTSCAN'
     target_id <- andrData$cohort_count %>%
       dplyr::filter(databaseId %in% !!input$databasesTreatmentPatterns, cohortId %in% !!cohortIdTreatmentPatterns()) %>%
       dplyr::pull(cohortId)
+    
     # if (length(target_id) == 0 | is.null(input$KMPlot)) { ggplot2::ggplot() }
     
-    data <- sankey %>% 
-      dplyr::filter(cohortDefinitionId == target_id, databaseId == 'MKTSCAN') %>%
-      dplyr::select(sourceName, targetName, value, sourceId, targetId)
+    sankeyData <- andrData$treatment_sankey %>%
+      dplyr::filter(targetId == target_id, databaseId == !!input$databasesTreatmentPatterns) %>%
+      dplyr::collect()
     
-    
-
-    data <- data %>% dplyr::select(sourceName, targetName, value)
-    treatmentPatternMap <- data.frame(name = unique(data$sourceName))
-    treatmentPatternMap$code <- 1:nrow(treatmentPatternMap)
-
-    sankeyData <- dplyr::inner_join(data, treatmentPatternMap, by = c('sourceName' = 'name')) %>%
-      dplyr::rename('sourceId' = 'code')
-
-    rowCount <- nrow(treatmentPatternMap)
-    treatmentPatternMap <- data.frame(name = unique(data$targetName))
-    treatmentPatternMap$code <- (rowCount + 1):(nrow(treatmentPatternMap) + rowCount)
-    sankeyData <- dplyr::inner_join(sankeyData, treatmentPatternMap, by = c('targetName' = 'name')) %>%
-      dplyr::rename('targetId' = 'code')
-
+    sankeyData = read.csv('sankey_grouped.csv')
 
     jsonData <- jsonlite::toJSON(sankeyData, pretty = TRUE)
     session$sendCustomMessage(type = "jsondata", jsonData)
   }
 
+  
   observeEvent(input$databasesTreatmentPatterns, {
       sendSankeyData()
   })
@@ -802,21 +790,21 @@ shinyServer(function(input, output, session) {
     tts$strata <- 'Time To Treatment Switch'
     
 
-    color_map <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
-    names(color_map) <- 'time to treatment switch'
+    color_map <- c("#838383")
+    names(color_map) <- ' '
   
     
-    plot <- ggsurvplot_core(tts,
-                            # risk.table = "nrisk_cumcensor",
-                            palette = color_map,
-                            legend.labs = 'time to treatment switch',
-                            cmap = color_map,
-                            conf.int = TRUE,
-                            legend.title = 'Event',
-                            ylim = c(min(tts$lower), 1),
-                            ggtheme = ggplot2::theme_bw()
-    )
-    return(plot)
+    ggsurvplot_core(tts,
+                    risk.table = "nrisk_cumcensor",
+                    color = '#838383',
+                    palette = color_map,
+                    legend.labs = ' ',
+                    cmap = color_map,
+                    conf.int = TRUE,
+                    legend.title = ' ',
+                    ylim = c(min(tts$lower), 1),
+                    ggtheme = ggplot2::theme_bw()
+                    )
   })
   
 

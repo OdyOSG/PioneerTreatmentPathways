@@ -1,3 +1,7 @@
+#pathwaysD3 svg {
+  background: white;
+}
+
 .node {
   font-family: sans-serif;
   font-size: 11px;

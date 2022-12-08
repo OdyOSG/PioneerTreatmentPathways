@@ -217,7 +217,7 @@ dashboardPage(
               htmlOutput("cohortName"),
               htmltools::withTags(
                 addInfo(
-                  div(class="download-container",
+                  div(class = "download-container",
                       shinyWidgets::dropdownButton(
                         inputId = "characterizationDownload",
                         label = "Download",
@@ -235,7 +235,7 @@ dashboardPage(
       ),
       
       tabItem(tabName = "timeToEvent",
-              div(class="download-container",
+              div(class = "download-container",
                   downloadButton("dlTimeToEvent", "Download Data")),
               tags$h4(textOutput('survivalHeader')),
               tags$div(
@@ -246,7 +246,6 @@ dashboardPage(
       
       tabItem (tabName = "metricsDistribution",
                tags$h4(textOutput('metricsHeader')),
-               # htmlOutput("borderCharacterization"),
                dataTableOutput("metricsTable")
       ),
       
@@ -266,14 +265,16 @@ dashboardPage(
                                )
               )
       ),
-      tabItem (tabName = "treatmentPatterns",
-               tags$h4(textOutput('treatmentPatternsHeader')),
-               tags$div(
-                 uiOutput("pathwaysD3")
-               ),
-               tags$div(
-                 plotOutput("timeToTreatmentSwitchPlot", height = 650, width = 1050)
-               )
+      tabItem(tabName = "treatmentPatterns",
+               h4(textOutput('treatmentPatternsHeader')),
+               div(class = 'treatment-patterns-container',
+                   div(
+                     h5('Treatment Time To Treatment Switch'),
+                     plotOutput("timeToTreatmentSwitchPlot", height = 560, width = 900)),
+                   div(
+                     h5('Treatment Switch Pathways'),
+                     uiOutput("pathwaysD3"))
+                  )
       ),
       tabItem(tabName = "databaseInformation",
               downloadButton("dlDatabaseInformation", "Download Data"),
