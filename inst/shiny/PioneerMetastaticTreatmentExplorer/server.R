@@ -142,6 +142,15 @@ shinyServer(function(input, output, session) {
     targetCohort$targetId[targetCohort$targetName %in% input$targetTimeToEvent]
   })
   
+  cohortIdTreatmentPatterns <- reactive({
+    unlist(cohortXref[cohortXref$targetId %in% targetCohortIdTreatmentPatterns() &
+                        cohortXref$strataName %in% input$strataTreatmentPatterns,c("cohortId")]
+    )
+  })
+
+  targetCohortIdTreatmentPatterns <- reactive({
+    targetCohort$targetId[targetCohort$targetName %in% input$targetTreatmentPatterns]
+  })
 
   cohortIdMetricsDistribution <- reactive({
     unlist(cohortXref[cohortXref$targetId %in% targetCohortIdMetricsDistribution() &
@@ -338,6 +347,7 @@ shinyServer(function(input, output, session) {
 
     color_map <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
     names(color_map) <- KMIds$name
+    # browser()
    
     plot <- ggsurvplot_core(accumulatedData,
                             risk.table = "nrisk_cumcensor",
@@ -726,11 +736,88 @@ shinyServer(function(input, output, session) {
     }
   )
   
+
+    # Treatment Patterns ---------------------
+
+  #Sankey
+  sendSankeyData <- function(){
+    sankey = andrData$treatment_sankey %>% dplyr::collect()
+    sankey$databaseId = 'MKTSCAN'
+    target_id <- andrData$cohort_count %>%
+      dplyr::filter(databaseId %in% !!input$databasesTreatmentPatterns, cohortId %in% !!cohortIdTreatmentPatterns()) %>%
+      dplyr::pull(cohortId)
+    # if (length(target_id) == 0 | is.null(input$KMPlot)) { ggplot2::ggplot() }
+    
+    data <- sankey %>% 
+      dplyr::filter(cohortDefinitionId == target_id, databaseId == 'MKTSCAN') %>%
+      dplyr::select(sourceName, targetName, value, sourceId, targetId)
+    
+    
+
+    data <- data %>% dplyr::select(sourceName, targetName, value)
+    treatmentPatternMap <- data.frame(name = unique(data$sourceName))
+    treatmentPatternMap$code <- 1:nrow(treatmentPatternMap)
+
+    sankeyData <- dplyr::inner_join(data, treatmentPatternMap, by = c('sourceName' = 'name')) %>%
+      dplyr::rename('sourceId' = 'code')
+
+    rowCount <- nrow(treatmentPatternMap)
+    treatmentPatternMap <- data.frame(name = unique(data$targetName))
+    treatmentPatternMap$code <- (rowCount + 1):(nrow(treatmentPatternMap) + rowCount)
+    sankeyData <- dplyr::inner_join(sankeyData, treatmentPatternMap, by = c('targetName' = 'name')) %>%
+      dplyr::rename('targetId' = 'code')
+
+
+    jsonData <- jsonlite::toJSON(sankeyData, pretty = TRUE)
+    session$sendCustomMessage(type = "jsondata", jsonData)
+  }
+
+  observeEvent(input$databasesTreatmentPatterns, {
+      sendSankeyData()
+  })
+
+  observeEvent(input$targetTreatmentPatterns, {
+    sendSankeyData()
+  })
+
+  observeEvent(input$strataTreatmentPatterns, {
+    sendSankeyData()
+  })
   
-  # Treatment Patterns ---------------------
-  data <- read.csv('sankey_grouped.csv')
-  jsonData <- jsonlite::toJSON(data, pretty = TRUE)
-  session$sendCustomMessage(type = "jsondata", jsonData)
+  
+  #KM
+  output$timeToTreatmentSwitchPlot <- renderPlot({
+    target_id <- andrData$cohort_count %>%
+      dplyr::filter(databaseId %in% !!input$databasesTreatmentPatterns, cohortId %in% !!cohortIdTreatmentPatterns()) %>%
+      dplyr::pull(cohortId)
+    
+    if (length(target_id) == 0 | is.null(input$KMPlot)) { ggplot2::ggplot() }
+
+    targetIdTimeToTreatmentSwitchData <- andrData$cohort_time_to_treatment_switch %>% 
+      dplyr::filter(targetId == target_id, databaseId == !!input$databasesTreatmentPatterns) %>%
+      dplyr::collect()
+
+    tts <- targetIdTimeToTreatmentSwitchData %>%
+      dplyr::select(time, surv, n.censor, n.event, n.risk, upper, lower) 
+    tts$strata <- 'Time To Treatment Switch'
+    
+
+    color_map <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+    names(color_map) <- 'time to treatment switch'
+  
+    
+    plot <- ggsurvplot_core(tts,
+                            # risk.table = "nrisk_cumcensor",
+                            palette = color_map,
+                            legend.labs = 'time to treatment switch',
+                            cmap = color_map,
+                            conf.int = TRUE,
+                            legend.title = 'Event',
+                            ylim = c(min(tts$lower), 1),
+                            ggtheme = ggplot2::theme_bw()
+    )
+    return(plot)
+  })
   
 
   # Database Info ------------------

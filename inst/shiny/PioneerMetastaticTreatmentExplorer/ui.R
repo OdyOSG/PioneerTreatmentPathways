@@ -176,9 +176,12 @@ dashboardPage(
   
   dashboardBody(
     tags$head(
-      tags$link(rel="stylesheet", type="text/css", href="ohdsi.css"),
+      tags$link(rel = "stylesheet", type = "text/css", href = "ohdsi.css"),
+      tags$link(rel = "stylesheet", type = "text/css", href = "pathways.css"), 
       tags$script(src = "js/lib/js.cookie.js"),
-      tags$script(src = "js/charybdis.js")
+      tags$script(src = "js/charybdis.js"),
+      tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"),
+      tags$script(src = "pathways.js")
     ),
     ### changing theme
     tabItems(
@@ -199,7 +202,7 @@ dashboardPage(
                         label = "Download",
                         icon = icon("download"),
                         circle = F,
-                        margin="20px",
+                        margin = "20px",
                         downloadButton("dlCohortCountsByDb", "Download Table View"),
                         downloadButton("dlCohortCountsFlat", "Download Flat Data")
                       ),
@@ -266,10 +269,10 @@ dashboardPage(
       tabItem (tabName = "treatmentPatterns",
                tags$h4(textOutput('treatmentPatternsHeader')),
                tags$div(
-                 plotOutput("TimeToTreatmentSwitch", height = 650, width = 1050)
+                 uiOutput("pathwaysD3")
                ),
                tags$div(
-                 plotOutput("test", height = 650, width = 1050)
+                 plotOutput("timeToTreatmentSwitchPlot", height = 650, width = 1050)
                )
       ),
       tabItem(tabName = "databaseInformation",
