@@ -1,4 +1,4 @@
-SELECT pat.cohort_definition_id, pat.id, 
+SELECT pat.cohort_definition_id AS cohort_id, pat.id, 
        pat.before_codeset_tag, pat.after_codeset_tag
 FROM  @cohort_database_schema.treatment_pat pat
 LEFT JOIN (

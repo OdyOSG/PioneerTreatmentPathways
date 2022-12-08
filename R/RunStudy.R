@@ -255,28 +255,33 @@ runStudy <- function(connectionDetails = NULL,
   data = DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
   
   data = data %>% 
-    dplyr::group_by(cohortDefinitionId, id) %>% 
+    dplyr::group_by(cohortId, id) %>% 
     dplyr::mutate(first_line = paste(beforeCodesetTag, collapse = " ")) %>%
     dplyr::mutate(second_line = paste(afterCodesetTag, collapse = " ")) %>%
-    dplyr::select(id, cohortDefinitionId, first_line, second_line) %>%
+    dplyr::select(id, cohortId, first_line, second_line) %>%
     dplyr::distinct() %>%
     dplyr::mutate(first_line = formatPattern(first_line)) %>%
     dplyr::mutate(second_line = formatPattern(second_line))
   
-  treatmentPatternMap = data.frame(name = unique(c(data$first_line, data$second_line)))
-  treatmentPatternMap$code = 1:nrow(treatmentPatternMap)
-  
+  treatmentPatternMap <- data.frame(name = unique(data$first_line))
+  treatmentPatternMap$code <- 1:nrow(treatmentPatternMap)
   sankeyData <- dplyr::inner_join(data, treatmentPatternMap, by = c('first_line' = 'name')) %>% 
     dplyr::rename('sourceId' = 'code') %>%
     dplyr::rename('sourceName' = 'first_line')
+  
+  rowCount <- nrow(treatmentPatternMap)
+  treatmentPatternMap <- data.frame(name = unique(data$second_line))
+  treatmentPatternMap$code <- (rowCount + 1):(nrow(treatmentPatternMap) + rowCount)
   sankeyData <- dplyr::inner_join(sankeyData, treatmentPatternMap, by = c('second_line' = 'name')) %>%
     dplyr::rename('targetId' = 'code') %>%
     dplyr::rename('targetName' = 'second_line')
+  
   sankeyData <- sankeyData %>%
-    dplyr::group_by(cohortDefinitionId, sourceName, targetName, sourceId, targetId) %>%
+    dplyr::group_by(cohortId, sourceName, targetName, sourceId, targetId) %>%
     dplyr::summarise(value = dplyr::n()) %>%
     dplyr::filter(sourceName != 'discontinued') %>% 
     dplyr::select_all()
+  sankeyData$databaseId = databaseId
   andrData$treatment_sankey <- sankeyData
   
   # drop treatment complementary tables
