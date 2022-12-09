@@ -194,7 +194,7 @@ FROM (
             -- first six months treatment
             SELECT cohort_definition_id AS before_cohort_id, person_id AS before_person_id, codeset_tag AS before_codeset_tag,
                    MIN(drug_exposure_start_date) AS first_exposure, cohort_start_date, cohort_end_date
-            FROM scratch_artem.treatment_tagged tp
+            FROM @cohort_database_schema.treatment_tagged tp
             WHERE drug_exposure_start_date <= DATEADD(month, 6, cohort_start_date)
             GROUP BY cohort_definition_id, person_id, codeset_tag, cohort_start_date, cohort_end_date
             ) before
@@ -202,7 +202,7 @@ FROM (
             -- post six months treatment
             SELECT cohort_definition_id AS after_cohort_id, person_id AS after_person_id, codeset_tag AS after_codeset_tag,
                    MIN(drug_exposure_start_date) AS after_first_exposure, cohort_start_date, cohort_end_date
-            FROM scratch_artem.treatment_tagged tp
+            FROM @cohort_database_schema.treatment_tagged tp
             WHERE drug_exposure_start_date > DATEADD(month, 6, cohort_start_date)
             GROUP BY cohort_definition_id, person_id, codeset_tag, cohort_start_date, cohort_end_date
             ) after
