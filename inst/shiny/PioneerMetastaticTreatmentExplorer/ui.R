@@ -223,7 +223,7 @@ dashboardPage(
                         label = "Download",
                         icon = icon("download"),
                         circle = F,
-                        margin="20px",
+                        margin = "20px",
                         downloadButton("dlCharacterizationByDb", "Download Table View"),
                         downloadButton("dlCharacterizationFlat", "Download Flat Data")
                       ),
@@ -245,7 +245,7 @@ dashboardPage(
       ),
       
       tabItem (tabName = "metricsDistribution",
-               tags$h4(textOutput('metricsHeader')),
+               h4(textOutput('metricsHeader')),
                dataTableOutput("metricsTable")
       ),
       

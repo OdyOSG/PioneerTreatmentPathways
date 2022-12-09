@@ -298,8 +298,8 @@ $(document).ready(function(){
     const units = "Patients";
     
     const margin = {top: 10, right: 10, bottom: 10, left: 10},
-          width = 900 - margin.left - margin.right,
-          height = 560 - margin.top - margin.bottom;
+        width = 900 - margin.left - margin.right,
+        height = 800 - margin.top - margin.bottom;
     
     const formatNumber = d3.format(",.0f")    // zero decimal places
     const format = function(d) { return formatNumber(d) + " " + units; };

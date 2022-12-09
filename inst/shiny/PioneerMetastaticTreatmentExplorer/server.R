@@ -750,10 +750,8 @@ shinyServer(function(input, output, session) {
     # if (length(target_id) == 0 | is.null(input$KMPlot)) { ggplot2::ggplot() }
     
     sankeyData <- andrData$treatment_sankey %>%
-      dplyr::filter(targetId == target_id, databaseId == !!input$databasesTreatmentPatterns) %>%
+      dplyr::filter(cohortId == target_id, databaseId == !!input$databasesTreatmentPatterns) %>%
       dplyr::collect()
-    
-    sankeyData = read.csv('sankey_grouped.csv')
 
     jsonData <- jsonlite::toJSON(sankeyData, pretty = TRUE)
     session$sendCustomMessage(type = "jsondata", jsonData)
@@ -785,16 +783,16 @@ shinyServer(function(input, output, session) {
       dplyr::filter(targetId == target_id, databaseId == !!input$databasesTreatmentPatterns) %>%
       dplyr::collect()
 
-    tts <- targetIdTimeToTreatmentSwitchData %>%
+    targetIdTimeToTreatmentSwitchData <- targetIdTimeToTreatmentSwitchData %>%
       dplyr::select(time, surv, n.censor, n.event, n.risk, upper, lower) 
-    tts$strata <- 'Time To Treatment Switch'
+    targetIdTimeToTreatmentSwitchData$strata <- 'Time To Treatment Switch'
     
 
     color_map <- c("#838383")
     names(color_map) <- ' '
   
     
-    ggsurvplot_core(tts,
+    ggsurvplot_core(targetIdTimeToTreatmentSwitchData,
                     risk.table = "nrisk_cumcensor",
                     color = '#838383',
                     palette = color_map,
@@ -802,7 +800,7 @@ shinyServer(function(input, output, session) {
                     cmap = color_map,
                     conf.int = TRUE,
                     legend.title = ' ',
-                    ylim = c(min(tts$lower), 1),
+                    ylim = c(min(targetIdTimeToTreatmentSwitchData$lower), 1),
                     ggtheme = ggplot2::theme_bw()
                     )
   })
