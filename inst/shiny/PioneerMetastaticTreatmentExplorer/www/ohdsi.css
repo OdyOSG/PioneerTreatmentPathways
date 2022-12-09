@@ -59,8 +59,11 @@ ul.dropdown-shinyWidgets > li {
   font-weight: 600;
 }
 
-.treatment-patterns-container {
+#shiny-tab-treatmentPatterns h5 {
   padding-top: 30px;
+}
+
+.treatment-patterns-container {
   display: flex;
   justify-content: space-around;
 }

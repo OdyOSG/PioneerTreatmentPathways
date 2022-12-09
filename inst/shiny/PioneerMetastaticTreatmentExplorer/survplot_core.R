@@ -95,7 +95,7 @@ ggsurvplot_core <- function(fit, data = NULL, d = NULL, fun = NULL,
   for(plot in legend.labs){
     palette <- c(palette, cmap[[plot]]) 
   }
-  
+
   p <- survminer::ggsurvplot_df(d, fun = fun,
                      color = color, palette = palette, linetype = linetype,
                      break.x.by = break.x.by, break.time.by = break.time.by, break.y.by = break.y.by,
@@ -107,8 +107,6 @@ ggsurvplot_core <- function(fit, data = NULL, d = NULL, fun = NULL,
                      xlim = xlim, ylim = ylim, axes.offset = axes.offset,
                      legend = legend, legend.title = legend.title, legend.labs = legend.labs,
                      ggtheme = ggtheme, ...)
-  
-  
   
   
   # The main plot parameters, will be used to plot survival tables
@@ -124,7 +122,6 @@ ggsurvplot_core <- function(fit, data = NULL, d = NULL, fun = NULL,
     # scurve_cols <- .extract_ggplot_colors (p, grp.levels = pms$legend.labs)
     scurve_cols <- cmap[legend.labs]
   }
-
 
   # The main plot parameters, will be used to plot survival tables
   pms <- attr(p, "parameters")
@@ -144,7 +141,6 @@ ggsurvplot_core <- function(fit, data = NULL, d = NULL, fun = NULL,
   pms$font.family <- font.family
   pms$axes.offset <- axes.offset
 
-
   # Add risk table
   if(risk.table){
     if(risk.table.pos == "in") risk.table.col = surv.color
@@ -160,7 +156,6 @@ ggsurvplot_core <- function(fit, data = NULL, d = NULL, fun = NULL,
   }
 
   # Add the cumulative number of events
-
   if(cumevents){
     pms$color <- cumevents.col
     pms$title <- cumevents.title

@@ -139,7 +139,6 @@ GeomConfint_old <- ggplot2::ggproto('GeomConfint_old', ggplot2::GeomRibbon,
     nstrata_size <- rep(n$x, each = length(strata)/nstrata)
     
   }
-
   res <- data.frame()
   for (st in strata){
     for (time in times){
@@ -152,7 +151,6 @@ GeomConfint_old <- ggplot2::ggproto('GeomConfint_old', ggplot2::GeomRibbon,
     }
   }
   
-  rownames(res) <- 1:nrow(res)
   res
 }
 

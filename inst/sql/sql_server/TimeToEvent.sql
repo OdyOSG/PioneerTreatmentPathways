@@ -18,4 +18,3 @@ FROM (
      WHERE t.cohort_definition_id = @target_id
      GROUP BY t.subject_id, t.cohort_start_date
      ) tab;
-     

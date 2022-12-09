@@ -181,7 +181,7 @@ dashboardPage(
       tags$script(src = "js/lib/js.cookie.js"),
       tags$script(src = "js/charybdis.js"),
       tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"),
-      tags$script(src = "pathways.js")
+      tags$script(src = "js/pathways.js")
     ),
     ### changing theme
     tabItems(

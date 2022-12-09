@@ -502,7 +502,6 @@ shinyServer(function(input, output, session) {
     covariateDataSubset <- andrData$covariate_value %>% 
       dplyr::filter(cohortId == !!cohortId(), databaseId %in% !!input$databases) %>% 
       dplyr::collect() 
-      # dplyr::mutate(covariateId = bit64::as.integer64(covariateId))
     covariateFiltered <- getFilteredCovariates()
     table <- merge.data.table(as.data.table(covariateFiltered), as.data.table(covariateDataSubset))
     table$cohortName <- targetCohortName()
@@ -787,14 +786,9 @@ shinyServer(function(input, output, session) {
       dplyr::select(time, surv, n.censor, n.event, n.risk, upper, lower) 
     targetIdTimeToTreatmentSwitchData$strata <- 'Time To Treatment Switch'
     
-
-    color_map <- c("#838383")
-    names(color_map) <- ' '
-  
-    
+    color_map = c(' ' = "#838383")
     ggsurvplot_core(targetIdTimeToTreatmentSwitchData,
                     risk.table = "nrisk_cumcensor",
-                    color = '#838383',
                     palette = color_map,
                     legend.labs = ' ',
                     cmap = color_map,

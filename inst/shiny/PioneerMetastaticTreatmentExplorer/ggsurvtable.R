@@ -12,7 +12,6 @@ ggsurvtable_custom <- function(fit, data = NULL, survtable = c("cumevents",  "cu
                          ggtheme = theme_survminer(),
                          tables.theme = ggtheme, ...)
 {
-  
   if(is.data.frame(fit)){}
   else if(.is_list(fit)){
     if(!all(c("time", "table") %in% names(fit)))
@@ -86,13 +85,6 @@ ggsurvtable_custom <- function(fit, data = NULL, survtable = c("cumevents",  "cu
   if(length(res) == 1) res <- res[[1]]
   res
 }
-
-
-
-
-
-
-
 
 # Helper function to plot a specific survival table
 .plot_survtable <- function (survsummary, times, survtable = c("cumevents", "risk.table", "cumcensor"),
