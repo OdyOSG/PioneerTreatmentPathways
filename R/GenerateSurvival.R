@@ -25,7 +25,7 @@ generateSurvival <- function(connection,
       
       km <- km_grouped %>% filter(targetId == .targetId)
       
-      if (nrow(km) < 100 | length(km$event[km$event == 1]) < 1) {return(NULL)}
+      if (nrow(km) < 30 | length(km$event[km$event == 1]) < 1) {return(NULL)}
 
       # TODO: Change to Cyclops
       surv_info <- survival::survfit(survival::Surv(timeToEvent, event) ~ 1, data = km)
