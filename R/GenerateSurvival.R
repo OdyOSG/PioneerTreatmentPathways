@@ -23,7 +23,7 @@ generateSurvival <- function(connection,
     
     purrr::map_df(targetIds, function(.targetId){
       
-      km <- km_grouped %>% filter(targetId == .targetId)
+      km <- km_grouped %>% dplyr::filter(targetId == .targetId)
       
       if (nrow(km) < 30 | length(km$event[km$event == 1]) < 1) {return(NULL)}
 
