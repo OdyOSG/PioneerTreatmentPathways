@@ -79,7 +79,7 @@ inverseStrata$strataName <- inverseStrata$strataInverseName
 shinyCohortXref <- rbind(targetCohortsForShiny[,xrefColumnNames], 
                          inverseStrata[,xrefColumnNames],
                          targetStrataXRef[targetStrataXRef$cohortType == "TwS",xrefColumnNames])
-readr::write_csv(shinyCohortXref, file.path("inst/shiny/PIONEERmetastaticTreatmentExplorer", "cohortXref.csv"))
+readr::write_csv(shinyCohortXref, file.path("inst/shiny/PioneerMetastaticTreatmentExplorer", "cohortXref.csv"))
 
 # Write out the final targetStrataXRef
 targetStrataXRef <- targetStrataXRef[,c("targetId","strataId","cohortId","cohortType","name")]
