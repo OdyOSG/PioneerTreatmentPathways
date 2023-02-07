@@ -19,7 +19,7 @@ LEFT JOIN (
     ) fs
 ON pat.cohort_definition_id = fs.cohort_definition_id
   AND pat.person_id = fs.person_id
-WHERE DATEDIFF(month, pat.cohort_start_date, pat.cohort_end_date) >= 6
+WHERE DATEDIFF(day, pat.cohort_start_date, pat.cohort_end_date) >= 183
   AND first_exposure IS NOT NULL OR 
       DATEADD(day, @second_line_treatment_gap, first_switch) >= after_first_exposure
 ORDER BY pat.cohort_definition_id, pat.person_id;
