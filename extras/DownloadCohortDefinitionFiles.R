@@ -17,21 +17,26 @@
 
 
 # This file contains cohort definitions update code and can't be run as is
-# One should get valid JWT Atlas session token and store it in bearer variable.
-# If script crashes try to update bearer variable with a new token.
+# One should get valid JWT Atlas session token and call the function with the token as an argument (without "Bearer" prefix)
+# If script crashes try to rerun getCohortDefinitionsFromAtlas() function with a new token.
 
 
 # get this token from an active ATLAS web session
-bearer <- "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcnRlbS5nb3JiYWNoZXZAb2R5c3NldXNpbmMuY29tIiwiZXhwIjoxNjY5MTA3OTAyfQ.d4hGbKOeEX-4BnQo_Rqj5zjBIJau3oKpiEFQwfvstWg1tism_MTvwxFxqxhxgA3muUsEiySgmRr-s-boi3F2zQ"
-
-baseUrl <- "https://pioneer.hzdr.de/WebAPI"
-ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
-
-cohortGroups <- read.csv(file.path("inst/settings/CohortGroups.csv"))
-for (i in 1:nrow(cohortGroups)) {
-  ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = file.path('inst', cohortGroups$fileName[i]),
-                                                   baseUrl, insertCohortCreationR = FALSE,
-                                                   packageName = getThisPackageName())
+getCohortDefinitionsFromAtlas <- function(bearer = NULL){
+  
+  if (is.null(bearer)) {
+    stop("Provide function call with a bearer token from an active ATLAS web session")
+  }
+  
+  bearer = paste("Bearer", bearer)
+  baseUrl <- "https://pioneer.hzdr.de/WebAPI"
+  ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
+  
+  cohortGroups <- read.csv(file.path("inst/settings/CohortGroups.csv"))
+  for (i in 1:nrow(cohortGroups)) {
+    ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = file.path('inst', cohortGroups$fileName[i]),
+                                                     baseUrl, insertCohortCreationR = FALSE,
+                                                     packageName = getThisPackageName())
+  }
 }
-
 
