@@ -7,7 +7,7 @@ CREATE TABLE #Codesets (
 INSERT INTO #Codesets (codeset_id, concept_id)
 SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (432851,4205430,4201930)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (432851,4205430,4201930,4264861,4264288,4246703,763131)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
@@ -40,11 +40,11 @@ WHERE E.concept_id is null
 ) C UNION ALL 
 SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (443392)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (443392,4312326)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (443392)
+  and ca.ancestor_concept_id in (443392,4312326)
   and c.invalid_reason is null
 
 ) I
@@ -95,11 +95,11 @@ UNION  select c.concept_id
 ) C UNION ALL 
 SELECT 8 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4235738,4330932,37396025,2108724,2108725,4198015,43533205,2790073,1781260,4041984,2789856,1524039,37111533,4061656,2789850,2789851,2789848,2789849,2789854,2789855,2789852,2789853,2789846,2789847,2789845,759648,4073126,2110047,37111533)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4235738,4330932,37396025,2108724,2108725,4198015,43533205,2790073,1781260,4041984,2789856,1524039,37111533,4061656,2789850,2789851,2789848,2789849,2789854,2789855,2789852,2789853,2789846,2789847,2789845,759648,4073126,2110047,37111533,2110046,2110035,2108678,2101059,2777698,40490346,2110043,2789830,709928,42733763,42733764)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4235738,4330932,37396025,2108724,2108725,4198015,43533205,2790073,1781260,4041984,2789856,1524039,37111533,4061656,2789850,2789851,2789848,2789849,2789854,2789855,2789852,2789853,2789846,2789847,2789845,759648,4073126,2110047,37111533)
+  and ca.ancestor_concept_id in (4235738,4330932,37396025,2108724,2108725,4198015,43533205,2790073,1781260,4041984,2789856,1524039,37111533,4061656,2789850,2789851,2789848,2789849,2789854,2789855,2789852,2789853,2789846,2789847,2789845,759648,4073126,2110047,37111533,2110046,2110035,2108678)
   and c.invalid_reason is null
 
 ) I
@@ -407,9 +407,35 @@ GROUP BY p.person_id, p.event_id
 HAVING COUNT(cc.event_id) = 0
 -- End Correlated Criteria
 
+UNION ALL
+-- Begin Correlated Criteria
+select 1 as index_id, p.person_id, p.event_id
+from #qualified_events p
+LEFT JOIN (
+SELECT p.person_id, p.event_id 
+FROM #qualified_events P
+JOIN (
+  -- Begin Observation Criteria
+select C.person_id, C.observation_id as event_id, C.observation_date as start_date, DATEADD(d,1,C.observation_date) as END_DATE,
+       C.visit_occurrence_id, C.observation_date as sort_date
+from 
+(
+  select o.* 
+  FROM @cdm_database_schema.OBSERVATION o
+JOIN #Codesets cs on (o.observation_concept_id = cs.concept_id and cs.codeset_id = 3)
+) C
+
+
+-- End Observation Criteria
+
+) A on A.person_id = P.person_id  AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= P.OP_END_DATE AND A.START_DATE >= P.OP_START_DATE AND A.START_DATE <= DATEADD(day,30,P.START_DATE) ) cc on p.person_id = cc.person_id and p.event_id = cc.event_id
+GROUP BY p.person_id, p.event_id
+HAVING COUNT(cc.event_id) = 0
+-- End Correlated Criteria
+
   ) CQ on E.person_id = CQ.person_id and E.event_id = CQ.event_id
   GROUP BY E.person_id, E.event_id
-  HAVING COUNT(index_id) = 1
+  HAVING COUNT(index_id) = 2
 ) G
 -- End Criteria Group
 ) AC on AC.person_id = pe.person_id AND AC.event_id = pe.event_id

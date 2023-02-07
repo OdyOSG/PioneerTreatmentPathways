@@ -4,6 +4,41 @@
 		"CriteriaList" : [
 			{
 				"DrugExposure" : {
+					"CorrelatedCriteria" : {
+						"Type" : "AT_LEAST",
+						"Count" : 1,
+						"CriteriaList" : [
+							{
+								"Criteria" : {
+									"DrugExposure" : {
+										"CodesetId" : 13,
+										"DrugTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 183,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							}
+						],
+						"DemographicCriteriaList" : [],
+						"Groups" : []
+					},
 					"CodesetId" : 11,
 					"OccurrenceStartDate" : {
 						"Value" : "2016-01-01",
@@ -15,6 +50,41 @@
 			},
 			{
 				"ProcedureOccurrence" : {
+					"CorrelatedCriteria" : {
+						"Type" : "AT_LEAST",
+						"Count" : 1,
+						"CriteriaList" : [
+							{
+								"Criteria" : {
+									"DrugExposure" : {
+										"CodesetId" : 13,
+										"DrugTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 183,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							}
+						],
+						"DemographicCriteriaList" : [],
+						"Groups" : []
+					},
 					"CodesetId" : 4,
 					"OccurrenceStartDate" : {
 						"Value" : "2016-01-01",
@@ -26,7 +96,68 @@
 			},
 			{
 				"DrugExposure" : {
-					"CodesetId" : 15,
+					"CorrelatedCriteria" : {
+						"Type" : "ANY",
+						"CriteriaList" : [
+							{
+								"Criteria" : {
+									"DrugExposure" : {
+										"CodesetId" : 11,
+										"DrugTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 183,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							},
+							{
+								"Criteria" : {
+									"ProcedureOccurrence" : {
+										"CodesetId" : 4,
+										"ProcedureTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Days" : 183,
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							}
+						],
+						"DemographicCriteriaList" : [],
+						"Groups" : []
+					},
+					"CodesetId" : 13,
 					"OccurrenceStartDate" : {
 						"Value" : "2016-01-01",
 						"Op" : "bt",
@@ -99,6 +230,74 @@
 						},
 						"isExcluded" : false,
 						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4264861,
+							"CONCEPT_NAME" : "pM1c: Distant metastasis site other than bone or non-regional lymph node(s) (prostate)",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "397215009",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4264288,
+							"CONCEPT_NAME" : "pM1b: Distant metastasis to bone(s) (prostate)",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "397214008",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4246703,
+							"CONCEPT_NAME" : "pM1a: Distant metastasis to non-regional lymph node(s) (prostate)",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "397213002",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 763131,
+							"CONCEPT_NAME" : "Neoplasm of prostate distant metastasis staging category M1: Distant metastasis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "436401000124103",
+							"DOMAIN_ID" : "Condition",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : false,
 						"includeMapped" : false
 					}
 				]
@@ -187,13 +386,47 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4145907,
-							"CONCEPT_NAME" : "Orchiectomy of remaining testis",
+							"CONCEPT_ID" : 4304921,
+							"CONCEPT_NAME" : "Bilateral orchidectomy",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "34426006",
+							"CONCEPT_CODE" : "386634006",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4073142,
+							"CONCEPT_NAME" : "Bilateral total orchidectomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "176416007",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4073143,
+							"CONCEPT_NAME" : "Bilateral total scrotal orchidectomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "176418008",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
@@ -211,6 +444,57 @@
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
 							"CONCEPT_CODE" : "236334001",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4012324,
+							"CONCEPT_NAME" : "Bilateral cryptorchidectomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "112910006",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4073141,
+							"CONCEPT_NAME" : "Bilateral subcapsular orchidectomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "176415006",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4071936,
+							"CONCEPT_NAME" : "Bilateral total inguinal orchidectomy",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "176417003",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
@@ -510,18 +794,35 @@
 					},
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4012324,
-							"CONCEPT_NAME" : "Bilateral cryptorchidectomy",
+							"CONCEPT_ID" : 4341536,
+							"CONCEPT_NAME" : "Total orchidectomy",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "112910006",
+							"CONCEPT_CODE" : "236334001",
 							"DOMAIN_ID" : "Procedure",
 							"VOCABULARY_ID" : "SNOMED",
 							"CONCEPT_CLASS_ID" : "Procedure"
 						},
-						"isExcluded" : true,
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4145907,
+							"CONCEPT_NAME" : "Orchiectomy of remaining testis",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "34426006",
+							"DOMAIN_ID" : "Procedure",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Procedure"
+						},
+						"isExcluded" : false,
 						"includeDescendants" : true,
 						"includeMapped" : false
 					}
@@ -587,133 +888,6 @@
 							"DOMAIN_ID" : "Measurement",
 							"VOCABULARY_ID" : "LOINC",
 							"CONCEPT_CLASS_ID" : "Clinical Observation"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
-		{
-			"id" : 9,
-			"name" : "[PIONEER 2.0] ADT+meds",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 40239056,
-							"CONCEPT_NAME" : "abiraterone",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1100072",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 963987,
-							"CONCEPT_NAME" : "apalutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1999574",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1344381,
-							"CONCEPT_NAME" : "bicalutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "83008",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1361291,
-							"CONCEPT_NAME" : "darolutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "2180325",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1315942,
-							"CONCEPT_NAME" : "docetaxel",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "72962",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1349025,
-							"CONCEPT_NAME" : "estramustine",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "4089",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 42900250,
-							"CONCEPT_NAME" : "enzalutamide",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1307298",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
 						},
 						"isExcluded" : false,
 						"includeDescendants" : true,
@@ -1032,6 +1206,23 @@
 						"isExcluded" : true,
 						"includeDescendants" : true,
 						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4312326,
+							"CONCEPT_NAME" : "Neoplasm, malignant (primary)",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "86049000",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Morph Abnormality"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
 					}
 				]
 			}
@@ -1301,48 +1492,6 @@
 		},
 		{
 			"id" : 12,
-			"name" : "[PIONEER 2.0] Hx of prostate cancer",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 3169330,
-							"CONCEPT_NAME" : "Personal history of prostate cancer",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "4220001000004104",
-							"DOMAIN_ID" : "Observation",
-							"VOCABULARY_ID" : "Nebraska Lexicon",
-							"CONCEPT_CLASS_ID" : "Context-dependent"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 4180749,
-							"CONCEPT_NAME" : "History of malignant neoplasm of prostate",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "428262008",
-							"DOMAIN_ID" : "Observation",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Context-dependent"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
-		{
-			"id" : 13,
 			"name" : "[PIONEER V2.0] ARTA",
 			"expression" : {
 				"items" : [
@@ -1418,7 +1567,133 @@
 			}
 		},
 		{
+			"id" : 13,
+			"name" : "[PIONEER V2.0] Chemotherapy (docetaxel & cabazitaxe & paclitaxel)",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1315942,
+							"CONCEPT_NAME" : "docetaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "72962",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 40222431,
+							"CONCEPT_NAME" : "cabazitaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "996051",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1378382,
+							"CONCEPT_NAME" : "paclitaxel",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "56946",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
 			"id" : 14,
+			"name" : "[PIONEER V2.0] Lutetium",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 44816340,
+							"CONCEPT_NAME" : "lutetium",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1534772",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 15,
+			"name" : "[PIONEER V2.0] PARP inhibitor",
+			"expression" : {
+				"items" : [
+					{
+						"concept" : {
+							"CONCEPT_ID" : 45892579,
+							"CONCEPT_NAME" : "olaparib",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1597582",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 1718850,
+							"CONCEPT_NAME" : "rucaparib",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "1862579",
+							"DOMAIN_ID" : "Drug",
+							"VOCABULARY_ID" : "RxNorm",
+							"CONCEPT_CLASS_ID" : "Ingredient"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					}
+				]
+			}
+		},
+		{
+			"id" : 16,
 			"name" : "[PIONEER V2.0] Immunotherapy (sipuleucel-T & pembrolizumab)",
 			"expression" : {
 				"items" : [
@@ -3058,107 +3333,6 @@
 			}
 		},
 		{
-			"id" : 15,
-			"name" : "[PIONEER V2.0] Chemotherapy (docetaxel & cabazitaxe & paclitaxel)",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1315942,
-							"CONCEPT_NAME" : "docetaxel",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "72962",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 40222431,
-							"CONCEPT_NAME" : "cabazitaxel",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "996051",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1378382,
-							"CONCEPT_NAME" : "paclitaxel",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "56946",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
-		{
-			"id" : 16,
-			"name" : "[PIONEER V2.0] PARP inhibitor",
-			"expression" : {
-				"items" : [
-					{
-						"concept" : {
-							"CONCEPT_ID" : 45892579,
-							"CONCEPT_NAME" : "olaparib",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1597582",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 1718850,
-							"CONCEPT_NAME" : "rucaparib",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1862579",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
-						},
-						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					}
-				]
-			}
-		},
-		{
 			"id" : 17,
 			"name" : "[PIONEER V2.0] Radium-223",
 			"expression" : {
@@ -3236,21 +3410,38 @@
 		},
 		{
 			"id" : 18,
-			"name" : "[PIONEER V2.0] Lutetium",
+			"name" : "[PIONEER 2.0] Hx of prostate cancer",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 44816340,
-							"CONCEPT_NAME" : "lutetium",
+							"CONCEPT_ID" : 3169330,
+							"CONCEPT_NAME" : "Personal history of prostate cancer",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "1534772",
-							"DOMAIN_ID" : "Drug",
-							"VOCABULARY_ID" : "RxNorm",
-							"CONCEPT_CLASS_ID" : "Ingredient"
+							"CONCEPT_CODE" : "4220001000004104",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "Nebraska Lexicon",
+							"CONCEPT_CLASS_ID" : "Context-dependent"
+						},
+						"isExcluded" : false,
+						"includeDescendants" : true,
+						"includeMapped" : false
+					},
+					{
+						"concept" : {
+							"CONCEPT_ID" : 4180749,
+							"CONCEPT_NAME" : "History of malignant neoplasm of prostate",
+							"STANDARD_CONCEPT" : "S",
+							"STANDARD_CONCEPT_CAPTION" : "Standard",
+							"INVALID_REASON" : "V",
+							"INVALID_REASON_CAPTION" : "Valid",
+							"CONCEPT_CODE" : "428262008",
+							"DOMAIN_ID" : "Observation",
+							"VOCABULARY_ID" : "SNOMED",
+							"CONCEPT_CLASS_ID" : "Context-dependent"
 						},
 						"isExcluded" : false,
 						"includeDescendants" : true,
@@ -3264,7 +3455,7 @@
 		"Type" : "First"
 	},
 	"ExpressionLimit" : {
-		"Type" : "First"
+		"Type" : "All"
 	},
 	"InclusionRules" : [
 		{
@@ -3310,20 +3501,229 @@
 			}
 		},
 		{
-			"name" : "metastasis ",
+			"name" : "no other drugs",
 			"expression" : {
 				"Type" : "ALL",
+				"CriteriaList" : [
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 12,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 183,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 14,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 183,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 15,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 183,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 16,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 183,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 17,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 0,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 183,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					}
+				],
+				"DemographicCriteriaList" : [],
+				"Groups" : []
+			}
+		},
+		{
+			"name" : "No other primary",
+			"expression" : {
+				"Type" : "ALL",
+				"CriteriaList" : [
+					{
+						"Criteria" : {
+							"ConditionOccurrence" : {
+								"CodesetId" : 10,
+								"ConditionTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 30,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"Observation" : {
+								"CodesetId" : 10,
+								"ObservationTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 30,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					}
+				],
+				"DemographicCriteriaList" : [],
+				"Groups" : []
+			}
+		},
+		{
+			"name" : "metastasis",
+			"expression" : {
+				"Type" : "ANY",
 				"CriteriaList" : [],
 				"DemographicCriteriaList" : [],
 				"Groups" : [
 					{
-						"Type" : "ANY",
+						"Type" : "AT_LEAST",
+						"Count" : 1,
 						"CriteriaList" : [
 							{
 								"Criteria" : {
 									"ConditionOccurrence" : {
 										"CorrelatedCriteria" : {
-											"Type" : "ALL",
+											"Type" : "AT_LEAST",
+											"Count" : 1,
 											"CriteriaList" : [
 												{
 													"Criteria" : {
@@ -3333,9 +3733,9 @@
 																"CriteriaList" : [
 																	{
 																		"Criteria" : {
-																			"Observation" : {
-																				"CodesetId" : 12,
-																				"ObservationTypeExclude" : false
+																			"ConditionOccurrence" : {
+																				"CodesetId" : 18,
+																				"ConditionTypeExclude" : false
 																			}
 																		},
 																		"StartWindow" : {
@@ -3343,7 +3743,6 @@
 																				"Coeff" : -1
 																			},
 																			"End" : {
-																				"Days" : 1,
 																				"Coeff" : -1
 																			},
 																			"UseIndexEnd" : false,
@@ -3368,7 +3767,6 @@
 													},
 													"StartWindow" : {
 														"Start" : {
-															"Days" : 183,
 															"Coeff" : -1
 														},
 														"End" : {
@@ -3388,204 +3786,7 @@
 												}
 											],
 											"DemographicCriteriaList" : [],
-											"Groups" : [
-												{
-													"Type" : "ALL",
-													"CriteriaList" : [
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 13,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 14,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 15,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 2,
-																"Count" : 1,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 16,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 17,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 18,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 11,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 2,
-																"Count" : 1,
-																"IsDistinct" : false
-															}
-														}
-													],
-													"DemographicCriteriaList" : [],
-													"Groups" : []
-												}
-											]
+											"Groups" : []
 										},
 										"CodesetId" : 1,
 										"First" : true,
@@ -3616,7 +3817,8 @@
 								"Criteria" : {
 									"Measurement" : {
 										"CorrelatedCriteria" : {
-											"Type" : "ALL",
+											"Type" : "AT_LEAST",
+											"Count" : 1,
 											"CriteriaList" : [
 												{
 													"Criteria" : {
@@ -3626,9 +3828,9 @@
 																"CriteriaList" : [
 																	{
 																		"Criteria" : {
-																			"Observation" : {
-																				"CodesetId" : 12,
-																				"ObservationTypeExclude" : false
+																			"ConditionOccurrence" : {
+																				"CodesetId" : 18,
+																				"ConditionTypeExclude" : false
 																			}
 																		},
 																		"StartWindow" : {
@@ -3661,7 +3863,6 @@
 													},
 													"StartWindow" : {
 														"Start" : {
-															"Days" : 183,
 															"Coeff" : -1
 														},
 														"End" : {
@@ -3681,204 +3882,7 @@
 												}
 											],
 											"DemographicCriteriaList" : [],
-											"Groups" : [
-												{
-													"Type" : "ALL",
-													"CriteriaList" : [
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 13,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 14,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 15,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 2,
-																"Count" : 1,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 16,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 17,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 18,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 11,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 2,
-																"Count" : 1,
-																"IsDistinct" : false
-															}
-														}
-													],
-													"DemographicCriteriaList" : [],
-													"Groups" : []
-												}
-											]
+											"Groups" : []
 										},
 										"CodesetId" : 7,
 										"First" : true,
@@ -3959,7 +3963,8 @@
 								"Criteria" : {
 									"Measurement" : {
 										"CorrelatedCriteria" : {
-											"Type" : "ALL",
+											"Type" : "AT_LEAST",
+											"Count" : 1,
 											"CriteriaList" : [
 												{
 													"Criteria" : {
@@ -3969,9 +3974,9 @@
 																"CriteriaList" : [
 																	{
 																		"Criteria" : {
-																			"Observation" : {
-																				"CodesetId" : 12,
-																				"ObservationTypeExclude" : false
+																			"ConditionOccurrence" : {
+																				"CodesetId" : 18,
+																				"ConditionTypeExclude" : false
 																			}
 																		},
 																		"StartWindow" : {
@@ -4004,7 +4009,6 @@
 													},
 													"StartWindow" : {
 														"Start" : {
-															"Days" : 183,
 															"Coeff" : -1
 														},
 														"End" : {
@@ -4024,204 +4028,7 @@
 												}
 											],
 											"DemographicCriteriaList" : [],
-											"Groups" : [
-												{
-													"Type" : "ALL",
-													"CriteriaList" : [
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 13,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 15,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 2,
-																"Count" : 1,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 14,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 18,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 16,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 17,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 0,
-																"Count" : 0,
-																"IsDistinct" : false
-															}
-														},
-														{
-															"Criteria" : {
-																"DrugExposure" : {
-																	"CodesetId" : 11,
-																	"DrugTypeExclude" : false
-																}
-															},
-															"StartWindow" : {
-																"Start" : {
-																	"Days" : 0,
-																	"Coeff" : -1
-																},
-																"End" : {
-																	"Days" : 183,
-																	"Coeff" : 1
-																},
-																"UseIndexEnd" : false,
-																"UseEventEnd" : false
-															},
-															"RestrictVisit" : false,
-															"IgnoreObservationPeriod" : false,
-															"Occurrence" : {
-																"Type" : 2,
-																"Count" : 1,
-																"IsDistinct" : false
-															}
-														}
-													],
-													"DemographicCriteriaList" : [],
-													"Groups" : []
-												}
-											]
+											"Groups" : []
 										},
 										"CodesetId" : 6,
 										"First" : true,
@@ -4253,42 +4060,6 @@
 						"Groups" : []
 					}
 				]
-			}
-		},
-		{
-			"name" : "No other primary",
-			"expression" : {
-				"Type" : "ALL",
-				"CriteriaList" : [
-					{
-						"Criteria" : {
-							"ConditionOccurrence" : {
-								"CodesetId" : 10,
-								"ConditionTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 30,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 0,
-							"Count" : 0,
-							"IsDistinct" : false
-						}
-					}
-				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
 			}
 		}
 	],

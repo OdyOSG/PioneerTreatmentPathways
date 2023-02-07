@@ -29,7 +29,7 @@ WHERE E.concept_id is null
 ) C UNION ALL 
 SELECT 1 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4302356,36713242,2792841,2792848,2792855,2788819,2211381,2211380,2211425,2793060,2211512,4061009,4058336,4058335)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4302356,36713242,2792841,2792848,2792855,2788819,2211381,2211380,2211425,2793060,2211512,4061009,4058336,4058335,3027941,36305710,43055219,43055217,43055218,3035261,3029076,36305511,3049252,3013610,36303622,3019825,3018999)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
