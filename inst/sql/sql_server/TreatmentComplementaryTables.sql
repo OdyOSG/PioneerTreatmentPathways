@@ -161,74 +161,7 @@ FROM (
 ;
 
 
--- get metastasis diagnosis date for each subject from cohort
-DROP TABLE IF EXISTS @cohort_database_schema.metastasis_date;
-CREATE TABLE @cohort_database_schema.metastasis_date AS
-SELECT subject_id, min(condition_date) AS metastasis_date
-FROM (
--- get measurements of metastasis
-     SELECT coh.subject_id, m.measurement_date AS condition_date
-     FROM @cdm_database_schema.measurement m
-     JOIN @cohort_database_schema.@cohort_table coh
-         ON m.person_id = coh.subject_id
-     WHERE m.measurement_concept_id IN (
-                                       SELECT concept_id
-                                       FROM @cdm_database_schema.CONCEPT
-                                       WHERE concept_id IN (3006575)
-                                       UNION
-                                       SELECT c.concept_id
-                                       FROM @cdm_database_schema.CONCEPT c
-                                       JOIN @cdm_database_schema.CONCEPT_ANCESTOR ca
-                                           ON c.concept_id = ca.descendant_concept_id
-                                               AND ca.ancestor_concept_id IN (3006575)
-                                               AND c.invalid_reason IS NULL
-                                       )
-       AND M.value_as_concept_id IN (45878386, 45881618, 45882500, 45876322)
-     UNION
-
--- get condition occurrence of secondary neoplasm
-     SELECT coh.subject_id, co.condition_start_date AS condition_date
-     FROM @cdm_database_schema.condition_occurrence co
-     JOIN @cohort_database_schema.@cohort_table coh
-         ON co.person_id = coh.subject_id
-     WHERE co.condition_concept_id IN (
-                                      SELECT concept_id
-                                      FROM @cdm_database_schema.CONCEPT
-                                      WHERE concept_id IN (432851, 4205430, 4201930)
-                                      UNION
-                                      SELECT c.concept_id
-                                      FROM @cdm_database_schema.CONCEPT c
-                                      JOIN @cdm_database_schema.CONCEPT_ANCESTOR ca
-                                          ON c.concept_id = ca.descendant_concept_id
-                                              AND ca.ancestor_concept_id IN (432851, 4205430, 4201930)
-                                              AND c.invalid_reason IS NULL
-                                      )
-     UNION
-
--- get measurement of cancer modifier
-     SELECT coh.subject_id, m.measurement_date AS condition_date
-     FROM @cdm_database_schema.measurement m
-     JOIN @cohort_database_schema.@cohort_table coh
-         ON m.person_id = coh.subject_id
-     WHERE m.measurement_concept_id IN (
-                                       SELECT concept_id
-                                       FROM @cdm_database_schema.CONCEPT
-                                       WHERE concept_id IN (36769180, 1635142)
-                                       UNION
-                                       SELECT c.concept_id
-                                       FROM @cdm_database_schema.CONCEPT c
-                                       JOIN @cdm_database_schema.CONCEPT_ANCESTOR ca
-                                           ON c.concept_id = ca.descendant_concept_id
-                                               AND ca.ancestor_concept_id IN (36769180, 1635142)
-                                               AND c.invalid_reason IS NULL
-                                       )
-     ) tab
-GROUP BY subject_id;
-
-
 -- assign drug tag to each drug_exposure instead of individual drug concept_ids 
--- and shift cohort start date to metastasis diagnosis with respect to which we
--- calculate treatment switch patterns
 -- TODO add analysis for number of patients less that 183 days in cohort
 DROP TABLE IF EXISTS @cohort_database_schema.treatment_tagged;
 
@@ -238,8 +171,6 @@ CREATE TABLE @cohort_database_schema.treatment_tagged(
   codeset_tag varchar,
   drug_exposure_start_date date,
   cohort_start_date date,
-  metastasis_date date,
-  real_start_date date,
   cohort_end_date date
 );
 
@@ -247,15 +178,12 @@ WITH tab AS(
   SELECT coh.cohort_definition_id, de.person_id,
          cs.codeset_tag, de.drug_exposure_start_date,
          coh.cohort_start_date,
-         md.metastasis_date,
          coh.cohort_end_date
   FROM @cdm_database_schema.drug_exposure de
   JOIN @cohort_database_schema.@cohort_table coh
       ON de.person_id = coh.subject_id
   JOIN @cohort_database_schema.drug_codesets cs
       ON cs.concept_id = de.drug_concept_id
-  JOIN @cohort_database_schema.metastasis_date md
-      ON coh.subject_id = md.subject_id
       )
 INSERT INTO @cohort_database_schema.treatment_tagged
 SELECT * 
@@ -263,7 +191,7 @@ FROM tab
 WHERE cohort_definition_id IN (@treatment_cohort_ids)
   AND cohort_end_date >= drug_exposure_start_date
   AND cohort_start_date <= drug_exposure_start_date
-  AND datediff(day, cohort_start_date, cohort_end_date) > 183
+  AND DATEDIFF(day, cohort_start_date, cohort_end_date) > 183
 ORDER BY cohort_definition_id, person_id, drug_exposure_start_date;
 
 
