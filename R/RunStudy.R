@@ -243,7 +243,7 @@ runStudy <- function(connectionDetails = NULL,
                        median = median(timeToEvent),
                        q3 = quantile(timeToEvent, 0.75),
                        maximum = max(timeToEvent)) %>% 
-    dplyr::mutate(iqr = q3 - q1, analysis_name = "Time to Treatment Switch") %>% 
+    dplyr::mutate(iqr = q3 - q1, analysisName = "Time to Treatment Switch") %>% 
     dplyr::relocate(iqr, .before = minimum)
     
   timeToTreatmentSwitch <- purrr::map_df(targetIds, function(targetId){
@@ -325,7 +325,7 @@ runStudy <- function(connectionDetails = NULL,
                                            target_ids = paste(targetIds, collapse = ', '))
   
   sql <- paste0(sql, sqlAggreg)
-  metrics <- rbind(metrics, DatabaseConnector::querySql(connection, sql))
+  metrics <- rbind(metrics, DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T))
  
   sqlAggreg <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
                                                  sqlFilename = file.path("quartiles", "QuartilesAggregation.sql"),
@@ -343,7 +343,7 @@ runStudy <- function(connectionDetails = NULL,
                                            target_ids = paste(targetIds, collapse = ', '))
   
   sql <- paste0(sql, sqlAggreg)
-  metrics <- rbind(metrics, DatabaseConnector::querySql(connection, sql))
+  metrics <- rbind(metrics, DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T))
 
   andrData$metrics_distribution <- metrics
 
