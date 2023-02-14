@@ -231,6 +231,21 @@ runStudy <- function(connectionDetails = NULL,
                                            death_cohort_id = deathCohortId
                                            )
   data <- DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = T)
+  
+  #calculate locality metrics for Time to Treatment Switch
+  browser()
+  metrics <- data %>%
+    dplyr::filter(event == 1) %>% 
+    dplyr::select(cohortDefinitionId, timeToEvent) %>% 
+    dplyr::group_by(cohortDefinitionId) %>% 
+    dplyr::summarise(minimum = min(timeToEvent),
+                       q1 = quantile(timeToEvent, 0.25),
+                       median = median(timeToEvent),
+                       q3 = quantile(timeToEvent, 0.75),
+                       maximum = max(timeToEvent)) %>% 
+    dplyr::mutate(iqr = q3 - q1, analysis_name = "Time to Treatment Switch") %>% 
+    dplyr::relocate(iqr, .before = minimum)
+    
   timeToTreatmentSwitch <- purrr::map_df(targetIds, function(targetId){
     data <- data %>% dplyr::filter(cohortDefinitionId == targetId) %>% dplyr::select(id, timeToEvent, event)
     if (nrow(data) < 30 | length(data$event[data$event == 1]) < 1) {return(NULL)}
@@ -284,74 +299,62 @@ runStudy <- function(connectionDetails = NULL,
   sankeyData$databaseId = databaseId
   andrData$treatment_sankey <- sankeyData
   
+  delta <- Sys.time() - start
+  ParallelLogger::logInfo(paste("Generating time to treatment switch data took",
+                                signif(delta, 3),
+                                attr(delta, "units")))
+  
+  # Locality estimation of some time periods ------------------------------------------------
+  # median follow-up time
+  ParallelLogger::logInfo("Time periods locality estimation")
+  start <- Sys.time()
+  browser()
+
+  sqlAggreg <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                                 sqlFilename = file.path("quartiles", "QuartilesAggregation.sql"),
+                                                 packageName = getThisPackageName(),
+                                                 warnOnMissingParameters = TRUE,
+                                                 analysis_name = "Follow up Time")
+  
+  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                           sqlFilename = file.path("quartiles", "MedianFollowUp.sql"),
+                                           packageName = getThisPackageName(),
+                                           warnOnMissingParameters = TRUE,
+                                           cohort_database_schema = cohortDatabaseSchema,
+                                           cohort_table = cohortTable,
+                                           target_ids = paste(targetIds, collapse = ', '))
+  
+  sql <- paste0(sql, sqlAggreg)
+  metrics <- rbind(metrics, DatabaseConnector::querySql(connection, sql))
+ 
+  sqlAggreg <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                                 sqlFilename = file.path("quartiles", "QuartilesAggregation.sql"),
+                                                 packageName = getThisPackageName(),
+                                                 warnOnMissingParameters = TRUE,
+                                                 analysis_name = "Time to Treatment")
+  
+  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
+                                           sqlFilename = file.path("quartiles", "MedianTimeToTreatment.sql"),
+                                           packageName = getThisPackageName(),
+                                           warnOnMissingParameters = TRUE,
+                                           cdm_database_schema = cdmDatabaseSchema,
+                                           cohort_database_schema = cohortDatabaseSchema,
+                                           cohort_table = cohortTable,
+                                           target_ids = paste(targetIds, collapse = ', '))
+  
+  sql <- paste0(sql, sqlAggreg)
+  metrics <- rbind(metrics, DatabaseConnector::querySql(connection, sql))
+
+  andrData$metrics_distribution <- metrics
+
   # drop treatment complementary tables
   sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
                                            sqlFilename = "TreatmentTablesDrop.sql",
                                            packageName = getThisPackageName(),
                                            warnOnMissingParameters = TRUE,
                                            cohort_database_schema = cohortDatabaseSchema
-                                           )
+                                          )
   DatabaseConnector::executeSql(connection, sql)
-  
-  delta <- Sys.time() - start
-  ParallelLogger::logInfo(paste("Generating time to treatment switch data took",
-                                signif(delta, 3),
-                                attr(delta, "units")))
-  
-  
-  # # Generate Metrics Distribution info -----------------------------------------------------
-  # ParallelLogger::logInfo("Generating metrics distribution")
-  # ParallelLogger::logInfo("Creating auxiliary tables")
-  # 
-  # start <- Sys.time()
-  # sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
-  #                                          sqlFilename = file.path("quartiles", "IQRComplementaryTables.sql"),
-  #                                          packageName = getThisPackageName(),
-  #                                          warnOnMissingParameters = TRUE,
-  #                                          cdm_database_schema = cdmDatabaseSchema,
-  #                                          cohort_database_schema = cohortDatabaseSchema,
-  #                                          cohort_table = cohortTable,
-  #                                          target_ids = paste(targetIds, collapse = ', '))
-  # DatabaseConnector::executeSql(connection, sql)
-  # outcomeBasedAnalyses <- c('TimeToDeath', 'TimeToSymptomaticProgression', 'TimeToTreatmentInitiation')
-  # distribAnalyses <- c('AgeAtDiagnosis', 'YearOfDiagnosis', 'CharlsonAtDiagnosis', 'PsaAtDiagnosis', outcomeBasedAnalyses)
-  # outcomes <- getFeatures()
-  # 
-  # metricsDistribution <- data.table::data.table()
-  # 
-  # for (analysis in distribAnalyses) {
-  #   outcome <- gsub("TimeTo", "", analysis)
-  #   outcome <- substring(SqlRender::camelCaseToTitleCase(outcome), 2)
-  #   outcomeId <- outcomes[tolower(outcomes$name) == tolower(outcome), "cohortId"][[1]]
-  #   
-  # 
-  #   if (length(outcomeId) == 0 & analysis %in% outcomeBasedAnalyses) {
-  #     next
-  #   }
-  #   result <- getAtEventDistribution(connection,
-  #                                    cohortDatabaseSchema,
-  #                                    cdmDatabaseSchema,
-  #                                    cohortTable = cohortTable,
-  #                                    targetIds = targetIds,
-  #                                    outcomeId = outcomeId,
-  #                                    databaseId = databaseId,
-  #                                    analysisName = analysis)
-  #   metricsDistribution <- rbind(metricsDistribution, result)
-  # }
-  # 
-  #  andrData$metrics_distribution <- metricsDistribution
-  # 
-  # 
-  #  sql <- SqlRender::loadRenderTranslateSql(dbms = connection@dbms,
-  #                                           sqlFilename = file.path("quartiles", "RemoveComplementaryTables.sql"),
-  #                                           packageName = getThisPackageName(),
-  #                                           cohort_database_schema = cohortDatabaseSchema)
-  #  DatabaseConnector::executeSql(connection, sql)
-  #  
-  #  delta <- Sys.time() - start
-  #  ParallelLogger::logInfo(paste("Generating metrics distribution took",
-  #                                signif(delta, 3),
-  #                                attr(delta, "units")))
   
   # Counting cohorts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Counting cohorts")
