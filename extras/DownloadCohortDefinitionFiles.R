@@ -22,21 +22,33 @@
 
 
 # get this token from an active ATLAS web session
-getCohortDefinitionsFromAtlas <- function(bearer = NULL){
+
+df < -readr::read_csv("extras/phenotype_tracker.csv")
+
+#columns to create are: name, atlasName, atlasId, cohortId
+
+library(dplyr)
+
+df2 <- df %>% 
+  transmute(name = cohort_id,
+            atlasName = phenotype_name,
+            atlasId = stringr::str_extract(atlas_link, "\\d+$"),
+            cohortId = cohort_id,
+            group = type,
+            atlas_link = atlas_link) %>% 
+  filter(!is.na(atlasId)) # fix issues here
+
+# df3 <- filter(df2, is.na(atlasId))
+
+readr::write_csv(df2, "inst/settings/CohortsToCreate.csv")
+
+bearer <- rstudioapi::askForPassword("Enter Bearer token")
+
+baseUrl <- "https://pioneer.hzdr.de/WebAPI"
+ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
   
-  if (is.null(bearer)) {
-    stop("Provide function call with a bearer token from an active ATLAS web session")
-  }
-  
-  bearer = paste("Bearer", bearer)
-  baseUrl <- "https://pioneer.hzdr.de/WebAPI"
-  ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
-  
-  cohortGroups <- read.csv(file.path("inst/settings/CohortGroups.csv"))
-  for (i in 1:nrow(cohortGroups)) {
-    ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = file.path('inst', cohortGroups$fileName[i]),
-                                                     baseUrl, insertCohortCreationR = FALSE,
-                                                     packageName = getThisPackageName())
-  }
-}
+ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "inst/settings/CohortsToCreate.csv",
+                                                 baseUrl, 
+                                                 insertCohortCreationR = FALSE,
+                                                 packageName = "PioneerTreatmentPathways")
 

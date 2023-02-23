@@ -104,7 +104,7 @@ getThisPackageVersion <- function() {
 
 #' @export
 getThisPackageName <- function() {
-  return("PIONEERmetastaticTreatment")
+  return("PioneerTreatmentPathways")
 }
 
 readCsv <- function(resourceFile) {
