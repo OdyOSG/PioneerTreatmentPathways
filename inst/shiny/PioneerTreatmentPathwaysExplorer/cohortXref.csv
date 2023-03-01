@@ -1,0 +1,408 @@
+cohortId,targetId,targetName,strataId,strataName,cohortType
+1,1,Newly diagnosed prostate cancer,0,All,Target
+2,2,Newly diagnosed prostate cancer initiated immediate conservative trt,0,All,Target
+3,3,Newly diagnosed prostate cancer initiated delayed conservative trt,0,All,Target
+4,4,Newly diagnosed prostate cancer initiated immediate curative trt,0,All,Target
+5,5,Newly diagnosed prostate cancer initiated delayed curative trt,0,All,Target
+7,7,Treatment category: prostatectomy surgery,0,All,Target
+8,8,Treatment category: radiotherapy,0,All,Target
+9,9,Treatment category: systemic chemotherapy,0,All,Target
+10,10,EAU High Risk,0,All,Target
+11,11,EAU Low Risk,0,All,Target
+12,12,EAU Intermediate Risk,0,All,Target
+1000362,1,Newly diagnosed prostate cancer,36,without Obesity,TwoS
+2000362,2,Newly diagnosed prostate cancer initiated immediate conservative trt,36,without Obesity,TwoS
+3000362,3,Newly diagnosed prostate cancer initiated delayed conservative trt,36,without Obesity,TwoS
+4000362,4,Newly diagnosed prostate cancer initiated immediate curative trt,36,without Obesity,TwoS
+5000362,5,Newly diagnosed prostate cancer initiated delayed curative trt,36,without Obesity,TwoS
+7000362,7,Treatment category: prostatectomy surgery,36,without Obesity,TwoS
+8000362,8,Treatment category: radiotherapy,36,without Obesity,TwoS
+9000362,9,Treatment category: systemic chemotherapy,36,without Obesity,TwoS
+10000362,10,EAU High Risk,36,without Obesity,TwoS
+11000362,11,EAU Low Risk,36,without Obesity,TwoS
+12000362,12,EAU Intermediate Risk,36,without Obesity,TwoS
+1000372,1,Newly diagnosed prostate cancer,37,without Hypertension,TwoS
+2000372,2,Newly diagnosed prostate cancer initiated immediate conservative trt,37,without Hypertension,TwoS
+3000372,3,Newly diagnosed prostate cancer initiated delayed conservative trt,37,without Hypertension,TwoS
+4000372,4,Newly diagnosed prostate cancer initiated immediate curative trt,37,without Hypertension,TwoS
+5000372,5,Newly diagnosed prostate cancer initiated delayed curative trt,37,without Hypertension,TwoS
+7000372,7,Treatment category: prostatectomy surgery,37,without Hypertension,TwoS
+8000372,8,Treatment category: radiotherapy,37,without Hypertension,TwoS
+9000372,9,Treatment category: systemic chemotherapy,37,without Hypertension,TwoS
+10000372,10,EAU High Risk,37,without Hypertension,TwoS
+11000372,11,EAU Low Risk,37,without Hypertension,TwoS
+12000372,12,EAU Intermediate Risk,37,without Hypertension,TwoS
+1000382,1,Newly diagnosed prostate cancer,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+2000382,2,Newly diagnosed prostate cancer initiated immediate conservative trt,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+3000382,3,Newly diagnosed prostate cancer initiated delayed conservative trt,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+4000382,4,Newly diagnosed prostate cancer initiated immediate curative trt,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+5000382,5,Newly diagnosed prostate cancer initiated delayed curative trt,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+7000382,7,Treatment category: prostatectomy surgery,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+8000382,8,Treatment category: radiotherapy,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+9000382,9,Treatment category: systemic chemotherapy,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+10000382,10,EAU High Risk,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+11000382,11,EAU Low Risk,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+12000382,12,EAU Intermediate Risk,38,"without Cardiovascular events (CVE; myocardial infarction, stroke)",TwoS
+1000402,1,Newly diagnosed prostate cancer,40,without Venous tromboembolic events (VTE),TwoS
+2000402,2,Newly diagnosed prostate cancer initiated immediate conservative trt,40,without Venous tromboembolic events (VTE),TwoS
+3000402,3,Newly diagnosed prostate cancer initiated delayed conservative trt,40,without Venous tromboembolic events (VTE),TwoS
+4000402,4,Newly diagnosed prostate cancer initiated immediate curative trt,40,without Venous tromboembolic events (VTE),TwoS
+5000402,5,Newly diagnosed prostate cancer initiated delayed curative trt,40,without Venous tromboembolic events (VTE),TwoS
+7000402,7,Treatment category: prostatectomy surgery,40,without Venous tromboembolic events (VTE),TwoS
+8000402,8,Treatment category: radiotherapy,40,without Venous tromboembolic events (VTE),TwoS
+9000402,9,Treatment category: systemic chemotherapy,40,without Venous tromboembolic events (VTE),TwoS
+10000402,10,EAU High Risk,40,without Venous tromboembolic events (VTE),TwoS
+11000402,11,EAU Low Risk,40,without Venous tromboembolic events (VTE),TwoS
+12000402,12,EAU Intermediate Risk,40,without Venous tromboembolic events (VTE),TwoS
+1000422,1,Newly diagnosed prostate cancer,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+2000422,2,Newly diagnosed prostate cancer initiated immediate conservative trt,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+3000422,3,Newly diagnosed prostate cancer initiated delayed conservative trt,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+4000422,4,Newly diagnosed prostate cancer initiated immediate curative trt,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+5000422,5,Newly diagnosed prostate cancer initiated delayed curative trt,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+7000422,7,Treatment category: prostatectomy surgery,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+8000422,8,Treatment category: radiotherapy,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+9000422,9,Treatment category: systemic chemotherapy,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+10000422,10,EAU High Risk,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+11000422,11,EAU Low Risk,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+12000422,12,EAU Intermediate Risk,42,without Family history of Prostate cancer or family history of germline mutations,TwoS
+1000432,1,Newly diagnosed prostate cancer,43,without PSA >20 at Diagnosis,TwoS
+2000432,2,Newly diagnosed prostate cancer initiated immediate conservative trt,43,without PSA >20 at Diagnosis,TwoS
+3000432,3,Newly diagnosed prostate cancer initiated delayed conservative trt,43,without PSA >20 at Diagnosis,TwoS
+4000432,4,Newly diagnosed prostate cancer initiated immediate curative trt,43,without PSA >20 at Diagnosis,TwoS
+5000432,5,Newly diagnosed prostate cancer initiated delayed curative trt,43,without PSA >20 at Diagnosis,TwoS
+7000432,7,Treatment category: prostatectomy surgery,43,without PSA >20 at Diagnosis,TwoS
+8000432,8,Treatment category: radiotherapy,43,without PSA >20 at Diagnosis,TwoS
+9000432,9,Treatment category: systemic chemotherapy,43,without PSA >20 at Diagnosis,TwoS
+10000432,10,EAU High Risk,43,without PSA >20 at Diagnosis,TwoS
+11000432,11,EAU Low Risk,43,without PSA >20 at Diagnosis,TwoS
+12000432,12,EAU Intermediate Risk,43,without PSA >20 at Diagnosis,TwoS
+1000442,1,Newly diagnosed prostate cancer,44,without PSA <10 at Diagnosis,TwoS
+2000442,2,Newly diagnosed prostate cancer initiated immediate conservative trt,44,without PSA <10 at Diagnosis,TwoS
+3000442,3,Newly diagnosed prostate cancer initiated delayed conservative trt,44,without PSA <10 at Diagnosis,TwoS
+4000442,4,Newly diagnosed prostate cancer initiated immediate curative trt,44,without PSA <10 at Diagnosis,TwoS
+5000442,5,Newly diagnosed prostate cancer initiated delayed curative trt,44,without PSA <10 at Diagnosis,TwoS
+7000442,7,Treatment category: prostatectomy surgery,44,without PSA <10 at Diagnosis,TwoS
+8000442,8,Treatment category: radiotherapy,44,without PSA <10 at Diagnosis,TwoS
+9000442,9,Treatment category: systemic chemotherapy,44,without PSA <10 at Diagnosis,TwoS
+10000442,10,EAU High Risk,44,without PSA <10 at Diagnosis,TwoS
+11000442,11,EAU Low Risk,44,without PSA <10 at Diagnosis,TwoS
+12000442,12,EAU Intermediate Risk,44,without PSA <10 at Diagnosis,TwoS
+1000452,1,Newly diagnosed prostate cancer,45,without PSA 10-20 at Diagnosis,TwoS
+2000452,2,Newly diagnosed prostate cancer initiated immediate conservative trt,45,without PSA 10-20 at Diagnosis,TwoS
+3000452,3,Newly diagnosed prostate cancer initiated delayed conservative trt,45,without PSA 10-20 at Diagnosis,TwoS
+4000452,4,Newly diagnosed prostate cancer initiated immediate curative trt,45,without PSA 10-20 at Diagnosis,TwoS
+5000452,5,Newly diagnosed prostate cancer initiated delayed curative trt,45,without PSA 10-20 at Diagnosis,TwoS
+7000452,7,Treatment category: prostatectomy surgery,45,without PSA 10-20 at Diagnosis,TwoS
+8000452,8,Treatment category: radiotherapy,45,without PSA 10-20 at Diagnosis,TwoS
+9000452,9,Treatment category: systemic chemotherapy,45,without PSA 10-20 at Diagnosis,TwoS
+10000452,10,EAU High Risk,45,without PSA 10-20 at Diagnosis,TwoS
+11000452,11,EAU Low Risk,45,without PSA 10-20 at Diagnosis,TwoS
+12000452,12,EAU Intermediate Risk,45,without PSA 10-20 at Diagnosis,TwoS
+1000462,1,Newly diagnosed prostate cancer,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+2000462,2,Newly diagnosed prostate cancer initiated immediate conservative trt,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+3000462,3,Newly diagnosed prostate cancer initiated delayed conservative trt,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+4000462,4,Newly diagnosed prostate cancer initiated immediate curative trt,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+5000462,5,Newly diagnosed prostate cancer initiated delayed curative trt,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+7000462,7,Treatment category: prostatectomy surgery,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+8000462,8,Treatment category: radiotherapy,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+9000462,9,Treatment category: systemic chemotherapy,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+10000462,10,EAU High Risk,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+11000462,11,EAU Low Risk,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+12000462,12,EAU Intermediate Risk,46,without Grade group (Gleason score) at diagnosis 1 (3+3),TwoS
+1000472,1,Newly diagnosed prostate cancer,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+2000472,2,Newly diagnosed prostate cancer initiated immediate conservative trt,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+3000472,3,Newly diagnosed prostate cancer initiated delayed conservative trt,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+4000472,4,Newly diagnosed prostate cancer initiated immediate curative trt,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+5000472,5,Newly diagnosed prostate cancer initiated delayed curative trt,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+7000472,7,Treatment category: prostatectomy surgery,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+8000472,8,Treatment category: radiotherapy,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+9000472,9,Treatment category: systemic chemotherapy,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+10000472,10,EAU High Risk,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+11000472,11,EAU Low Risk,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+12000472,12,EAU Intermediate Risk,47,without Grade group (Gleason score) at diagnosis 2 (3+4),TwoS
+1000482,1,Newly diagnosed prostate cancer,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+2000482,2,Newly diagnosed prostate cancer initiated immediate conservative trt,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+3000482,3,Newly diagnosed prostate cancer initiated delayed conservative trt,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+4000482,4,Newly diagnosed prostate cancer initiated immediate curative trt,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+5000482,5,Newly diagnosed prostate cancer initiated delayed curative trt,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+7000482,7,Treatment category: prostatectomy surgery,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+8000482,8,Treatment category: radiotherapy,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+9000482,9,Treatment category: systemic chemotherapy,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+10000482,10,EAU High Risk,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+11000482,11,EAU Low Risk,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+12000482,12,EAU Intermediate Risk,48,without Grade group (Gleason score) at diagnosis 3 (4+3),TwoS
+1000492,1,Newly diagnosed prostate cancer,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+2000492,2,Newly diagnosed prostate cancer initiated immediate conservative trt,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+3000492,3,Newly diagnosed prostate cancer initiated delayed conservative trt,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+4000492,4,Newly diagnosed prostate cancer initiated immediate curative trt,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+5000492,5,Newly diagnosed prostate cancer initiated delayed curative trt,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+7000492,7,Treatment category: prostatectomy surgery,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+8000492,8,Treatment category: radiotherapy,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+9000492,9,Treatment category: systemic chemotherapy,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+10000492,10,EAU High Risk,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+11000492,11,EAU Low Risk,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+12000492,12,EAU Intermediate Risk,49,without Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwoS
+1000502,1,Newly diagnosed prostate cancer,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+2000502,2,Newly diagnosed prostate cancer initiated immediate conservative trt,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+3000502,3,Newly diagnosed prostate cancer initiated delayed conservative trt,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+4000502,4,Newly diagnosed prostate cancer initiated immediate curative trt,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+5000502,5,Newly diagnosed prostate cancer initiated delayed curative trt,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+7000502,7,Treatment category: prostatectomy surgery,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+8000502,8,Treatment category: radiotherapy,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+9000502,9,Treatment category: systemic chemotherapy,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+10000502,10,EAU High Risk,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+11000502,11,EAU Low Risk,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+12000502,12,EAU Intermediate Risk,50,without Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwoS
+1000512,1,Newly diagnosed prostate cancer,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+2000512,2,Newly diagnosed prostate cancer initiated immediate conservative trt,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+3000512,3,Newly diagnosed prostate cancer initiated delayed conservative trt,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+4000512,4,Newly diagnosed prostate cancer initiated immediate curative trt,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+5000512,5,Newly diagnosed prostate cancer initiated delayed curative trt,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+7000512,7,Treatment category: prostatectomy surgery,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+8000512,8,Treatment category: radiotherapy,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+9000512,9,Treatment category: systemic chemotherapy,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+10000512,10,EAU High Risk,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+11000512,11,EAU Low Risk,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+12000512,12,EAU Intermediate Risk,51,"without EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwoS
+1000522,1,Newly diagnosed prostate cancer,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+2000522,2,Newly diagnosed prostate cancer initiated immediate conservative trt,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+3000522,3,Newly diagnosed prostate cancer initiated delayed conservative trt,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+4000522,4,Newly diagnosed prostate cancer initiated immediate curative trt,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+5000522,5,Newly diagnosed prostate cancer initiated delayed curative trt,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+7000522,7,Treatment category: prostatectomy surgery,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+8000522,8,Treatment category: radiotherapy,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+9000522,9,Treatment category: systemic chemotherapy,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+10000522,10,EAU High Risk,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+11000522,11,EAU Low Risk,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+12000522,12,EAU Intermediate Risk,52,without EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwoS
+1000532,1,Newly diagnosed prostate cancer,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+2000532,2,Newly diagnosed prostate cancer initiated immediate conservative trt,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+3000532,3,Newly diagnosed prostate cancer initiated delayed conservative trt,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+4000532,4,Newly diagnosed prostate cancer initiated immediate curative trt,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+5000532,5,Newly diagnosed prostate cancer initiated delayed curative trt,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+7000532,7,Treatment category: prostatectomy surgery,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+8000532,8,Treatment category: radiotherapy,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+9000532,9,Treatment category: systemic chemotherapy,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+10000532,10,EAU High Risk,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+11000532,11,EAU Low Risk,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+12000532,12,EAU Intermediate Risk,53,"without EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwoS
+1000011,1,Newly diagnosed prostate cancer,1,with Age < 60,TwS
+2000011,2,Newly diagnosed prostate cancer initiated immediate conservative trt,1,with Age < 60,TwS
+3000011,3,Newly diagnosed prostate cancer initiated delayed conservative trt,1,with Age < 60,TwS
+4000011,4,Newly diagnosed prostate cancer initiated immediate curative trt,1,with Age < 60,TwS
+5000011,5,Newly diagnosed prostate cancer initiated delayed curative trt,1,with Age < 60,TwS
+7000011,7,Treatment category: prostatectomy surgery,1,with Age < 60,TwS
+8000011,8,Treatment category: radiotherapy,1,with Age < 60,TwS
+9000011,9,Treatment category: systemic chemotherapy,1,with Age < 60,TwS
+10000011,10,EAU High Risk,1,with Age < 60,TwS
+11000011,11,EAU Low Risk,1,with Age < 60,TwS
+12000011,12,EAU Intermediate Risk,1,with Age < 60,TwS
+1000021,1,Newly diagnosed prostate cancer,2,with Age 60 - 69,TwS
+2000021,2,Newly diagnosed prostate cancer initiated immediate conservative trt,2,with Age 60 - 69,TwS
+3000021,3,Newly diagnosed prostate cancer initiated delayed conservative trt,2,with Age 60 - 69,TwS
+4000021,4,Newly diagnosed prostate cancer initiated immediate curative trt,2,with Age 60 - 69,TwS
+5000021,5,Newly diagnosed prostate cancer initiated delayed curative trt,2,with Age 60 - 69,TwS
+7000021,7,Treatment category: prostatectomy surgery,2,with Age 60 - 69,TwS
+8000021,8,Treatment category: radiotherapy,2,with Age 60 - 69,TwS
+9000021,9,Treatment category: systemic chemotherapy,2,with Age 60 - 69,TwS
+10000021,10,EAU High Risk,2,with Age 60 - 69,TwS
+11000021,11,EAU Low Risk,2,with Age 60 - 69,TwS
+12000021,12,EAU Intermediate Risk,2,with Age 60 - 69,TwS
+1000031,1,Newly diagnosed prostate cancer,3,with Age 70 - 79,TwS
+2000031,2,Newly diagnosed prostate cancer initiated immediate conservative trt,3,with Age 70 - 79,TwS
+3000031,3,Newly diagnosed prostate cancer initiated delayed conservative trt,3,with Age 70 - 79,TwS
+4000031,4,Newly diagnosed prostate cancer initiated immediate curative trt,3,with Age 70 - 79,TwS
+5000031,5,Newly diagnosed prostate cancer initiated delayed curative trt,3,with Age 70 - 79,TwS
+7000031,7,Treatment category: prostatectomy surgery,3,with Age 70 - 79,TwS
+8000031,8,Treatment category: radiotherapy,3,with Age 70 - 79,TwS
+9000031,9,Treatment category: systemic chemotherapy,3,with Age 70 - 79,TwS
+10000031,10,EAU High Risk,3,with Age 70 - 79,TwS
+11000031,11,EAU Low Risk,3,with Age 70 - 79,TwS
+12000031,12,EAU Intermediate Risk,3,with Age 70 - 79,TwS
+1000041,1,Newly diagnosed prostate cancer,4,with Age >= 80,TwS
+2000041,2,Newly diagnosed prostate cancer initiated immediate conservative trt,4,with Age >= 80,TwS
+3000041,3,Newly diagnosed prostate cancer initiated delayed conservative trt,4,with Age >= 80,TwS
+4000041,4,Newly diagnosed prostate cancer initiated immediate curative trt,4,with Age >= 80,TwS
+5000041,5,Newly diagnosed prostate cancer initiated delayed curative trt,4,with Age >= 80,TwS
+7000041,7,Treatment category: prostatectomy surgery,4,with Age >= 80,TwS
+8000041,8,Treatment category: radiotherapy,4,with Age >= 80,TwS
+9000041,9,Treatment category: systemic chemotherapy,4,with Age >= 80,TwS
+10000041,10,EAU High Risk,4,with Age >= 80,TwS
+11000041,11,EAU Low Risk,4,with Age >= 80,TwS
+12000041,12,EAU Intermediate Risk,4,with Age >= 80,TwS
+1000361,1,Newly diagnosed prostate cancer,36,with Obesity,TwS
+2000361,2,Newly diagnosed prostate cancer initiated immediate conservative trt,36,with Obesity,TwS
+3000361,3,Newly diagnosed prostate cancer initiated delayed conservative trt,36,with Obesity,TwS
+4000361,4,Newly diagnosed prostate cancer initiated immediate curative trt,36,with Obesity,TwS
+5000361,5,Newly diagnosed prostate cancer initiated delayed curative trt,36,with Obesity,TwS
+7000361,7,Treatment category: prostatectomy surgery,36,with Obesity,TwS
+8000361,8,Treatment category: radiotherapy,36,with Obesity,TwS
+9000361,9,Treatment category: systemic chemotherapy,36,with Obesity,TwS
+10000361,10,EAU High Risk,36,with Obesity,TwS
+11000361,11,EAU Low Risk,36,with Obesity,TwS
+12000361,12,EAU Intermediate Risk,36,with Obesity,TwS
+1000371,1,Newly diagnosed prostate cancer,37,with Hypertension,TwS
+2000371,2,Newly diagnosed prostate cancer initiated immediate conservative trt,37,with Hypertension,TwS
+3000371,3,Newly diagnosed prostate cancer initiated delayed conservative trt,37,with Hypertension,TwS
+4000371,4,Newly diagnosed prostate cancer initiated immediate curative trt,37,with Hypertension,TwS
+5000371,5,Newly diagnosed prostate cancer initiated delayed curative trt,37,with Hypertension,TwS
+7000371,7,Treatment category: prostatectomy surgery,37,with Hypertension,TwS
+8000371,8,Treatment category: radiotherapy,37,with Hypertension,TwS
+9000371,9,Treatment category: systemic chemotherapy,37,with Hypertension,TwS
+10000371,10,EAU High Risk,37,with Hypertension,TwS
+11000371,11,EAU Low Risk,37,with Hypertension,TwS
+12000371,12,EAU Intermediate Risk,37,with Hypertension,TwS
+1000381,1,Newly diagnosed prostate cancer,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+2000381,2,Newly diagnosed prostate cancer initiated immediate conservative trt,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+3000381,3,Newly diagnosed prostate cancer initiated delayed conservative trt,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+4000381,4,Newly diagnosed prostate cancer initiated immediate curative trt,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+5000381,5,Newly diagnosed prostate cancer initiated delayed curative trt,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+7000381,7,Treatment category: prostatectomy surgery,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+8000381,8,Treatment category: radiotherapy,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+9000381,9,Treatment category: systemic chemotherapy,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+10000381,10,EAU High Risk,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+11000381,11,EAU Low Risk,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+12000381,12,EAU Intermediate Risk,38,"with Cardiovascular events (CVE; myocardial infarction, stroke)",TwS
+1000401,1,Newly diagnosed prostate cancer,40,with Venous tromboembolic events (VTE),TwS
+2000401,2,Newly diagnosed prostate cancer initiated immediate conservative trt,40,with Venous tromboembolic events (VTE),TwS
+3000401,3,Newly diagnosed prostate cancer initiated delayed conservative trt,40,with Venous tromboembolic events (VTE),TwS
+4000401,4,Newly diagnosed prostate cancer initiated immediate curative trt,40,with Venous tromboembolic events (VTE),TwS
+5000401,5,Newly diagnosed prostate cancer initiated delayed curative trt,40,with Venous tromboembolic events (VTE),TwS
+7000401,7,Treatment category: prostatectomy surgery,40,with Venous tromboembolic events (VTE),TwS
+8000401,8,Treatment category: radiotherapy,40,with Venous tromboembolic events (VTE),TwS
+9000401,9,Treatment category: systemic chemotherapy,40,with Venous tromboembolic events (VTE),TwS
+10000401,10,EAU High Risk,40,with Venous tromboembolic events (VTE),TwS
+11000401,11,EAU Low Risk,40,with Venous tromboembolic events (VTE),TwS
+12000401,12,EAU Intermediate Risk,40,with Venous tromboembolic events (VTE),TwS
+1000421,1,Newly diagnosed prostate cancer,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+2000421,2,Newly diagnosed prostate cancer initiated immediate conservative trt,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+3000421,3,Newly diagnosed prostate cancer initiated delayed conservative trt,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+4000421,4,Newly diagnosed prostate cancer initiated immediate curative trt,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+5000421,5,Newly diagnosed prostate cancer initiated delayed curative trt,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+7000421,7,Treatment category: prostatectomy surgery,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+8000421,8,Treatment category: radiotherapy,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+9000421,9,Treatment category: systemic chemotherapy,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+10000421,10,EAU High Risk,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+11000421,11,EAU Low Risk,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+12000421,12,EAU Intermediate Risk,42,with Family history of Prostate cancer or family history of germline mutations,TwS
+1000431,1,Newly diagnosed prostate cancer,43,with PSA >20 at Diagnosis,TwS
+2000431,2,Newly diagnosed prostate cancer initiated immediate conservative trt,43,with PSA >20 at Diagnosis,TwS
+3000431,3,Newly diagnosed prostate cancer initiated delayed conservative trt,43,with PSA >20 at Diagnosis,TwS
+4000431,4,Newly diagnosed prostate cancer initiated immediate curative trt,43,with PSA >20 at Diagnosis,TwS
+5000431,5,Newly diagnosed prostate cancer initiated delayed curative trt,43,with PSA >20 at Diagnosis,TwS
+7000431,7,Treatment category: prostatectomy surgery,43,with PSA >20 at Diagnosis,TwS
+8000431,8,Treatment category: radiotherapy,43,with PSA >20 at Diagnosis,TwS
+9000431,9,Treatment category: systemic chemotherapy,43,with PSA >20 at Diagnosis,TwS
+10000431,10,EAU High Risk,43,with PSA >20 at Diagnosis,TwS
+11000431,11,EAU Low Risk,43,with PSA >20 at Diagnosis,TwS
+12000431,12,EAU Intermediate Risk,43,with PSA >20 at Diagnosis,TwS
+1000441,1,Newly diagnosed prostate cancer,44,with PSA <10 at Diagnosis,TwS
+2000441,2,Newly diagnosed prostate cancer initiated immediate conservative trt,44,with PSA <10 at Diagnosis,TwS
+3000441,3,Newly diagnosed prostate cancer initiated delayed conservative trt,44,with PSA <10 at Diagnosis,TwS
+4000441,4,Newly diagnosed prostate cancer initiated immediate curative trt,44,with PSA <10 at Diagnosis,TwS
+5000441,5,Newly diagnosed prostate cancer initiated delayed curative trt,44,with PSA <10 at Diagnosis,TwS
+7000441,7,Treatment category: prostatectomy surgery,44,with PSA <10 at Diagnosis,TwS
+8000441,8,Treatment category: radiotherapy,44,with PSA <10 at Diagnosis,TwS
+9000441,9,Treatment category: systemic chemotherapy,44,with PSA <10 at Diagnosis,TwS
+10000441,10,EAU High Risk,44,with PSA <10 at Diagnosis,TwS
+11000441,11,EAU Low Risk,44,with PSA <10 at Diagnosis,TwS
+12000441,12,EAU Intermediate Risk,44,with PSA <10 at Diagnosis,TwS
+1000451,1,Newly diagnosed prostate cancer,45,with PSA 10-20 at Diagnosis,TwS
+2000451,2,Newly diagnosed prostate cancer initiated immediate conservative trt,45,with PSA 10-20 at Diagnosis,TwS
+3000451,3,Newly diagnosed prostate cancer initiated delayed conservative trt,45,with PSA 10-20 at Diagnosis,TwS
+4000451,4,Newly diagnosed prostate cancer initiated immediate curative trt,45,with PSA 10-20 at Diagnosis,TwS
+5000451,5,Newly diagnosed prostate cancer initiated delayed curative trt,45,with PSA 10-20 at Diagnosis,TwS
+7000451,7,Treatment category: prostatectomy surgery,45,with PSA 10-20 at Diagnosis,TwS
+8000451,8,Treatment category: radiotherapy,45,with PSA 10-20 at Diagnosis,TwS
+9000451,9,Treatment category: systemic chemotherapy,45,with PSA 10-20 at Diagnosis,TwS
+10000451,10,EAU High Risk,45,with PSA 10-20 at Diagnosis,TwS
+11000451,11,EAU Low Risk,45,with PSA 10-20 at Diagnosis,TwS
+12000451,12,EAU Intermediate Risk,45,with PSA 10-20 at Diagnosis,TwS
+1000461,1,Newly diagnosed prostate cancer,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+2000461,2,Newly diagnosed prostate cancer initiated immediate conservative trt,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+3000461,3,Newly diagnosed prostate cancer initiated delayed conservative trt,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+4000461,4,Newly diagnosed prostate cancer initiated immediate curative trt,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+5000461,5,Newly diagnosed prostate cancer initiated delayed curative trt,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+7000461,7,Treatment category: prostatectomy surgery,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+8000461,8,Treatment category: radiotherapy,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+9000461,9,Treatment category: systemic chemotherapy,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+10000461,10,EAU High Risk,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+11000461,11,EAU Low Risk,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+12000461,12,EAU Intermediate Risk,46,with Grade group (Gleason score) at diagnosis 1 (3+3),TwS
+1000471,1,Newly diagnosed prostate cancer,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+2000471,2,Newly diagnosed prostate cancer initiated immediate conservative trt,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+3000471,3,Newly diagnosed prostate cancer initiated delayed conservative trt,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+4000471,4,Newly diagnosed prostate cancer initiated immediate curative trt,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+5000471,5,Newly diagnosed prostate cancer initiated delayed curative trt,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+7000471,7,Treatment category: prostatectomy surgery,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+8000471,8,Treatment category: radiotherapy,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+9000471,9,Treatment category: systemic chemotherapy,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+10000471,10,EAU High Risk,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+11000471,11,EAU Low Risk,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+12000471,12,EAU Intermediate Risk,47,with Grade group (Gleason score) at diagnosis 2 (3+4),TwS
+1000481,1,Newly diagnosed prostate cancer,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+2000481,2,Newly diagnosed prostate cancer initiated immediate conservative trt,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+3000481,3,Newly diagnosed prostate cancer initiated delayed conservative trt,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+4000481,4,Newly diagnosed prostate cancer initiated immediate curative trt,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+5000481,5,Newly diagnosed prostate cancer initiated delayed curative trt,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+7000481,7,Treatment category: prostatectomy surgery,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+8000481,8,Treatment category: radiotherapy,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+9000481,9,Treatment category: systemic chemotherapy,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+10000481,10,EAU High Risk,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+11000481,11,EAU Low Risk,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+12000481,12,EAU Intermediate Risk,48,with Grade group (Gleason score) at diagnosis 3 (4+3),TwS
+1000491,1,Newly diagnosed prostate cancer,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+2000491,2,Newly diagnosed prostate cancer initiated immediate conservative trt,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+3000491,3,Newly diagnosed prostate cancer initiated delayed conservative trt,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+4000491,4,Newly diagnosed prostate cancer initiated immediate curative trt,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+5000491,5,Newly diagnosed prostate cancer initiated delayed curative trt,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+7000491,7,Treatment category: prostatectomy surgery,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+8000491,8,Treatment category: radiotherapy,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+9000491,9,Treatment category: systemic chemotherapy,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+10000491,10,EAU High Risk,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+11000491,11,EAU Low Risk,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+12000491,12,EAU Intermediate Risk,49,with Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),TwS
+1000501,1,Newly diagnosed prostate cancer,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+2000501,2,Newly diagnosed prostate cancer initiated immediate conservative trt,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+3000501,3,Newly diagnosed prostate cancer initiated delayed conservative trt,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+4000501,4,Newly diagnosed prostate cancer initiated immediate curative trt,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+5000501,5,Newly diagnosed prostate cancer initiated delayed curative trt,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+7000501,7,Treatment category: prostatectomy surgery,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+8000501,8,Treatment category: radiotherapy,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+9000501,9,Treatment category: systemic chemotherapy,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+10000501,10,EAU High Risk,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+11000501,11,EAU Low Risk,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+12000501,12,EAU Intermediate Risk,50,with Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),TwS
+1000511,1,Newly diagnosed prostate cancer,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+2000511,2,Newly diagnosed prostate cancer initiated immediate conservative trt,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+3000511,3,Newly diagnosed prostate cancer initiated delayed conservative trt,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+4000511,4,Newly diagnosed prostate cancer initiated immediate curative trt,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+5000511,5,Newly diagnosed prostate cancer initiated delayed curative trt,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+7000511,7,Treatment category: prostatectomy surgery,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+8000511,8,Treatment category: radiotherapy,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+9000511,9,Treatment category: systemic chemotherapy,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+10000511,10,EAU High Risk,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+11000511,11,EAU Low Risk,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+12000511,12,EAU Intermediate Risk,51,"with EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",TwS
+1000521,1,Newly diagnosed prostate cancer,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+2000521,2,Newly diagnosed prostate cancer initiated immediate conservative trt,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+3000521,3,Newly diagnosed prostate cancer initiated delayed conservative trt,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+4000521,4,Newly diagnosed prostate cancer initiated immediate curative trt,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+5000521,5,Newly diagnosed prostate cancer initiated delayed curative trt,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+7000521,7,Treatment category: prostatectomy surgery,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+8000521,8,Treatment category: radiotherapy,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+9000521,9,Treatment category: systemic chemotherapy,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+10000521,10,EAU High Risk,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+11000521,11,EAU Low Risk,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+12000521,12,EAU Intermediate Risk,52,with EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),TwS
+1000531,1,Newly diagnosed prostate cancer,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+2000531,2,Newly diagnosed prostate cancer initiated immediate conservative trt,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+3000531,3,Newly diagnosed prostate cancer initiated delayed conservative trt,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+4000531,4,Newly diagnosed prostate cancer initiated immediate curative trt,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+5000531,5,Newly diagnosed prostate cancer initiated delayed curative trt,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+7000531,7,Treatment category: prostatectomy surgery,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+8000531,8,Treatment category: radiotherapy,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+9000531,9,Treatment category: systemic chemotherapy,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+10000531,10,EAU High Risk,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+11000531,11,EAU Low Risk,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS
+12000531,12,EAU Intermediate Risk,53,"with EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",TwS

@@ -15,44 +15,87 @@ install.packages("devtools")
 install.packages("ff")
 install.packages("survminer")
 devtools::install_github("OHDSI/CohortDiagnostics")
+devtools::install_github("OHDSI/CohortGenerator")
 ```
 
 
-```{r params}
 
-purrr::walk(list.files("R", full.names = TRUE), source)
-
+```{r source}
 library(DatabaseConnector)
-cd <- createConnectionDetails("postgresql", user = "postgres", password = "", server = "localhost/covid")
-con <- connect(cd)
-dbGetQuery(con, "select * from cdm5.person limit 8")
-disconnect(con)
+purrr::walk(list.files("R", full.names = TRUE), source)
+```
 
-connectionDetails = cd
+# Assign parameters
+
+```{r params}
+library(DatabaseConnector)
+library(dplyr, warn.conflicts = FALSE)
+# connectionDetails <- createConnectionDetails("postgresql", user = "postgres", password = "", server = "localhost/covid")
+# con <- connect(cd)
+# dbGetQuery(con, "select * from cdm5.person limit 8")
+# disconnect(con)
+# 
+# connectionDetails <- createConnectionDetails(dbms = "postgresql",
+#                                              server = "testnode.arachnenetwork.com/synpuf_110k",
+#                                              user = "ohdsi",
+#                                              password = Sys.getenv("ODYS_DB_PASSWORD"),
+#                                              port = "5441")
+
+connectionDetails <- createConnectionDetails(dbms = "postgresql",
+                                             server = "localhost/synpuf100k",
+                                             user = "postgres",
+                                             password = "")
+
+
 connection = NULL
-cdmDatabaseSchema = "cdm5"
+# cdmDatabaseSchema = "cdm5"
+cdmDatabaseSchema = "cdm531"
 oracleTempSchema = NULL
 cohortDatabaseSchema = "scratch"
+# cohortDatabaseSchema = "adam_black_results"
 cohortStagingTable = "cohort_stg"
 cohortTable = "cohort"
 featureSummaryTable = "cohort_smry"
 cohortIdsToExcludeFromExecution = c()
 cohortIdsToExcludeFromResultsExport = NULL
-cohortGroups = getUserSelectableCohortGroups()
-exportFolder
-databaseId
+# cohortGroups = getUserSelectableCohortGroups()
+exportFolder = here::here("export")
+databaseId = "Synpuf"
 databaseName = databaseId
-databaseDescription = ""
+databaseDescription = "Synthetic medicare claims 100k person sample"
 useBulkCharacterization = FALSE
 minCellCount = 5
-incremental = FALSE
-incrementalFolder = file.path(exportFolder, "RecordKeeping")
 minimumSubjectCountForCharacterization = 140
 ```
 
+# Check connection to database
 
-```{r }
+```{r}
+conn <- connect(connectionDetails)
 
+renderTranslateQuerySql(conn, 
+                        "select count(*) as n_persons from @cdmDatabaseSchema.person",
+                        cdmDatabaseSchema = cdmDatabaseSchema)
+
+# check write access
+insertTable(conn, cohortDatabaseSchema, "iris_temp", iris)
+
+renderTranslateQuerySql(conn, 
+                        "select count(*) as n from @cohortDatabaseSchema.iris_temp",
+                        cohortDatabaseSchema = cohortDatabaseSchema)
+
+# dbExecute(conn, "rollback;")
+renderTranslateExecuteSql(conn, 
+                          "drop table @cohortDatabaseSchema.iris_temp",
+                          cohortDatabaseSchema = cohortDatabaseSchema,
+                          progressBar = FALSE)
+
+disconnect(conn)
+```
+
+
+
+```{r}
 start <- Sys.time()
 
 if (!file.exists(exportFolder)) {
@@ -65,129 +108,103 @@ on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
 # Write out the system information
 ParallelLogger::logInfo(.systemInfo())
 
-useSubset = Sys.getenv("USE_SUBSET")
+useSubset <- Sys.getenv("USE_SUBSET")
 if (!is.na(as.logical(useSubset)) && as.logical(useSubset)) {
   ParallelLogger::logWarn("Running in subset mode for testing")
 }
 
-if (incremental) {
-  if (is.null(incrementalFolder)) {
-    stop("Must specify incrementalFolder when incremental = TRUE")
-  }
-  if (!file.exists(incrementalFolder)) {
-    dir.create(incrementalFolder, recursive = TRUE)
-  }
-}
+# if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
+#   warning("fftempdir '", getOption("fftempdir"), "' not found. Attempting to create folder")
+#   dir.create(getOption("fftempdir"), recursive = TRUE)
+# }
 
-if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
-  warning("fftempdir '", getOption("fftempdir"), "' not found. Attempting to create folder")
-  dir.create(getOption("fftempdir"), recursive = TRUE)
-}
-
-if (is.null(connection)) {
-  connection <- DatabaseConnector::connect(connectionDetails)
-  on.exit(DatabaseConnector::disconnect(connection))
-}
-
+connection <- DatabaseConnector::connect(connectionDetails)
+DatabaseConnector::disconnect(connection)
 andrData <- Andromeda::andromeda()
 
 # Instantiate cohorts -----------------------------------------------------------------------
-cohorts <- getCohortsToCreate()
-# Remove any cohorts that are to be excluded
-cohorts <- cohorts[!(cohorts$cohortId %in% cohortIdsToExcludeFromExecution), ]
-targetCohortIds  <- cohorts[cohorts$cohortType == "target",  "cohortId"][[1]]
-strataCohortIds  <- cohorts[cohorts$cohortType == "strata",  "cohortId"][[1]]
-outcomeCohortIds <- cohorts[cohorts$cohortType == "outcome", "cohortId"][[1]]
-# treatmentCohortIds <- cohorts[cohorts$cohortType == "treatment", "cohortId"][[1]]
+cohortDefinitionSet <- readr::read_csv(file.path("inst", "settings", "CohortsToCreate.csv"), 
+                                       show_col_types = FALSE) %>% 
+  mutate(cohortName = name,
+         sqlPath = file.path("inst", "sql", paste0(name, ".sql")),
+         sql = purrr::map_chr(sqlPath, readr::read_file))
+```
 
-# Start with the target cohorts
-ParallelLogger::logInfo("**********************************************************")
-ParallelLogger::logInfo("  ---- Creating target cohorts ---- ")
-ParallelLogger::logInfo("**********************************************************")
-instantiateCohortSet(connectionDetails = connectionDetails,
-                     connection = connection,
-                     cdmDatabaseSchema = cdmDatabaseSchema,
-                     oracleTempSchema = oracleTempSchema,
-                     cohortDatabaseSchema = cohortDatabaseSchema,
-                     cohortTable = cohortStagingTable,
-                     cohortIds = targetCohortIds,
-                     minCellCount = minCellCount,
-                     createCohortTable = TRUE,
-                     generateInclusionStats = FALSE,
-                     incremental = incremental,
-                     incrementalFolder = incrementalFolder,
-                     inclusionStatisticsFolder = exportFolder)
+# Generate Cohorts
 
-# Next do the strata cohorts
-ParallelLogger::logInfo("******************************************")
-ParallelLogger::logInfo("  ---- Creating strata cohorts  ---- ")
-ParallelLogger::logInfo("******************************************")
-instantiateCohortSet(connectionDetails = connectionDetails,
-                     connection = connection,
-                     cdmDatabaseSchema = cdmDatabaseSchema,
-                     oracleTempSchema = oracleTempSchema,
-                     cohortDatabaseSchema = cohortDatabaseSchema,
-                     cohortTable = cohortStagingTable,
-                     cohortIds = strataCohortIds,
-                     minCellCount = minCellCount,
-                     createCohortTable = FALSE,
-                     generateInclusionStats = FALSE,
-                     incremental = incremental,
-                     incrementalFolder = incrementalFolder,
-                     inclusionStatisticsFolder = exportFolder)
+```{r}
 
-# Create the feature cohorts
-ParallelLogger::logInfo("**********************************************************")
-ParallelLogger::logInfo(" ---- Creating outcome cohorts ---- ")
-ParallelLogger::logInfo("**********************************************************")
-instantiateCohortSet(connectionDetails = connectionDetails,
-                     connection = connection,
-                     cdmDatabaseSchema = cdmDatabaseSchema,
-                     oracleTempSchema = oracleTempSchema,
-                     cohortDatabaseSchema = cohortDatabaseSchema,
-                     cohortTable = cohortStagingTable,
-                     cohortIds = outcomeCohortIds,
-                     minCellCount = minCellCount,
-                     createCohortTable = FALSE,
-                     generateInclusionStats = FALSE,
-                     incremental = incremental,
-                     incrementalFolder = incrementalFolder,
-                     inclusionStatisticsFolder = exportFolder)
+cohortTableNames <- CohortGenerator::getCohortTableNames(cohortStagingTable)
 
-# Create the stratified cohorts
-ParallelLogger::logInfo("**********************************************************")
-ParallelLogger::logInfo(" ---- Creating stratified target cohorts ---- ")
-ParallelLogger::logInfo("**********************************************************")
-createBulkStrata(connection = connection,
-                 cdmDatabaseSchema = cdmDatabaseSchema,
-                 cohortDatabaseSchema = cohortDatabaseSchema,
-                 cohortStagingTable = cohortStagingTable,
-                 targetIds = targetCohortIds,
-                 oracleTempSchema = oracleTempSchema)
+CohortGenerator::createCohortTables(
+  connectionDetails = connectionDetails,
+  cohortDatabaseSchema = cohortDatabaseSchema,
+  cohortTableNames = cohortTableNames
+)
+```
 
+
+```{r}
+ParallelLogger::logInfo("**********************************************************")
+ParallelLogger::logInfo("  ---- Creating cohorts ---- ")
+ParallelLogger::logInfo("**********************************************************")
+
+CohortGenerator::generateCohortSet(
+  connectionDetails = connectionDetails,
+  cdmDatabaseSchema = cdmDatabaseSchema,
+  cohortDatabaseSchema = cohortDatabaseSchema,
+  cohortDefinitionSet = cohortDefinitionSet,
+  cohortTableNames = cohortTableNames,
+  incremental = TRUE,
+  incrementalFolder = file.path(exportFolder, "incremental")
+)
+
+cohortCounts <- CohortGenerator::getCohortCounts(
+  connectionDetails = connectionDetails,
+  cohortDatabaseSchema = cohortDatabaseSchema,
+  cohortTable = cohortStagingTable)
+
+cohortCountsComplete <- cohortDefinitionSet %>% 
+  select(cohortId, cohortName = atlasName) %>% 
+  left_join(cohortCounts, by = "cohortId") %>% 
+  mutate(cohortEntries = coalesce(cohortEntries, 0),
+         cohortSubjects = coalesce(cohortSubjects, 0))
+
+readr::write_csv(cohortCountsComplete, file.path("export", paste0(databaseId, "CohortCounts.csv")))
+
+```
+
+
+```{r}
 # Copy and censor cohorts to the final table
 ParallelLogger::logInfo("**********************************************************")
 ParallelLogger::logInfo(" ---- Copy cohorts to main table ---- ")
 ParallelLogger::logInfo("**********************************************************")
-copyAndCensorCohorts(connection = connection,
+copyAndCensorCohorts(connectionDetails = connectionDetails,
                      cohortDatabaseSchema = cohortDatabaseSchema,
                      cohortStagingTable = cohortStagingTable,
                      cohortTable = cohortTable,
-                     minCellCount = minCellCount,
-                     targetIds = targetCohortIds,
-                     oracleTempSchema = oracleTempSchema)
+                     minCellCount = minCellCount)
 
+```
+
+
+```{r}
 # Compute the features
 ParallelLogger::logInfo("**********************************************************")
 ParallelLogger::logInfo(" ---- Create feature proportions ---- ")
 ParallelLogger::logInfo("**********************************************************")
-createFeatureProportions(connection = connection,
+createFeatureProportions(connectionDetails = connectionDetails,
                          cohortDatabaseSchema = cohortDatabaseSchema,
                          cohortStagingTable = cohortStagingTable,
                          cohortTable = cohortTable,
-                         featureSummaryTable = featureSummaryTable,
-                         oracleTempSchema = oracleTempSchema)
+                         featureSummaryTable = featureSummaryTable)
+```
 
+
+
+
+```{r}
 ParallelLogger::logInfo("Saving database metadata")
 database <- data.frame(databaseId = databaseId,
                        databaseName = databaseName,
@@ -411,7 +428,7 @@ andrData$cohort <- cohortsForExport
 
 # Extract feature counts -----------------------------------------------------------------------
 ParallelLogger::logInfo("Extract feature counts")
-featureProportions <- exportFeatureProportions(connection = connection,
+featureProportions <- exportFeatureProportions(connectionDetails = connectionDetails,
                                                cohortDatabaseSchema = cohortDatabaseSchema,
                                                cohortTable = cohortTable,
                                                featureSummaryTable = featureSummaryTable)
@@ -468,7 +485,9 @@ if (useBulkCharacterization) {
   if (incremental) {
     recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
   }
-  featureTimeWindows <- getFeatureTimeWindows()
+  featureTimeWindows <- readr::read_csv(here::here("inst", "settings", "featureTimeWindows.csv"), 
+                                          show_col_types = FALSE)
+  
   for (i in 1:nrow(featureTimeWindows)) {
     windowStart <- featureTimeWindows$windowStart[i]
     windowEnd <- featureTimeWindows$windowEnd[i]

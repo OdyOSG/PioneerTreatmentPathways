@@ -22,25 +22,16 @@ getCohortBasedStrata <- function() {
   return(readCsv(resourceFile))
 }
 
-getFeatures <- function() {
-  resourceFile <- file.path(getPathToResource(), "CohortsToCreateOutcome.csv")
-  return(readCsv(resourceFile))
-}
-
-getFeatureTimeWindows <- function() {
-  resourceFile <- file.path(getPathToResource(), "featureTimeWindows.csv")
-  return(readCsv(resourceFile))
-}
 
 getTimeToEventSettings <- function(){
   resourceFile <- file.path(getPathToResource(), "TimeToEvent.csv")
   return(readCsv(resourceFile))
 }
 
-getTargetStrataXref <- function() {
-  resourceFile <- file.path(getPathToResource(), "targetStrataXref.csv")
-  return(readCsv(resourceFile))
-}
+# getTargetStrataXref <- function() {
+#   resourceFile <- file.path(getPathToResource(), "targetStrataXref.csv")
+#   return(readCsv(resourceFile))
+# }
 
 getCohortsToCreate <- function(cohortGroups = getCohortGroups()) {
   packageName <- getThisPackageName()
@@ -73,55 +64,4 @@ getAllStudyCohorts <- function() {
   targetStrataXref <- targetStrataXref[, ..colNames]
   allCohorts <- rbind(cohortsToCreate, targetStrataXref)
   return(allCohorts)
-}
-
-#' @export
-getAllStudyCohortsWithDetails <- function() {
-  cohortsToCreate <- getCohortsToCreate()
-  targetStrataXref <- getTargetStrataXref()
-  allStrata <- getAllStrata()
-  colNames <- c("cohortId", "cohortName", "targetCohortId", "targetCohortName", "strataCohortId", "strataCohortName", "cohortType")
-  # Format - cohortsToCreate
-  cohortsToCreate$targetCohortId <- cohortsToCreate$cohortId
-  cohortsToCreate$targetCohortName <- cohortsToCreate$atlasName
-  cohortsToCreate$strataCohortId <- 0
-  cohortsToCreate$strataCohortName <- "All"
-  cohortsToCreate <- dplyr::rename(cohortsToCreate, cohortName = "name")
-  cohortsToCreate <- cohortsToCreate[, ..colNames]
-  # Format - targetStrataXref
-  stratifiedCohorts <- dplyr::inner_join(targetStrataXref, cohortsToCreate[,c("targetCohortId", "targetCohortName")], by = c("targetId" = "targetCohortId"))
-  stratifiedCohorts <- dplyr::inner_join(stratifiedCohorts, allStrata[,c("cohortId", "name")], by=c("strataId" = "cohortId"))
-  stratifiedCohorts <- dplyr::rename(stratifiedCohorts, targetCohortId="targetId",strataCohortId="strataId",cohortName="name.x",strataCohortName="name.y")
-  stratifiedCohorts <- stratifiedCohorts[,..colNames]
-  # Bind
-  allCohorts <- rbind(cohortsToCreate, stratifiedCohorts)
-  return(allCohorts)
-}
-
-getThisPackageVersion <- function() { 
-  return(packageVersion(getThisPackageName()))
-}
-
-#' @export
-getThisPackageName <- function() {
-  return("PioneerTreatmentPathways")
-}
-
-readCsv <- function(resourceFile) {
-  packageName <- getThisPackageName()
-  pathToCsv <- system.file(resourceFile, package = packageName, mustWork = TRUE)
-  fileContents <- data.table::fread(pathToCsv)
-  return(fileContents)
-}
-
-getPathToResource <- function(useSubset = Sys.getenv("USE_SUBSET")) {
-  path <- "settings"
-  useSubset <- as.logical(useSubset)
-  if (is.na(useSubset)) {
-    useSubset = FALSE
-  }
-  if (useSubset) {
-    path <- file.path(path, "subset/")
-  }
-  return(path)
 }

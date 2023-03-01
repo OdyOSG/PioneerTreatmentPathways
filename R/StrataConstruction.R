@@ -88,36 +88,7 @@ createBulkStrataFromCohorts <- function(connection,
   DatabaseConnector::executeSql(connection, sql)
 }
 
-cohortStrataXrefTempTableSql <- function(connection, targetStrataXref, oracleTempSchema) {
-  sql <- "WITH data AS (
-            @unions
-          ) 
-          SELECT target_id,strata_id,cohort_id,cohort_type
-          INTO #TARGET_STRATA_XREF 
-          FROM data;"
-  unions <- "";
-  for(i in 1:nrow(targetStrataXref)) {
-    stmt <- paste0("SELECT ", targetStrataXref$targetId[i], " target_id, ", 
-                   targetStrataXref$strataId[i], " strata_id, ", 
-                   targetStrataXref$cohortId[i], " cohort_id, ",
-                   "'", targetStrataXref$cohortType[i], "' cohort_type")
-    unions <- paste(unions, stmt, sep="\n")
-    if (i < nrow(targetStrataXref)) {
-      unions <- paste(unions, "UNION ALL", sep="\n")
-    }
-  }
-  
-  sql <- SqlRender::render(sql, unions = unions)
-  sql <- SqlRender::translate(sql = sql, 
-                              targetDialect = attr(connection, "dbms"),
-                              oracleTempSchema = oracleTempSchema)
-  
-  dropSql <- "TRUNCATE TABLE #TARGET_STRATA_XREF;\nDROP TABLE #TARGET_STRATA_XREF;\n\n"
-  dropSql <- SqlRender::translate(sql = dropSql, 
-                                  targetDialect = attr(connection, "dbms"),
-                                  oracleTempSchema = oracleTempSchema)
-  return(list(create = sql, drop = dropSql))
-}
+
 
 serializeBulkStrataName <- function(bulkStrataToCreate) {
   return(paste(bulkStrataToCreate$generationScript, bulkStrataToCreate$name, bulkStrataToCreate$parameterValue, sep = "|"))

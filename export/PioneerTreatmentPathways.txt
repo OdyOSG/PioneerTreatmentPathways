@@ -1,0 +1,1011 @@
+2023-02-24 10:23:10	[Main thread]	FATAL			could not find function ".systemInfo"
+2023-02-24 10:23:10	[Main thread]	FATAL			could not find function ".systemInfo"
+2023-02-24 10:26:26	[Main thread]	INFO			R version: R version 4.2.2 (2022-10-31)  Platform: x86_64-apple-darwin17.0  Locale: en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8  Attached base packages: - stats - graphics - grDevices - utils - datasets - methods - base  Other attached packages:
+2023-02-24 10:26:26	[Main thread]	INFO			R version: R version 4.2.2 (2022-10-31)  Platform: x86_64-apple-darwin17.0  Locale: en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8  Attached base packages: - stats - graphics - grDevices - utils - datasets - methods - base  Other attached packages:
+2023-02-24 10:27:11	[Main thread]	FATAL			object 'useSubset' not found
+2023-02-24 10:27:11	[Main thread]	FATAL			object 'useSubset' not found
+2023-02-24 10:30:21	[Main thread]	INFO			**********************************************************
+2023-02-24 10:30:21	[Main thread]	INFO			**********************************************************
+2023-02-24 10:30:21	[Main thread]	INFO			  ---- Creating target cohorts ---- 
+2023-02-24 10:30:21	[Main thread]	INFO			  ---- Creating target cohorts ---- 
+2023-02-24 10:30:22	[Main thread]	INFO			**********************************************************
+2023-02-24 10:30:22	[Main thread]	INFO			**********************************************************
+2023-02-24 10:30:34	[Main thread]	FATAL			could not find function "disconnect"
+2023-02-24 10:30:34	[Main thread]	FATAL			could not find function "disconnect"
+2023-02-24 10:30:48	[Main thread]	INFO			**********************************************************
+2023-02-24 10:30:48	[Main thread]	INFO			**********************************************************
+2023-02-24 10:30:48	[Main thread]	INFO			  ---- Creating target cohorts ---- 
+2023-02-24 10:30:48	[Main thread]	INFO			  ---- Creating target cohorts ---- 
+2023-02-24 10:30:49	[Main thread]	INFO			**********************************************************
+2023-02-24 10:30:49	[Main thread]	INFO			**********************************************************
+2023-02-24 10:31:06	[Main thread]	FATAL			object 'targetCohortIds' not found
+2023-02-24 10:31:06	[Main thread]	FATAL			object 'targetCohortIds' not found
+2023-02-24 10:35:02	[Main thread]	INFO			**********************************************************
+2023-02-24 10:35:02	[Main thread]	INFO			**********************************************************
+2023-02-24 10:35:02	[Main thread]	INFO			  ---- Creating target cohorts ---- 
+2023-02-24 10:35:02	[Main thread]	INFO			  ---- Creating target cohorts ---- 
+2023-02-24 10:35:02	[Main thread]	INFO			**********************************************************
+2023-02-24 10:35:02	[Main thread]	INFO			**********************************************************
+2023-02-24 10:35:13	[Main thread]	FATAL			object 'incrementalFolder' not found
+2023-02-24 10:35:13	[Main thread]	FATAL			object 'incrementalFolder' not found
+2023-02-24 10:35:24	[Main thread]	INFO			Creating cohort table
+2023-02-24 10:35:24	[Main thread]	INFO			Creating cohort table
+2023-02-24 10:35:24	[Main thread]	FATAL	SqlRender	loadRenderTranslateSql	Cannot find 'CreateCohortTable.sql' in the 'sql' or 'sql/sql_server' folder of the 'PioneerTreatmentPathways' package.
+2023-02-24 10:35:24	[Main thread]	FATAL	SqlRender	loadRenderTranslateSql	Cannot find 'CreateCohortTable.sql' in the 'sql' or 'sql/sql_server' folder of the 'PioneerTreatmentPathways' package.
+2023-02-24 10:51:45	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-02-24 10:51:45	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion_result
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion_result
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion_stats
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion_stats
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_summary_stats
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_summary_stats
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_censor_stats
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_censor_stats
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.77secs
+2023-02-24 10:51:47	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.77secs
+2023-02-24 10:52:48	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-02-24 10:52:48	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion_result
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion_result
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion_stats
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_inclusion_stats
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_summary_stats
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_summary_stats
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_censor_stats
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table adam_black_results.cohort_censor_stats
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.32secs
+2023-02-24 10:52:49	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 1.32secs
+2023-02-24 10:56:25	[Main thread]	INFO			**********************************************************
+2023-02-24 10:56:25	[Main thread]	INFO			**********************************************************
+2023-02-24 10:56:25	[Main thread]	INFO			  ---- Creating cohorts ---- 
+2023-02-24 10:56:25	[Main thread]	INFO			  ---- Creating cohorts ---- 
+2023-02-24 10:56:26	[Main thread]	INFO			**********************************************************
+2023-02-24 10:56:26	[Main thread]	INFO			**********************************************************
+2023-02-24 10:56:28	[Main thread]	FATAL	checkmate	mstop	Assertion on 'colnames(cohortDefinitionSet)' failed: Names must include the elements {'cohortId','cohortName','sql'}, but is missing elements {'cohortName','sql'}.
+2023-02-24 10:56:28	[Main thread]	FATAL	checkmate	mstop	Assertion on 'colnames(cohortDefinitionSet)' failed: Names must include the elements {'cohortId','cohortName','sql'}, but is missing elements {'cohortName','sql'}.
+2023-02-24 11:02:43	[Main thread]	FATAL			unexpected ')' in: " )"
+2023-02-24 11:02:43	[Main thread]	FATAL			unexpected ')' in: " )"
+2023-02-24 11:03:59	[Main thread]	FATAL			object 'cohortDefinitionSet' not found
+2023-02-24 11:03:59	[Main thread]	FATAL			object 'cohortDefinitionSet' not found
+2023-02-24 11:04:09	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-02-24 11:04:09	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-02-24 11:04:09	[Main thread]	INFO	CohortGenerator	FUN	1/44- Generating cohort: 1
+2023-02-24 11:04:09	[Main thread]	INFO	CohortGenerator	FUN	1/44- Generating cohort: 1
+2023-02-24 11:04:42	[Main thread]	INFO	CohortGenerator	FUN	2/44- Generating cohort: 2
+2023-02-24 11:04:42	[Main thread]	INFO	CohortGenerator	FUN	2/44- Generating cohort: 2
+2023-02-24 11:06:02	[Main thread]	INFO	CohortGenerator	FUN	3/44- Generating cohort: 3
+2023-02-24 11:06:02	[Main thread]	INFO	CohortGenerator	FUN	3/44- Generating cohort: 3
+2023-02-24 11:06:35	[Main thread]	INFO	CohortGenerator	FUN	4/44- Generating cohort: 4
+2023-02-24 11:06:35	[Main thread]	INFO	CohortGenerator	FUN	4/44- Generating cohort: 4
+2023-02-24 11:06:57	[Main thread]	INFO	CohortGenerator	FUN	5/44- Generating cohort: 5
+2023-02-24 11:06:57	[Main thread]	INFO	CohortGenerator	FUN	5/44- Generating cohort: 5
+2023-02-24 11:07:18	[Main thread]	INFO	CohortGenerator	FUN	6/44- Generating cohort: 7
+2023-02-24 11:07:18	[Main thread]	INFO	CohortGenerator	FUN	6/44- Generating cohort: 7
+2023-02-24 11:07:27	[Main thread]	INFO	CohortGenerator	FUN	7/44- Generating cohort: 8
+2023-02-24 11:07:27	[Main thread]	INFO	CohortGenerator	FUN	7/44- Generating cohort: 8
+2023-02-24 11:07:37	[Main thread]	INFO	CohortGenerator	FUN	8/44- Generating cohort: 9
+2023-02-24 11:07:37	[Main thread]	INFO	CohortGenerator	FUN	8/44- Generating cohort: 9
+2023-02-24 11:07:47	[Main thread]	INFO	CohortGenerator	FUN	9/44- Generating cohort: 10
+2023-02-24 11:07:47	[Main thread]	INFO	CohortGenerator	FUN	9/44- Generating cohort: 10
+2023-02-24 11:07:49	[Main thread]	INFO	CohortGenerator	FUN	10/44- Generating cohort: 11
+2023-02-24 11:07:49	[Main thread]	INFO	CohortGenerator	FUN	10/44- Generating cohort: 11
+2023-02-24 11:07:51	[Main thread]	INFO	CohortGenerator	FUN	11/44- Generating cohort: 12
+2023-02-24 11:07:51	[Main thread]	INFO	CohortGenerator	FUN	11/44- Generating cohort: 12
+2023-02-24 11:07:53	[Main thread]	INFO	CohortGenerator	FUN	12/44- Generating cohort: 13
+2023-02-24 11:07:53	[Main thread]	INFO	CohortGenerator	FUN	12/44- Generating cohort: 13
+2023-02-24 11:08:00	[Main thread]	INFO	CohortGenerator	FUN	13/44- Generating cohort: 14
+2023-02-24 11:08:00	[Main thread]	INFO	CohortGenerator	FUN	13/44- Generating cohort: 14
+2023-02-24 11:08:06	[Main thread]	INFO	CohortGenerator	FUN	14/44- Generating cohort: 15
+2023-02-24 11:08:06	[Main thread]	INFO	CohortGenerator	FUN	14/44- Generating cohort: 15
+2023-02-24 11:08:08	[Main thread]	INFO	CohortGenerator	FUN	15/44- Generating cohort: 16
+2023-02-24 11:08:08	[Main thread]	INFO	CohortGenerator	FUN	15/44- Generating cohort: 16
+2023-02-24 11:08:28	[Main thread]	INFO	CohortGenerator	FUN	16/44- Generating cohort: 17
+2023-02-24 11:08:28	[Main thread]	INFO	CohortGenerator	FUN	16/44- Generating cohort: 17
+2023-02-24 11:08:32	[Main thread]	INFO	CohortGenerator	FUN	17/44- Generating cohort: 18
+2023-02-24 11:08:32	[Main thread]	INFO	CohortGenerator	FUN	17/44- Generating cohort: 18
+2023-02-24 11:08:35	[Main thread]	INFO	CohortGenerator	FUN	18/44- Generating cohort: 19
+2023-02-24 11:08:35	[Main thread]	INFO	CohortGenerator	FUN	18/44- Generating cohort: 19
+2023-02-24 11:08:37	[Main thread]	INFO	CohortGenerator	FUN	19/44- Generating cohort: 20
+2023-02-24 11:08:37	[Main thread]	INFO	CohortGenerator	FUN	19/44- Generating cohort: 20
+2023-02-24 11:08:39	[Main thread]	INFO	CohortGenerator	FUN	20/44- Generating cohort: 21
+2023-02-24 11:08:39	[Main thread]	INFO	CohortGenerator	FUN	20/44- Generating cohort: 21
+2023-02-24 11:08:40	[Main thread]	INFO	CohortGenerator	FUN	21/44- Generating cohort: 22
+2023-02-24 11:08:40	[Main thread]	INFO	CohortGenerator	FUN	21/44- Generating cohort: 22
+2023-02-24 11:08:42	[Main thread]	INFO	CohortGenerator	FUN	22/44- Generating cohort: 23
+2023-02-24 11:08:42	[Main thread]	INFO	CohortGenerator	FUN	22/44- Generating cohort: 23
+2023-02-24 11:08:43	[Main thread]	INFO	CohortGenerator	FUN	23/44- Generating cohort: 25
+2023-02-24 11:08:43	[Main thread]	INFO	CohortGenerator	FUN	23/44- Generating cohort: 25
+2023-02-24 11:08:49	[Main thread]	INFO	CohortGenerator	FUN	24/44- Generating cohort: 26
+2023-02-24 11:08:49	[Main thread]	INFO	CohortGenerator	FUN	24/44- Generating cohort: 26
+2023-02-24 11:08:57	[Main thread]	INFO	CohortGenerator	FUN	25/44- Generating cohort: 27
+2023-02-24 11:08:57	[Main thread]	INFO	CohortGenerator	FUN	25/44- Generating cohort: 27
+2023-02-24 11:09:09	[Main thread]	INFO	CohortGenerator	FUN	26/44- Generating cohort: 28
+2023-02-24 11:09:09	[Main thread]	INFO	CohortGenerator	FUN	26/44- Generating cohort: 28
+2023-02-24 11:09:10	[Main thread]	INFO	CohortGenerator	FUN	27/44- Generating cohort: 36
+2023-02-24 11:09:10	[Main thread]	INFO	CohortGenerator	FUN	27/44- Generating cohort: 36
+2023-02-24 11:09:30	[Main thread]	INFO	CohortGenerator	FUN	28/44- Generating cohort: 37
+2023-02-24 11:09:30	[Main thread]	INFO	CohortGenerator	FUN	28/44- Generating cohort: 37
+2023-02-24 11:10:13	[Main thread]	INFO	CohortGenerator	FUN	29/44- Generating cohort: 38
+2023-02-24 11:10:13	[Main thread]	INFO	CohortGenerator	FUN	29/44- Generating cohort: 38
+2023-02-24 11:11:17	[Main thread]	INFO	CohortGenerator	FUN	30/44- Generating cohort: 40
+2023-02-24 11:11:17	[Main thread]	INFO	CohortGenerator	FUN	30/44- Generating cohort: 40
+2023-02-24 11:11:45	[Main thread]	INFO	CohortGenerator	FUN	31/44- Generating cohort: 42
+2023-02-24 11:11:45	[Main thread]	INFO	CohortGenerator	FUN	31/44- Generating cohort: 42
+2023-02-24 11:11:47	[Main thread]	INFO	CohortGenerator	FUN	32/44- Generating cohort: 43
+2023-02-24 11:11:47	[Main thread]	INFO	CohortGenerator	FUN	32/44- Generating cohort: 43
+2023-02-24 11:11:49	[Main thread]	INFO	CohortGenerator	FUN	33/44- Generating cohort: 44
+2023-02-24 11:11:49	[Main thread]	INFO	CohortGenerator	FUN	33/44- Generating cohort: 44
+2023-02-24 11:11:52	[Main thread]	INFO	CohortGenerator	FUN	34/44- Generating cohort: 45
+2023-02-24 11:11:52	[Main thread]	INFO	CohortGenerator	FUN	34/44- Generating cohort: 45
+2023-02-24 11:11:54	[Main thread]	INFO	CohortGenerator	FUN	35/44- Generating cohort: 46
+2023-02-24 11:11:54	[Main thread]	INFO	CohortGenerator	FUN	35/44- Generating cohort: 46
+2023-02-24 11:11:56	[Main thread]	INFO	CohortGenerator	FUN	36/44- Generating cohort: 47
+2023-02-24 11:11:56	[Main thread]	INFO	CohortGenerator	FUN	36/44- Generating cohort: 47
+2023-02-24 11:12:09	[Main thread]	INFO	CohortGenerator	FUN	37/44- Generating cohort: 48
+2023-02-24 11:12:09	[Main thread]	INFO	CohortGenerator	FUN	37/44- Generating cohort: 48
+2023-02-24 11:12:16	[Main thread]	INFO	CohortGenerator	FUN	38/44- Generating cohort: 49
+2023-02-24 11:12:16	[Main thread]	INFO	CohortGenerator	FUN	38/44- Generating cohort: 49
+2023-02-24 11:12:23	[Main thread]	INFO	CohortGenerator	FUN	39/44- Generating cohort: 50
+2023-02-24 11:12:23	[Main thread]	INFO	CohortGenerator	FUN	39/44- Generating cohort: 50
+2023-02-24 11:12:31	[Main thread]	INFO	CohortGenerator	FUN	40/44- Generating cohort: 51
+2023-02-24 11:12:31	[Main thread]	INFO	CohortGenerator	FUN	40/44- Generating cohort: 51
+2023-02-24 11:12:33	[Main thread]	INFO	CohortGenerator	FUN	41/44- Generating cohort: 52
+2023-02-24 11:12:33	[Main thread]	INFO	CohortGenerator	FUN	41/44- Generating cohort: 52
+2023-02-24 11:12:35	[Main thread]	INFO	CohortGenerator	FUN	42/44- Generating cohort: 53
+2023-02-24 11:12:35	[Main thread]	INFO	CohortGenerator	FUN	42/44- Generating cohort: 53
+2023-02-24 11:12:37	[Main thread]	INFO	CohortGenerator	FUN	43/44- Generating cohort: 58
+2023-02-24 11:12:37	[Main thread]	INFO	CohortGenerator	FUN	43/44- Generating cohort: 58
+2023-02-24 11:12:39	[Main thread]	INFO	CohortGenerator	FUN	44/44- Generating cohort: 59
+2023-02-24 11:12:39	[Main thread]	INFO	CohortGenerator	FUN	44/44- Generating cohort: 59
+2023-02-24 11:17:18	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-02-24 11:17:18	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-02-24 11:17:18	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-02-24 11:18:54	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.558 secs
+2023-02-24 11:18:54	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.558 secs
+2023-02-24 11:21:34	[Main thread]	FATAL	dplyr	same_src.data.frame	object 'cohort' not found
+2023-02-24 11:21:34	[Main thread]	FATAL	dplyr	same_src.data.frame	object 'cohort' not found
+2023-02-24 11:22:02	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.564 secs
+2023-02-24 11:22:02	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.564 secs
+2023-02-24 11:31:41	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.555 secs
+2023-02-24 11:31:41	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.555 secs
+2023-02-24 11:33:22	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2023-02-24 11:33:22	[Main thread]	INFO	CohortGenerator	getCohortDefinitionSet	Loading cohortDefinitionSet
+2023-02-24 11:33:22	[Main thread]	FATAL	vroom	check_path	'' does not exist in current working directory ('/Users/adamblack/projects/PioneerTreatmentPathways').
+2023-02-24 11:33:22	[Main thread]	FATAL	vroom	check_path	'' does not exist in current working directory ('/Users/adamblack/projects/PioneerTreatmentPathways').
+2023-02-24 12:20:27	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-02-24 12:20:27	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-02-24 12:20:27	[Main thread]	INFO	CohortGenerator	FUN	1/44- Generating cohort: 1
+2023-02-24 12:20:27	[Main thread]	INFO	CohortGenerator	FUN	1/44- Generating cohort: 1
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-02-24 12:21:11	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-02-24 12:21:12	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-02-24 12:21:13	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-02-24 12:21:17	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.626 secs
+2023-02-24 12:21:17	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.626 secs
+2023-02-24 13:52:11	[Main thread]	FATAL			no file found
+2023-02-24 13:52:11	[Main thread]	FATAL			no file found
+2023-02-24 13:54:11	[Main thread]	INFO	vroom	cli_block	[1mRows: [22m[34m1620[39m [1mColumns: [22m[34m5[39m
+2023-02-24 13:54:11	[Main thread]	INFO	vroom	cli_block	[1mRows: [22m[34m1620[39m [1mColumns: [22m[34m5[39m
+2023-02-24 13:54:11	[Main thread]	INFO	vroom	cli_block	[36m──[39m [1mColumn specification[22m [36m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m [1mDelimiter:[22m "," [31mchr[39m (2): cohortType, name [32mdbl[39m (3): targetId, strataId, cohortId
+2023-02-24 13:54:11	[Main thread]	INFO	vroom	cli_block	[36m──[39m [1mColumn specification[22m [36m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m [1mDelimiter:[22m "," [31mchr[39m (2): cohortType, name [32mdbl[39m (3): targetId, strataId, cohortId
+2023-02-24 13:54:11	[Main thread]	INFO	vroom	cli_block	 [36mℹ[39m Use `spec()` to retrieve the full column specification for this data. [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
+2023-02-24 13:54:11	[Main thread]	INFO	vroom	cli_block	 [36mℹ[39m Use `spec()` to retrieve the full column specification for this data. [36mℹ[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
+2023-02-24 14:04:07	[Main thread]	FATAL	vroom	check_path	'inst/settings/CohortGroups.csv' does not exist in current working directory ('/Users/adamblack/projects/PioneerTreatmentPathways').
+2023-02-24 14:04:07	[Main thread]	FATAL	vroom	check_path	'inst/settings/CohortGroups.csv' does not exist in current working directory ('/Users/adamblack/projects/PioneerTreatmentPathways').
+2023-03-01 15:41:51	[Main thread]	FATAL			could not find function ".systemInfo"
+2023-03-01 15:41:51	[Main thread]	FATAL			could not find function ".systemInfo"
+2023-03-01 15:42:04	[Main thread]	FATAL	cli	cli_abort	[38;5;255m[36mℹ[38;5;255m In index: 2.[39m [1mCaused by error in `.f()`:[22m [33m![39m R/CohortConstruction.R:148:57: unexpected '=' 147:    148:   sql <- SqlRender::translate(sql, targetDialect = dbms =                                                              ^
+2023-03-01 15:42:04	[Main thread]	FATAL	cli	cli_abort	[38;5;255m[36mℹ[38;5;255m In index: 2.[39m [1mCaused by error in `.f()`:[22m [33m![39m R/CohortConstruction.R:148:57: unexpected '=' 147:    148:   sql <- SqlRender::translate(sql, targetDialect = dbms =                                                              ^
+2023-03-01 15:42:59	[Main thread]	INFO			R version: R version 4.2.2 (2022-10-31)  Platform: x86_64-apple-darwin17.0  Locale: en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8  Attached base packages: - stats - graphics - grDevices - utils - datasets - methods - base  Other attached packages: - dplyr (1.1.0) - DatabaseConnector (6.0.0) - testthat (3.1.6)
+2023-03-01 15:42:59	[Main thread]	INFO			R version: R version 4.2.2 (2022-10-31)  Platform: x86_64-apple-darwin17.0  Locale: en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8  Attached base packages: - stats - graphics - grDevices - utils - datasets - methods - base  Other attached packages: - dplyr (1.1.0) - DatabaseConnector (6.0.0) - testthat (3.1.6)
+2023-03-01 15:43:19	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-03-01 15:43:19	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_inclusion
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_inclusion
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_inclusion_result
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_inclusion_result
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_inclusion_stats
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_inclusion_stats
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_summary_stats
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_summary_stats
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_censor_stats
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_censor_stats
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.29secs
+2023-03-01 15:43:20	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.29secs
+2023-03-01 15:44:42	[Main thread]	INFO			**********************************************************
+2023-03-01 15:44:42	[Main thread]	INFO			**********************************************************
+2023-03-01 15:44:42	[Main thread]	INFO			  ---- Creating cohorts ---- 
+2023-03-01 15:44:42	[Main thread]	INFO			  ---- Creating cohorts ---- 
+2023-03-01 15:44:42	[Main thread]	INFO			**********************************************************
+2023-03-01 15:44:42	[Main thread]	INFO			**********************************************************
+2023-03-01 15:44:42	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 15:44:42	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-03-01 15:44:42	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-03-01 15:44:43	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.166 secs
+2023-03-01 15:44:43	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.166 secs
+2023-03-01 15:45:00	[Main thread]	INFO			**********************************************************
+2023-03-01 15:45:00	[Main thread]	INFO			**********************************************************
+2023-03-01 15:45:00	[Main thread]	INFO			 ---- Copy cohorts to main table ---- 
+2023-03-01 15:45:00	[Main thread]	INFO			 ---- Copy cohorts to main table ---- 
+2023-03-01 15:45:00	[Main thread]	INFO			**********************************************************
+2023-03-01 15:45:00	[Main thread]	INFO			**********************************************************
+2023-03-01 15:45:00	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 15:45:00	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 15:45:00	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: relation "scratch.cohort_stg" does not exist   Position: 113 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 15:45:00	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: relation "scratch.cohort_stg" does not exist   Position: 113 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 15:48:14	[Main thread]	FATAL			object 'targetIds' not found
+2023-03-01 15:48:14	[Main thread]	FATAL			object 'targetIds' not found
+2023-03-01 15:49:07	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2023-03-01 15:49:07	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2023-03-01 15:49:33	[Main thread]	WARN	SqlRender	render	Parameter 'target_strata_xref_table_create' not found in SQL
+2023-03-01 15:49:33	[Main thread]	WARN	SqlRender	render	Parameter 'target_strata_xref_table_create' not found in SQL
+2023-03-01 15:53:16	[Main thread]	FATAL			'\w' is an unrecognized escape in character string starting ""@\w"
+2023-03-01 15:53:16	[Main thread]	FATAL			'\w' is an unrecognized escape in character string starting ""@\w"
+2023-03-01 15:56:40	[Main thread]	FATAL			'\w' is an unrecognized escape in character string starting ""@\w"
+2023-03-01 15:56:40	[Main thread]	FATAL			'\w' is an unrecognized escape in character string starting ""@\w"
+2023-03-01 15:56:44	[Main thread]	FATAL			length(stringr::str_extract_all(sql, "@\\w+")[[1]] == 0) is not TRUE
+2023-03-01 15:56:44	[Main thread]	FATAL			length(stringr::str_extract_all(sql, "@\\w+")[[1]] == 0) is not TRUE
+2023-03-01 15:57:32	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 15:57:32	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 15:57:36	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: column "cohort_type" does not exist   Hint: Perhaps you meant to reference the column "data.chort_type".   Position: 39272 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 15:57:36	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: column "cohort_type" does not exist   Hint: Perhaps you meant to reference the column "data.chort_type".   Position: 39272 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 15:58:32	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 15:58:32	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 15:58:33	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: relation "scratch.cohort_stg" does not exist   Position: 113 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 15:58:33	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: relation "scratch.cohort_stg" does not exist   Position: 113 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 16:36:20	[Main thread]	INFO			R version: R version 4.2.2 (2022-10-31)  Platform: x86_64-apple-darwin17.0  Locale: en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8  Attached base packages: - stats - graphics - grDevices - utils - datasets - methods - base  Other attached packages: - dplyr (1.1.0) - DatabaseConnector (6.0.0) - testthat (3.1.6)
+2023-03-01 16:36:20	[Main thread]	INFO			R version: R version 4.2.2 (2022-10-31)  Platform: x86_64-apple-darwin17.0  Locale: en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8  Attached base packages: - stats - graphics - grDevices - utils - datasets - methods - base  Other attached packages: - dplyr (1.1.0) - DatabaseConnector (6.0.0) - testthat (3.1.6)
+2023-03-01 16:36:20	[Main thread]	INFO			R version: R version 4.2.2 (2022-10-31)  Platform: x86_64-apple-darwin17.0  Locale: en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8  Attached base packages: - stats - graphics - grDevices - utils - datasets - methods - base  Other attached packages: - dplyr (1.1.0) - DatabaseConnector (6.0.0) - testthat (3.1.6)
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion_result
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion_result
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion_result
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_inclusion_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_summary_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_summary_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_summary_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_censor_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_censor_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	logCreateTableMessage	- Created table scratch.cohort_stg_censor_stats
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.1secs
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.1secs
+2023-03-01 16:36:26	[Main thread]	INFO	CohortGenerator	createCohortTables	Creating cohort tables took 0.1secs
+2023-03-01 16:36:30	[Main thread]	INFO			**********************************************************
+2023-03-01 16:36:30	[Main thread]	INFO			**********************************************************
+2023-03-01 16:36:30	[Main thread]	INFO			**********************************************************
+2023-03-01 16:36:30	[Main thread]	INFO			  ---- Creating cohorts ---- 
+2023-03-01 16:36:30	[Main thread]	INFO			  ---- Creating cohorts ---- 
+2023-03-01 16:36:30	[Main thread]	INFO			  ---- Creating cohorts ---- 
+2023-03-01 16:36:30	[Main thread]	INFO			**********************************************************
+2023-03-01 16:36:30	[Main thread]	INFO			**********************************************************
+2023-03-01 16:36:30	[Main thread]	INFO			**********************************************************
+2023-03-01 16:36:30	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:36:30	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:36:30	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-03-01 16:36:30	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.11 secs
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.11 secs
+2023-03-01 16:36:31	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.11 secs
+2023-03-01 16:38:09	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:38:09	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:38:09	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '1' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '2' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '3' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '4' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '5' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '7' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '8' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '9' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '10' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '11' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '12' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '13' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-03-01 16:38:09	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '14' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '15' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '16' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '17' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '18' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '19' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '20' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '21' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '22' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '23' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '25' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '26' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '27' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '28' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '36' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '37' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '38' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '40' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '42' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '43' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '44' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '45' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '46' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '47' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '48' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '49' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '50' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '51' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '52' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '53' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '58' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-03-01 16:38:10	[Main thread]	INFO	CohortGenerator	isTaskRequired	Skipping cohortId = '59' because it is unchanged from earlier run
+2023-03-01 16:38:14	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.107 secs
+2023-03-01 16:38:14	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.107 secs
+2023-03-01 16:38:14	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.107 secs
+2023-03-01 16:38:38	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:38:38	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:38:38	[Main thread]	TRACE	CohortGenerator	generateCohortSet	Initiating cluster consisting only of main thread
+2023-03-01 16:38:38	[Main thread]	INFO	CohortGenerator	FUN	1/44- Generating cohort: 1
+2023-03-01 16:38:38	[Main thread]	INFO	CohortGenerator	FUN	1/44- Generating cohort: 1
+2023-03-01 16:38:38	[Main thread]	INFO	CohortGenerator	FUN	1/44- Generating cohort: 1
+2023-03-01 16:38:44	[Main thread]	INFO	CohortGenerator	FUN	2/44- Generating cohort: 2
+2023-03-01 16:38:44	[Main thread]	INFO	CohortGenerator	FUN	2/44- Generating cohort: 2
+2023-03-01 16:38:44	[Main thread]	INFO	CohortGenerator	FUN	2/44- Generating cohort: 2
+2023-03-01 16:38:49	[Main thread]	INFO	CohortGenerator	FUN	3/44- Generating cohort: 3
+2023-03-01 16:38:49	[Main thread]	INFO	CohortGenerator	FUN	3/44- Generating cohort: 3
+2023-03-01 16:38:49	[Main thread]	INFO	CohortGenerator	FUN	3/44- Generating cohort: 3
+2023-03-01 16:38:50	[Main thread]	INFO	CohortGenerator	FUN	4/44- Generating cohort: 4
+2023-03-01 16:38:50	[Main thread]	INFO	CohortGenerator	FUN	4/44- Generating cohort: 4
+2023-03-01 16:38:50	[Main thread]	INFO	CohortGenerator	FUN	4/44- Generating cohort: 4
+2023-03-01 16:38:51	[Main thread]	INFO	CohortGenerator	FUN	5/44- Generating cohort: 5
+2023-03-01 16:38:51	[Main thread]	INFO	CohortGenerator	FUN	5/44- Generating cohort: 5
+2023-03-01 16:38:51	[Main thread]	INFO	CohortGenerator	FUN	5/44- Generating cohort: 5
+2023-03-01 16:38:52	[Main thread]	INFO	CohortGenerator	FUN	6/44- Generating cohort: 7
+2023-03-01 16:38:52	[Main thread]	INFO	CohortGenerator	FUN	6/44- Generating cohort: 7
+2023-03-01 16:38:52	[Main thread]	INFO	CohortGenerator	FUN	6/44- Generating cohort: 7
+2023-03-01 16:38:54	[Main thread]	INFO	CohortGenerator	FUN	7/44- Generating cohort: 8
+2023-03-01 16:38:54	[Main thread]	INFO	CohortGenerator	FUN	7/44- Generating cohort: 8
+2023-03-01 16:38:54	[Main thread]	INFO	CohortGenerator	FUN	7/44- Generating cohort: 8
+2023-03-01 16:38:55	[Main thread]	INFO	CohortGenerator	FUN	8/44- Generating cohort: 9
+2023-03-01 16:38:55	[Main thread]	INFO	CohortGenerator	FUN	8/44- Generating cohort: 9
+2023-03-01 16:38:55	[Main thread]	INFO	CohortGenerator	FUN	8/44- Generating cohort: 9
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	9/44- Generating cohort: 10
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	9/44- Generating cohort: 10
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	9/44- Generating cohort: 10
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	10/44- Generating cohort: 11
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	10/44- Generating cohort: 11
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	10/44- Generating cohort: 11
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	11/44- Generating cohort: 12
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	11/44- Generating cohort: 12
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	11/44- Generating cohort: 12
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	12/44- Generating cohort: 13
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	12/44- Generating cohort: 13
+2023-03-01 16:38:57	[Main thread]	INFO	CohortGenerator	FUN	12/44- Generating cohort: 13
+2023-03-01 16:38:59	[Main thread]	INFO	CohortGenerator	FUN	13/44- Generating cohort: 14
+2023-03-01 16:38:59	[Main thread]	INFO	CohortGenerator	FUN	13/44- Generating cohort: 14
+2023-03-01 16:38:59	[Main thread]	INFO	CohortGenerator	FUN	13/44- Generating cohort: 14
+2023-03-01 16:39:00	[Main thread]	INFO	CohortGenerator	FUN	14/44- Generating cohort: 15
+2023-03-01 16:39:00	[Main thread]	INFO	CohortGenerator	FUN	14/44- Generating cohort: 15
+2023-03-01 16:39:00	[Main thread]	INFO	CohortGenerator	FUN	14/44- Generating cohort: 15
+2023-03-01 16:39:01	[Main thread]	INFO	CohortGenerator	FUN	15/44- Generating cohort: 16
+2023-03-01 16:39:01	[Main thread]	INFO	CohortGenerator	FUN	15/44- Generating cohort: 16
+2023-03-01 16:39:01	[Main thread]	INFO	CohortGenerator	FUN	15/44- Generating cohort: 16
+2023-03-01 16:39:05	[Main thread]	INFO	CohortGenerator	FUN	16/44- Generating cohort: 17
+2023-03-01 16:39:05	[Main thread]	INFO	CohortGenerator	FUN	16/44- Generating cohort: 17
+2023-03-01 16:39:05	[Main thread]	INFO	CohortGenerator	FUN	16/44- Generating cohort: 17
+2023-03-01 16:39:05	[Main thread]	INFO	CohortGenerator	FUN	17/44- Generating cohort: 18
+2023-03-01 16:39:05	[Main thread]	INFO	CohortGenerator	FUN	17/44- Generating cohort: 18
+2023-03-01 16:39:05	[Main thread]	INFO	CohortGenerator	FUN	17/44- Generating cohort: 18
+2023-03-01 16:39:06	[Main thread]	INFO	CohortGenerator	FUN	18/44- Generating cohort: 19
+2023-03-01 16:39:06	[Main thread]	INFO	CohortGenerator	FUN	18/44- Generating cohort: 19
+2023-03-01 16:39:06	[Main thread]	INFO	CohortGenerator	FUN	18/44- Generating cohort: 19
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	19/44- Generating cohort: 20
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	19/44- Generating cohort: 20
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	19/44- Generating cohort: 20
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	20/44- Generating cohort: 21
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	20/44- Generating cohort: 21
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	20/44- Generating cohort: 21
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	21/44- Generating cohort: 22
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	21/44- Generating cohort: 22
+2023-03-01 16:39:07	[Main thread]	INFO	CohortGenerator	FUN	21/44- Generating cohort: 22
+2023-03-01 16:39:08	[Main thread]	INFO	CohortGenerator	FUN	22/44- Generating cohort: 23
+2023-03-01 16:39:08	[Main thread]	INFO	CohortGenerator	FUN	22/44- Generating cohort: 23
+2023-03-01 16:39:08	[Main thread]	INFO	CohortGenerator	FUN	22/44- Generating cohort: 23
+2023-03-01 16:39:08	[Main thread]	INFO	CohortGenerator	FUN	23/44- Generating cohort: 25
+2023-03-01 16:39:08	[Main thread]	INFO	CohortGenerator	FUN	23/44- Generating cohort: 25
+2023-03-01 16:39:08	[Main thread]	INFO	CohortGenerator	FUN	23/44- Generating cohort: 25
+2023-03-01 16:39:09	[Main thread]	INFO	CohortGenerator	FUN	24/44- Generating cohort: 26
+2023-03-01 16:39:09	[Main thread]	INFO	CohortGenerator	FUN	24/44- Generating cohort: 26
+2023-03-01 16:39:09	[Main thread]	INFO	CohortGenerator	FUN	24/44- Generating cohort: 26
+2023-03-01 16:39:10	[Main thread]	INFO	CohortGenerator	FUN	25/44- Generating cohort: 27
+2023-03-01 16:39:10	[Main thread]	INFO	CohortGenerator	FUN	25/44- Generating cohort: 27
+2023-03-01 16:39:10	[Main thread]	INFO	CohortGenerator	FUN	25/44- Generating cohort: 27
+2023-03-01 16:39:11	[Main thread]	INFO	CohortGenerator	FUN	26/44- Generating cohort: 28
+2023-03-01 16:39:11	[Main thread]	INFO	CohortGenerator	FUN	26/44- Generating cohort: 28
+2023-03-01 16:39:11	[Main thread]	INFO	CohortGenerator	FUN	26/44- Generating cohort: 28
+2023-03-01 16:39:11	[Main thread]	INFO	CohortGenerator	FUN	27/44- Generating cohort: 36
+2023-03-01 16:39:11	[Main thread]	INFO	CohortGenerator	FUN	27/44- Generating cohort: 36
+2023-03-01 16:39:11	[Main thread]	INFO	CohortGenerator	FUN	27/44- Generating cohort: 36
+2023-03-01 16:39:13	[Main thread]	INFO	CohortGenerator	FUN	28/44- Generating cohort: 37
+2023-03-01 16:39:13	[Main thread]	INFO	CohortGenerator	FUN	28/44- Generating cohort: 37
+2023-03-01 16:39:13	[Main thread]	INFO	CohortGenerator	FUN	28/44- Generating cohort: 37
+2023-03-01 16:39:14	[Main thread]	INFO	CohortGenerator	FUN	29/44- Generating cohort: 38
+2023-03-01 16:39:14	[Main thread]	INFO	CohortGenerator	FUN	29/44- Generating cohort: 38
+2023-03-01 16:39:14	[Main thread]	INFO	CohortGenerator	FUN	29/44- Generating cohort: 38
+2023-03-01 16:39:20	[Main thread]	INFO	CohortGenerator	FUN	30/44- Generating cohort: 40
+2023-03-01 16:39:20	[Main thread]	INFO	CohortGenerator	FUN	30/44- Generating cohort: 40
+2023-03-01 16:39:20	[Main thread]	INFO	CohortGenerator	FUN	30/44- Generating cohort: 40
+2023-03-01 16:39:21	[Main thread]	INFO	CohortGenerator	FUN	31/44- Generating cohort: 42
+2023-03-01 16:39:21	[Main thread]	INFO	CohortGenerator	FUN	31/44- Generating cohort: 42
+2023-03-01 16:39:21	[Main thread]	INFO	CohortGenerator	FUN	31/44- Generating cohort: 42
+2023-03-01 16:39:22	[Main thread]	INFO	CohortGenerator	FUN	32/44- Generating cohort: 43
+2023-03-01 16:39:22	[Main thread]	INFO	CohortGenerator	FUN	32/44- Generating cohort: 43
+2023-03-01 16:39:22	[Main thread]	INFO	CohortGenerator	FUN	32/44- Generating cohort: 43
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	33/44- Generating cohort: 44
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	33/44- Generating cohort: 44
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	33/44- Generating cohort: 44
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	34/44- Generating cohort: 45
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	34/44- Generating cohort: 45
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	34/44- Generating cohort: 45
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	35/44- Generating cohort: 46
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	35/44- Generating cohort: 46
+2023-03-01 16:39:23	[Main thread]	INFO	CohortGenerator	FUN	35/44- Generating cohort: 46
+2023-03-01 16:39:24	[Main thread]	INFO	CohortGenerator	FUN	36/44- Generating cohort: 47
+2023-03-01 16:39:24	[Main thread]	INFO	CohortGenerator	FUN	36/44- Generating cohort: 47
+2023-03-01 16:39:24	[Main thread]	INFO	CohortGenerator	FUN	36/44- Generating cohort: 47
+2023-03-01 16:39:26	[Main thread]	INFO	CohortGenerator	FUN	37/44- Generating cohort: 48
+2023-03-01 16:39:26	[Main thread]	INFO	CohortGenerator	FUN	37/44- Generating cohort: 48
+2023-03-01 16:39:26	[Main thread]	INFO	CohortGenerator	FUN	37/44- Generating cohort: 48
+2023-03-01 16:39:28	[Main thread]	INFO	CohortGenerator	FUN	38/44- Generating cohort: 49
+2023-03-01 16:39:28	[Main thread]	INFO	CohortGenerator	FUN	38/44- Generating cohort: 49
+2023-03-01 16:39:28	[Main thread]	INFO	CohortGenerator	FUN	38/44- Generating cohort: 49
+2023-03-01 16:39:31	[Main thread]	INFO	CohortGenerator	FUN	39/44- Generating cohort: 50
+2023-03-01 16:39:31	[Main thread]	INFO	CohortGenerator	FUN	39/44- Generating cohort: 50
+2023-03-01 16:39:31	[Main thread]	INFO	CohortGenerator	FUN	39/44- Generating cohort: 50
+2023-03-01 16:39:33	[Main thread]	INFO	CohortGenerator	FUN	40/44- Generating cohort: 51
+2023-03-01 16:39:33	[Main thread]	INFO	CohortGenerator	FUN	40/44- Generating cohort: 51
+2023-03-01 16:39:33	[Main thread]	INFO	CohortGenerator	FUN	40/44- Generating cohort: 51
+2023-03-01 16:39:33	[Main thread]	INFO	CohortGenerator	FUN	41/44- Generating cohort: 52
+2023-03-01 16:39:33	[Main thread]	INFO	CohortGenerator	FUN	41/44- Generating cohort: 52
+2023-03-01 16:39:33	[Main thread]	INFO	CohortGenerator	FUN	41/44- Generating cohort: 52
+2023-03-01 16:39:34	[Main thread]	INFO	CohortGenerator	FUN	42/44- Generating cohort: 53
+2023-03-01 16:39:34	[Main thread]	INFO	CohortGenerator	FUN	42/44- Generating cohort: 53
+2023-03-01 16:39:34	[Main thread]	INFO	CohortGenerator	FUN	42/44- Generating cohort: 53
+2023-03-01 16:39:34	[Main thread]	INFO	CohortGenerator	FUN	43/44- Generating cohort: 58
+2023-03-01 16:39:34	[Main thread]	INFO	CohortGenerator	FUN	43/44- Generating cohort: 58
+2023-03-01 16:39:34	[Main thread]	INFO	CohortGenerator	FUN	43/44- Generating cohort: 58
+2023-03-01 16:39:35	[Main thread]	INFO	CohortGenerator	FUN	44/44- Generating cohort: 59
+2023-03-01 16:39:35	[Main thread]	INFO	CohortGenerator	FUN	44/44- Generating cohort: 59
+2023-03-01 16:39:35	[Main thread]	INFO	CohortGenerator	FUN	44/44- Generating cohort: 59
+2023-03-01 16:39:37	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.192 secs
+2023-03-01 16:39:37	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.192 secs
+2023-03-01 16:39:37	[Main thread]	INFO	CohortGenerator	getCohortCounts	Counting cohorts took 0.192 secs
+2023-03-01 16:39:42	[Main thread]	INFO			**********************************************************
+2023-03-01 16:39:42	[Main thread]	INFO			**********************************************************
+2023-03-01 16:39:42	[Main thread]	INFO			**********************************************************
+2023-03-01 16:39:43	[Main thread]	INFO			 ---- Copy cohorts to main table ---- 
+2023-03-01 16:39:43	[Main thread]	INFO			 ---- Copy cohorts to main table ---- 
+2023-03-01 16:39:43	[Main thread]	INFO			 ---- Copy cohorts to main table ---- 
+2023-03-01 16:39:44	[Main thread]	INFO			**********************************************************
+2023-03-01 16:39:44	[Main thread]	INFO			**********************************************************
+2023-03-01 16:39:44	[Main thread]	INFO			**********************************************************
+2023-03-01 16:39:45	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:39:45	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:39:45	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:39:46	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: relation "target_strata_xref" does not exist   Position: 402 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 16:39:46	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: relation "target_strata_xref" does not exist   Position: 402 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 16:39:46	[Main thread]	FATAL	DatabaseConnector	.createErrorReport	Error executing SQL: org.postgresql.util.PSQLException: ERROR: relation "target_strata_xref" does not exist   Position: 402 An error report has been created at  /Users/adamblack/projects/PioneerTreatmentPathways/errorReportSql.txt
+2023-03-01 16:40:36	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2023-03-01 16:40:36	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2023-03-01 16:40:36	[Main thread]	INFO	DatabaseConnector	connectPostgreSql	Connecting using PostgreSQL driver
+2023-03-01 16:40:44	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:40:44	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:40:44	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:40:45	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.149 secs
+2023-03-01 16:40:45	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.149 secs
+2023-03-01 16:40:45	[Main thread]	INFO	DatabaseConnector	executeSql	Executing SQL took 0.149 secs
+2023-03-01 16:41:05	[Main thread]	INFO			**********************************************************
+2023-03-01 16:41:05	[Main thread]	INFO			**********************************************************
+2023-03-01 16:41:05	[Main thread]	INFO			**********************************************************
+2023-03-01 16:41:05	[Main thread]	INFO			 ---- Copy cohorts to main table ---- 
+2023-03-01 16:41:05	[Main thread]	INFO			 ---- Copy cohorts to main table ---- 
+2023-03-01 16:41:05	[Main thread]	INFO			 ---- Copy cohorts to main table ---- 
+2023-03-01 16:41:05	[Main thread]	INFO			**********************************************************
+2023-03-01 16:41:05	[Main thread]	INFO			**********************************************************
+2023-03-01 16:41:05	[Main thread]	INFO			**********************************************************
+2023-03-01 16:41:05	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:41:05	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:41:05	[Main thread]	INFO			Copy and censor cohorts to main analysis table
+2023-03-01 16:59:00	[Main thread]	FATAL	vroom	check_path	'/Users/adamblack/projects/PioneerTreatmentPathways/inst/settings/CohortsToCreateStrata.csv' does not exist.
+2023-03-01 16:59:00	[Main thread]	FATAL	vroom	check_path	'/Users/adamblack/projects/PioneerTreatmentPathways/inst/settings/CohortsToCreateStrata.csv' does not exist.
+2023-03-01 16:59:00	[Main thread]	FATAL	vroom	check_path	'/Users/adamblack/projects/PioneerTreatmentPathways/inst/settings/CohortsToCreateStrata.csv' does not exist.

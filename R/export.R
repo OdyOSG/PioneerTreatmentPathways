@@ -46,7 +46,7 @@ formatPattern <- function(raw){
 
 zipResults <- function(exportFolder, databaseId) {
   date <- format(Sys.time(), "%Y%m%dT%H%M%S")
-  zipName <- file.path(exportFolder, paste0("Results_v", getThisPackageVersion(), "_", databaseId, "_", date, ".zip")) 
+  zipName <- file.path(exportFolder, paste0("Results", "_", databaseId, "_", date, ".zip")) 
   files <- list.files(exportFolder, ".*\\.csv$")
   oldWd <- setwd(exportFolder)
   on.exit(setwd(oldWd), add = TRUE)

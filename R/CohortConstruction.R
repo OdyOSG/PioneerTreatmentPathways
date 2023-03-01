@@ -12,81 +12,145 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' Create cohort table(s)
-#'
-#' @description
-#' This function creates an empty cohort table. Optionally, additional empty tables are created to
-#' store statistics on the various inclusion criteria.
-#'
-#' @template Connection
-#'
-#' @template CohortTable
-#'
-#' @param createInclusionStatsTables   Create the four additional tables for storing inclusion rule
-#'                                     statistics?
-#' @param resultsDatabaseSchema        Schema name where the statistics tables reside. Note that for
-#'                                     SQL Server, this should include both the database and schema
-#'                                     name, for example 'scratch.dbo'.
-#' @param cohortInclusionTable         Name of the inclusion table, one of the tables for storing
-#'                                     inclusion rule statistics.
-#' @param cohortInclusionResultTable   Name of the inclusion result table, one of the tables for
-#'                                     storing inclusion rule statistics.
-#' @param cohortInclusionStatsTable    Name of the inclusion stats table, one of the tables for storing
-#'                                     inclusion rule statistics.
-#' @param cohortSummaryStatsTable      Name of the summary stats table, one of the tables for storing
-#'                                     inclusion rule statistics.
-#'
-#' @export
-createCohortTable <- function(connectionDetails = NULL,
-                              connection = NULL,
-                              cohortDatabaseSchema,
-                              cohortTable = "cohort",
-                              createInclusionStatsTables = FALSE,
-                              resultsDatabaseSchema = cohortDatabaseSchema,
-                              cohortInclusionTable = paste0(cohortTable, "_inclusion"),
-                              cohortInclusionResultTable = paste0(cohortTable, "_inclusion_result"),
-                              cohortInclusionStatsTable = paste0(cohortTable, "_inclusion_stats"),
-                              cohortSummaryStatsTable = paste0(cohortTable, "_summary_stats")) {
-  start <- Sys.time()
-  ParallelLogger::logInfo("Creating cohort table")
-  if (is.null(connection)) {
-    connection <- DatabaseConnector::connect(connectionDetails)
-    on.exit(DatabaseConnector::disconnect(connection))
-  }
-  sql <- SqlRender::loadRenderTranslateSql("CreateCohortTable.sql",
-                                           packageName = getThisPackageName(),
-                                           dbms = connection@dbms,
-                                           cohort_database_schema = cohortDatabaseSchema,
-                                           cohort_table = cohortTable)
-  DatabaseConnector::executeSql(connection, sql, progressBar = FALSE, reportOverallTime = FALSE)
-  ParallelLogger::logDebug("- Created table ", cohortDatabaseSchema, ".", cohortTable)
+copyAndCensorCohorts <- function(connectionDetails,
+                                 cohortDatabaseSchema,
+                                 cohortStagingTable,
+                                 cohortTable,
+                                 targetIds = NULL, 
+                                 minCellCount = 5) {
   
-  if (createInclusionStatsTables) {
-    ParallelLogger::logInfo("Creating inclusion rule statistics tables")
-    sql <- SqlRender::loadRenderTranslateSql("CreateInclusionStatsTables.sql",
-                                             packageName = getThisPackageName(),
-                                             dbms = connectionDetails$dbms,
-                                             cohort_database_schema = resultsDatabaseSchema,
-                                             cohort_inclusion_table = cohortInclusionTable,
-                                             cohort_inclusion_result_table = cohortInclusionResultTable,
-                                             cohort_inclusion_stats_table = cohortInclusionStatsTable,
-                                             cohort_summary_stats_table = cohortSummaryStatsTable)
-    DatabaseConnector::executeSql(connection, sql, progressBar = FALSE, reportOverallTime = FALSE)
-    ParallelLogger::logDebug("- Created table ", cohortDatabaseSchema, ".", cohortInclusionTable)
-    ParallelLogger::logDebug("- Created table ",
-                             cohortDatabaseSchema,
-                             ".",
-                             cohortInclusionResultTable)
-    ParallelLogger::logDebug("- Created table ",
-                             cohortDatabaseSchema,
-                             ".",
-                             cohortInclusionStatsTable)
-    ParallelLogger::logDebug("- Created table ", cohortDatabaseSchema, ".", cohortSummaryStatsTable)
+  connection <- DatabaseConnector::connect(connectionDetails)
+  on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
+  
+  targetStrataXref <- readr::read_csv(file.path("inst", "settings", "targetStrataXref.csv"), show_col_types = FALSE)
+  
+  if (!is.null(targetIds)) {
+    stopifnot(is.numeric(targetIds))
+    tsXrefSubset <- targetStrataXref[targetStrataXref$targetId %in% targetIds, ]
+  } else {
+    tsXrefSubset <- targetStrataXref
   }
-  delta <- Sys.time() - start
-  writeLines(paste("Creating cohort table took", signif(delta, 3), attr(delta, "units")))
+  
+  # Create the SQL for the temp table to hold the cohorts to be stratified
+  # tsXrefTempTableSql <- cohortStrataXrefTempTableSql(connection, tsXrefSubset, oracleTempSchema)
+ 
+  unions <- paste(glue::glue("SELECT 
+              {targetId} AS target_id,
+              {strataId} AS strata_id,
+              {cohortId} AS cohort_id,
+              '{cohortType}' AS cohort_type", 
+              .envir = tsXrefSubset),
+        collapse = "\nUNION ALL \n")
+  
+  createSql <- glue::glue(
+    "WITH data AS ({unions}) 
+    SELECT target_id,strata_id,cohort_id,cohort_type
+    INTO #TARGET_STRATA_XREF 
+    FROM data;")
+  
+  sql <- "
+  @target_strata_xref_table_create
+  
+  IF OBJECT_ID('@cohort_database_schema.@cohort_table', 'U') IS NOT NULL
+  DROP TABLE @cohort_database_schema.@cohort_table;
+  
+  CREATE TABLE @cohort_database_schema.@cohort_table (
+    cohort_definition_id INT,
+    subject_id BIGINT,
+    cohort_start_date DATE,
+    cohort_end_date DATE
+  );
+  
+  --summarize counts of cohorts so we can filter to those that are feasible
+  select cohort_definition_id, count(distinct subject_id) as num_persons
+  into #cohort_summary
+  from @cohort_database_schema.@cohort_staging_table
+  group by cohort_definition_id
+  ;
+  
+  
+  --find all feasible analyses:   T > X;   TwS and TwoS  > X
+  INSERT INTO @cohort_database_schema.@cohort_table (
+    cohort_definition_id,
+    subject_id,
+    cohort_start_date,
+    cohort_end_date
+  )
+  -- T > X;
+  select 
+  s.cohort_definition_id,
+  s.subject_id,
+  s.cohort_start_date,
+  s.cohort_end_date
+  from @cohort_database_schema.@cohort_staging_table as s
+  inner join (
+    SELECT cs.cohort_definition_id
+    FROM #cohort_summary cs
+    INNER JOIN (SELECT DISTINCT target_id cohort_definition_id FROM #TARGET_STRATA_XREF) t 
+                ON t.cohort_definition_id = cs.cohort_definition_id 
+                where cs.num_persons > @min_cell_count
+                UNION ALL
+                -- Bulk strata cohorts will contain only 1 entry
+                -- so they must be identified by the presence of only a single
+                -- cohort_type
+                SELECT DISTINCT xref.cohort_id
+                FROM (
+                  SELECT strata_id, target_id, COUNT(DISTINCT cohort_type) cnt
+                  FROM #TARGET_STRATA_XREF
+                  group by strata_id, target_id HAVING COUNT(DISTINCT cohort_type) = 1
+                ) single
+                INNER JOIN #TARGET_STRATA_XREF xref ON single.strata_id = xref.strata_id
+                AND single.target_id = xref.target_id
+    ) cs1 on s.cohort_definition_id = cs1.cohort_definition_id
+    
+    union all
+    -- TwS and TwoS  > X
+    select 
+      s.cohort_definition_id,
+      s.subject_id,
+      s.cohort_start_date,
+      s.cohort_end_date
+    from @cohort_database_schema.@cohort_staging_table as s
+    inner join (
+      SELECT cr1.cohort_id cohort_definition_id
+      from #TARGET_STRATA_XREF cr1
+      inner join #cohort_summary cs1
+      on cr1.cohort_id = cs1.cohort_definition_id
+      inner join #TARGET_STRATA_XREF cr2
+      on cr1.target_id = cr2.target_id
+      and cr1.strata_id = cr2.strata_id
+      and cr1.cohort_type <> cr2.cohort_type
+      inner join #cohort_summary cs2
+      on cr2.cohort_id = cs2.cohort_definition_id 
+      where cs1.num_persons > @min_cell_count
+      and cs2.num_persons > @min_cell_count
+    ) cs1 ON s.cohort_definition_id = cs1.cohort_definition_id
+    ;
+    
+    CREATE INDEX IDX_@cohort_table ON @cohort_database_schema.@cohort_table (cohort_definition_id, subject_id, cohort_start_date);
+    
+    TRUNCATE TABLE #cohort_summary;
+    DROP TABLE #cohort_summary;
+    
+    TRUNCATE TABLE #TARGET_STRATA_XREF;
+    DROP TABLE #TARGET_STRATA_XREF;"
+  
+  sql <- SqlRender::render(sql,
+                           warnOnMissingParameters = TRUE,
+                           cohort_database_schema = cohortDatabaseSchema,
+                           cohort_staging_table = cohortStagingTable,
+                           cohort_table = cohortTable,
+                           min_cell_count = minCellCount,
+                           target_strata_xref_table_create = createSql)
+  
+  remainingParams <- unique(stringr::str_extract_all(sql, "@\\w+")[[1]])
+  stopifnot(length(remainingParams) == 0)
+  
+  sql <- SqlRender::translate(sql, targetDialect = attr(connection, "dbms"))
+  
+  ParallelLogger::logInfo("Copy and censor cohorts to main analysis table")
+  DatabaseConnector::executeSql(connection, sql)
 }
-
 
 
 #' Get statistics on cohort inclusion criteria
@@ -257,152 +321,6 @@ processInclusionStats <- function(inclusion,
   return(result)
 }
 
-#' Instantiate a set of cohort
-#'
-#' @description
-#' This function instantiates a set of cohort in the cohort table, using definitions that are fetched from a WebApi interface.
-#' Optionally, the inclusion rule statistics are computed and stored in the \code{inclusionStatisticsFolder}.
-#'
-#' @template Connection
-#'
-#' @template CohortTable
-#'
-#' @template OracleTempSchema
-#'
-#' @template CdmDatabaseSchema
-#' 
-#' @template CohortSetSpecs
-#' 
-#' @template CohortSetReference
-#'
-#' @param cohortIds                   Optionally, provide a subset of cohort IDs to restrict the
-#'                                    construction to.
-#' @param generateInclusionStats      Compute and store inclusion rule statistics?
-#' @param inclusionStatisticsFolder   The folder where the inclusion rule statistics are stored. Can be
-#'                                    left NULL if \code{generateInclusionStats = FALSE}.
-#' @param createCohortTable           Create the cohort table? If \code{incremental = TRUE} and the table
-#'                                    already exists this will be skipped.
-#' @param incremental                 Create only cohorts that haven't been created before?
-#' @param incrementalFolder           If \code{incremental = TRUE}, specify a folder where records are kept
-#'                                    of which definition has been executed.
-#'
-#' @export
-instantiateCohortSet <- function(connectionDetails = NULL,
-                                 connection = NULL,
-                                 cdmDatabaseSchema,
-                                 oracleTempSchema = NULL,
-                                 cohortDatabaseSchema = cdmDatabaseSchema,
-                                 cohortTable = "cohort",
-                                 cohortIds = NULL,
-                                 minCellCount,
-                                 generateInclusionStats = FALSE,
-                                 inclusionStatisticsFolder = NULL,
-                                 createCohortTable = FALSE,
-                                 incremental = FALSE,
-                                 incrementalFolder = NULL) {
-  if (generateInclusionStats) {
-    if (is.null(inclusionStatisticsFolder)) {
-      stop("Must specify inclusionStatisticsFolder when generateInclusionStats = TRUE")
-    }
-    if (!file.exists(inclusionStatisticsFolder)) {
-      dir.create(inclusionStatisticsFolder, recursive = TRUE)
-    }
-  }
-  if (incremental) {
-    if (is.null(incrementalFolder)) {
-      stop("Must specify incrementalFolder when incremental = TRUE")
-    }
-    if (!file.exists(incrementalFolder)) {
-      dir.create(incrementalFolder, recursive = TRUE)
-    }
-  }
-  
-  start <- Sys.time()
-  if (is.null(connection)) {
-    connection <- DatabaseConnector::connect(connectionDetails)
-    on.exit(DatabaseConnector::disconnect(connection))
-  }
-  if (createCohortTable) {
-    needToCreate <- TRUE
-    if (incremental) {
-      tables <- DatabaseConnector::getTableNames(connection, cohortDatabaseSchema)
-      if (toupper(cohortTable) %in% toupper(tables)) {
-        ParallelLogger::logInfo("Cohort table already exists and in incremental mode, so not recreating table.")
-        needToCreate <- FALSE
-      }
-    }
-    if (needToCreate) {
-      createCohortTable(connection = connection,
-                        cohortDatabaseSchema = cohortDatabaseSchema,
-                        cohortTable = cohortTable,
-                        createInclusionStatsTables = FALSE)
-    }
-  }
-  
-  cohorts <- loadCohortsFromPackage(cohortIds = cohortIds)
-  
-  if (incremental) {
-    cohorts$checksum <- computeChecksum(cohorts$sql)
-    recordKeepingFile <- file.path(incrementalFolder, "InstantiatedCohorts.csv")
-  }
-  
-  if (generateInclusionStats) {
-    createTempInclusionStatsTables(connection, oracleTempSchema, cohorts) 
-  }
-  
-  instantiatedCohortIds <- c() 
-  for (i in 1:nrow(cohorts)) {
-    if (!incremental || isTaskRequired(cohortId = cohorts$cohortId[i],
-                                       checksum = cohorts$checksum[i],
-                                       recordKeepingFile = recordKeepingFile)) {
-      ParallelLogger::logInfo(i, "/", nrow(cohorts), ": Instantiation cohort ", cohorts$cohortFullName[i], "  (", cohorts$cohortId[i], ".sql)")
-      sql <- cohorts$sql[i]
-      
-      if (generateInclusionStats) {
-        sql <- SqlRender::render(sql,
-                                 cdm_database_schema = cdmDatabaseSchema,
-                                 vocabulary_database_schema = cdmDatabaseSchema,
-                                 target_database_schema = cohortDatabaseSchema,
-                                 target_cohort_table = cohortTable,
-                                 target_cohort_id = cohorts$cohortId[i],
-                                 results_database_schema.cohort_inclusion = "#cohort_inclusion",
-                                 results_database_schema.cohort_inclusion_result = "#cohort_inc_result",
-                                 results_database_schema.cohort_inclusion_stats = "#cohort_inc_stats",
-                                 results_database_schema.cohort_summary_stats = "#cohort_summary_stats",
-                                 warnOnMissingParameters = FALSE,
-                                 episodetable = FALSE)
-      } else {
-        sql <- SqlRender::render(sql,
-                                 cdm_database_schema = cdmDatabaseSchema,
-                                 vocabulary_database_schema = cdmDatabaseSchema,
-                                 target_database_schema = cohortDatabaseSchema,
-                                 target_cohort_table = cohortTable,
-                                 target_cohort_id = cohorts$cohortId[i],
-                                 warnOnMissingParameters = FALSE,
-                                 episodetable = FALSE)
-      }
-      sql <- SqlRender::translate(sql,
-                                  targetDialect = connectionDetails$dbms,
-                                  oracleTempSchema = oracleTempSchema)
-      DatabaseConnector::executeSql(connection, sql)
-      instantiatedCohortIds <- c(instantiatedCohortIds, cohorts$cohortId[i])
-      if (incremental) {
-        recordTasksDone(cohortId = cohorts$cohortId[i], checksum = cohorts$checksum[i], recordKeepingFile = recordKeepingFile)
-      }
-    }
-  }
-  
-  if (generateInclusionStats) {
-    saveAndDropTempInclusionStatsTables(connection = connection, 
-                                        oracleTempSchema = oracleTempSchema, 
-                                        inclusionStatisticsFolder = inclusionStatisticsFolder, 
-                                        incremental = incremental, 
-                                        cohortIds = instantiatedCohortIds)
-  }
-  
-  delta <- Sys.time() - start
-  writeLines(paste("Instantiating cohort set took", signif(delta, 3), attr(delta, "units")))
-}
 
 createTempInclusionStatsTables <- function(connection, oracleTempSchema, cohorts) {
   ParallelLogger::logInfo("Creating temporary inclusion statistics tables")
@@ -481,35 +399,4 @@ saveAndDropTempInclusionStatsTables <- function(connection,
                                                progressBar = FALSE,
                                                reportOverallTime = FALSE,
                                                oracleTempSchema = oracleTempSchema)
-}
-
-copyAndCensorCohorts <- function(connection,
-                                 cohortDatabaseSchema,
-                                 cohortStagingTable,
-                                 cohortTable,
-                                 targetIds, 
-                                 minCellCount,
-                                 oracleTempSchema) {
-  packageName = getThisPackageName()
-  # Create the SQL for the temp table to hold the cohorts to be stratified
-  targetStrataXref <- getTargetStrataXref()
-  # Get the strata to create for the targets selected
-  tsXrefSubset <- targetStrataXref[targetStrataXref$targetId %in% targetIds, ]
-  # Create the SQL for the temp table to hold the cohorts to be stratified
-  tsXrefTempTableSql <- cohortStrataXrefTempTableSql(connection, tsXrefSubset, oracleTempSchema)
-
-  sql <- SqlRender::loadRenderTranslateSql(dbms = attr(connection, "dbms"),
-                                           sqlFilename = "CopyAndCensorCohorts.sql",
-                                           packageName = packageName,
-                                           oracleTempSchema = oracleTempSchema,
-                                           warnOnMissingParameters = TRUE,
-                                           cohort_database_schema = cohortDatabaseSchema,
-                                           cohort_staging_table = cohortStagingTable,
-                                           cohort_table = cohortTable,
-                                           min_cell_count = minCellCount,
-                                           target_strata_xref_table_create = tsXrefTempTableSql$create,
-                                           target_strata_xref_table_drop = tsXrefTempTableSql$drop)
-  
-  ParallelLogger::logInfo("Copy and censor cohorts to main analysis table")
-  DatabaseConnector::executeSql(connection, sql)
 }

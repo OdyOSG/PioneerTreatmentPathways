@@ -136,8 +136,10 @@ createBulkCharacteristics <- function(connection,
   cohortSubsetSql <- cohortSubsetTempTableSql(connection, cohortIds, oracleTempSchema)
 
   # Get the time windows
-  featureTimeWindows <- getFeatureTimeWindows()
-  featureTimeWindowTempTableSql <- featureWindowsTempTableSql(connection, featureTimeWindows, oracleTempSchema)
+  featureTimeWindows <- readr::read_csv(here::here("inst", "settings", "featureTimeWindows.csv"), 
+                                        show_col_types = FALSE)
+  
+  featureTimeWindowTempTableSql <- featureWindowsTempTableSql(connection, featureTimeWindows)
   
   # Generate the bulk creation script
   sql <- SqlRender::loadRenderTranslateSql(dbms = attr(connection, "dbms"),

@@ -380,7 +380,7 @@ runStudy <- function(connectionDetails = NULL,
   
   # Extract feature counts -----------------------------------------------------------------------
   ParallelLogger::logInfo("Extract feature counts")
-  featureProportions <- exportFeatureProportions(connection = connection,
+  featureProportions <- exportFeatureProportions(connectionDetails = connectionDetails,
                                                  cohortDatabaseSchema = cohortDatabaseSchema,
                                                  cohortTable = cohortTable,
                                                  featureSummaryTable = featureSummaryTable)
@@ -437,7 +437,10 @@ runStudy <- function(connectionDetails = NULL,
     if (incremental) {
       recordKeepingFile <- file.path(incrementalFolder, "CreatedAnalyses.csv")
     }
-    featureTimeWindows <- getFeatureTimeWindows()
+    
+    featureTimeWindows <- readr::read_csv(here::here("inst", "settings", "featureTimeWindows.csv"), 
+                                          show_col_types = FALSE)
+    
     for (i in 1:nrow(featureTimeWindows)) {
       windowStart <- featureTimeWindows$windowStart[i]
       windowEnd <- featureTimeWindows$windowEnd[i]

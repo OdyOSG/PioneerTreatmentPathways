@@ -23,6 +23,8 @@
 
 # get this token from an active ATLAS web session
 
+# devtools::install_github("OHDSI/ROhdsiWebApi")
+
 df < -readr::read_csv("extras/phenotype_tracker.csv")
 
 #columns to create are: name, atlasName, atlasId, cohortId
@@ -50,5 +52,6 @@ ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
 ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "inst/settings/CohortsToCreate.csv",
                                                  baseUrl, 
                                                  insertCohortCreationR = FALSE,
-                                                 packageName = "PioneerTreatmentPathways")
+                                                 packageName = "PioneerTreatmentPathways",
+                                                 generateStats = TRUE)
 
