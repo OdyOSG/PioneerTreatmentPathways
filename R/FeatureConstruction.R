@@ -37,7 +37,7 @@ createFeatureProportions <- function(connectionDetails,
   connection <- DatabaseConnector::connect(connectionDetails)
   on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
   
-  sql <- "
+  sql <- c("
     @feature_time_window_table_create
     
     IF OBJECT_ID('@cohort_database_schema.@feature_summary_table', 'U') IS NOT NULL
@@ -91,7 +91,7 @@ createFeatureProportions <- function(connectionDetails,
     ;
     
     @feature_time_window_table_drop
-  "
+  ")
   
   featureIds <- readr::read_csv(here::here("inst", "settings","CohortsToCreate.csv"), 
                                 show_col_types = FALSE) %>% 
@@ -112,6 +112,8 @@ createFeatureProportions <- function(connectionDetails,
                            feature_time_window_table_create = featureTimeWindowTempTableSql$create,
                            feature_time_window_table_drop = featureTimeWindowTempTableSql$drop) %>% 
     SqlRender::translate(attr(connection, "dbms"))
+  
+  stopifnot(length(unique(stringr::str_extract_all(sql, "@\\w+")[[1]])) == 0)
   
   ParallelLogger::logInfo("Compute feature proportions for all target and strata")
   DatabaseConnector::executeSql(connection, sql)
@@ -158,7 +160,7 @@ exportFeatureProportions <- function(connectionDetails,
   featureTimeWindows <- readr::read_csv(here::here("inst", "settings", "featureTimeWindows.csv"), 
                                         show_col_types = FALSE)
   
-  featureCohorts <- readr::read_csv(here::here("inst", "settings","CohortsToCreateStrata.csv"), show_col_types = FALSE) %>% 
+  featureCohorts <- readr::read_csv(here::here("inst", "settings","CohortsToCreate.csv"), show_col_types = FALSE) %>% 
     dplyr::filter(group %in% c("Stratification", "Outcome")) %>% 
     dplyr::select(name, cohortId)
   

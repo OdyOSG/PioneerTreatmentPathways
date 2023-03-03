@@ -22,7 +22,8 @@ copyAndCensorCohorts <- function(connectionDetails,
   connection <- DatabaseConnector::connect(connectionDetails)
   on.exit(DatabaseConnector::disconnect(connection), add = TRUE)
   
-  targetStrataXref <- readr::read_csv(file.path("inst", "settings", "targetStrataXref.csv"), show_col_types = FALSE)
+  targetStrataXref <- readr::read_csv(file.path("inst", "settings", "targetStrataXref.csv"), 
+                                      show_col_types = FALSE)
   
   if (!is.null(targetIds)) {
     stopifnot(is.numeric(targetIds))
@@ -31,9 +32,6 @@ copyAndCensorCohorts <- function(connectionDetails,
     tsXrefSubset <- targetStrataXref
   }
   
-  # Create the SQL for the temp table to hold the cohorts to be stratified
-  # tsXrefTempTableSql <- cohortStrataXrefTempTableSql(connection, tsXrefSubset, oracleTempSchema)
- 
   unions <- paste(glue::glue("SELECT 
               {targetId} AS target_id,
               {strataId} AS strata_id,
@@ -44,7 +42,7 @@ copyAndCensorCohorts <- function(connectionDetails,
   
   createSql <- glue::glue(
     "WITH data AS ({unions}) 
-    SELECT target_id,strata_id,cohort_id,cohort_type
+    SELECT target_id, strata_id, cohort_id, cohort_type
     INTO #TARGET_STRATA_XREF 
     FROM data;")
   
@@ -67,7 +65,6 @@ copyAndCensorCohorts <- function(connectionDetails,
   from @cohort_database_schema.@cohort_staging_table
   group by cohort_definition_id
   ;
-  
   
   --find all feasible analyses:   T > X;   TwS and TwoS  > X
   INSERT INTO @cohort_database_schema.@cohort_table (
@@ -141,12 +138,9 @@ copyAndCensorCohorts <- function(connectionDetails,
                            cohort_staging_table = cohortStagingTable,
                            cohort_table = cohortTable,
                            min_cell_count = minCellCount,
-                           target_strata_xref_table_create = createSql)
-  
-  remainingParams <- unique(stringr::str_extract_all(sql, "@\\w+")[[1]])
-  stopifnot(length(remainingParams) == 0)
-  
-  sql <- SqlRender::translate(sql, targetDialect = attr(connection, "dbms"))
+                           target_strata_xref_table_create = createSql) %>% 
+  assertNoParameters() %>% 
+  SqlRender::translate(targetDialect = attr(connection, "dbms"))
   
   ParallelLogger::logInfo("Copy and censor cohorts to main analysis table")
   DatabaseConnector::executeSql(connection, sql)

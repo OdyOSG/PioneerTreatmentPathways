@@ -1,45 +1,45 @@
-cohortId,cohortName,cohortEntries,cohortSubjects
-1,Newly diagnosed prostate cancer,1976,1976
-2,Newly diagnosed prostate cancer initiated immediate conservative trt,0,0
-3,Newly diagnosed prostate cancer initiated delayed conservative trt,0,0
-4,Newly diagnosed prostate cancer initiated immediate curative trt,0,0
-5,Newly diagnosed prostate cancer initiated delayed curative trt,0,0
-7,Treatment category: prostatectomy surgery,0,0
-8,Treatment category: radiotherapy,0,0
-9,Treatment category: systemic chemotherapy,0,0
-10,EAU High Risk,0,0
-11,EAU Low Risk,0,0
-12,EAU Intermediate Risk,0,0
-13,"Prostatectomy (radical, open, laparoscopic radical and robot assisted radical) or",345,345
-14,Radiotherapy,17,16
-15,"Focal therapy (HIFU, Cryotherapy, RFA)",288,288
-16,Palliative treatment outcome cohort,20289,16780
-17,Radiotherapy following symptoms,23,23
-18,Placement of ureteral stent or nephrostomy for acute kidney failure,17,16
-19,Colostomy,215,212
-20,Chronic foley catheter placement,3150,3150
-21,Pelvectomy (Total pelvic exenteration),5,5
-22,Suprapubic catheter placement,90,90
-23,Symptomatic progression,0,0
-25,Urinary retention,15153,13034
-26,Hydronephrosis and acute kidney failure,8631,8631
-27,Bowel occlusion/obstruction,18859,15179
-28,Death cohort,5461,5461
-36,Obesity,23695,23695
-37,Hypertension,43830,43830
-38,"Cardiovascular events (CVE; myocardial infarction, stroke)",17843,16096
-40,Venous tromboembolic events (VTE),45533,30893
-42,Family history of Prostate cancer or family history of germline mutations,0,0
-43,PSA >20 at Diagnosis,0,0
-44,PSA <10 at Diagnosis,0,0
-45,PSA 10-20 at Diagnosis,0,0
-46,Grade group (Gleason score) at diagnosis 1 (3+3),0,0
-47,Grade group (Gleason score) at diagnosis 2 (3+4),0,0
-48,Grade group (Gleason score) at diagnosis 3 (4+3),0,0
-49,Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),0,0
-50,Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),0,0
-51,"EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",0,0
-52,EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),0,0
-53,"EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",0,0
-58,CT thorax/abdomen OR full body MRI,0,0
-59,PET/CT imaging,0,0
+cohortId,cohortName,group,cohortEntries,cohortSubjects,databaseId
+1,Newly diagnosed prostate cancer,Target,1976,1976,Synpuf
+2,Newly diagnosed prostate cancer initiated immediate conservative trt,Target,0,0,Synpuf
+3,Newly diagnosed prostate cancer initiated delayed conservative trt,Target,0,0,Synpuf
+4,Newly diagnosed prostate cancer initiated immediate curative trt,Target,0,0,Synpuf
+5,Newly diagnosed prostate cancer initiated delayed curative trt,Target,0,0,Synpuf
+7,Treatment category: prostatectomy surgery,Target,0,0,Synpuf
+8,Treatment category: radiotherapy,Target,0,0,Synpuf
+9,Treatment category: systemic chemotherapy,Target,0,0,Synpuf
+10,EAU High Risk,Target,0,0,Synpuf
+11,EAU Low Risk,Target,0,0,Synpuf
+12,EAU Intermediate Risk,Target,0,0,Synpuf
+13,"Prostatectomy (radical, open, laparoscopic radical and robot assisted radical) or",Outcome,345,345,Synpuf
+14,Radiotherapy,Outcome,17,16,Synpuf
+15,"Focal therapy (HIFU, Cryotherapy, RFA)",Outcome,288,288,Synpuf
+16,Palliative treatment outcome cohort,Outcome,20289,16780,Synpuf
+17,Radiotherapy following symptoms,Outcome,23,23,Synpuf
+18,Placement of ureteral stent or nephrostomy for acute kidney failure,Outcome,17,16,Synpuf
+19,Colostomy,Outcome,215,212,Synpuf
+20,Chronic foley catheter placement,Outcome,3150,3150,Synpuf
+21,Pelvectomy (Total pelvic exenteration),Outcome,5,5,Synpuf
+22,Suprapubic catheter placement,Outcome,90,90,Synpuf
+23,Symptomatic progression,Outcome,0,0,Synpuf
+25,Urinary retention,Outcome,15153,13034,Synpuf
+26,Hydronephrosis and acute kidney failure,Outcome,8631,8631,Synpuf
+27,Bowel occlusion/obstruction,Outcome,18859,15179,Synpuf
+28,Death cohort,Outcome,5461,5461,Synpuf
+36,Obesity,Stratification,23695,23695,Synpuf
+37,Hypertension,Stratification,43830,43830,Synpuf
+38,"Cardiovascular events (CVE; myocardial infarction, stroke)",Stratification,17843,16096,Synpuf
+40,Venous tromboembolic events (VTE),Stratification,45533,30893,Synpuf
+42,Family history of Prostate cancer or family history of germline mutations,Stratification,0,0,Synpuf
+43,PSA >20 at Diagnosis,Stratification,0,0,Synpuf
+44,PSA <10 at Diagnosis,Stratification,0,0,Synpuf
+45,PSA 10-20 at Diagnosis,Stratification,0,0,Synpuf
+46,Grade group (Gleason score) at diagnosis 1 (3+3),Stratification,0,0,Synpuf
+47,Grade group (Gleason score) at diagnosis 2 (3+4),Stratification,0,0,Synpuf
+48,Grade group (Gleason score) at diagnosis 3 (4+3),Stratification,0,0,Synpuf
+49,Grade group (Gleason score) at diagnosis 4 (4+4 OR 3+5 OR 5+3),Stratification,0,0,Synpuf
+50,Grade group (Gleason score) at diagnosis 5 (5+5 OR 4+5 OR 5+4),Stratification,0,0,Synpuf
+51,"EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",Stratification,0,0,Synpuf
+52,EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),Stratification,0,0,Synpuf
+53,"EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",Stratification,0,0,Synpuf
+58,CT thorax/abdomen OR full body MRI,Characterization,0,0,Synpuf
+59,PET/CT imaging,Characterization,0,0,Synpuf

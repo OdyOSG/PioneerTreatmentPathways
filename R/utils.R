@@ -80,4 +80,27 @@ uploadResults <- function(outputFolder, privateKeyFileName, userName, remoteFold
 
 
 
+# A helper function to give an error if rendered SQL contains parameters
+assertNoParameters <- function(renderedSql) {
+  remainingParams <- unique(stringr::str_extract_all(renderedSql, "@\\w+")[[1]])
+  if (length(remainingParams) > 0) {
+    remainingParams <- paste(remainingParams, collapse = ",")
+    rlang::abort(paste("SQL contains parameters! ", remainingParams))
+  }
+  return(renderedSql)
+}
 
+enforceMinCellValue <- function(data, fieldName, minValues, silent = FALSE) {
+  toCensor <- !is.na(data[, fieldName]) & data[, fieldName] < minValues & data[, fieldName] != 0
+  if (!silent) {
+    percent <- round(100 * sum(toCensor)/nrow(data), 1)
+    msg <- glue::glue("censoring {sum(toCensor)} values ({percent}%) from {fieldName} because value below minimum")
+    ParallelLogger::logInfo(msg)
+  }
+  if (length(minValues) == 1) {
+    data[toCensor, fieldName] <- -minValues
+  } else {
+    data[toCensor, fieldName] <- -minValues[toCensor]
+  }
+  return(data)
+}

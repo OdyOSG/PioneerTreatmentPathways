@@ -54,13 +54,6 @@ zipResults <- function(exportFolder, databaseId) {
   return(zipName)
 }
 
-getVocabularyInfo <- function(connection, cdmDatabaseSchema, oracleTempSchema) {
-  sql <- "SELECT vocabulary_version FROM @cdm_database_schema.vocabulary WHERE vocabulary_id = 'None';"
-  sql <- SqlRender::render(sql, cdm_database_schema = cdmDatabaseSchema)
-  sql <- SqlRender::translate(sql, targetDialect = attr(connection, "dbms"), oracleTempSchema = oracleTempSchema)
-  vocabInfo <- DatabaseConnector::querySql(connection, sql)
-  return(vocabInfo[[1]])
-}
 
 #' @export
 getUserSelectableCohortGroups <- function() {
@@ -127,39 +120,39 @@ loadCohortsFromPackage <- function(cohortIds) {
   return(cohorts)
 }
 
-loadCohortsForExportFromPackage <- function(cohortIds) {
-  packageName = getThisPackageName()
-  cohorts <- getCohortsToCreate()
-  cohorts <- cohorts %>%  dplyr::mutate(atlasId = NULL)
-  if ("atlasName" %in% colnames(cohorts)) {
-    # Remove PIONEER cohort identifier (3.g. [PIONEER O2])
-    # Remove atlasName and name from object to prevent clashes when combining with stratXref
-    cohorts <- cohorts %>% 
-      dplyr::mutate(cohortName = trimws(gsub("(\\[.+?\\])", "", atlasName)),
-                    cohortFullName = atlasName) %>%
-      dplyr::select(-atlasName, -name)
-  } else {
-    cohorts <- cohorts %>% dplyr::rename(cohortName = name, cohortFullName = fullName)
-  }
-  
-  # Get the stratified cohorts for the study
-  # and join to the cohorts to create to get the names
-  targetStrataXref <- getTargetStrataXref() 
-  targetStrataXref <- targetStrataXref %>% 
-    dplyr::rename(cohortName = name) %>%
-    dplyr::mutate(cohortFullName = cohortName,
-                  targetId = NULL,
-                  strataId = NULL)
-  
-  cols <- names(cohorts)
-  cohorts <- rbind(cohorts, targetStrataXref[,..cols])
-  
-  if (!is.null(cohortIds)) {
-    cohorts <- cohorts[cohorts$cohortId %in% cohortIds, ]
-  }
-  
-  return(cohorts)
-}
+# loadCohortsForExportFromPackage <- function(cohortIds) {
+#   packageName = getThisPackageName()
+#   cohorts <- getCohortsToCreate()
+#   cohorts <- cohorts %>%  dplyr::mutate(atlasId = NULL)
+#   if ("atlasName" %in% colnames(cohorts)) {
+#     # Remove PIONEER cohort identifier (3.g. [PIONEER O2])
+#     # Remove atlasName and name from object to prevent clashes when combining with stratXref
+#     cohorts <- cohorts %>% 
+#       dplyr::mutate(cohortName = trimws(gsub("(\\[.+?\\])", "", atlasName)),
+#                     cohortFullName = atlasName) %>%
+#       dplyr::select(-atlasName, -name)
+#   } else {
+#     cohorts <- cohorts %>% dplyr::rename(cohortName = name, cohortFullName = fullName)
+#   }
+#   
+#   # Get the stratified cohorts for the study
+#   # and join to the cohorts to create to get the names
+#   targetStrataXref <- getTargetStrataXref() 
+#   targetStrataXref <- targetStrataXref %>% 
+#     dplyr::rename(cohortName = name) %>%
+#     dplyr::mutate(cohortFullName = cohortName,
+#                   targetId = NULL,
+#                   strataId = NULL)
+#   
+#   cols <- names(cohorts)
+#   cohorts <- rbind(cohorts, targetStrataXref[,..cols])
+#   
+#   if (!is.null(cohortIds)) {
+#     cohorts <- cohorts[cohorts$cohortId %in% cohortIds, ]
+#   }
+#   
+#   return(cohorts)
+# }
 
 loadCohortsForExportWithChecksumFromPackage <- function(cohortIds) {
   packageName = getThisPackageName()
@@ -211,51 +204,8 @@ writeToCsv <- function(data, fileName, incremental = FALSE, ...) {
   }
 }
 
-enforceMinCellValue <- function(data, fieldName, minValues, silent = FALSE) {
-  toCensor <- !is.na(data[, fieldName]) & data[, fieldName] < minValues & data[, fieldName] != 0
-  if (!silent) {
-    percent <- round(100 * sum(toCensor)/nrow(data), 1)
-    ParallelLogger::logInfo("   censoring ",
-                            sum(toCensor),
-                            " values (",
-                            percent,
-                            "%) from ",
-                            fieldName,
-                            " because value below minimum")
-  }
-  if (length(minValues) == 1) {
-    data[toCensor, fieldName] <- -minValues
-  } else {
-    data[toCensor, fieldName] <- -minValues[toCensor]
-  }
-  return(data)
-}
 
-getCohortCounts <- function(connectionDetails = NULL,
-                            connection = NULL,
-                            cohortDatabaseSchema,
-                            cohortTable = "cohort",
-                            cohortIds = c()) {
-  start <- Sys.time()
-  
-  if (is.null(connection)) {
-    connection <- DatabaseConnector::connect(connectionDetails)
-    on.exit(DatabaseConnector::disconnect(connection))
-  }
-  sql <- SqlRender::loadRenderTranslateSql(sqlFilename = "CohortCounts.sql",
-                                           packageName = getThisPackageName(),
-                                           dbms = connection@dbms,
-                                           cohort_database_schema = cohortDatabaseSchema,
-                                           cohort_table = cohortTable,
-                                           cohort_ids = cohortIds)
-  counts <- DatabaseConnector::querySql(connection, sql, snakeCaseToCamelCase = TRUE)
-  delta <- Sys.time() - start
-  ParallelLogger::logInfo(paste("Counting cohorts took",
-                                signif(delta, 3),
-                                attr(delta, "units")))
-  return(counts)
-  
-}
+
 
 subsetToRequiredCohorts <- function(cohorts, task, incremental, recordKeepingFile) {
   if (incremental) {
@@ -278,42 +228,4 @@ getKeyIndex <- function(key, recordKeeping) {
     idx <- merge(recordKeeping, key)$idx
     return(idx)
   }
-}
-
-recordTasksDone <- function(..., checksum, recordKeepingFile, incremental = TRUE) {
-  if (!incremental) {
-    return()
-  }
-  if (length(list(...)[[1]]) == 0) {
-    return()
-  }
-  if (file.exists(recordKeepingFile)) {
-    recordKeeping <- data.table::fread(recordKeepingFile)
-    idx <- getKeyIndex(list(...), recordKeeping)
-    if (length(idx) > 0) {
-      recordKeeping <- recordKeeping[-idx, ]
-    }
-  } else {
-    recordKeeping <- tibble::tibble()
-  }
-  newRow <- tibble::as_tibble(list(...))
-  newRow$checksum <- checksum
-  newRow$timeStamp <-  Sys.time()
-  recordKeeping <- dplyr::bind_rows(recordKeeping, newRow)
-  data.table::fwrite(recordKeeping, recordKeepingFile)
-}
-
-saveIncremental <- function(data, fileName, ...) {
-  if (length(list(...)[[1]]) == 0) {
-    return()
-  }
-  if (file.exists(fileName)) {
-    previousData <- data.table::fread(fileName)
-    idx <- getKeyIndex(list(...), previousData)
-    if (length(idx) > 0) {
-      previousData <- previousData[-idx, ] 
-    }
-    data <- dplyr::bind_rows(previousData, data)
-  } 
-  data.table::fwrite(data, fileName)
 }
