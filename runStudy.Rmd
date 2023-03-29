@@ -10,75 +10,70 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This Rmarkdown document contains the code to run the PIONEER Treatment Patterns Study. The code has been largely adapted from the [PIONEERmetastaticTreatment](https://github.com/bdemeulder/PIONEERmetastaticTreatment) study. It has been refactored into an RMarkdown document to facilitate readability.
 
-The study can be executed by rendering this documnent all at once or by running each code block one at a time.
-
+The study can be executed by rendering this documnent all at once or by running each code block one at a time. It is provided in both RMarkdown and Jupyter notebook formats. The notebook is written prioritizing readability so that other data scientists might easily see how the study code implements the study protocol.
 
 # Setup
 
+First we set up the R runtime by installing required packages and test database access. We need to test both read and write access since the study needs to be able to write data to the `cohortDatabaseSchema`.
+
 ```{r install-dependencies, eval=FALSE}
 # This only needs to be done once
-install.packages("devtools")
-install.packages("survminer")
-devtools::install_github("OHDSI/CohortDiagnostics")
-devtools::install_github("OHDSI/CohortGenerator")
+# install.packages("devtools")
+# install.packages("survminer")
+# devtools::install_github("OHDSI/CohortDiagnostics")
+# devtools::install_github("OHDSI/CohortGenerator")
 ```
 
 
-Change the parameters in the code chunck below to match your database. This is the only code that needs to be edited to run the study.
+Change the parameters in the code chunck below to match your database. 
+This is the only code that should need to be edited to run the study.
 
 ```{r set-study-parameters}
 library(DatabaseConnector)
 library(dplyr, warn.conflicts = FALSE)
 library(here)
 library(glue)
-# connectionDetails <- createConnectionDetails("postgresql", user = "postgres", password = "", server = "localhost/covid")
-# con <- connect(cd)
-# dbGetQuery(con, "select * from cdm5.person limit 8")
-# disconnect(con)
-# 
-# connectionDetails <- createConnectionDetails(dbms = "postgresql",
-#                                              server = "testnode.arachnenetwork.com/synpuf_110k",
-#                                              user = "ohdsi",
-#                                              password = Sys.getenv("ODYS_DB_PASSWORD"),
-#                                              port = "5441")
 
+# Database Connection info
 connectionDetails <- createConnectionDetails(dbms = "postgresql",
                                              server = "localhost/synpuf100k",
                                              user = "postgres",
                                              password = "")
 
-connection = NULL
-# cdmDatabaseSchema = "cdm5"
+
 cdmDatabaseSchema = "cdm531"
-oracleTempSchema = NULL
 cohortDatabaseSchema = "scratch"
-# cohortDatabaseSchema = "adam_black_results"
-cohortStagingTable = "cohort_stg"
 cohortTable = "cohort"
-featureSummaryTable = "cohort_smry"
-cohortIdsToExcludeFromExecution = c()
-cohortIdsToExcludeFromResultsExport = NULL
-# cohortGroups = getUserSelectableCohortGroups()
-exportFolder = here::here("export")
+
+# CDM metadata
 databaseId = "Synpuf"
 databaseName = databaseId
 databaseDescription = "Synthetic medicare claims 100k person sample"
-useBulkCharacterization = FALSE
+
+# Where to save output
+exportFolder = here::here("output")
+
 minCellCount = 5
 minimumSubjectCountForCharacterization = 140
+
+
+cohortStagingTable = "cohort_stg"
+featureSummaryTable = "cohort_smry"
 ```
 
 
+The R folder contains some helpful R functions that we will use in the study. Load/source them into the R environment.
+
 ```{r source-R-files}
 # Source R code files in this project
-purrr::walk(list.files(here("R"), full.names = TRUE), source)
+purrr::walk(list.files(here::here("R"), full.names = TRUE), source)
 
 if (!file.exists(exportFolder)) {
   dir.create(exportFolder, recursive = TRUE)
 }
 
-ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "PioneerTreatmentPathways.txt"))
-ParallelLogger::logInfo(.systemInfo())
+# ParallelLogger::addDefaultFileLogger(file.path(exportFolder, "PioneerTreatmentPathways.txt"))
+readr::write_lines(.systemInfo(), here::here(exportFolder, "sessionInfo.txt"))
 ```
 
 
@@ -97,48 +92,45 @@ df <- renderTranslateQuerySql(conn,
 
 message(glue::glue("Number of rows in the person table: {df$n_persons}"))
 
-insertTable(conn, cohortDatabaseSchema, "iris_temp", iris)
+insertTable(conn, cohortDatabaseSchema, "temp_test", mtcars)
 
 df <- renderTranslateQuerySql(conn, 
-                              "select count(*) as n from @cohortDatabaseSchema.iris_temp",
+                              "select count(*) as n from @cohortDatabaseSchema.temp_test",
                               cohortDatabaseSchema = cohortDatabaseSchema) %>% 
   rename_all(tolower)
 
 renderTranslateExecuteSql(conn, 
-                          "drop table @cohortDatabaseSchema.iris_temp",
+                          "drop table @cohortDatabaseSchema.temp_test",
                           cohortDatabaseSchema = cohortDatabaseSchema,
                           progressBar = FALSE)
 
-if (df$n != nrow(iris)) {
+if (df$n != nrow(mtcars)) {
   rlang::abort("Error with database write access check")
 } else {
-  message("Write access confirmed")
+  rlang::inform("Write access confirmed")
 }
 
 disconnect(conn)
 ```
 
-# Save database metadata
+## Save database metadata
 
 ```{r}
-ParallelLogger::logInfo("Saving database metadata")
 
 con <- connect(connectionDetails)
 
-vocabInfo <- renderTranslateQuerySql(
-  con,
-  glue("SELECT vocabulary_version FROM {cdmDatabaseSchema}.vocabulary WHERE vocabulary_id = 'None';"))
+sql <- glue("SELECT vocabulary_version 
+             FROM {cdmDatabaseSchema}.vocabulary 
+             WHERE vocabulary_id = 'None';")
+
+vocabInfo <- renderTranslateQuerySql(con, sql)
 
 database <- data.frame(databaseId = databaseId,
                        databaseName = databaseName,
                        description = databaseDescription,
-                       vocabularyVersion = vocabInfo[[1]],
-                       isMetaAnalysis = 0)
+                       vocabularyVersion = vocabInfo[[1]])
 
-readr::write_csv(database, file.path(exportFolder, "database.csv"))
-
-andrData <- Andromeda::andromeda()
-andrData$database <- database
+readr::write_csv(database, here::here(exportFolder, "database.csv"))
 
 disconnect(con)
 ```
@@ -146,30 +138,27 @@ disconnect(con)
 
 # Generate Study Cohorts
 
+There are multiple types of cohorts being used in the study:
+
 ```{r}
 start <- Sys.time()
 
-# Instantiate cohorts -----------------------------------------------------------------------
-cohortDefinitionSet <- readr::read_csv(file.path("inst", "settings", "CohortsToCreate.csv"), 
-                                       show_col_types = FALSE) %>% 
+cohortStagingTable <- paste0(cohortTable, "_stg")
+
+cohortDefinitionSet <- 
+  readr::read_csv(here::here("input", "settings", "CohortsToCreate.csv"), show_col_types = FALSE) %>% 
   mutate(cohortName = name,
-         sqlPath = file.path("inst", "sql", paste0(name, ".sql")),
+         sqlPath = here("input", "sql", paste0(name, ".sql")),
          sql = purrr::map_chr(sqlPath, readr::read_file))
 
 cohortTableNames <- CohortGenerator::getCohortTableNames(cohortStagingTable)
 
-if (!file.exists(here(exportFolder, "incremental", "GeneratedCohorts.csv"))) {
-  CohortGenerator::createCohortTables(
-    connectionDetails = connectionDetails,
-    cohortDatabaseSchema = cohortDatabaseSchema,
-    cohortTableNames = cohortTableNames,
-    incremental = TRUE
-  )
-}
-
-ParallelLogger::logInfo("**********************************************************")
-ParallelLogger::logInfo("  ---- Creating cohorts ---- ")
-ParallelLogger::logInfo("**********************************************************")
+CohortGenerator::createCohortTables(
+  connectionDetails = connectionDetails,
+  cohortDatabaseSchema = cohortDatabaseSchema,
+  cohortTableNames = cohortTableNames,
+  incremental = TRUE
+)
 
 CohortGenerator::generateCohortSet(
   connectionDetails = connectionDetails,
@@ -190,67 +179,70 @@ cohortCounts <- CohortGenerator::getCohortCounts(
          cohortSubjects = coalesce(cohortSubjects, 0),
          databaseId = databaseId)
 
-readr::write_csv(cohortCounts, file.path("export", paste0(databaseId, "CohortCounts.csv")))
+readr::write_csv(cohortCounts, here::here(exportFolder, paste0(databaseId, "_CohortCounts.csv")))
 
 if (all(filter(cohortCounts, group == "Target") %>% pull(cohortEntries) == 0)) {
   stop("All target cohorts are empty. You cannot execute this study.")
 }
+
 delta <- Sys.time() - start
-msg <- paste("Generating cohorts took", signif(delta, 3), attr(delta, "units"))
-ParallelLogger::logInfo(msg)
+paste("Generating cohorts took", signif(delta, 3), attr(delta, "units"))
+```
+## Generate strata cohorts (skip for now)
+Create stratification cohorts. There are two types. Bulk strata defined by a csv file and 
+strata defined by circe json files.
+
+
+```{r, eval = F}
+# targetStrataXref <- readr::read_csv(here::here("input", "settings", "targetStrataXref.csv"), 
+#                                     show_col_types = FALSE)
+# 
+# bulkStrata <- readr::read_csv(here::here("input", "settings", "bulkStrata.csv"), 
+#                               show_col_types = FALSE)
 ```
 
-Censor cohorts that have counts lower than min cell
 
-```{r}
-ParallelLogger::logInfo(" ---- Copy cohorts to main table ---- ")
+```{r, eval=F}
 
-con <- connect(connectionDetails)
-
-# Idendtify feasable analyses
-# Target count >= minCellCount
-# Target with strata (TwS) >= minCellCount AND Target with strata (TwoS) >= minCellCount
-
-# targetStrataXref is a table with all combinations of target cohorts with and without strata
-targetStrataXref <- readr::read_csv(file.path("inst", "settings", "targetStrataXref.csv"), 
-                                    show_col_types = FALSE)
-
-df <- targetStrataXref %>% 
-  select(targetId, strataId, cohortId, cohortType) %>% 
-  inner_join(select(cohortCounts, targetId = cohortId, targetCount = cohortEntries), by = "targetId")
-
-# TODO decide how to filter these
-
-
-CohortGenerator::createCohortTables(connection = con,
-                                    cohortDatabaseSchema = cohortDatabaseSchema,
-                                    cohortTableNames = CohortGenerator::getCohortTableNames(cohortTable))
-
-sql <- c("
-  INSERT INTO @cohort_database_schema.@cohort_table 
-  SELECT 
-    cohort_definition_id,
-    subject_id,
-    cohort_start_date,
-    cohort_end_date
-  FROM @cohort_database_schema.@cohort_staging_table
-  WHERE cohort_definition_id IN (@feasable_cohort_defition_ids);
-   
-  CREATE INDEX IDX_@cohort_table 
-  ON @cohort_database_schema.@cohort_table (cohort_definition_id, subject_id, cohort_start_date);") %>% 
-  SqlRender::render(
-    cohort_database_schema = cohortDatabaseSchema,
-    cohort_staging_table = cohortStagingTable,
-    cohort_table = cohortTable,
-    feasable_cohort_defition_ids = df$targetId) %>% 
-  assertNoParameters() %>% 
-  SqlRender::translate(targetDialect = attr(connection, "dbms"))
+createAgeStrata <- function(connectionDetails, 
+                            upperBound,
+                            lowerBound,
+                            newCohortId, 
+                            targetCohortId, 
+                            cohortDatabaseSchema = cohortDatabaseSchema,
+                            cdmDatabaseSchema = cohortDatabaseSchema,
+                            cohortTable = cohortStagingTable) {
   
-ParallelLogger::logInfo("Copy and censor cohorts to main analysis table")
-executeSql(con, sql)
-disconnect(con)
+  con <- connect(connectionDetails)
+
+  sql <- glue::glue("
+    DELETE FROM {cohortDatabaseSchema}.{cohortTable}
+    WHERE cohort_definition_id = {newCohortId};
+    
+    INSERT INTO {cohortDatabaseSchema}.{cohortTable}
+    SELECT 
+      {newCohortId} as cohort_definition_id,
+      c.subject_id, 
+      c.cohort_start_date, 
+      c.cohort_end_date  
+    FROM {cohortDatabaseSchema}.{cohortTable} c
+    INNER JOIN {cdmDatabaseSchema}.person p 
+      ON c.subject_id = p.person_id
+      AND FLOOR(YEAR(c.cohort_start_date) - p.year_of_birth) <= @upperBound
+      AND FLOOR(YYEAR(c.cohort_start_date) - p.year_of_birth) >= @lowerBound
+    WHERE c.cohort_definition_id = {targetCohortId};") %>% 
+    SqlRender::translate(dbms(con)) %>% 
+    executeSql(con, .)
   
+  disconnect(con)
+}
+
+
 ```
+
+
+
+
 
 
 ```{r}
@@ -272,70 +264,74 @@ message(glue("cohort table created with {n2} rows."))
 
 
 ```{r}
-CohortGenerator::getCohortCounts(
+
+cohortTable <- cohortStagingTable
+
+cohort_counts <- CohortGenerator::getCohortCounts(
     connectionDetails = connectionDetails,
     cohortDatabaseSchema = cohortDatabaseSchema,
     cohortTable = cohortTable) 
-```
-
-
-
-```{r}
-# Compute the features
-ParallelLogger::logInfo("**********************************************************")
-ParallelLogger::logInfo(" ---- Create feature proportions ---- ")
-ParallelLogger::logInfo("**********************************************************")
-createFeatureProportions(connectionDetails = connectionDetails,
-                         cohortDatabaseSchema = cohortDatabaseSchema,
-                         cohortStagingTable = cohortStagingTable,
-                         cohortTable = cohortTable,
-                         featureSummaryTable = featureSummaryTable)
-```
-
-
-# Count staging cohorts
-
-```{r}
-ParallelLogger::logInfo("Counting staging cohorts")
-
-counts <- CohortGenerator::getCohortCounts(connectionDetails = connectionDetails,
-                                           cohortDatabaseSchema = cohortDatabaseSchema,
-                                           cohortTable = cohortStagingTable)
-
-if (nrow(counts) > 0) {
-  counts$databaseId <- databaseId
-  counts <- enforceMinCellValue(counts, "cohortEntries", minCellCount)
-  counts <- enforceMinCellValue(counts, "cohortSubjects", minCellCount)
-}
-
-allStudyCohorts <- bind_rows(
-  readr::read_csv(here("inst", "settings", "CohortsToCreate.csv"), 
-                  col_select = c("name" = "atlasName", "cohortId"),
-                  show_col_types = FALSE),
   
-  readr::read_csv(here("inst", "settings", "targetStrataXref.csv"), 
-                  col_select = c("name", "cohortId"),
-                  col_types = "cd",
-                  show_col_types = FALSE)
-  )
+cohort_counts <- cohortDefinitionSet %>% 
+  select(cohortId, name = atlasName, group) %>% 
+  left_join(cohort_counts, by = "cohortId") %>% 
+  mutate(across(c(cohortEntries, cohortSubjects), ~tidyr::replace_na(., 0)))
 
-allCounts <- dplyr::left_join(allStudyCohorts, counts, by = "cohortId") %>% 
-  mutate(across(c(cohortEntries, cohortSubjects), ~tidyr::replace_na(., 0))) %>% 
-  mutate(databaseId = databaseId)
-
-andrData$cohort_staging_count = allCounts
 ```
+
+# Baseline Characterization
+
+
+Use FeatureExtraction to get baseline characteristics for all target cohorts.
+
+```{r}
+
+library(FeatureExtraction)
+
+target_ids <- cohort_counts %>% 
+  filter(group == "Target") %>% 
+  pull(cohortId)
+
+
+pre_index_covariate_settings <- createCovariateSettings(
+  useDemographicsAge = TRUE,
+  useDemographicsGender = TRUE,
+  useConditionGroupEraLongTerm = TRUE,
+  useDrugGroupEraLongTerm = TRUE,
+  longTermStartDays = -365,
+  endDays = 0
+)
+
+
+cohortTable
+
+pre_index_covariates <- 
+  getDbCovariateData(connectionDetails,
+                     oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
+                     cohortTable = cohortTable,
+                     cohortDatabaseSchema = cohortDatabaseSchema,
+                     cohortId = target_ids,
+                     covariateSettings = pre_index_covariate_settings,
+                     aggregated = TRUE)
+
+
+```
+
+
 
 
 # Generate survival info 
 
 ```{r}
 
-ParallelLogger::logInfo("Generating time to event data")
 start <- Sys.time()
 
-targetStrataXref <- readr::read_csv(here("inst", "settings", "targetStrataXref.csv"), show_col_types = FALSE)
-cohortsToCreate <- readr::read_csv(here("inst", "settings", "cohortsToCreate.csv"), show_col_types = FALSE)
+library(dplyr)
+
+targetStrataXref <- readr::read_csv(here::here("input", "settings", "targetStrataXref.csv"), 
+                                    show_col_types = FALSE)
+cohortsToCreate <- readr::read_csv(here::here("input", "settings", "cohortsToCreate.csv"), 
+                                   show_col_types = FALSE)
 
 targetCohortIds <- cohortsToCreate %>% 
   filter(group == "Target") %>% 
@@ -343,7 +339,7 @@ targetCohortIds <- cohortsToCreate %>%
 
 targetIds <- c(targetCohortIds, targetStrataXref$cohortId)
 
-events <- readr::read_csv(here("inst", "settings", "TimeToEvent.csv"), show_col_types = F) %>% 
+events <- readr::read_csv(here::here("input", "settings", "TimeToEvent.csv"), show_col_types = F) %>% 
   mutate(outcomeCohortIds = stringr::str_replace_all(outcomeCohortIds, ";", ","))
 
 connection <- connect(connectionDetails)
@@ -366,18 +362,19 @@ timeToEvent <- purrr::map_dfr(eventIds, function(.eventId) {
                 coalesce(min(o.cohort_start_date), max(t.cohort_end_date)) AS event_date,
                 CASE WHEN min(o.cohort_start_date) IS NULL THEN 0 ELSE 1 END AS event
          FROM @cohort_database_schema.@cohort_table t
-             LEFT JOIN (
-                SELECT subject_id, MIN (cohort_start_date) AS cohort_start_date
-                FROM @cohort_database_schema.@cohort_table
-                WHERE cohort_definition_id IN (@outcome_ids)
-                GROUP BY subject_id
-              ) o
-             ON t.subject_id = o.subject_id
-                AND o.cohort_start_date >= t.cohort_start_date
-                AND o.cohort_start_date <= t.cohort_end_date
+         LEFT JOIN (
+            -- select earliest occurrence of each outcome
+            SELECT subject_id, MIN (cohort_start_date) AS cohort_start_date
+            FROM @cohort_database_schema.@cohort_table
+            WHERE cohort_definition_id IN (@outcome_ids)
+            GROUP BY subject_id
+          ) o
+         ON t.subject_id = o.subject_id
+            AND o.cohort_start_date >= t.cohort_start_date
+            AND o.cohort_start_date <= t.cohort_end_date
          WHERE t.cohort_definition_id IN (@target_ids)
          GROUP BY t.cohort_definition_id, t.subject_id, t.cohort_start_date
-         ) tab;
+      ) tab;
     ",
     cohort_database_schema = cohortDatabaseSchema,
     cohort_table = cohortTable,

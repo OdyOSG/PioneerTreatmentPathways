@@ -1,0 +1,86 @@
+---
+title: "Example time to event calculation"
+author: "Adam Black"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(DatabaseConnector)
+
+con <- connect(dbms = "sqlite", server = ":memory:")
+
+cohort <- tibble::tribble(
+  ~cohort_name, ~cohort_definition_id, ~subject_id, ~cohort_start_date, ~cohort_end_date,
+  "outcome: urinary retention", 1, 1, "2020-01-01", "2020-01-02",
+  "target: prostate cancer",    2, 1, "2020-05-01", "2023-01-01",
+  "outcome: urinary retention", 1, 1, "2021-01-01", "2021-01-02",
+) %>% 
+  dplyr::mutate(across(dplyr::matches("date"), as.Date))
+
+gt::gt(cohort)
+
+insertTable(con, "main", "cohort", cohort)
+```
+
+
+```{r}
+get_km_grouped <- function(con) {
+  sql <- SqlRender::render("
+  SELECT cohort_definition_id AS target_id, 
+     row_number() OVER (PARTITION BY cohort_definition_id) AS id,
+     DATEDIFF(day, cohort_start_date, event_date) AS time_to_event,
+     event
+  FROM (
+       SELECT t.cohort_definition_id, t.cohort_start_date,
+              coalesce(min(o.cohort_start_date), max(t.cohort_end_date)) AS event_date,
+              CASE WHEN min(o.cohort_start_date) IS NULL THEN 0 ELSE 1 END AS event
+       FROM @cohort_database_schema.@cohort_table t
+       LEFT JOIN (
+          -- select earliest occurrence of each outcome
+          SELECT subject_id, MIN (cohort_start_date) AS cohort_start_date
+          FROM @cohort_database_schema.@cohort_table
+          WHERE cohort_definition_id IN (@outcome_ids)
+          GROUP BY subject_id
+        ) o
+       ON t.subject_id = o.subject_id
+          AND o.cohort_start_date >= t.cohort_start_date
+          AND o.cohort_start_date <= t.cohort_end_date
+       WHERE t.cohort_definition_id IN (@target_ids)
+       GROUP BY t.cohort_definition_id, t.subject_id, t.cohort_start_date
+  ) tab;
+  ",
+  cohort_database_schema = "main",
+  cohort_table = "cohort",
+  outcome_ids = 1, 
+  target_ids = 2) %>% 
+  SqlRender::translate(dbms(con)) 
+  
+  DatabaseConnector::querySql(con, sql, snakeCaseToCamelCase = T)
+}
+
+get_km_grouped(con)
+```
+
+
+
+```{r}
+cohort <- tibble::tribble(
+  ~cohort_name, ~cohort_definition_id, ~subject_id, ~cohort_start_date, ~cohort_end_date,
+  "target: prostate cancer",    2, 1, "2020-05-01", "2023-01-01",
+  "outcome: urinary retention", 1, 1, "2021-01-01", "2021-01-02",
+) %>% 
+  dplyr::mutate(across(dplyr::matches("date"), as.Date))
+
+gt::gt(cohort)
+
+insertTable(con, "main", "cohort", cohort)
+
+get_km_grouped(con)
+```
+
