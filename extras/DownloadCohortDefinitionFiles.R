@@ -25,7 +25,7 @@
 
 # devtools::install_github("OHDSI/ROhdsiWebApi")
 
-df < -readr::read_csv("extras/phenotype_tracker.csv")
+df <- readr::read_csv("extras/phenotype_tracker.csv")
 
 #columns to create are: name, atlasName, atlasId, cohortId
 
@@ -38,19 +38,26 @@ df2 <- df %>%
             cohortId = cohort_id,
             group = type,
             atlas_link = atlas_link) %>% 
-  filter(!is.na(atlasId)) # fix issues here
+  filter(!is.na(atlas_link)) # fix issues here
+
+
+df2 %>% 
+  filter_all(is.na)
 
 # df3 <- filter(df2, is.na(atlasId))
 
-readr::write_csv(df2, "inst/settings/CohortsToCreate.csv")
+readr::write_csv(df2, "input/settings/CohortsToCreate.csv")
 
 bearer <- rstudioapi::askForPassword("Enter Bearer token")
 
 baseUrl <- "https://pioneer.hzdr.de/WebAPI"
 ROhdsiWebApi::setAuthHeader(baseUrl, bearer)
   
-ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "inst/settings/CohortsToCreate.csv",
+ROhdsiWebApi::insertCohortDefinitionSetInPackage(fileName = "input/settings/CohortsToCreate.csv",
                                                  baseUrl, 
+                                                 jsonFolder = "input/cohorts",
+                                                 sqlFolder = "input/sql/sql_server",
+                                                 insertTableSql = FALSE,
                                                  insertCohortCreationR = FALSE,
                                                  packageName = "PioneerTreatmentPathways",
                                                  generateStats = TRUE)

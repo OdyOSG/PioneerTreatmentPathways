@@ -3,9 +3,14 @@
 	"PrimaryCriteria" : {
 		"CriteriaList" : [
 			{
-				"ProcedureOccurrence" : {
+				"Death" : {
+					"DeathTypeExclude" : false
+				}
+			},
+			{
+				"Observation" : {
 					"CodesetId" : 0,
-					"ProcedureTypeExclude" : false
+					"ObservationTypeExclude" : false
 				}
 			}
 		],
@@ -14,46 +19,29 @@
 			"PostDays" : 0
 		},
 		"PrimaryCriteriaLimit" : {
-			"Type" : "All"
+			"Type" : "First"
 		}
 	},
 	"ConceptSets" : [
 		{
 			"id" : 0,
-			"name" : "[PIONEER 2.0] Suprapubic catheter",
+			"name" : "Natural death",
 			"expression" : {
 				"items" : [
 					{
 						"concept" : {
-							"CONCEPT_ID" : 4178787,
-							"CONCEPT_NAME" : "Procedure involving suprapubic catheter",
+							"CONCEPT_ID" : 4297089,
+							"CONCEPT_NAME" : "Natural death",
 							"STANDARD_CONCEPT" : "S",
 							"STANDARD_CONCEPT_CAPTION" : "Standard",
 							"INVALID_REASON" : "V",
 							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "429516009",
-							"DOMAIN_ID" : "Procedure",
+							"CONCEPT_CODE" : "38605008",
+							"DOMAIN_ID" : "Observation",
 							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
+							"CONCEPT_CLASS_ID" : "Clinical Finding"
 						},
 						"isExcluded" : false,
-						"includeDescendants" : true,
-						"includeMapped" : false
-					},
-					{
-						"concept" : {
-							"CONCEPT_ID" : 44809709,
-							"CONCEPT_NAME" : "Urodynamic study using suprapubic tube",
-							"STANDARD_CONCEPT" : "S",
-							"STANDARD_CONCEPT_CAPTION" : "Standard",
-							"INVALID_REASON" : "V",
-							"INVALID_REASON_CAPTION" : "Valid",
-							"CONCEPT_CODE" : "894071000000104",
-							"DOMAIN_ID" : "Procedure",
-							"VOCABULARY_ID" : "SNOMED",
-							"CONCEPT_CLASS_ID" : "Procedure"
-						},
-						"isExcluded" : true,
 						"includeDescendants" : false,
 						"includeMapped" : false
 					}
@@ -65,15 +53,9 @@
 		"Type" : "First"
 	},
 	"ExpressionLimit" : {
-		"Type" : "All"
+		"Type" : "First"
 	},
 	"InclusionRules" : [],
-	"EndStrategy" : {
-		"DateOffset" : {
-			"DateField" : "EndDate",
-			"Offset" : 1
-		}
-	},
 	"CensoringCriteria" : [],
 	"CollapseSettings" : {
 		"CollapseType" : "ERA",
