@@ -21,4 +21,8 @@ The overarching aim of this study is to describe the natural history of patients
 1. To describe the frequency of diagnostic procedures performed and time to receipt of diagnostic procedures from diagnosis with prostate cancer to initiation of treatment in patients newly diagnosed with prostate cancer 
 1. To characterize time to treatment initiation at each visit and to quantify the change in the distribution of time to treatment initiation during the follow up in patients newly diagnosed with prostate cancer 
 
+# Instructions
+
+1. Edit the file 00_study_parameters.R and add your database connection information. Run the script.
+1. Run the runStudy.R script
 

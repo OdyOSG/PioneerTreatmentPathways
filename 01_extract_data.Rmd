@@ -1,0 +1,244 @@
+---
+title: "PIONEER Treatment Patterns Study"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This Rmarkdown document contains the code to run the PIONEER Treatment Patterns Study. The code has been largely adapted from the [PIONEERmetastaticTreatment](https://github.com/bdemeulder/PIONEERmetastaticTreatment) study. It has been refactored into an RMarkdown document to facilitate readability.
+
+The study can be executed by rendering this documnent all at once or by running each code block one at a time. It is provided in both RMarkdown and Jupyter notebook formats. The notebook is written prioritizing readability so that other data scientists might easily see how the study code implements the study protocol.
+
+# Setup
+
+First we set up the R runtime by installing required packages and test database access. We need to test both read and write access since the study needs to be able to write data to the `cohortDatabaseSchema`.
+
+```{r install-dependencies, eval=FALSE}
+# This only needs to be done once
+# install.packages("devtools")
+# install.packages("survminer")
+# devtools::install_github("OHDSI/CohortDiagnostics")
+# devtools::install_github("OHDSI/CohortGenerator")
+```
+
+
+
+```{r set-study-parameters}
+source(here::here("00_study_parameters.R"))
+
+# check that study parameters are available
+# these should be set in parameters.R
+cohortDatabaseSchema
+cohortTable
+exportFolder
+databaseId
+databaseName
+databaseDescription
+options("sqlRenderTempEmulationSchema")
+```
+
+
+The R folder contains some helpful R functions that we will use in the study. Load/source them into the R environment.
+
+```{r source-R-files}
+
+# Source R code files in this project
+purrr::walk(list.files(here("R"), full.names = TRUE), source)
+
+if (!file.exists(exportFolder)) {
+  dir.create(exportFolder, recursive = TRUE)
+}
+
+readr::write_lines(.systemInfo(), here::here(exportFolder, "sessionInfo.txt"))
+cat(.systemInfo())
+```
+
+
+## Save database metadata
+
+```{r}
+
+con <- connect(connectionDetails)
+
+sql <- glue("SELECT vocabulary_version 
+             FROM {cdmDatabaseSchema}.vocabulary 
+             WHERE vocabulary_id = 'None';")
+
+vocabInfo <- renderTranslateQuerySql(con, sql)
+
+database <- data.frame(databaseId = databaseId,
+                       databaseName = databaseName,
+                       description = databaseDescription,
+                       vocabularyVersion = vocabInfo[[1]])
+
+readr::write_csv(database, here::here(exportFolder, "database.csv"))
+
+disconnect(con)
+```
+
+# Generate Study Cohorts
+
+```{r}
+cohortDefinitionSet <- readr::read_csv(here("input", "settings", "CohortsToCreate.csv"), 
+                                       show_col_types = FALSE) %>% 
+  mutate(cohortName = name,
+         sqlPath = file.path("input", "sql", "sql_server", paste0(name, ".sql")),
+         sql = purrr::map_chr(sqlPath, readr::read_file))
+```
+
+
+```{r}
+start <- Sys.time()
+cohortTableNames <- CohortGenerator::getCohortTableNames(cohortTable)
+
+CohortGenerator::createCohortTables(
+    connectionDetails = connectionDetails,
+    cohortDatabaseSchema = cohortDatabaseSchema,
+    cohortTableNames = cohortTableNames,
+    incremental = FALSE)
+
+
+CohortGenerator::generateCohortSet(
+  connectionDetails = connectionDetails,
+  cdmDatabaseSchema = cdmDatabaseSchema,
+  cohortDatabaseSchema = cohortDatabaseSchema,
+  cohortDefinitionSet = cohortDefinitionSet,
+  cohortTableNames = cohortTableNames,
+  incremental = TRUE,
+  incrementalFolder = here(exportFolder, "incremental")
+)
+
+delta <- Sys.time() - start
+cat(paste("Generating cohorts took", signif(delta, 3), attr(delta, "units")))
+```
+
+```{r}
+con <- DatabaseConnector::connect(connectionDetails)
+
+n <- renderTranslateQuerySql(con, glue::glue("select count(*) as n from {cohortDatabaseSchema}.{cohortTable}")) %>%
+  rename_all(tolower) %>% 
+  pull(n)
+
+DatabaseConnector::disconnect(con)
+message(glue("cohort table created with {n} rows."))
+```
+
+```{r}
+cohortCounts <- CohortGenerator::getCohortCounts(
+    connectionDetails = connectionDetails,
+    cohortDatabaseSchema = cohortDatabaseSchema,
+    cohortTable = cohortTable) %>%
+  tibble() %>%
+  full_join(select(cohortDefinitionSet, cohortId, name = atlasName, group), by = "cohortId") %>%
+  mutate(across(c(cohortEntries, cohortSubjects), ~tidyr::replace_na(., 0)), databaseId = databaseId) %>%
+  arrange(cohortId)
+
+readr::write_csv(cohortCounts, here(exportFolder, paste0(databaseId, "CohortCounts.csv")))
+
+print(cohortCounts, n=100)
+
+if (all(filter(cohortCounts, group == "Target") %>% pull(cohortEntries) == 0)) {
+  stop("All target cohorts are empty. You cannot execute this study.")
+}
+```
+
+# Extract Baseline Characteristics
+
+```{r}
+library(FeatureExtraction)
+
+target_ids <- 1:5
+
+preIndexCovariateSettings <- createCovariateSettings(
+  useDemographicsAge = TRUE,
+  useDemographicsGender = TRUE,
+  useConditionGroupEraLongTerm = TRUE,
+  useDrugGroupEraLongTerm = TRUE,
+  longTermStartDays = -365,
+  endDays = 0
+)
+
+covariates_minus365_minus1 <- 
+  getDbCovariateData(connectionDetails,
+                     oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
+                     cohortTable = cohortTable,
+                     cdmDatabaseSchema = cdmDatabaseSchema,
+                     cohortDatabaseSchema = cohortDatabaseSchema,
+                     cohortId = target_ids,
+                     covariateSettings = preIndexCovariateSettings,
+                     aggregated = TRUE)
+
+Andromeda::saveAndromeda(covariates_minus365_minus1, here::here(exportFolder, "covariates_minus365_minus1"))
+```
+
+```{r}
+postIndexCovariateSettings_0_365 <- createCovariateSettings(
+  useConditionGroupEraLongTerm = TRUE,
+  useDrugGroupEraLongTerm = TRUE,
+  longTermStartDays = 0,
+  endDays = 365
+)
+
+postIndexCovariates <- 
+  getDbCovariateData(connectionDetails,
+                     oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
+                     cohortTable = cohortTable,
+                     cdmDatabaseSchema = cdmDatabaseSchema,
+                     cohortDatabaseSchema = cohortDatabaseSchema,
+                     cohortId = target_ids,
+                     covariateSettings = postIndexCovariateSettings_0_365,
+                     aggregated = TRUE)
+
+Andromeda::saveAndromeda(postIndexCovariates, here::here(exportFolder, "covariates_0_365"))
+```
+
+
+```{r}
+
+postIndexCovariateSettings_366_710 <- createCovariateSettings(
+  useConditionGroupEraLongTerm = TRUE,
+  useDrugGroupEraLongTerm = TRUE,
+  longTermStartDays = 366,
+  endDays = 710
+)
+
+covariates_366_710 <- 
+  getDbCovariateData(connectionDetails,
+                     oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
+                     cohortTable = cohortTable,
+                     cdmDatabaseSchema = cdmDatabaseSchema,
+                     cohortDatabaseSchema = cohortDatabaseSchema,
+                     cohortId = target_ids,
+                     covariateSettings = postIndexCovariateSettings_366_710,
+                     aggregated = TRUE)
+
+Andromeda::saveAndromeda(covariates_366_710, here::here(exportFolder, "covariates_366_710"))
+```
+
+
+```{r}
+con <- connect(connectionDetails)
+
+sql <- glue("
+  select * 
+  from {cohortDatabaseSchema}.{cohortTable}
+  where subject_id in (
+    select distinct subject_id 
+    from {cohortDatabaseSchema}.{cohortTable}
+    where cohort_definition_id = 1
+  )") %>% 
+  SqlRender::translate(connectionDetails$dbms())
+
+cohort <- Andromeda::andromeda()
+DatabaseConnector::querySqlToAndromeda(conn, sql, cohort, "cohort")
+disconnect(con)
+
+Andromeda::saveAndromeda(cohort, here::here("temp", "cohort"))
+
+cohort <- Andromeda::loadAndromeda(here::here("temp", "cohort"))
+
+print(paste(nrow(cohort$cohort), "rows in the cohort table"))
+```

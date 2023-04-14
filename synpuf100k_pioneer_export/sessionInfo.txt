@@ -19,6 +19,6 @@ Attached base packages:
 Other attached packages:
 - glue (1.6.2)
 - here (1.0.1)
-- dplyr (1.1.0)
-- DatabaseConnector (6.0.0)
+- dplyr (1.1.1)
+- DatabaseConnector (6.1.0)
 - testthat (3.1.6)
