@@ -76,7 +76,7 @@ database <- data.frame(databaseId = databaseId,
 
 readr::write_csv(database, here::here(exportFolder, "database.csv"))
 
-disconnect(con)
+
 ```
 
 # Generate Study Cohorts
@@ -95,14 +95,14 @@ start <- Sys.time()
 cohortTableNames <- CohortGenerator::getCohortTableNames(cohortTable)
 
 CohortGenerator::createCohortTables(
-    connectionDetails = connectionDetails,
+    connection = con,
     cohortDatabaseSchema = cohortDatabaseSchema,
     cohortTableNames = cohortTableNames,
     incremental = FALSE)
 
 
 CohortGenerator::generateCohortSet(
-  connectionDetails = connectionDetails,
+  connection = con,
   cdmDatabaseSchema = cdmDatabaseSchema,
   cohortDatabaseSchema = cohortDatabaseSchema,
   cohortDefinitionSet = cohortDefinitionSet,
@@ -116,24 +116,23 @@ cat(paste("Generating cohorts took", signif(delta, 3), attr(delta, "units")))
 ```
 
 ```{r}
-con <- DatabaseConnector::connect(connectionDetails)
-
 n <- renderTranslateQuerySql(con, glue::glue("select count(*) as n from {cohortDatabaseSchema}.{cohortTable}")) %>%
   rename_all(tolower) %>% 
   pull(n)
 
-DatabaseConnector::disconnect(con)
 message(glue("cohort table created with {n} rows."))
 ```
 
 ```{r}
+
 cohortCounts <- CohortGenerator::getCohortCounts(
-    connectionDetails = connectionDetails,
+    connection = con,
     cohortDatabaseSchema = cohortDatabaseSchema,
     cohortTable = cohortTable) %>%
   tibble() %>%
   full_join(select(cohortDefinitionSet, cohortId, name = atlasName, group), by = "cohortId") %>%
-  mutate(across(c(cohortEntries, cohortSubjects), ~tidyr::replace_na(., 0)), databaseId = databaseId) %>%
+  mutate(across(c(cohortEntries, cohortSubjects), ~tidyr::replace_na(., 0))) %>% 
+  mutate(databaseId = databaseId) %>%
   arrange(cohortId)
 
 readr::write_csv(cohortCounts, here(exportFolder, paste0(databaseId, "CohortCounts.csv")))
@@ -162,7 +161,7 @@ preIndexCovariateSettings <- createCovariateSettings(
 )
 
 covariates_minus365_minus1 <- 
-  getDbCovariateData(connectionDetails,
+  getDbCovariateData(connection = con,
                      oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
                      cohortTable = cohortTable,
                      cdmDatabaseSchema = cdmDatabaseSchema,
@@ -183,7 +182,7 @@ postIndexCovariateSettings_0_365 <- createCovariateSettings(
 )
 
 postIndexCovariates <- 
-  getDbCovariateData(connectionDetails,
+  getDbCovariateData(connection = con,
                      oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
                      cohortTable = cohortTable,
                      cdmDatabaseSchema = cdmDatabaseSchema,
@@ -206,7 +205,7 @@ postIndexCovariateSettings_366_710 <- createCovariateSettings(
 )
 
 covariates_366_710 <- 
-  getDbCovariateData(connectionDetails,
+  getDbCovariateData(connection = con,
                      oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
                      cohortTable = cohortTable,
                      cdmDatabaseSchema = cdmDatabaseSchema,
@@ -220,7 +219,6 @@ Andromeda::saveAndromeda(covariates_366_710, here::here(exportFolder, "covariate
 
 
 ```{r}
-con <- connect(connectionDetails)
 
 sql <- glue("
   select * 
@@ -233,12 +231,19 @@ sql <- glue("
   SqlRender::translate(connectionDetails$dbms())
 
 cohort <- Andromeda::andromeda()
-DatabaseConnector::querySqlToAndromeda(conn, sql, cohort, "cohort")
-disconnect(con)
+DatabaseConnector::querySqlToAndromeda(con, sql, cohort, "cohort")
 
 Andromeda::saveAndromeda(cohort, here::here("temp", "cohort"))
 
 cohort <- Andromeda::loadAndromeda(here::here("temp", "cohort"))
 
 print(paste(nrow(cohort$cohort), "rows in the cohort table"))
+
+Andromeda::close(cohort)
 ```
+
+
+```{r}
+disconnect(con)
+```
+
