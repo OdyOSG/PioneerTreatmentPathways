@@ -1,0 +1,36 @@
+cohortId,cohortEntries,cohortSubjects,name,group,databaseId
+1,0,0,Newly diagnosed prostate cancer,Target,SYNPUF100K
+2,0,0,Newly diagnosed prostate cancer initiated immediate conservative trt,Target,SYNPUF100K
+3,0,0,Newly diagnosed prostate cancer initiated delayed conservative trt,Target,SYNPUF100K
+4,0,0,Newly diagnosed prostate cancer initiated immediate curative trt,Target,SYNPUF100K
+5,0,0,Newly diagnosed prostate cancer initiated delayed curative trt,Target,SYNPUF100K
+7,0,0,Newly diagnosed prostate cancer received  radiotherapy,Target,SYNPUF100K
+8,0,0,Newly diagnosed prostate cancer received  systemic chemotherapy,Target,SYNPUF100K
+13,345,345,"Prostatectomy (radical, open, laparoscopic radical and robot assisted radical) or",Outcome,SYNPUF100K
+14,35,35,Radiotherapy (palliative),Outcome,SYNPUF100K
+15,327,327,Radiotherapy (all),Outcome,SYNPUF100K
+16,296,294,Radiotherapy (curative),Outcome,SYNPUF100K
+17,288,288,"Focal therapy (HIFU, Cryotherapy, RFA)",Outcome,SYNPUF100K
+18,430,428,Curative treatment outcome cohort,Outcome,SYNPUF100K
+19,23080,19129,Palliative treatment outcome cohort,Outcome,SYNPUF100K
+20,65898,65898,Symptomatic progression,Outcome,SYNPUF100K
+21,0,0,"Skeletal-related events (i.e., compression fracture of vertebral column or spinal cord compression)",Outcome,SYNPUF100K
+22,5461,5461,Death cohort,Outcome,SYNPUF100K
+23,23695,23695,Obesity,Stratification,SYNPUF100K
+24,43830,43830,Hypertension,Stratification,SYNPUF100K
+25,17843,16096,"Cardiovascular events (CVE; myocardial infarction, stroke)",Stratification,SYNPUF100K
+26,81062,81062,Type 2 diabetes,Stratification,SYNPUF100K
+27,45533,30893,Venous tromboembolic events (VTE),Stratification,SYNPUF100K
+28,52293,52293,Respiratory disease (chronic obstructive pulmonary disease (COPD) or asthma),Stratification,SYNPUF100K
+29,0,0,Family history of Prostate cancer or family history of germline mutations,Stratification,SYNPUF100K
+30,0,0,"EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",Stratification,SYNPUF100K
+31,0,0,EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),Stratification,SYNPUF100K
+32,0,0,"EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",Stratification,SYNPUF100K
+37,0,0,CT thorax/abdomen OR full body MRI,Characterization,SYNPUF100K
+38,0,0,PET/CT imaging,Characterization,SYNPUF100K
+46,5,5,Pelvectomy (Total pelvic exenteration),Outcome,SYNPUF100K
+47,90,90,Suprapubic catheter placement,Outcome,SYNPUF100K
+48,15153,13034,Urinary retention,Outcome,SYNPUF100K
+49,8631,8631,Hydronephrosis and acute kidney failure,Outcome,SYNPUF100K
+50,18859,15179,Bowel occlusion/obstruction,Outcome,SYNPUF100K
+51,3150,3150,Chronic foley catheter placement,Outcome,SYNPUF100K
