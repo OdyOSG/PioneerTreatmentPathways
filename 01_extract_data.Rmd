@@ -242,7 +242,40 @@ Andromeda::close(cohort)
 # Get aggregate covariates for each strata
 
 ```{r}
-# create a new cohort table with strata columns
+
+# Compute charlson group for each person in the target cohort an upload it to the database
+library(FeatureExtraction)
+
+charlson <- getDbCovariateData(
+  connection = con,
+  oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
+  cohortTable = cohortTable,
+  cdmDatabaseSchema = cdmDatabaseSchema,
+  cohortDatabaseSchema = cohortDatabaseSchema,
+  cohortId = 1,
+  covariateSettings = createCovariateSettings(useCharlsonIndex = TRUE, longTermStartDays = -365, endDays = -1),
+  aggregated = FALSE)
+
+charlson_df <- charlson$covariates %>% 
+  mutate(charlson_group = case_when(
+         covariateValue == 0 ~ 'CCI=0',
+         covariateValue == 1 ~ 'CCI=0',
+         covariateValue >= 2 ~ 'CCI>=2')) %>%
+  select(subject_id = rowId, charlson_group) %>%
+  collect() %>%
+  mutate(subject_id = as.integer(subject_id))
+
+insertTable(con, 
+            databaseSchema = cohortDatabaseSchema,
+            tableName = "charlson_strata",
+            data = charlson_df,
+            bulkLoad = FALSE,
+            dropTableIfExists = TRUE,
+            progressBar = TRUE)
+```
+
+```{r}
+# create a new cohort target cohort table with additional stratafication columns
 
 renderTranslateExecuteSql(con, glue("
 DROP TABLE IF EXISTS {cohortDatabaseSchema}.pioneer_target_strata;
@@ -278,6 +311,7 @@ where a.cohort_definition_id = 1;
 ```
 
 ```{r}
+# Get all levels of all strata that exist in the data
 strata_columns <- c("index_year", "age_group", "obesity", "hypertension", "cve", "t2dm", "copd", "charlson_group")
 
 strata_levels <- purrr::map(strata_columns, ~renderTranslateQuerySql(con, 
@@ -286,8 +320,9 @@ names(strata_levels) <- strata_columns
 strata_level_names <- purrr::map(strata_levels, ~stringr::str_remove_all(., "[:symbol:]"))
 ```
 
-
 ```{r}
+# TODO implement a minimum person count check. Don't run FE is the strata has less than {minPerson} persons
+# Run feature extraction for each strata level
 start_days = c(-365, 0, 366)
 end_days = c(-1, 365, 710)
 
