@@ -239,6 +239,99 @@ print(paste(nrow(cohort$cohort), "rows in the cohort table"))
 Andromeda::close(cohort)
 ```
 
+# Get aggregate covariates for each strata
+
+```{r}
+# create a new cohort table with strata columns
+
+renderTranslateExecuteSql(con, glue("
+DROP TABLE IF EXISTS {cohortDatabaseSchema}.pioneer_target_strata;
+
+CREATE TABLE {cohortDatabaseSchema}.pioneer_target_strata AS
+select distinct
+    a.cohort_definition_id,
+    a.subject_id,
+    a.cohort_start_date,
+    a.cohort_end_date,
+    YEAR(a.cohort_start_date) as index_year,
+    CASE 
+        WHEN YEAR(a.cohort_start_date) - p.year_of_birth < 60 THEN '<60'
+        WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 60 
+            AND YEAR(a.cohort_start_date) - p.year_of_birth < 70 THEN '60-69'
+        WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 70 
+            AND YEAR(a.cohort_start_date) - p.year_of_birth < 80 THEN '70-79'
+        WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 80 THEN '>80'
+    END AS age_group,
+    CASE WHEN b.cohort_definition_id = 23 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS obesity,
+    CASE WHEN b.cohort_definition_id = 24 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS hypertension,
+    CASE WHEN b.cohort_definition_id = 25 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS cve,
+    CASE WHEN b.cohort_definition_id = 26 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS t2dm,
+    CASE WHEN b.cohort_definition_id = 27 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS vte,
+    CASE WHEN b.cohort_definition_id = 28 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS copd,
+    COALESCE(c.charlson_group, 'CCI=0') AS charlson_group,
+from {cohortDatabaseSchema}.{cohortTable} a
+join {cohortDatabaseSchema}.{cohortTable} b on a.subject_id = b.subject_id
+join {cdmDatabaseSchema}.person p on a.subject_id = p.person_id
+left join {cohortDatabaseSchema}.charlson_strata c on a.subject_id = c.subject_id
+where a.cohort_definition_id = 1;
+"))
+```
+
+```{r}
+strata_columns <- c("index_year", "age_group", "obesity", "hypertension", "cve", "t2dm", "copd", "charlson_group")
+
+strata_levels <- purrr::map(strata_columns, ~renderTranslateQuerySql(con, 
+  glue("select distinct {.} as x from {cohortDatabaseSchema}.pioneer_target_strata;"))[[1]])
+names(strata_levels) <- strata_columns
+strata_level_names <- purrr::map(strata_levels, ~stringr::str_remove_all(., "[:symbol:]"))
+```
+
+
+```{r}
+start_days = c(-365, 0, 366)
+end_days = c(-1, 365, 710)
+
+for (i in seq_along(strata_levels)) {   
+    for (j in seq_along(strata_levels[[i]])) {
+        print(glue("running FeatureExtraction for {names(strata_levels)[i]} level {strata_levels[[i]][j]}"))
+        
+        # add string quotes
+        lv <- ifelse(is.character(strata_levels[[i]][j]), glue("'{strata_levels[[i]][j]}'"), strata_levels[[i]][j])
+        # create a subset cohort table
+        renderTranslateExecuteSql(con, glue("
+            drop table if exists {cohortDatabaseSchema}.strata_temp_cohort;
+            create table {cohortDatabaseSchema}.strata_temp_cohort as
+            select * from {cohortDatabaseSchema}.pioneer_target_strata
+            where {names(strata_levels)[i]} = {lv}"))
+
+        for (k in 1:3) {
+            print(glue("time window {start_days[k]} - {end_days[k]}"))
+            # run FE for all three time windows 
+            preIndexCovariateSettings <- createCovariateSettings(
+              useDemographicsAge = TRUE,
+              useDemographicsGender = TRUE,
+              useConditionGroupEraLongTerm = TRUE,
+              useDrugGroupEraLongTerm = TRUE,
+              longTermStartDays = start_days[k],
+              endDays = end_days[k])
+
+            covariates_minus365_minus1 <- 
+                getDbCovariateData(
+                     connection = con,
+                     oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
+                     cohortTable = cohortTable,
+                     cdmDatabaseSchema = cdmDatabaseSchema,
+                     cohortDatabaseSchema = cohortDatabaseSchema,
+                     covariateSettings = preIndexCovariateSettings,
+                     aggregated = TRUE)
+
+            nm <- glue("strata_covariates_{start_days[k]}_{end_days[k]}_{names(strata_levels)[i]}_{strata_level_names[[i]][j]}") 
+            Andromeda::saveAndromeda(covariates_minus365_minus1, here::here(exportFolder, nm))
+        }
+    }          
+}
+```
+
 
 ```{r disconnect}
 disconnect(con)
