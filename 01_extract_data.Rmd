@@ -241,7 +241,7 @@ Andromeda::close(cohort)
 
 # Get aggregate covariates for each strata
 
-```{r}
+```{r get_charlson_scores_for_strata}
 
 # Compute charlson group for each person in the target cohort an upload it to the database
 library(FeatureExtraction)
@@ -274,7 +274,7 @@ insertTable(con,
             progressBar = TRUE)
 ```
 
-```{r}
+```{r create_stratified_cohort_table}
 # create a new cohort target cohort table with additional stratafication columns
 
 renderTranslateExecuteSql(con, glue("
@@ -310,7 +310,7 @@ where a.cohort_definition_id = 1;
 "))
 ```
 
-```{r}
+```{r get_strata_levels_in_data}
 # Get all levels of all strata that exist in the data
 strata_columns <- c("index_year", "age_group", "obesity", "hypertension", "cve", "t2dm", "copd", "charlson_group")
 
@@ -320,7 +320,7 @@ names(strata_levels) <- strata_columns
 strata_level_names <- purrr::map(strata_levels, ~stringr::str_remove_all(., "[:symbol:]"))
 ```
 
-```{r}
+```{r extract_strata_features}
 # Run feature extraction for each strata level
 start_days = c(-365, 0, 366)
 end_days = c(-1, 365, 710)
