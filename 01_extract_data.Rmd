@@ -321,14 +321,16 @@ strata_level_names <- purrr::map(strata_levels, ~stringr::str_remove_all(., "[:s
 ```
 
 ```{r}
-# TODO implement a minimum person count check. Don't run FE is the strata has less than {minPerson} persons
 # Run feature extraction for each strata level
 start_days = c(-365, 0, 366)
 end_days = c(-1, 365, 710)
 
+if (!dir.exists(here::here(exportFolder, "strata_covariates"))) {
+  dir.create(here::here(exportFolder, "strata_covariates"))
+}
+
 for (i in seq_along(strata_levels)) {   
     for (j in seq_along(strata_levels[[i]])) {
-        print(glue("running FeatureExtraction for {names(strata_levels)[i]} level {strata_levels[[i]][j]}"))
         
         # add string quotes
         lv <- ifelse(is.character(strata_levels[[i]][j]), glue("'{strata_levels[[i]][j]}'"), strata_levels[[i]][j])
@@ -338,10 +340,19 @@ for (i in seq_along(strata_levels)) {
             create table {cohortDatabaseSchema}.strata_temp_cohort as
             select * from {cohortDatabaseSchema}.pioneer_target_strata
             where {names(strata_levels)[i]} = {lv}"))
+        
+        cnt <- renderTranslateQuerySql(con, glue("select count(distinct subject_id) as n from {cohortDatabaseSchema}.strata_temp_cohort"))[[1]]
+        
+        if (cnt < 10) {
+          print(glue("skipping FeatureExtraction for {names(strata_levels)[i]} level {strata_levels[[i]][j]} with {cnt} persons"))
+          next
+        }
+        
+        print(glue("running FeatureExtraction for {names(strata_levels)[i]} level {strata_levels[[i]][j]} with {cnt} persons"))
 
         for (k in 1:3) {
-            print(glue("time window {start_days[k]} - {end_days[k]}"))
             # run FE for all three time windows 
+            print(glue("Feature time window {start_days[k]} - {end_days[k]}"))
             preIndexCovariateSettings <- createCovariateSettings(
               useDemographicsAge = TRUE,
               useDemographicsGender = TRUE,
@@ -350,7 +361,7 @@ for (i in seq_along(strata_levels)) {
               longTermStartDays = start_days[k],
               endDays = end_days[k])
 
-            covariates_minus365_minus1 <- 
+            covariates <- 
                 getDbCovariateData(
                      connection = con,
                      oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
@@ -361,10 +372,12 @@ for (i in seq_along(strata_levels)) {
                      aggregated = TRUE)
 
             nm <- glue("strata_covariates_{start_days[k]}_{end_days[k]}_{names(strata_levels)[i]}_{strata_level_names[[i]][j]}") 
-            Andromeda::saveAndromeda(covariates_minus365_minus1, here::here(exportFolder, nm))
+            Andromeda::saveAndromeda(covariates, here::here(exportFolder, "strata_covariates", nm))
         }
     }          
 }
+
+renderTranslateExecuteSql(con, glue("drop table if exists {cohortDatabaseSchema}.strata_temp_cohort;"))
 ```
 
 
