@@ -215,6 +215,8 @@ Andromeda::saveAndromeda(covariates_366_710, here::here(exportFolder, "covariate
 ```
 
 
+# Extract cohort table for survival analysis
+
 ```{r extract_cohort_table}
 
 sql <- glue("
@@ -225,7 +227,7 @@ sql <- glue("
     from {cohortDatabaseSchema}.{cohortTable}
     where cohort_definition_id = 1
   )") %>% 
-  SqlRender::translate(connectionDetails$dbms())
+  SqlRender::translate(dbms(con))
 
 cohort <- Andromeda::andromeda()
 DatabaseConnector::querySqlToAndromeda(con, sql, cohort, "cohort")
@@ -234,7 +236,8 @@ Andromeda::saveAndromeda(cohort, here::here("temp", "cohort"))
 
 cohort <- Andromeda::loadAndromeda(here::here("temp", "cohort"))
 
-print(paste(nrow(cohort$cohort), "rows in the cohort table"))
+print(paste(collect(tally(cohort$cohort))$n, "rows in the cohort table")) # old Andromeda
+print(paste(nrow(cohort$cohort), "rows in the cohort table")) # new Andromeda
 
 Andromeda::close(cohort)
 ```
