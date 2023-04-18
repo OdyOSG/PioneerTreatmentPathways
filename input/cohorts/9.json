@@ -3,10 +3,10 @@
 	"PrimaryCriteria" : {
 		"CriteriaList" : [
 			{
-				"DrugExposure" : {
-					"CodesetId" : 23,
+				"ProcedureOccurrence" : {
+					"CodesetId" : 21,
 					"First" : true,
-					"DrugTypeExclude" : false
+					"ProcedureTypeExclude" : false
 				}
 			}
 		],
@@ -4088,7 +4088,7 @@
 			}
 		},
 		{
-			"name" : "No ARTA, Immunotherapy, PSMA, Radium, PARP",
+			"name" : "No ARTA, Immunotherapy, PSMA, Radium, PARP, Chemo",
 			"expression" : {
 				"Type" : "ALL",
 				"CriteriaList" : [
@@ -4200,6 +4200,32 @@
 						"Criteria" : {
 							"DrugExposure" : {
 								"CodesetId" : 28,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 0,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 23,
 								"DrugTypeExclude" : false
 							}
 						},
@@ -4333,42 +4359,6 @@
 							},
 							"End" : {
 								"Days" : 90,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 0,
-							"Count" : 0,
-							"IsDistinct" : false
-						}
-					}
-				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
-			}
-		},
-		{
-			"name" : "No prior focal therapy",
-			"expression" : {
-				"Type" : "ALL",
-				"CriteriaList" : [
-					{
-						"Criteria" : {
-							"ProcedureOccurrence" : {
-								"CodesetId" : 21,
-								"ProcedureTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 0,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,

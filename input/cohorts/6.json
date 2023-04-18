@@ -3,10 +3,10 @@
 	"PrimaryCriteria" : {
 		"CriteriaList" : [
 			{
-				"DrugExposure" : {
-					"CodesetId" : 23,
+				"ProcedureOccurrence" : {
+					"CodesetId" : 18,
 					"First" : true,
-					"DrugTypeExclude" : false
+					"ProcedureTypeExclude" : false
 				}
 			}
 		],
@@ -4088,10 +4088,36 @@
 			}
 		},
 		{
-			"name" : "No ARTA, Immunotherapy, PSMA, Radium, PARP",
+			"name" : "No chemo, ARTA, Immunotherapy, PSMA, Radium, PARP",
 			"expression" : {
 				"Type" : "ALL",
 				"CriteriaList" : [
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 23,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 0,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 2,
+							"Count" : 1,
+							"IsDistinct" : false
+						}
+					},
 					{
 						"Criteria" : {
 							"DrugExposure" : {
@@ -4228,7 +4254,7 @@
 			}
 		},
 		{
-			"name" : "No prior radiotherapy prior to prostatectomy",
+			"name" : "No prior radiotherapy prior prostatectomy and no RT within the first year",
 			"expression" : {
 				"Type" : "ANY",
 				"CriteriaList" : [
@@ -4244,7 +4270,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 0,
+								"Days" : 365,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,
@@ -4270,7 +4296,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 0,
+								"Days" : 365,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,
@@ -4290,7 +4316,7 @@
 			}
 		},
 		{
-			"name" : "No ADT prior to prostatectomy",
+			"name" : "No ADT prior to or within 90 days after prostatectomy",
 			"expression" : {
 				"Type" : "ANY",
 				"CriteriaList" : [
@@ -4360,42 +4386,6 @@
 						"Criteria" : {
 							"ProcedureOccurrence" : {
 								"CodesetId" : 21,
-								"ProcedureTypeExclude" : false
-							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
-							},
-							"End" : {
-								"Days" : 0,
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 0,
-							"Count" : 0,
-							"IsDistinct" : false
-						}
-					}
-				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
-			}
-		},
-		{
-			"name" : "No prostatectomy",
-			"expression" : {
-				"Type" : "ALL",
-				"CriteriaList" : [
-					{
-						"Criteria" : {
-							"ProcedureOccurrence" : {
-								"CodesetId" : 18,
 								"ProcedureTypeExclude" : false
 							}
 						},

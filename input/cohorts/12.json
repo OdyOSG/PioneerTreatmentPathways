@@ -3,10 +3,10 @@
 	"PrimaryCriteria" : {
 		"CriteriaList" : [
 			{
-				"DrugExposure" : {
-					"CodesetId" : 23,
+				"ProcedureOccurrence" : {
+					"CodesetId" : 18,
 					"First" : true,
-					"DrugTypeExclude" : false
+					"ProcedureTypeExclude" : false
 				}
 			}
 		],
@@ -4088,10 +4088,36 @@
 			}
 		},
 		{
-			"name" : "No ARTA, Immunotherapy, PSMA, Radium, PARP",
+			"name" : "No chemo, ARTA, Immunotherapy, PSMA, Radium, PARP",
 			"expression" : {
 				"Type" : "ALL",
 				"CriteriaList" : [
+					{
+						"Criteria" : {
+							"DrugExposure" : {
+								"CodesetId" : 23,
+								"DrugTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 0,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 2,
+							"Count" : 1,
+							"IsDistinct" : false
+						}
+					},
 					{
 						"Criteria" : {
 							"DrugExposure" : {
@@ -4228,7 +4254,7 @@
 			}
 		},
 		{
-			"name" : "No prior radiotherapy prior to prostatectomy",
+			"name" : "No prior radiotherapy prior prostatectomy",
 			"expression" : {
 				"Type" : "ANY",
 				"CriteriaList" : [
@@ -4306,7 +4332,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 90,
+								"Days" : 0,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,
@@ -4332,7 +4358,7 @@
 								"Coeff" : -1
 							},
 							"End" : {
-								"Days" : 90,
+								"Days" : 0,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,
@@ -4388,23 +4414,24 @@
 			}
 		},
 		{
-			"name" : "No prostatectomy",
+			"name" : "ADT within 3 month from index",
 			"expression" : {
-				"Type" : "ALL",
+				"Type" : "ANY",
 				"CriteriaList" : [
 					{
 						"Criteria" : {
-							"ProcedureOccurrence" : {
-								"CodesetId" : 18,
-								"ProcedureTypeExclude" : false
+							"DrugExposure" : {
+								"CodesetId" : 22,
+								"DrugTypeExclude" : false
 							}
 						},
 						"StartWindow" : {
 							"Start" : {
-								"Coeff" : -1
+								"Days" : 1,
+								"Coeff" : 1
 							},
 							"End" : {
-								"Days" : 0,
+								"Days" : 90,
 								"Coeff" : 1
 							},
 							"UseIndexEnd" : false,
@@ -4415,6 +4442,96 @@
 						"Occurrence" : {
 							"Type" : 0,
 							"Count" : 0,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"ProcedureOccurrence" : {
+								"CodesetId" : 29,
+								"ProcedureTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 1,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Days" : 90,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 0,
+							"Count" : 0,
+							"IsDistinct" : false
+						}
+					}
+				],
+				"DemographicCriteriaList" : [],
+				"Groups" : []
+			}
+		},
+		{
+			"name" : "RT within a year after surgery",
+			"expression" : {
+				"Type" : "ANY",
+				"CriteriaList" : [
+					{
+						"Criteria" : {
+							"ProcedureOccurrence" : {
+								"CodesetId" : 19,
+								"ProcedureTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 1,
+								"Coeff" : 1
+							},
+							"End" : {
+								"Days" : 365,
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 2,
+							"Count" : 1,
+							"IsDistinct" : false
+						}
+					},
+					{
+						"Criteria" : {
+							"Observation" : {
+								"CodesetId" : 19,
+								"ObservationTypeExclude" : false
+							}
+						},
+						"StartWindow" : {
+							"Start" : {
+								"Days" : 1,
+								"Coeff" : -1
+							},
+							"End" : {
+								"Coeff" : 1
+							},
+							"UseIndexEnd" : false,
+							"UseEventEnd" : false
+						},
+						"RestrictVisit" : false,
+						"IgnoreObservationPeriod" : false,
+						"Occurrence" : {
+							"Type" : 2,
+							"Count" : 1,
 							"IsDistinct" : false
 						}
 					}

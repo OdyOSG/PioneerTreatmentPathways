@@ -1,36 +1,38 @@
 name,atlasName,atlasId,cohortId,group,atlas_link
-1,Newly diagnosed prostate cancer,497,1,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/497
+1,Newly diagnosed prostate cancer,542,1,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/542
 2,Newly diagnosed prostate cancer initiated immediate conservative trt,509,2,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/509
 3,Newly diagnosed prostate cancer initiated delayed conservative trt,510,3,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/510
 4,Newly diagnosed prostate cancer initiated immediate curative trt,512,4,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/512
 5,Newly diagnosed prostate cancer initiated delayed curative trt,511,5,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/511
-7,Newly diagnosed prostate cancer received  radiotherapy,514,7,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/514
-8,Newly diagnosed prostate cancer received  systemic chemotherapy,513,8,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/513
-13,"Prostatectomy (radical, open, laparoscopic radical and robot assisted radical) or",499,13,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/499
-14,Radiotherapy (palliative),508,14,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/508
-15,Radiotherapy (all),498,15,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/498
-16,Radiotherapy (curative),523,16,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/523
-17,"Focal therapy (HIFU, Cryotherapy, RFA)",504,17,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/504
-18,Curative treatment outcome cohort,524,18,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/524
-19,Palliative treatment outcome cohort,516,19,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/516
-20,Symptomatic progression,453,20,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/453
-21,"Skeletal-related events (i.e., compression fracture of vertebral column or spinal cord compression)",361,21,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/361
-22,Death cohort,362,22,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/362
-23,Obesity,282,23,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/282
-24,Hypertension,284,24,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/284
-25,"Cardiovascular events (CVE; myocardial infarction, stroke)",286,25,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/286
-26,Type 2 diabetes,287,26,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/287
-27,Venous tromboembolic events (VTE),288,27,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/288
-28,Respiratory disease (chronic obstructive pulmonary disease (COPD) or asthma),290,28,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/290
-29,Family history of Prostate cancer or family history of germline mutations,292,29,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/292
-30,"EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",52,30,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/52
-31,EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),54,31,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/54
-32,"EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",53,32,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/53
-37,CT thorax/abdomen OR full body MRI,316,37,Characterization,https://pioneer.hzdr.de/atlas/#/cohortdefinition/316
-38,PET/CT imaging,299,38,Characterization,https://pioneer.hzdr.de/atlas/#/cohortdefinition/299
-46,Pelvectomy (Total pelvic exenteration),338,46,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/338
-47,Suprapubic catheter placement,337,47,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/337
-48,Urinary retention,505,48,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/505
-49,Hydronephrosis and acute kidney failure,506,49,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/506
-50,Bowel occlusion/obstruction,507,50,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/507
-51,Chronic foley catheter placement,334,51,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/334
+6,Newly diagnosed prostate cancer received prostatectomy,539,6,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/539
+7,Newly diagnosed prostate cancer received radiotherapy,514,7,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/514
+8,Newly diagnosed prostate cancer received systemic chemotherapy,513,8,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/513
+9,Newly diagnosed prostate cancer received focal therapy,536,9,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/536
+11,Newly diagnosed prostate cancer received prostatectomy plus salvage ADT and radiotherapy,531,11,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/531
+12,Newly diagnosed prostate cancer received postatectomy and adjuvant radiotherapy,538,12,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/538
+13,"Prostatectomy (radical, open, laparoscopic radical and robot assisted radical) or",499,13,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/499
+14,Radiotherapy (palliative),508,14,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/508
+15,Radiotherapy (all),498,15,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/498
+16,Radiotherapy (curative),523,16,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/523
+17,ADT (base treatment),415,17,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/415
+18,"Focal therapy (HIFU, Cryotherapy, RFA)",504,18,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/504
+19,Curative treatment outcome cohort,524,19,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/524
+20,Palliative treatment outcome cohort,516,20,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/516
+21,Symptomatic progression,453,21,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/453
+22,"Skeletal-related events (i.e., compression fracture of vertebral column or spinal cord compression)",361,22,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/361
+23,Death cohort,362,23,Outcome,https://pioneer.hzdr.de/atlas/#/cohortdefinition/362
+24,Obesity,282,24,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/282
+25,Hypertension,284,25,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/284
+26,"Cardiovascular events (CVE; myocardial infarction, stroke)",286,26,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/286
+27,Type 2 diabetes,287,27,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/287
+28,Venous tromboembolic events (VTE),288,28,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/288
+29,Respiratory disease (chronic obstructive pulmonary disease (COPD) or asthma),290,29,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/290
+30,Family history of Prostate cancer or family history of germline mutations,292,30,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/292
+31,"EAU risk group at diagnosis low-risk (PSA <10 ng/ml AND (Gleason score 6 OR grade group 1) AND c1/cT2a),",52,31,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/52
+32,EAU risk group at diagnosis intermediate-risk (PSA 10-20 ng/ml OR (Gleason score 7 OR grade group 2-3) OR cT2b),54,32,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/54
+33,"EAU risk group at diagnosis high-risk (PSA >20 ng/ml OR (Gleason score 8-10 OR grade group 4-5) OR cT2c or cT3, cT4)",53,33,Stratification,https://pioneer.hzdr.de/atlas/#/cohortdefinition/53
+34,MRI of prostate,528,34,Characterization,https://pioneer.hzdr.de/atlas/#/cohortdefinition/528
+35,CT thorax/abdomen OR full body MRI,529,35,Characterization,https://pioneer.hzdr.de/atlas/#/cohortdefinition/529
+36,PET/CT imaging,527,36,Characterization,https://pioneer.hzdr.de/atlas/#/cohortdefinition/527
+37,Hospitalization,324,37,Characterization,https://pioneer.hzdr.de/atlas/#/cohortdefinition/324
+38,ER,327,38,Characterization,https://pioneer.hzdr.de/atlas/#/cohortdefinition/327

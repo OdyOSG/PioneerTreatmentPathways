@@ -5,23 +5,23 @@ CREATE TABLE #Codesets (
 ;
 
 INSERT INTO #Codesets (codeset_id, concept_id)
-SELECT 12 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+SELECT 13 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
 ( 
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4330932,37396025,2108724,2108725,4198015,43533205,2790073,1781260,4041984,2789856,1524039,2789850,2789851,2789848,2789849,2789854,2789855,2789852,2789853,2789846,2789847,2789845,2110047,2110043,2789830)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (2108724,1524039,2789846,2789854,2789853,4198015,1781260,2789847,4041984,2110047,2108725,2789851,2789845,2789848,2790073,43533205,2789852,2789850,2789830,2789855,2789849,2789856,4330932,2110043,4029715)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (4330932,37396025,2108724,2108725,4198015,43533205,2790073,1781260,4041984,2789856,1524039,2789850,2789851,2789848,2789849,2789854,2789855,2789852,2789853,2789846,2789847,2789845,2110047)
+  and ca.ancestor_concept_id in (2108724,1524039,2789846,2789854,2789853,4198015,1781260,2789847,4041984,2110047,2108725,2789851,2789845,2789848,2790073,43533205,2789852,2789850,2789855,2789849,2789856,4330932,4029715)
   and c.invalid_reason is null
 
 ) I
 LEFT JOIN
 (
-  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (2108677,40487861,4193061,44783041,2780477,44783043)
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (2108677,40487861,4193061,44783041,44783043)
 UNION  select c.concept_id
   from @vocabulary_database_schema.CONCEPT c
   join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
-  and ca.ancestor_concept_id in (2108677,40487861,4193061,44783041,2780477,44783043)
+  and ca.ancestor_concept_id in (2108677,40487861,4193061,44783041,44783043)
   and c.invalid_reason is null
 
 ) E ON I.concept_id = E.concept_id
@@ -47,7 +47,7 @@ from
 (
   select po.* 
   FROM @cdm_database_schema.PROCEDURE_OCCURRENCE po
-JOIN #Codesets cs on (po.procedure_concept_id = cs.concept_id and cs.codeset_id = 12)
+JOIN #Codesets cs on (po.procedure_concept_id = cs.concept_id and cs.codeset_id = 13)
 ) C
 
 
@@ -61,7 +61,7 @@ from
 (
   select o.* 
   FROM @cdm_database_schema.OBSERVATION o
-JOIN #Codesets cs on (o.observation_concept_id = cs.concept_id and cs.codeset_id = 12)
+JOIN #Codesets cs on (o.observation_concept_id = cs.concept_id and cs.codeset_id = 13)
 ) C
 
 

@@ -3,6 +3,27 @@ cohortName,ruleSequence,ruleName,cohortId
 1,1,No history of PCa,1
 1,2,PCa biopsy,1
 1,3,no ADT and androgen agonist inhibitors,1
+1,4,No prior other malignancies,1
+11,0,Age 18+,11
+11,1,Male,11
+11,2,Prior prostate cancer,11
+11,3,No prior cancer other than prostate,11
+11,4,"No chemo, ARTA, Immunotherapy, PSMA, Radium, PARP",11
+11,5,No prior radiotherapy prior prostatectomy,11
+11,6,No ADT prior to prostatectomy,11
+11,7,No prior focal therapy,11
+11,8,ADT within 3 month from index,11
+11,9,RT within a year after surgery,11
+12,0,Age 18+,12
+12,1,Male,12
+12,2,Prior prostate cancer,12
+12,3,No prior cancer other than prostate,12
+12,4,"No chemo, ARTA, Immunotherapy, PSMA, Radium, PARP",12
+12,5,No prior radiotherapy prior prostatectomy,12
+12,6,No ADT prior to prostatectomy,12
+12,7,No prior focal therapy,12
+12,8,ADT within 3 month from index,12
+12,9,RT within a year after surgery,12
 14,0,Prior symptoms,14
 16,0,Prior symptoms,16
 2,0,Age >= 18,2
@@ -13,11 +34,9 @@ cohortName,ruleSequence,ruleName,cohortId
 3,1,Male,3
 3,2,Prior prostate cancer up to 183 days before treatment initiation,3
 3,3,No prior curative treatment,3
-30,0,High grade attributes ,30
-31,0,Intermediate grade attributes ,31
-32,0,Low grade attributes,32
-37,0,CT thorax and or abdomen,37
-38,0,PET/CT within 90 days,38
+31,0,High grade attributes ,31
+32,0,Intermediate grade attributes ,32
+33,0,Low grade attributes,33
 4,0,Age >= 18,4
 4,1,Male,4
 4,2,Prior prostate cancer 183 days before treatment initiation,4
@@ -26,13 +45,36 @@ cohortName,ruleSequence,ruleName,cohortId
 5,1,Male,5
 5,2,Prior prostate cancer in 183 days before treatment initiation,5
 5,3,No prior palliative treatment,5
+6,0,Age 18+,6
+6,1,Male,6
+6,2,Prior prostate cancer,6
+6,3,No prior cancer other than prostate,6
+6,4,"No chemo, ARTA, Immunotherapy, PSMA, Radium, PARP",6
+6,5,No prior radiotherapy prior prostatectomy and no RT within the first year,6
+6,6,No ADT prior to or within 90 days after prostatectomy,6
+6,7,No prior focal therapy,6
 7,0,Age 18+,7
 7,1,Male,7
 7,2,Prior prostate cancer,7
 7,3,No prior cancer other than prostate,7
-7,4,No other prior curative treatments,7
+7,4,"No chemo, ARTA, Immunotherapy, PSMA, Radium, PARP",7
+7,5,No prior prostatectomy,7
+7,6,No ADT prior ,7
+7,7,No prior focal therapy,7
 8,0,Age 18+,8
 8,1,Male,8
 8,2,Prior prostate cancer,8
 8,3,No prior cancer other than prostate,8
-8,4,No other prior curative treatment for prostate cancer,8
+8,4,"No ARTA, Immunotherapy, PSMA, Radium, PARP",8
+8,5,No prior radiotherapy prior to prostatectomy,8
+8,6,No ADT prior to prostatectomy,8
+8,7,No prior focal therapy,8
+8,8,No prostatectomy,8
+9,0,Age 18+,9
+9,1,Male,9
+9,2,Prior prostate cancer,9
+9,3,No prior cancer other than prostate,9
+9,4,"No ARTA, Immunotherapy, PSMA, Radium, PARP, Chemo",9
+9,5,No prior radiotherapy prior to prostatectomy,9
+9,6,No ADT prior to prostatectomy,9
+9,7,No prostatectomy,9

@@ -1,5 +1,0 @@
-generationScript,name,lbOperator,lbStrataValue,ubOperator,ubStrataValue,cohortId
-strata/StratifyByAge.sql,Age < 60,>,0,<,60,1
-strata/StratifyByAge.sql,Age 60 - 69,>=,60,<=,69,2
-strata/StratifyByAge.sql,Age 70 - 79,>=,70,<=,79,3
-strata/StratifyByAge.sql,Age >= 80,>=,80,<,99999,4

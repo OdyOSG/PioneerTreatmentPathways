@@ -1,6 +1,6 @@
 # Copyright 2022 Observational Health Data Sciences and Informatics
 #
-# This file is part of PioneerMetastaticTreatment
+# This file is part of PioneerTreatmentPathways
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,6 +25,7 @@
 
 # devtools::install_github("OHDSI/ROhdsiWebApi")
 
+file.copy("~/Downloads/Phenotype tracker - FINAL.csv", "extras/phenotype_tracker.csv", overwrite = T)
 df <- readr::read_csv("extras/phenotype_tracker.csv")
 
 #columns to create are: name, atlasName, atlasId, cohortId
@@ -44,7 +45,7 @@ df2 <- df %>%
 df2 %>% 
   filter_all(is.na)
 
-# df3 <- filter(df2, is.na(atlasId))
+df2 <- filter(df2, !is.na(atlasId))
 
 readr::write_csv(df2, "input/settings/CohortsToCreate.csv")
 
