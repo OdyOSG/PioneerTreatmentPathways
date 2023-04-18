@@ -1,32 +1,16 @@
----
-title: "PIONEER Treatment Patterns Study"
-output: html_document
-date: "`r Sys.Date()`"
----
-
-```{r setup, include=FALSE}
+## ----setup, include=FALSE-----------------------------------------------------------------------------
 knitr::opts_chunk$set(echo = TRUE)
-```
-
-This Rmarkdown document contains the code to run the PIONEER Treatment Patterns Study. The code has been largely adapted from the [PIONEERmetastaticTreatment](https://github.com/bdemeulder/PIONEERmetastaticTreatment) study. It has been refactored into an RMarkdown document to facilitate readability.
-
-The study can be executed by rendering this documnent all at once or by running each code block one at a time. It is provided in both RMarkdown and Jupyter notebook formats. The notebook is written prioritizing readability so that other data scientists might easily see how the study code implements the study protocol.
-
-# Setup
-
-First we set up the R runtime by installing required packages and test database access. We need to test both read and write access since the study needs to be able to write data to the `cohortDatabaseSchema`.
-
-```{r install-dependencies, eval=FALSE}
-# This only needs to be done once
-# install.packages("devtools")
-# install.packages("survminer")
-# devtools::install_github("OHDSI/CohortDiagnostics")
-# devtools::install_github("OHDSI/CohortGenerator")
-```
 
 
+## ----install-dependencies, eval=FALSE-----------------------------------------------------------------
+## # This only needs to be done once
+## # install.packages("devtools")
+## # install.packages("survminer")
+## # devtools::install_github("OHDSI/CohortDiagnostics")
+## # devtools::install_github("OHDSI/CohortGenerator")
 
-```{r set-study-parameters}
+
+## ----set-study-parameters-----------------------------------------------------------------------------
 source(here::here("00_study_parameters.R"))
 
 # check that study parameters are available
@@ -38,12 +22,9 @@ databaseId
 databaseName
 databaseDescription
 options("sqlRenderTempEmulationSchema")
-```
 
 
-The R folder contains some helpful R functions that we will use in the study. Load/source them into the R environment.
-
-```{r source-R-files}
+## ----source-R-files-----------------------------------------------------------------------------------
 
 # Source R code files in this project
 purrr::walk(list.files(here("R"), full.names = TRUE), source)
@@ -54,12 +35,9 @@ if (!file.exists(exportFolder)) {
 
 readr::write_lines(.systemInfo(), here::here(exportFolder, "sessionInfo.txt"))
 cat(.systemInfo())
-```
 
 
-## Save database metadata
-
-```{r save_database_info}
+## ----save_database_info-------------------------------------------------------------------------------
 
 con <- connect(connectionDetails)
 
@@ -77,11 +55,9 @@ database <- data.frame(databaseId = databaseId,
 readr::write_csv(database, here::here(exportFolder, "database.csv"))
 
 
-```
 
-# Generate Study Cohorts
 
-```{r generate_cohorts}
+## ----generate_cohorts---------------------------------------------------------------------------------
 cohortDefinitionSet <- readr::read_csv(here("input", "settings", "CohortsToCreate.csv"), 
                                        show_col_types = FALSE) %>% 
   mutate(cohortName = name,
@@ -110,17 +86,17 @@ CohortGenerator::generateCohortSet(
 
 delta <- Sys.time() - start
 cat(paste("Generating cohorts took", signif(delta, 3), attr(delta, "units")))
-```
 
-```{r check_cohort_generation}
+
+## ----check_cohort_generation--------------------------------------------------------------------------
 n <- renderTranslateQuerySql(con, glue::glue("select count(*) as n from {cohortDatabaseSchema}.{cohortTable}")) %>%
   rename_all(tolower) %>% 
   pull(n)
 
 message(glue("cohort table created with {n} rows."))
-```
 
-```{r get_cohort_counts}
+
+## ----get_cohort_counts--------------------------------------------------------------------------------
 
 cohortCounts <- CohortGenerator::getCohortCounts(
     connection = con,
@@ -139,11 +115,9 @@ print(cohortCounts, n=100)
 if (all(filter(cohortCounts, group == "Target") %>% pull(cohortEntries) == 0)) {
   stop("All target cohorts are empty. You cannot execute this study.")
 }
-```
 
-# Extract Baseline Characteristics
 
-```{r features_one_year_prior_to_index}
+## ----features_one_year_prior_to_index-----------------------------------------------------------------
 library(FeatureExtraction)
 
 target_ids <- 1:5
@@ -168,9 +142,9 @@ covariates_minus365_minus1 <-
                      aggregated = TRUE)
 
 Andromeda::saveAndromeda(covariates_minus365_minus1, here::here(exportFolder, "covariates_minus365_minus1"))
-```
 
-```{r features_one_year_post_index}
+
+## ----features_one_year_post_index---------------------------------------------------------------------
 postIndexCovariateSettings_0_365 <- createCovariateSettings(
   useConditionGroupEraLongTerm = TRUE,
   useDrugGroupEraLongTerm = TRUE,
@@ -189,10 +163,9 @@ postIndexCovariates <-
                      aggregated = TRUE)
 
 Andromeda::saveAndromeda(postIndexCovariates, here::here(exportFolder, "covariates_0_365"))
-```
 
 
-```{r features_year2_post_index}
+## ----features_year2_post_index------------------------------------------------------------------------
 
 postIndexCovariateSettings_366_710 <- createCovariateSettings(
   useConditionGroupEraLongTerm = TRUE,
@@ -212,12 +185,9 @@ covariates_366_710 <-
                      aggregated = TRUE)
 
 Andromeda::saveAndromeda(covariates_366_710, here::here(exportFolder, "covariates_366_710"))
-```
 
 
-# Extract cohort table for survival analysis
-
-```{r extract_cohort_table}
+## ----extract_cohort_table-----------------------------------------------------------------------------
 
 sql <- glue("
   select * 
@@ -240,11 +210,9 @@ print(paste(collect(tally(cohort$cohort))$n, "rows in the cohort table")) # old 
 print(paste(nrow(cohort$cohort), "rows in the cohort table")) # new Andromeda
 
 Andromeda::close(cohort)
-```
 
-# Get aggregate covariates for each strata
 
-```{r get_charlson_scores_for_strata}
+## ----get_charlson_scores_for_strata-------------------------------------------------------------------
 
 # Compute charlson group for each person in the target cohort an upload it to the database
 library(FeatureExtraction)
@@ -275,9 +243,9 @@ insertTable(con,
             bulkLoad = FALSE,
             dropTableIfExists = TRUE,
             progressBar = TRUE)
-```
 
-```{r create_stratified_cohort_table}
+
+## ----create_stratified_cohort_table-------------------------------------------------------------------
 # create a new cohort target cohort table with additional stratafication columns
 
 renderTranslateExecuteSql(con, glue("
@@ -317,15 +285,14 @@ join {cdmDatabaseSchema}.observation_period o
 left join {cohortDatabaseSchema}.charlson_strata c on a.subject_id = c.subject_id
 where a.cohort_definition_id = 1;
 "))
-```
 
-```{r}
+
+## -----------------------------------------------------------------------------------------------------
 target_strata <- renderTranslateQuerySql(con, glue("select * from {cohortDatabaseSchema}.pioneer_target_strata"))
 readr::write_rds(target_strata, here::here("temp", "target_strata.rds"))
-```
 
 
-```{r get_strata_levels_in_data}
+## ----get_strata_levels_in_data------------------------------------------------------------------------
 # Get all levels of all strata that exist in the data
 strata_columns <- c("index_year", "age_group", "obesity", "hypertension", "cve", "t2dm", "copd", "charlson_group")
 
@@ -333,9 +300,9 @@ strata_levels <- purrr::map(strata_columns, ~renderTranslateQuerySql(con,
   glue("select distinct {.} as x from {cohortDatabaseSchema}.pioneer_target_strata;"))[[1]])
 names(strata_levels) <- strata_columns
 strata_level_names <- purrr::map(strata_levels, ~stringr::str_remove_all(., "[:symbol:]"))
-```
 
-```{r extract_strata_features}
+
+## ----extract_strata_features--------------------------------------------------------------------------
 # Run feature extraction for each strata level
 start_days = c(-365, 0, 366)
 end_days = c(-1, 365, 710)
@@ -393,10 +360,8 @@ for (i in seq_along(strata_levels)) {
 }
 
 renderTranslateExecuteSql(con, glue("drop table if exists {cohortDatabaseSchema}.strata_temp_cohort;"))
-```
 
 
-```{r disconnect}
+## ----disconnect---------------------------------------------------------------------------------------
 disconnect(con)
-```
 
