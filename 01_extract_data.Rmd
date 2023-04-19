@@ -286,38 +286,68 @@ renderTranslateExecuteSql(con, glue("
 DROP TABLE IF EXISTS {cohortDatabaseSchema}.pioneer_target_strata;
 
 CREATE TABLE {cohortDatabaseSchema}.pioneer_target_strata AS
-select distinct
-    a.cohort_definition_id,
-    a.subject_id,
-    a.cohort_start_date,
-    a.cohort_end_date,
-    YEAR(a.cohort_start_date) as index_year,
-    CASE 
-        WHEN YEAR(a.cohort_start_date) - p.year_of_birth < 60 THEN '<60'
-        WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 60 
-            AND YEAR(a.cohort_start_date) - p.year_of_birth < 70 THEN '60-69'
-        WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 70 
-            AND YEAR(a.cohort_start_date) - p.year_of_birth < 80 THEN '70-79'
-        WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 80 THEN '>80'
-    END AS age_group,
-    CASE WHEN b.cohort_definition_id = 23 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS obesity,
-    CASE WHEN b.cohort_definition_id = 24 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS hypertension,
-    CASE WHEN b.cohort_definition_id = 25 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS cve,
-    CASE WHEN b.cohort_definition_id = 26 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS t2dm,
-    CASE WHEN b.cohort_definition_id = 27 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS vte,
-    CASE WHEN b.cohort_definition_id = 28 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS copd,
-    COALESCE(c.charlson_group, 'CCI=0') AS charlson_group,
-    o.observation_period_start_date,
-    o.observation_period_end_date
-from {cohortDatabaseSchema}.{cohortTable} a
-join {cohortDatabaseSchema}.{cohortTable} b on a.subject_id = b.subject_id
-join {cdmDatabaseSchema}.person p on a.subject_id = p.person_id
-join {cdmDatabaseSchema}.observation_period o 
-  ON a.subject_id = o.person_id 
-  AND o.observation_period_start_date <= a.cohort_start_date
-  AND a.cohort_start_date <= o.observation_period_end_date
-left join {cohortDatabaseSchema}.charlson_strata c on a.subject_id = c.subject_id
-where a.cohort_definition_id = 1;
+
+SELECT DISTINCT
+  cohort_definition_id,
+  subject_id,
+  cohort_start_date,
+  cohort_end_date,
+  index_year,
+  age_group,
+  MAX(obesity) AS obesity,
+  MAX(hypertension) AS hypertension,
+  MAX(cve) AS cve,
+  MAX(t2dm) AS t2dm,
+  MAX(obesity) AS obesity,
+  MAX(vte) AS vte,
+  MAX(copd) AS copd,
+  charlson_group,
+  observation_period_start_date,
+  observation_period_end_date
+FROM (
+  SELECT DISTINCT
+      a.cohort_definition_id,
+      a.subject_id,
+      a.cohort_start_date,
+      a.cohort_end_date,
+      YEAR(a.cohort_start_date) as index_year,
+      CASE 
+          WHEN YEAR(a.cohort_start_date) - p.year_of_birth < 60 THEN '<60'
+          WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 60 
+              AND YEAR(a.cohort_start_date) - p.year_of_birth < 70 THEN '60-69'
+          WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 70 
+              AND YEAR(a.cohort_start_date) - p.year_of_birth < 80 THEN '70-79'
+          WHEN YEAR(a.cohort_start_date) - p.year_of_birth >= 80 THEN '>80'
+      END AS age_group,
+      CASE WHEN b.cohort_definition_id = 23 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS obesity,
+      CASE WHEN b.cohort_definition_id = 24 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS hypertension,
+      CASE WHEN b.cohort_definition_id = 25 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS cve,
+      CASE WHEN b.cohort_definition_id = 26 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS t2dm,
+      CASE WHEN b.cohort_definition_id = 27 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS vte,
+      CASE WHEN b.cohort_definition_id = 28 AND b.cohort_start_date <= a.cohort_start_date THEN 1 ELSE 0 END AS copd,
+      COALESCE(c.charlson_group, 'CCI=0') AS charlson_group,
+      o.observation_period_start_date,
+      o.observation_period_end_date
+  FROM {cohortDatabaseSchema}.{cohortTable} a
+  JOIN {cohortDatabaseSchema}.{cohortTable} b ON a.subject_id = b.subject_id
+  JOIN {cdmDatabaseSchema}.person p ON a.subject_id = p.person_id
+  JOIN {cdmDatabaseSchema}.observation_period o 
+    ON a.subject_id = o.person_id 
+    AND o.observation_period_start_date <= a.cohort_start_date
+    AND a.cohort_start_date <= o.observation_period_end_date
+  LEFT JOIN {cohortDatabaseSchema}.charlson_strata c on a.subject_id = c.subject_id
+  WHERE a.cohort_definition_id = 1
+)
+GROUP BY
+  cohort_definition_id,
+  subject_id,
+  cohort_start_date,
+  cohort_end_date,
+  index_year,
+  age_group,
+  charlson_group,
+  observation_period_start_date,
+  observation_period_end_date
 "))
 ```
 
