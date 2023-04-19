@@ -218,15 +218,17 @@ Andromeda::saveAndromeda(covariates_366_710, here::here(exportFolder, "covariate
 # Extract cohort table for survival analysis
 
 ```{r extract_cohort_table}
-
+# only include events on or after index date
 sql <- glue("
-  select * 
-  from {cohortDatabaseSchema}.{cohortTable}
-  where subject_id in (
-    select distinct subject_id 
+  select a.* 
+  from {cohortDatabaseSchema}.{cohortTable} a
+  join (
+    select distinct subject_id, cohort_start_date
     from {cohortDatabaseSchema}.{cohortTable}
     where cohort_definition_id = 1
-  )") %>% 
+  ) index 
+  ON a.subject_id = index.subject_id 
+  AND a.cohort_start_date >= index.cohort_start_date") %>% 
   SqlRender::translate(dbms(con))
 
 cohort <- Andromeda::andromeda()

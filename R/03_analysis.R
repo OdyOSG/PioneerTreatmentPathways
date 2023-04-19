@@ -1,46 +1,10 @@
 
-library(dplyr)
-
-# Save overall covariates as csv
-
-# Can you make a table of the number of patients in the cohort and then number of patients by treatment category. 
-# Also, let’s look at the median follow up time in the cohort and then by treatment category. 
-# And a simple description of treatments post index? And median follow up time in all, those with and without treatment.
-# It can be totally ok if patients don’t get a treatment. 
-
-cohort <- readr::read_rds(here::here("cohort.rds")) %>% 
-  tibble() %>% 
-  rename_all(tolower)
-
-df1 <- readr::read_csv(here::here("input", "settings", "CohortsToCreate.csv"), show_col_types = F) %>% 
-  select(cohort_definition_id = cohortId, name = atlasName, group) %>% 
-  {left_join(cohort, ., by = "cohort_definition_id")} %>% 
-  arrange(subject_id, cohort_start_date)
-
-# is everyone in cohort 1?
-check <- cohort %>% 
-  filter(cohort_definition_id == 1) %>% 
-  count(subject_id, name = "n_rows") %>% 
-  count(n_rows, name = "n_persons")
-
-if (nrow(check) != 1 || check$n_rows != 1) {
-  warning("Some people are in the main target cohort more than once!")
-}
-
-# assert that each person is in cohort id 1 exactly once
-index_dates <- cohort %>% 
-  filter(cohort_definition_id == 1) %>% 
-  select(subject_id, index_date = cohort_start_date, end_of_followup = cohort_end_date) %>% 
-  mutate(followup_days = as.integer(end_of_followup - index_date))
 
 
-# Question: When building stratification cohorts do we only use time prior to index?
-strata <- df1 %>% 
-  filter(group == "Stratification") %>% 
-  inner_join(index_dates, by = "subject_id") %>% 
-  filter(cohort_start_date <= index_date) %>% 
-  distinct(subject_id, strata_id = cohort_definition_id, strata_name = name)
 
+
+
+cohort
 
 df <- df1 %>% 
   filter(group != "Stratification") %>% 
@@ -363,3 +327,11 @@ df %>%
     n_persons = "Person Count",
     median_time_from_index_to_treatment = "Median time from index to outcome"
   )
+
+
+
+# Can you make a table of the number of patients in the cohort and then number of patients by treatment category. 
+# Also, let’s look at the median follow up time in the cohort and then by treatment category. 
+# And a simple description of treatments post index? And median follow up time in all, those with and without treatment.
+# It can be totally ok if patients don’t get a treatment. 
+
