@@ -266,7 +266,7 @@ charlson_df <- charlson$covariates %>%
          covariateValue >= 2 ~ 'CCI>=2')) %>%
   select(subject_id = rowId, charlson_group) %>%
   collect() %>%
-  mutate(subject_id = as.integer(subject_id))
+  mutate(subject_id = as.double(subject_id))
 
 insertTable(con, 
             databaseSchema = cohortDatabaseSchema,

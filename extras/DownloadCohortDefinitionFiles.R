@@ -43,7 +43,7 @@ df2 <- df %>%
 
 
 df2 %>% 
-  filter_all(is.na)
+  filter(if_any(everything(), is.na))
 
 df2 <- filter(df2, !is.na(atlasId))
 
