@@ -28,6 +28,7 @@
 file.copy("~/Downloads/Phenotype tracker - FINAL.csv", "extras/phenotype_tracker.csv", overwrite = T)
 df <- readr::read_csv("extras/phenotype_tracker.csv")
 
+View(df)
 #columns to create are: name, atlasName, atlasId, cohortId
 
 library(dplyr)

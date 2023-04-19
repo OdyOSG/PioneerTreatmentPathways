@@ -3,11 +3,13 @@ name,atlasName,atlasId,cohortId,group,atlas_link
 2,Newly diagnosed prostate cancer initiated immediate conservative trt,509,2,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/509
 3,Newly diagnosed prostate cancer initiated delayed conservative trt,510,3,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/510
 4,Newly diagnosed prostate cancer initiated immediate curative trt,512,4,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/512
+40,Newly diagnosed prostate cancer initiated immediate curative trt NARROW,547,40,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/547
 5,Newly diagnosed prostate cancer initiated delayed curative trt,511,5,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/511
 6,Newly diagnosed prostate cancer received prostatectomy,539,6,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/539
 7,Newly diagnosed prostate cancer received radiotherapy,514,7,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/514
 8,Newly diagnosed prostate cancer received systemic chemotherapy,513,8,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/513
 9,Newly diagnosed prostate cancer received focal therapy,536,9,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/536
+10,Newly diagnosed prostate cancer received ADT based doublet or triplet combination therapies:,545,10,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/545
 11,Newly diagnosed prostate cancer received prostatectomy plus salvage ADT and radiotherapy,531,11,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/531
 12,Newly diagnosed prostate cancer received postatectomy and adjuvant radiotherapy,538,12,Target,https://pioneer.hzdr.de/atlas/#/cohortdefinition/538
 13,"Prostatectomy (radical, open, laparoscopic radical and robot assisted radical) or",499,13,Treatment,https://pioneer.hzdr.de/atlas/#/cohortdefinition/499

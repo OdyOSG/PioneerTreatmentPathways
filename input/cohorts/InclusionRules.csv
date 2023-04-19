@@ -4,6 +4,15 @@ cohortName,ruleSequence,ruleName,cohortId
 1,2,PCa biopsy,1
 1,3,no ADT and androgen agonist inhibitors,1
 1,4,No prior other malignancies,1
+10,0,Age 18+,10
+10,1,Male,10
+10,2,Prior prostate cancer,10
+10,3,No prior cancer other than prostate,10
+10,4,"No chemo, ARTA, Immunotherapy, PSMA, Radium, PARP",10
+10,5,No prior radiotherapy prior,10
+10,6,No prior focal therapy,10
+10,7,No RT within a year after surgery,10
+10,8,No prior prostatectomy,10
 11,0,Age 18+,11
 11,1,Male,11
 11,2,Prior prostate cancer,11
@@ -41,6 +50,11 @@ cohortName,ruleSequence,ruleName,cohortId
 4,1,Male,4
 4,2,Prior prostate cancer 183 days before treatment initiation,4
 4,3,No prior palliative treatment,4
+40,0,Age >= 18,40
+40,1,Male,40
+40,2,Prior prostate cancer 183 days before treatment initiation,40
+40,3,No prior palliative treatment,40
+40,4,no mets prior to trt,40
 5,0,Age >= 18,5
 5,1,Male,5
 5,2,Prior prostate cancer in 183 days before treatment initiation,5
