@@ -71,7 +71,7 @@ CohortGenerator::createCohortTables(
     connection = con,
     cohortDatabaseSchema = cohortDatabaseSchema,
     cohortTableNames = cohortTableNames,
-    incremental = FALSE)
+    incremental = F)
 
 
 CohortGenerator::generateCohortSet(
