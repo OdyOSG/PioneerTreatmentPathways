@@ -54,7 +54,9 @@ if (n_distinct(index_dates$person_id) != nrow(index_dates)) {
 target3 <- target2 %>% 
   select(-cohort_start_date)
 
-readr::write_csv(target3, here::here(exportFolder, "target.csv"))
+target3 %>% 
+  select(-subject_id) %>% 
+  readr::write_csv(here::here(exportFolder, "target.csv"))
 
 cohort <- Andromeda::loadAndromeda(here::here("temp", "cohort")) 
 cohort$index <- index_dates

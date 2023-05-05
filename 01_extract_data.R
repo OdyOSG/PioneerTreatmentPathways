@@ -120,7 +120,7 @@ if (all(filter(cohortCounts, group == "Target") %>% pull(cohortEntries) == 0)) {
 ## ----features_one_year_prior_to_index-----------------------------------------------------------------
 library(FeatureExtraction)
 
-target_ids <- 1:5
+target_ids <- c(1:12, 40)
 
 preIndexCovariateSettings <- createCovariateSettings(
   useDemographicsAge = TRUE,
@@ -335,7 +335,7 @@ for (i in seq_along(strata_levels)) {
         for (k in 1:3) {
             # run FE for all three time windows 
             print(glue("Feature time window {start_days[k]} - {end_days[k]}"))
-            preIndexCovariateSettings <- createCovariateSettings(
+            FESettings <- createCovariateSettings(
               useDemographicsAge = TRUE,
               useDemographicsGender = TRUE,
               useConditionGroupEraLongTerm = TRUE,
@@ -347,10 +347,10 @@ for (i in seq_along(strata_levels)) {
                 getDbCovariateData(
                      connection = con,
                      oracleTempSchema = getOption("SqlRenderTempEmulationSchema"),
-                     cohortTable = cohortTable,
+                     cohortTable = "strata_temp_cohort",
                      cdmDatabaseSchema = cdmDatabaseSchema,
                      cohortDatabaseSchema = cohortDatabaseSchema,
-                     covariateSettings = preIndexCovariateSettings,
+                     covariateSettings = FESettings,
                      aggregated = TRUE)
 
             nm <- glue("strata_covariates_{start_days[k]}_{end_days[k]}_{names(strata_levels)[i]}_{strata_level_names[[i]][j]}") 
