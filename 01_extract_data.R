@@ -1,5 +1,4 @@
-## ----setup, include=FALSE-----------------------------------------------------------------------------
-knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
 
 
 ## ----install-dependencies, eval=FALSE-----------------------------------------------------------------
@@ -102,6 +101,7 @@ cohortCounts <- CohortGenerator::getCohortCounts(
     connection = con,
     cohortDatabaseSchema = cohortDatabaseSchema,
     cohortTable = cohortTable) %>%
+  rename_all(tolower) %>% 
   tibble() %>%
   full_join(select(cohortDefinitionSet, cohortId, name = atlasName, group), by = "cohortId") %>%
   mutate(across(c(cohortEntries, cohortSubjects), ~tidyr::replace_na(., 0))) %>% 
@@ -201,6 +201,7 @@ sql <- glue("
 
 cohort <- Andromeda::andromeda()
 DatabaseConnector::querySqlToAndromeda(con, sql, cohort, "cohort")
+cohort$cohort <- dplyr::rename_all(cohort$cohort, tolower)
 
 Andromeda::saveAndromeda(cohort, here::here("temp", "cohort"))
 

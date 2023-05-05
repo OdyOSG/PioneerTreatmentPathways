@@ -63,6 +63,7 @@ cohort$index <- index_dates
 cohort_export <- Andromeda::andromeda()
 
 cohort_export$cohort <- cohort$cohort %>% 
+  rename_all(tolower) %>% 
   left_join(cohort$index, by = "subject_id") %>% 
   mutate(start_day = cohort_start_date - index_date,
          end_day = cohort_end_date - index_date) %>% 
