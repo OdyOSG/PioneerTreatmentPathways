@@ -31,6 +31,10 @@ databaseDescription = "SYNPUF100K"
 options(sqlRenderTempEmulationSchema = writeSchema)
 exportFolder = here::here(paste0(tolower(databaseId), "_pioneer_export"))
 
+# Should cohort generation be done in incremental mode? 
+# TRUE = don't regenerate cohorts if they already generated. FALSE = rerun study from scratch.
+incremental = FALSE
+
 if (!dir.exists(exportFolder)) dir.create(exportFolder)
 
 conn <- connect(connectionDetails)

@@ -14,13 +14,14 @@ source(here::here("00_study_parameters.R"))
 
 # check that study parameters are available
 # these should be set in parameters.R
-cohortDatabaseSchema
-cohortTable
-exportFolder
-databaseId
-databaseName
-databaseDescription
-options("sqlRenderTempEmulationSchema")
+print(glue::glue('cohortDatabaseSchema = {cohortDatabaseSchema}'))
+print(glue::glue('cohortTable = {cohortTable}'))
+print(glue::glue('exportFolder = {exportFolder}'))
+print(glue::glue('databaseId = {databaseId}'))
+print(glue::glue('databaseName = {databaseName}'))
+print(glue::glue('databaseDescription = {databaseDescription}'))
+print(glue::glue('incremental = {incremental}'))
+print(glue::glue('options("sqlRenderTempEmulationSchema") = {options("sqlRenderTempEmulationSchema")"}'))
 
 
 ## ----source-R-files-----------------------------------------------------------------------------------
@@ -70,7 +71,7 @@ CohortGenerator::createCohortTables(
     connection = con,
     cohortDatabaseSchema = cohortDatabaseSchema,
     cohortTableNames = cohortTableNames,
-    incremental = F)
+    incremental = incremental)
 
 
 CohortGenerator::generateCohortSet(
@@ -79,7 +80,7 @@ CohortGenerator::generateCohortSet(
   cohortDatabaseSchema = cohortDatabaseSchema,
   cohortDefinitionSet = cohortDefinitionSet,
   cohortTableNames = cohortTableNames,
-  incremental = TRUE,
+  incremental = incremental,
   incrementalFolder = here(exportFolder, "incremental")
 )
 
@@ -103,10 +104,10 @@ cohortCounts <- CohortGenerator::getCohortCounts(
     cohortTable = cohortTable) %>%
   rename_all(tolower) %>% 
   tibble() %>%
-  full_join(select(cohortDefinitionSet, cohortId, name = atlasName, group), by = "cohortId") %>%
-  mutate(across(c(cohortEntries, cohortSubjects), ~tidyr::replace_na(., 0))) %>% 
+  full_join(select(cohortDefinitionSet, cohortId, name = atlasName, group), by = c("cohortid" = "cohortId")) %>%
+  mutate(across(c(cohortentries, cohortsubjects), ~tidyr::replace_na(., 0))) %>% 
   mutate(databaseId = databaseId) %>%
-  arrange(cohortId)
+  arrange(cohortid)
 
 readr::write_csv(cohortCounts, here(exportFolder, paste0(databaseId, "CohortCounts.csv")))
 
