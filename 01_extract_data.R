@@ -21,7 +21,7 @@ print(glue::glue('databaseId = {databaseId}'))
 print(glue::glue('databaseName = {databaseName}'))
 print(glue::glue('databaseDescription = {databaseDescription}'))
 print(glue::glue('incremental = {incremental}'))
-print(glue::glue('options("sqlRenderTempEmulationSchema") = {options("sqlRenderTempEmulationSchema")"}'))
+print(glue::glue('options("sqlRenderTempEmulationSchema") = {options("sqlRenderTempEmulationSchema")}'))
 
 
 ## ----source-R-files-----------------------------------------------------------------------------------
@@ -113,7 +113,7 @@ readr::write_csv(cohortCounts, here(exportFolder, paste0(databaseId, "CohortCoun
 
 print(cohortCounts, n=100)
 
-if (all(filter(cohortCounts, group == "Target") %>% pull(cohortEntries) == 0)) {
+if (all(filter(cohortCounts, group == "Target") %>% pull(cohortentries) == 0)) {
   stop("All target cohorts are empty. You cannot execute this study.")
 }
 
